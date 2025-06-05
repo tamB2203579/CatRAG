@@ -1,0 +1,20 @@
+Extract meaningful relationships between entities in the following text. 
+The text is in Vietnamese about university regulations.
+
+Text: {text}
+
+Entities: {entities}
+
+For each pair of entities that have a clear relationship, identify the relationship verb or phrase.
+Format your response as a JSON array of objects with the following structure:
+[
+    {{
+    "source": "Entity1",
+    "target": "Entity2",
+    "relationship": "relationship_verb"
+    }}
+]
+
+Only include relationships that are explicitly stated or strongly implied in the text.
+If no clear relationships exist, return an empty array.
+Do not include any explanations, markdown formatting, or code blocks - just return the raw JSON.

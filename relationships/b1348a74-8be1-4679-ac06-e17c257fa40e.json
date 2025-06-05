@@ -1,0 +1,32 @@
+{
+  "chunk_id": "b1348a74-8be1-4679-ac06-e17c257fa40e",
+  "text": "bằng tốt nghiệp và hạng tốt nghiệp  \n\nbằng tốt nghiệp được cấp theo ngành đào tạo. hạng tốt nghiệp được xác định căn cứ vào điểm trung bình chung tích lũy theo các mức trong bảng sau  \n\n hạng tốt nghiệp  điểm trung bình chung tích lũy   \n ---  ---   \n loại xuất sắc  từ 3,60 đến 4,00   \n loại giỏi  từ 3,20 đến 3,59   \n loại khá  từ 2,50 đến 3,19   \n loại trung bình  từ 2,00 đến 2,49   \n\nhạng tốt nghiệp loại xuất sắc và giỏi sẽ bị giảm một mức nếu thuộc một trong các trường hợp sau  \ncó khối lượng các học phần bị điểm F vượt quá 5 so với tổng số tín chỉ quy định của chương trình đào tạo không tính khối lượng học phần học cải thiện điểm bị điểm F. đã bị kỷ luật từ mức cảnh cáo cấp trường trong thời gian học.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "bằng tốt nghiệp",
+      "target": "hạng tốt nghiệp",
+      "relationship": "được cấp theo"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "điểm trung bình chung tích lũy",
+      "relationship": "được xác định căn cứ vào"
+    },
+    {
+      "source": "hạng tốt nghiệp loại xuất sắc",
+      "target": "hạng tốt nghiệp loại giỏi",
+      "relationship": "sẽ bị giảm một mức nếu thuộc"
+    },
+    {
+      "source": "khối lượng các học phần bị điểm F",
+      "target": "tổng số tín chỉ quy định của chương trình đào tạo",
+      "relationship": "vượt quá"
+    },
+    {
+      "source": "đã bị kỷ luật",
+      "target": "mức cảnh cáo cấp trường",
+      "relationship": "từ"
+    }
+  ]
+}

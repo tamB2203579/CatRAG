@@ -1,0 +1,47 @@
+{
+  "chunk_id": "81276642-9778-4795-9009-36e3a63179cf",
+  "text": "nơi nhận HIỆU TRƯỞNG  \n\nnhư trên  \nlưu VT. trần trung tính  \n\n phụ lục  \n PHƯƠNG ÁN BỐ TRÍ 3 HỌC KỲ CHÍNH TRONG MỘT NĂM HỌC  \nkèm theo công văn số ĐHCT-VPT ngày . tháng 7 năm 2024 của hiệu trưởng trường đại học cần thơ  \n\nNĂM HỌC CÓ 3 HỌC KỲ CHÍNH  \nhọc kỳ có 15 tuần 11 tuần dạy và học  01 tuần dự trữ và thi HP thi riêng  01 tuần thi HP thi riêng còn lại  01 tuần thi HP thi chung và 01 tuần xử lý kết quả  \n\n tuần  năm 2025  năm 2026  năm 2027  năm 2028  năm 2029  năm 2030   \n-------------------------------------------------------------------",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "HIỆU TRƯỞNG",
+      "target": "trường đại học cần thơ",
+      "relationship": "của"
+    },
+    {
+      "source": "NĂM HỌC",
+      "target": "3 HỌC KỲ CHÍNH",
+      "relationship": "CÓ"
+    },
+    {
+      "source": "học kỳ",
+      "target": "15 tuần",
+      "relationship": "có"
+    },
+    {
+      "source": "học kỳ",
+      "target": "11 tuần dạy và học",
+      "relationship": "có"
+    },
+    {
+      "source": "học kỳ",
+      "target": "01 tuần dự trữ và thi HP thi riêng",
+      "relationship": "có"
+    },
+    {
+      "source": "học kỳ",
+      "target": "01 tuần thi HP thi riêng còn lại",
+      "relationship": "có"
+    },
+    {
+      "source": "học kỳ",
+      "target": "01 tuần thi HP thi chung",
+      "relationship": "có"
+    },
+    {
+      "source": "học kỳ",
+      "target": "01 tuần xử lý kết quả",
+      "relationship": "có"
+    }
+  ]
+}

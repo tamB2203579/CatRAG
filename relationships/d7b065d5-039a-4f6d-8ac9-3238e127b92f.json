@@ -1,0 +1,47 @@
+{
+  "chunk_id": "d7b065d5-039a-4f6d-8ac9-3238e127b92f",
+  "text": "BỘ GIÁO DỤC VÀ ĐÀO TẠO\n CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\n\n TRƯỜNG ĐẠI HỌC CÀN thơ\nđộc lập - tự do - hạnh phúc  \ncần thơ, ngày  tháng  năm 2020  \n QUYẾT định\n\nban hành số tay sinh viên trường đại học cần thơ  \nHIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CÀN thơ\n\ncăn cứ luật giáo dục đại học ngày 18 tháng 6 năm 2012 và luật sửa đổi, bổ sung một số điều của luật giáo dục đại học ngày 19 tháng 11 năm 2018  \ncăn cứ thông tư số 552015TT-BGDĐT, ngày 1282015 của bộ giáo dục và đào tạo về ban hành quy chế đánh giá kết quả rèn luyện của người học được đào tạo trình độ đại học hệ chính quy  \ncăn cứ quy định về công tác sinh viên bậc đại học hệ chính quy, ban hành kèm theo quyết định số 2748QĐ-ĐHCT, ngày 12072019 của hiệu trưởng trường đại học cần thơ  \nxét đề nghị của các ông trưởng phòng công tác sinh viên,  \n\n QUYẾT định\n\nđiều 1. ban hành sổ tay sinh viên trường đại học cần thơ. điều 2. quyết định này có hiệu lực kể từ ngày ký. điều 3. các ông bà trưởng phòng công tác sinh viên, tài chính, đào tạo, bí thư đoàn TNCS hồ chí minh trường đại học cần thơ, trưởng khoa, thủ trưởng các đơn vị có liên quan và sinh viên tại điều 1 chịu trách nhiệm thi hành quyết định này. kt.hiệu TRƯỞNG  \nPHÓ HIỆU TRƯỞNG  \n\nnơi nhận  \nnhư điều 3  \nlưu VT, CTSV. trần trùng tính  \n\n GIỚI THIỆU VỀ ĐẠI HỌC CẦN thơ\n\nđại học cần thơ ĐHCT, cơ sở đào tạo đại học và sau đại học trọng điểm của nhà nước ở ĐBSCL, là trung tâm văn hóa - khoa học kỹ thuật của vùng. trường đã không ngừng hoàn thiện và phát triển.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "BỘ GIÁO DỤC VÀ ĐÀO TẠO",
+      "target": "QUYẾT định",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CÀN thơ",
+      "target": "sổ tay sinh viên",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "luật giáo dục đại học",
+      "target": "QUYẾT định",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "thông tư số 552015TT-BGDĐT",
+      "target": "QUYẾT định",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "quy định về công tác sinh viên",
+      "target": "QUYẾT định",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "các ông bà trưởng phòng công tác sinh viên",
+      "target": "QUYẾT định",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "đại học cần thơ",
+      "target": "cơ sở đào tạo đại học và sau đại học",
+      "relationship": "là"
+    },
+    {
+      "source": "đại học cần thơ",
+      "target": "trung tâm văn hóa - khoa học kỹ thuật",
+      "relationship": "là"
+    }
+  ]
+}

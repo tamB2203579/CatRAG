@@ -1,0 +1,112 @@
+{
+  "chunk_id": "792271fe-5203-465c-933f-780c861d35d1",
+  "text": "BỘ GIÁO DỤC VÀ ĐÀO TẠO  \n CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \n TRƯỜNG ĐẠI HỌC CÀN THƠ  \nđộc lập - tự do - hạnh phúc  \n\ncần thơ, ngày 10 tháng 4 năm 2024  \n\n QUYẾT ĐỊNH  \nban hành quy chế đánh giá kết quả rèn luyện dành cho sinh viên bậc đại học hình thức chính quy  \n\n HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CÀN THƠ  \n\ncăn cứ luật giáo dục đại học ngày 18 tháng 6 năm 2012 và luật sửa đổi, bổ sung một số điều của luật giáo dục đại học ngày 19 tháng 11 năm 2018  \n\ncăn cứ nghị định số 992019NĐ-CP ngày 30 tháng 12 năm 2019 của chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của luật sửa đổi, bổ sung một số điều của luật giáo dục đại học  \n\ncăn cứ thông tư số 162015TT-BGDĐT, ngày 1282015 của bộ giáo dục và đào tạo về ban hành quy chế đánh giá kết quả rèn luyện của người học được đào tạo trình độ đại học hệ chính quy  \n\ncăn cứ nghị quyết số 99NQ-HĐT ngày 19 tháng 4 năm 2023 của hội đồng trường ban hành quy chế tổ chức và hoạt động của trường đại học cần thơ nghị quyết số 181NQ-HĐT ngày 19 tháng 4 năm 2024 và nghị quyết số 185VQ-HĐT ngày 03 tháng 7 năm 2024 của hội đồng trường về sửa đổi bổ sung một số điều của quy chế tổ chức và hoạt động của trường đại học cần thơ  \n\ntheo đề nghị của trưởng phòng công tác sinh viên,  \n\n QUYẾT ĐỊNH  \n\nđiều 1. ban hành kèm theo quyết định này quy chế đánh giá kết quả rèn luyện sinh viên bậc đại học hình thức chính quy của trường đại học cần thơ. điều 2. quyết định này có hiệu lực từ học kỳ 2, năm học 2024 - 2025 và thay thế quyết định số 78QĐ-ĐHCT, ngày 15112021 của hiệu trưởng trường đại học cần thơ. điều 3. chánh văn phòng trường đại học cần thơ, các trưởng phòng công tác sinh viên, đào tạo, tài chính bí thư đoàn TNCS hồ chí minh trường đại học cần thơ chủ tịch hội sinh viên trường đại học cần thơ thủ trưởng các đơn vị và sinh viên có liên quan chịu trách nhiệm thi hành quyết định này. HIỆU TRƯỞNG  \nnơi nhận  \nnhư điều 3  \nlưu VT, CTSV.",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "BỘ GIÁO DỤC VÀ ĐÀO TẠO",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CÀN THƠ",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "ký"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "quy chế đánh giá kết quả rèn luyện",
+      "relationship": "ban hành kèm theo"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "có hiệu lực",
+      "relationship": "có hiệu lực từ"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "quyết định số 78QĐ-ĐHCT",
+      "relationship": "thay thế"
+    },
+    {
+      "source": "trường đại học cần thơ",
+      "target": "quy chế tổ chức và hoạt động",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "trưởng phòng công tác sinh viên",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "đề nghị"
+    },
+    {
+      "source": "căn cứ luật giáo dục đại học",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "căn cứ nghị định số 992019NĐ-CP",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "căn cứ thông tư số 162015TT-BGDĐT",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "căn cứ nghị quyết số 99NQ-HĐT",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "căn cứ nghị quyết số 181NQ-HĐT",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "căn cứ nghị quyết số 185VQ-HĐT",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "chánh văn phòng trường đại học cần thơ",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "các trưởng phòng công tác sinh viên",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "đào tạo",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "tài chính",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "bí thư đoàn TNCS hồ chí minh trường đại học cần thơ",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "chủ tịch hội sinh viên trường đại học cần thơ",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "thủ trưởng các đơn vị",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "sinh viên có liên quan",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "chịu trách nhiệm"
+    }
+  ]
+}

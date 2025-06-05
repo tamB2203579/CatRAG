@@ -1,0 +1,37 @@
+{
+  "chunk_id": "bbda30cd-12f4-4bf2-97dc-372882cff887",
+  "text": "BỘ GIÁO DỤC VÀ ĐÀO TẠO  \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \n\n TRƯỜNG ĐẠI HỌC CN THƠ  \nđộc lập - tự do - hạnh phúc  \nsố Z QĐ-ĐHCT cần thơ, ngày zỗ tháng  năm 2071  \n\n QUYẾT ĐỊNH  \nban hành quy chế cử sinh viên đi học tập ở nước ngoài  \n\n HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CẦN THƠ  \n\ncăn cứ luật giáo dục đại học ngày 18 tháng 6 năm 2012 và luật sửa đổi, bổ sung một số điều của luật giáo dục đại học ngày 19 tháng 11 năm 2018  \n\ncăn cứ nghị định số 992019NĐ-CP ngày 30 tháng 12 năm 2019 của chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của luật sửa đổi, bổ sung một số điều của luật giáo dục đại học  \n\ncăn cứ văn bản hợp nhất số 17VBHN-BGDĐT ngày 15 tháng 05 năm 2014 của bộ trưởng bộ giáo dục và đào tạo quyết định ban hành quy chế đào tạo đại học và cao đẳng hệ chính quy theo hệ thống tín chỉ  \n\ncăn cứ quy chế tổ chức và hoạt động của trường đại học cần thơ ban hành kèm theo nghị quyết số 29NQO-HĐT ngày 19 tháng 5 năm 2020 của hội đồng trường đại học cần thơ  \n\ntheo đề nghị của ông trưởng phòng công tác sinh viên. QUYẾT ĐỊNH  \n\nđiều 1. ban hành kèm theo quyết định này quy chế cử sinh viên bậc đại học hệ chính quy đi học tập ở nước ngoài của trường đại học cần thơ. điều 2. quyết định này có hiệu lực từ học kỳ II, năm học 2020 - 2021 và thay thế quyết định số 770QĐ-ĐHCT, ngày 15032017 của hiệu trưởng trường đại học cần thơ. điều 3. các trưởng phòng kế hoạch tổng hợp, công tác sinh viên, tài chính, đào tạo bí thư đoàn TNCS hồ chí minh trường đại học cần thơ chủ tịch hội sinh viên trường đại học cần thơ thủ trưởng các đơn vị có liên quan và sinh viên có trách nhiệm thi hành quyết định này. nơi nhận  \nnhư điều 3  \nlưu VT, CTSV.",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "BỘ GIÁO DỤC VÀ ĐÀO TẠO",
+      "target": "TRƯỜNG ĐẠI HỌC CẦN THƠ",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CẦN THƠ",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "ký"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "quy chế cử sinh viên đi học tập ở nước ngoài",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "có hiệu lực",
+      "relationship": "có hiệu lực từ"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "quyết định số 770QĐ-ĐHCT",
+      "relationship": "thay thế"
+    },
+    {
+      "source": "các trưởng phòng",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "có trách nhiệm thi hành"
+    }
+  ]
+}

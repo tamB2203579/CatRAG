@@ -1,0 +1,37 @@
+{
+  "chunk_id": "58f8c257-4c37-4392-9b65-d9e661ab5e32",
+  "text": "BỘ GIÁO DỤC VÀ ĐÀO TẠO  \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \n\n TRƯỜNG ĐẠI HỌC CÀN THƠ  \nđộc lập - tự do - hạnh phúc  \nsố 2445 HD-ĐHCT  \ncần thơ, ngày 19 tháng 8 năm 2023  \n\n HƯỚNG DẪN  \nchuyển sang học một chương trình, một ngành đào tạo khác đối với sinh viên từ khóa 47 trở về sau của trường đại học cần thơ  \n\ncăn cứ thông tư số 082021TT-BGDĐT ngày 18 tháng 03 năm 2021 của bộ trưởng bộ giáo dục và đào tạo ban hành quy chế đào tạo trình độ đại học  \n\ncăn cứ quy định công tác học vụ dành cho sinh viên trình độ đại học hệ chính quy và các văn bản hiện hành của trường trường đại học cần thơ ĐHCT hướng dẫn về việc chuyển sang học một chương trình, một ngành đào tạo khác được áp dụng đối với sinh viên hệ chính quy từ khóa 47 trở về sau như sau  \n\n đối tượng áp dụng  \nhướng dẫn này được áp dụng đối với sinh viên hệ chính quy từ khóa 47 tuyển sinh năm 2021 trở về sau đang theo học tại trường ĐHCT có nguyện vọng chuyển sang học một chương trình, một ngành đào tạo khác do trường ĐHCT tổ chức đào tạo. điều kiện xét chuyển sang học một chương trình, một ngành đào tạo khác  \ncăn cứ quy chế đào tạo hiện hành, sinh viên từ khóa 47 trở về sau được xem xét chuyển sang học một chương trình, một ngành đào tạo khác khi có đủ các điều kiện sau  \n\nsinh viên không đang là sinh viên trình độ năm thứ nhất hoặc năm cuối khóa, cụ thể khối lượng tín chỉ tích lũy được của chương trình đào tạo CTĐT mà sinh viên đang theo học đạt từ 36 tín chỉ đến 105 tín chỉ đối với CTĐT có thời gian thiết kế là 4 năm từ 36 tín chỉ đến 124 tín chỉ đối với CTĐT có thời gian thiết kế là 4,5 năm từ 36 tín chỉ đến 142 tín chỉ đối với CTĐT có thời gian thiết kế là 5 năm.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "BỘ GIÁO DỤC VÀ ĐÀO TẠO",
+      "target": "TRƯỜNG ĐẠI HỌC CÀN THƠ",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "TRƯỜNG ĐẠI HỌC CÀN THƠ",
+      "target": "sinh viên",
+      "relationship": "hướng dẫn"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khóa 47",
+      "relationship": "đối với"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chương trình, một ngành đào tạo khác",
+      "relationship": "chuyển sang học"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quy chế đào tạo hiện hành",
+      "relationship": "căn cứ"
+    },
+    {
+      "source": "chương trình đào tạo CTĐT",
+      "target": "tín chỉ",
+      "relationship": "đạt"
+    }
+  ]
+}

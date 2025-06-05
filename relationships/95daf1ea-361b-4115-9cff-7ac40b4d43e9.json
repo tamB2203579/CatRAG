@@ -1,0 +1,62 @@
+{
+  "chunk_id": "95daf1ea-361b-4115-9cff-7ac40b4d43e9",
+  "text": "tuyệt đối chấp hành sự kiểm tra, quản lý và hướng dẫn của cán bộ coi thi. các vật dụng không được sử dụng trong quá trình thi phải được tập trung đúng nơi quy định. trong thời gian thi, sinh viên chỉ được ra ngoài phòng thi nếu có lý do chính đáng, được cán bộ coi thi đồng ý và lập biên bản. bài thi phải làm trên giấy thi thống nhất, viết rõ ràng, sạch sẽ. được sử dụng bút mực hoặc bút bi màu xanh dương, đen hoặc tím thước kẻ máy tính điện tử không có thẻ nhớ và không soạn thảo được văn bản giấy nháp có chữ ký của cán bộ coi thi. trong giờ thi sinh viên phải giữ trật tự, nghiêm túc làm bài và bảo vệ bài làm của mình, không để người khác xem bài của mình.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "cán bộ coi thi",
+      "relationship": "phải chấp hành"
+    },
+    {
+      "source": "vật dụng",
+      "target": "quá trình thi",
+      "relationship": "không được sử dụng trong"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phòng thi",
+      "relationship": "chỉ được ra ngoài"
+    },
+    {
+      "source": "cán bộ coi thi",
+      "target": "biên bản",
+      "relationship": "lập"
+    },
+    {
+      "source": "bài thi",
+      "target": "giấy thi thống nhất",
+      "relationship": "phải làm trên"
+    },
+    {
+      "source": "bút mực hoặc bút bi",
+      "target": "bài thi",
+      "relationship": "được sử dụng"
+    },
+    {
+      "source": "máy tính điện tử",
+      "target": "thẻ nhớ",
+      "relationship": "không có"
+    },
+    {
+      "source": "giấy nháp",
+      "target": "chữ ký của cán bộ coi thi",
+      "relationship": "có"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trật tự",
+      "relationship": "phải giữ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bài làm của mình",
+      "relationship": "bảo vệ"
+    },
+    {
+      "source": "người khác",
+      "target": "bài của mình",
+      "relationship": "không để xem"
+    }
+  ]
+}

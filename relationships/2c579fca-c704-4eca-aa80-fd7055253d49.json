@@ -1,0 +1,112 @@
+{
+  "chunk_id": "2c579fca-c704-4eca-aa80-fd7055253d49",
+  "text": "điều 9. học bổng và trợ cấp xã hội  \n\nhọc bổng khuyến khích học tập được xét áp dụng theo học kỳ dựa trên cơ sở điểm trung bình chung học kỳ và điểm rèn luyện của học kỳ trước đó. học bổng được cấp cho sinh viên từ cao xuống thấp theo mức học bổng trong từng mức ưu tiên theo điểm trung bình chung học kỳ trường hợp có cùng điểm trung bình chung học kỳ thì xét ưu tiên theo điểm rèn luyện. riêng đối với học kỳ đầu tiên của khóa học, học bổng được cấp dựa trên kết quả xét tuyển đầu vào do hiệu trưởng trường đại học cần thơ quyết định. quỹ học bổng dành cho sinh viên từng lớp chuyên ngành được công bố từ đầu khóa học và sẽ được điều chỉnh nếu nguồn quỹ học bổng của trường đại học cần thơ có thay đổi. điều kiện để được xét học bổng bao gồm có số tín chỉ đăng ký tối thiểu trong học kỳ trước đó là 12 tín chỉ trừ trường hợp do trường bố trí học kỳ trước đó, sinh viên có kết quả học tập, rèn luyện đạt từ loại khá trở lên, trong đó không có học phần dưới điểm D không bị kỷ luật từ hình thức khiển trách cấp trường trở lên. tiêu chuẩn cho từng mức học bổng được xác định như sau  \nmức học bổng loại xuất sắc điểm trung bình chung học kỳ và điểm rèn luyện đạt loại xuất sắc. mức học bổng loại giỏi điểm trung bình chung học kỳ đạt từ loại giỏi và điểm rèn luyện đạt từ loại tốt trở lên. mức học bổng loại khá điểm trung bình chung học kỳ và điểm rèn luyện đạt từ loại khá trở lên. học bổng dành cho sinh viên đi học tập ở nước ngoài sinh viên được nhận học bổng khuyến khích học tập còn được xét cấp học bổng để đi học nước ngoài theo quy định hiện hành của hiệu trưởng. mức học bổng do hiệu trưởng quyết định. học bổng tài trợ hàng năm, trường xét cấp học bổng tài trợ từ nguồn tài trợ của các cơ quan, doanh nghiệp, tổ chức, cá nhân trong và ngoài nước theo quy định về quản lý và cấp phát học bổng tài trợ. quỹ hỗ trợ sinh viên khi gặp khó khăn đột xuất về kinh tế, sinh viên có thể làm đơn trình bày rõ hoàn cảnh khó khăn, có xác nhận của cố vấn học tập và trưởng đơn vị đào tạo để hiệu trưởng xem xét. trợ cấp xã hội đối tượng được hưởng trợ cấp xã hội là sinh viên dân tộc ít người ở vùng cao sinh viên mồ côi cả cha lẫn mẹ sinh viên tàn tật trên 41 sinh viên thuộc hộ nghèo theo quy định. điều 10. học phí, miễn, giảm học phí và hỗ trợ chi phí học tập  \n\nhọc phí đóng theo học kỳ và tính theo tổng số tín chỉ mà sinh viên đã đăng ký học ở học kỳ đó. mức học phí do hiệu trưởng quyết định. đối tượng được miễn, giảm học phí và được hỗ trợ chi phí học tập thực hiện theo các quy định hiện hành và các văn bản hướng dẫn có liên quan. hồ sơ hướng dẫn thực hiện miễn, giảm học phí và hỗ trợ chi phí học tập được công khai tại trang thông tin điện tử của phòng công tác sinh viên. sau thời hạn đóng học phí, sinh viên không đóng học phí sẽ bị hủy kết quả học tập những học phần nợ học phí trong học kỳ đó và buộc phải đóng học phí còn nợ cùng lúc với học phí của học kỳ tiếp theo. sinh viên không đóng học phí 2 học kỳ liên tiếp sẽ bị buộc thôi học. điều 11. bảo hiểm y tế, bảo hiểm tai nạn và tín dụng sinh viên  \n\nbảo hiểm y tế sinh viên phải nộp phí bảo hiểm y tế theo các quy định hiện hành của pháp luật và các văn bản hướng dẫn có liên quan. bảo hiểm tai nạn trường khuyến khích sinh viên tham gia bảo hiểm tai nạn. tín dụng sinh viên sinh viên có thể đề nghị vay tín dụng từ các ngân hàng chính sách xã hội tại địa phương nơi gia đình sinh viên cư trú. trường đại học cần thơ sẽ cấp giấy xác nhận để sinh viên bổ sung hồ sơ vay vốn nếu sinh viên có yêu cầu. điều 12.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "học bổng",
+      "target": "sinh viên",
+      "relationship": "cấp"
+    },
+    {
+      "source": "học bổng",
+      "target": "điểm trung bình chung học kỳ",
+      "relationship": "xét áp dụng theo"
+    },
+    {
+      "source": "học bổng",
+      "target": "điểm rèn luyện",
+      "relationship": "xét ưu tiên theo"
+    },
+    {
+      "source": "học bổng",
+      "target": "kết quả xét tuyển đầu vào",
+      "relationship": "cấp dựa trên"
+    },
+    {
+      "source": "quỹ học bổng",
+      "target": "sinh viên",
+      "relationship": "dành cho"
+    },
+    {
+      "source": "quỹ học bổng",
+      "target": "điều chỉnh",
+      "relationship": "sẽ được"
+    },
+    {
+      "source": "sinh viên",
+      "target": "số tín chỉ đăng ký",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả học tập, rèn luyện",
+      "relationship": "đạt"
+    },
+    {
+      "source": "học bổng",
+      "target": "mức học bổng",
+      "relationship": "được xác định"
+    },
+    {
+      "source": "học bổng",
+      "target": "học tập ở nước ngoài",
+      "relationship": "dành cho"
+    },
+    {
+      "source": "học bổng tài trợ",
+      "target": "trường",
+      "relationship": "xét cấp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relationship": "làm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trợ cấp xã hội",
+      "relationship": "được hưởng"
+    },
+    {
+      "source": "học phí",
+      "target": "sinh viên",
+      "relationship": "đóng"
+    },
+    {
+      "source": "học phí",
+      "target": "mức học phí",
+      "relationship": "do"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hồ sơ hướng dẫn",
+      "relationship": "công khai"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relationship": "không đóng"
+    },
+    {
+      "source": "bảo hiểm y tế",
+      "target": "sinh viên",
+      "relationship": "phải nộp"
+    },
+    {
+      "source": "trường",
+      "target": "bảo hiểm tai nạn",
+      "relationship": "khuyến khích"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tín dụng",
+      "relationship": "đề nghị vay"
+    },
+    {
+      "source": "trường đại học cần thơ",
+      "target": "giấy xác nhận",
+      "relationship": "cấp"
+    }
+  ]
+}

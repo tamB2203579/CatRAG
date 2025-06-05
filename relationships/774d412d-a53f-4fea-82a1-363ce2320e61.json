@@ -1,0 +1,57 @@
+{
+  "chunk_id": "774d412d-a53f-4fea-82a1-363ce2320e61",
+  "text": "là lực lượng nòng cốt trong các phong trào văn hóa, văn nghệ, thể thao. cấp bộ môn, chi đoàn chi hội, đội, nhóm cấp khoa và tương đương, trường. tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội. được khen thưởng trong các hoạt động phong trào. quyết định khen thưởng của đoàn khoa và tương đương\n\ngiấy khen cấp trường giấy khen cấp cao hơn. 1. các tiêu chí để xác định điểm đánh giá\n\nphòng công tác sinh viên. 2. khung điểm đánh giá của điều 6. điều 7. đánh giá về ý thức công dân trong quan hệ cộng đồng. chức năng tự điền hình thức khen thưởng của phân hệ đoàn viên. CB đoàn khoa nhập liệu, dựa vào dữ liệu khen thưởng đoàn viên. sau đó, chương trình sẽ lấy điểm đã định nghĩa đưa qua điểm rèn luyện. chức năng tự điền khen thưởng của phân hệ quản lý sinh viên. CB phòng công tác sinh viên nhập liệu, dựa vào dữ liệu khen thưởng sinh viên. sau đó, chương trình sẽ lấy điểm đã định nghĩa đưa qua điểm rèn luyện. cộng gộp số điểm nêu lớn hơn 20 thì lấy bằng 20. Ý thức chấp hành và tham gia tuyên truyền các chủ trương, chính sách, pháp luật của nhà nước trong cộng đồng. chức năng tự điền kỷ luật của phân hệ quản lý sinh viên. mặc định số điểm cao nhất  \nkhông vi phạm pháp luật của nhà nước nếu vi phạm pháp luật sẽ bị điểm 00. tích cực tham gia tuyên truyền các chủ trương của đảng, chính sách, pháp luật của nhà nước trong cộng đồng và chủ trì cập nhật điểm cho sinh viên.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "lực lượng",
+      "target": "các phong trào",
+      "relationship": "là nòng cốt trong"
+    },
+    {
+      "source": "tham gia",
+      "target": "tuyên truyền",
+      "relationship": "về"
+    },
+    {
+      "source": "được",
+      "target": "khen thưởng",
+      "relationship": "trong"
+    },
+    {
+      "source": "quyết định",
+      "target": "khen thưởng",
+      "relationship": "của"
+    },
+    {
+      "source": "CB đoàn khoa",
+      "target": "nhập liệu",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "chương trình",
+      "target": "lấy điểm",
+      "relationship": "sẽ"
+    },
+    {
+      "source": "cộng gộp số điểm",
+      "target": "lớn hơn 20",
+      "relationship": "thì lấy bằng"
+    },
+    {
+      "source": "không vi phạm pháp luật",
+      "target": "sẽ bị điểm 00",
+      "relationship": "nếu"
+    },
+    {
+      "source": "tích cực tham gia",
+      "target": "tuyên truyền",
+      "relationship": "về"
+    },
+    {
+      "source": "chủ trì",
+      "target": "cập nhật điểm",
+      "relationship": "cho"
+    }
+  ]
+}

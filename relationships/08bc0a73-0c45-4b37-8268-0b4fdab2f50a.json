@@ -1,0 +1,57 @@
+{
+  "chunk_id": "08bc0a73-0c45-4b37-8268-0b4fdab2f50a",
+  "text": "có tinh thần chia sẻ, giúp đỡ người thân, người có khó khăn, hoạn nạn. có tinh thần giúp đỡ bạn bè trong học tập, trong cuộc sống nhưng không quá 5 điểm. CVHT quyết định số điểm và chủ trì cập nhật điểm cho sinh viên. 2.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "tinh thần",
+      "target": "chia sẻ",
+      "relationship": "có"
+    },
+    {
+      "source": "tinh thần",
+      "target": "giúp đỡ",
+      "relationship": "có"
+    },
+    {
+      "source": "người",
+      "target": "khó khăn",
+      "relationship": "có"
+    },
+    {
+      "source": "người",
+      "target": "hoạn nạn",
+      "relationship": "có"
+    },
+    {
+      "source": "tinh thần",
+      "target": "giúp đỡ",
+      "relationship": "có"
+    },
+    {
+      "source": "bạn bè",
+      "target": "học tập",
+      "relationship": "trong"
+    },
+    {
+      "source": "bạn bè",
+      "target": "cuộc sống",
+      "relationship": "trong"
+    },
+    {
+      "source": "CVHT",
+      "target": "số điểm",
+      "relationship": "quyết định"
+    },
+    {
+      "source": "CVHT",
+      "target": "điểm",
+      "relationship": "chủ trì cập nhật"
+    },
+    {
+      "source": "điểm",
+      "target": "sinh viên",
+      "relationship": "cho"
+    }
+  ]
+}

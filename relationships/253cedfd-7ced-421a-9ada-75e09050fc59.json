@@ -1,0 +1,62 @@
+{
+  "chunk_id": "253cedfd-7ced-421a-9ada-75e09050fc59",
+  "text": "khung điểm đánh giá của điều 7. điều 8. đánh giá về ý thức và kết quả khi tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong nhà trường hoặc người học đạt được thành tích đặc biệt trong học tập, rèn luyện. ý thức, tinh thần thái độ, uy tín và hiệu quả công việc của người học được phân công nhiệm vụ quản lý lớp, các tổ chức đảng, đoàn thanh niên, hội SV và các tổ chức khác trong nhà trường. lớp trưởng, bí thư chi đoàn, ủy viên BCH đoàn thể cấp cao hơn lớp, quản lý chức vụ sinh viên. CVHT cập nhật danh sách ban cán sự lớp, SV giữ chức vụ. CB đoàn cập nhật danh sách các chức vụ đoàn các chức vụ bên đoàn thanh niên lấy dữ liệu từ phân hệ quản lý đoàn viên. CB quản lý KTX các chức vụ liên quan đến KTX thì do KTX nhập liệu. ngoại trú phòng công tác sinh viên nhập liệu. kỹ năng tổ chức, quản lý lớp, quản lý các tổ chức đảng, đoàn thanh niên, hội SV và các tổ chức khác trong nhà trường. là thành viên của ban cán sự lớp, ban chấp hành chi đoàn, ban chấp hành liên chi hội SV, chi hội SV trường từ các thành viên nêu mục trên, đội SV an ninh xung kích, hội đồng tự quản KTX gồm chủ tịch và các trưởng nhóm chuyên môn, hội đồng tự quản ngoại trú, nhà trưởng KTX, cụm trưởng khu nhà trọ đã hoàn thành nhiệm vụ được giao. hỗ trợ và tham gia tích cực vào các hoạt động chung của lớp, tập thể, khoa và nhà trường. tích cực tham gia hỗ trợ các hoạt động, phong trào của khoa, sự kiện chung của nhà trường có xác nhận của đơn vị tổ chức sự kiện mỗi đợt tham gia được cộng 01 điểm. chức năng quản lý SV đạt thành tích. CB đoàn và phòng công tác sinh viên sẽ thực hiện nhập liệu thông tin thành tích và điểm thành tích của SV bao gồm thành tích tiêu biểu của đoàn và thành tích đặc biệt. người học đạt được các thành tích đặc biệt trong học tập, rèn luyện. được kết nạp đảng, hoặc được công nhận đoàn viên ưu tú đạt danh hiệu SV 5 tốt cấp trường trở lên phân loại đảng viên được xếp loại mức 2. CB đoàn và phòng công tác sinh viên sẽ thực hiện nhập liệu thông tin thành tích và điểm thành tích của SV bao gồm thành tích tiêu biểu của đoàn và thành tích đặc biệt. 2.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "thành tích đặc biệt",
+      "relationship": "đạt được"
+    },
+    {
+      "source": "người học",
+      "target": "nhiệm vụ quản lý lớp",
+      "relationship": "được phân công"
+    },
+    {
+      "source": "CB đoàn",
+      "target": "danh sách các chức vụ đoàn",
+      "relationship": "cập nhật"
+    },
+    {
+      "source": "CVHT",
+      "target": "danh sách ban cán sự lớp",
+      "relationship": "cập nhật"
+    },
+    {
+      "source": "CB quản lý KTX",
+      "target": "các chức vụ liên quan đến KTX",
+      "relationship": "nhập liệu"
+    },
+    {
+      "source": "phòng công tác sinh viên",
+      "target": "thông tin thành tích",
+      "relationship": "nhập liệu"
+    },
+    {
+      "source": "người học",
+      "target": "được kết nạp đảng",
+      "relationship": "hoặc"
+    },
+    {
+      "source": "người học",
+      "target": "đoàn viên ưu tú",
+      "relationship": "được công nhận"
+    },
+    {
+      "source": "CB đoàn",
+      "target": "thông tin thành tích",
+      "relationship": "thực hiện nhập liệu"
+    },
+    {
+      "source": "người học",
+      "target": "SV 5 tốt",
+      "relationship": "đạt danh hiệu"
+    },
+    {
+      "source": "người học",
+      "target": "đảng viên",
+      "relationship": "phân loại"
+    }
+  ]
+}

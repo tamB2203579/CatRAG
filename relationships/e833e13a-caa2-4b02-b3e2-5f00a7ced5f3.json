@@ -1,0 +1,42 @@
+{
+  "chunk_id": "e833e13a-caa2-4b02-b3e2-5f00a7ced5f3",
+  "text": "QUYỀN KHIẾU NẠI điều 15  \n\nngười học có quyền khiếu nại lên phòng, ban chức năng hoặc hiệu trưởng nếu thấy việc đánh giá kết quả rèn luyện chưa chính xác. khi nhận được đơn khiếu nại, cơ sở giáo dục đại học có trách nhiệm giải quyết, trả lời theo quy định của pháp luật về khiếu nại.",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "QUYỀN KHIẾU NẠI",
+      "relationship": "có"
+    },
+    {
+      "source": "người học",
+      "target": "phòng, ban chức năng hoặc hiệu trưởng",
+      "relationship": "khiếu nại lên"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "đơn khiếu nại",
+      "relationship": "nhận được"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "trách nhiệm",
+      "relationship": "có"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "giải quyết",
+      "relationship": "trách nhiệm"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "trả lời",
+      "relationship": "trách nhiệm"
+    },
+    {
+      "source": "trả lời",
+      "target": "quy định của pháp luật về khiếu nại",
+      "relationship": "theo"
+    }
+  ]
+}

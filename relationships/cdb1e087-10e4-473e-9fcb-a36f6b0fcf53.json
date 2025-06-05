@@ -1,0 +1,92 @@
+{
+  "chunk_id": "cdb1e087-10e4-473e-9fcb-a36f6b0fcf53",
+  "text": "mức học bổng cho mỗi svlần đi theo quy định của hiệu trưởng. đối với SV được trường cấp HBKKHT và được tài trợ hoặc tự túc một phần kinh phí thì thực hiện điểm a, b và c khoản 1 và điểm d khoản 3 điều này. đối với SV được tài trợ hoặc SV tự túc hoàn toàn kinh phí, SV có điểm trung bình chung tích lũy từ trung bình trở lên, điểm trung bình chung học kỳ tại thời điểm xét từ loại khá trở lên và có trình độ ngoại ngữ đáp ứng yêu cầu của khoa đề ra không bị kỷ luật từ hình thức cảnh cáo trở lên trong quá trình học tập tại trường. được trường, khoa đồng ý cử đi và phía đối tác nước ngoài tiếp nhận. thời hạn SV học tập ở nước ngoài tối đa là 12 tháng. trường hợp khác do khoa đề xuất trình BGH xem xét quyết định. SV được tài trợ hoặc tự túc hoàn toàn kinh phí phục vụ cho học tập theo chương trình đào tạo. điều 4. trách nhiệm của nhà trường  \n\nbố trí 10 quỹ HBKKHT năm học để cấp học bổng cho SV đi học tập ở nước ngoài. trung tâm tư vấn, hỗ trợ và khởi nghiệp sinh viên làm đầu mối tư vấn, hỗ trợ những vấn đề chung, nắm tình hình, phối hợp với các khoa nhận, phản hồi thông tin, tổng hợp báo cáo. phòng công tác sinh viên P.CTSV có trách nhiệm trực tiếp quản lý nguồn kinh phí, tham mưu thông báo chỉ tiêu SV và định mức học bổng bình quânsv cung cấp thông tin khen thưởng - kỷ luật, học tập - rèn luyện, lập tờ trình đề cử, soạn thảo quyết định cử đi, quyết định thu nhận SV trình ban giám hiệu phê duyệt. phòng hợp tác quốc tế P. HTQT có trách nhiệm chủ động phối hợp với khoa liên hệ với phía đối tác nước ngoài để thực hiện việc cử SV đi học tập ở nước ngoài hướng dẫn về hồ sơ, thủ tục, tư vấn quy định xuất nhập cảnh cho SV cung cấp danh sách phía đối tác nước ngoài đã ký thỏa ước, thỏa thuận hợp tác với trường, thông tin giới thiệu về trường cho các khoa. phòng đào tạo PĐT có trách nhiệm phối hợp với các khoa xét miễn và công nhận điểm học phần cho SV theo hướng dẫn số 3570HD-ĐHCT, ngày 21122016 của hiệu trưởng trường đại học cần thơ về việc xét miễn và công nhận điểm học phần trong chương trình đào tạo bậc đại học hệ chính quy cho SV được trường ĐHCT cử đi học tập ở nước ngoài. điều 5. trách nhiệm của khoa quản lý sinh viên  \n\nlập kế hoạch hàng năm, bao gồm số lượng SV cử đi học tập ở nước ngoài, thời gian thực hiện, chi phí liên quan, đề xuất nếu có. trên cơ sở số SV đạt HBKKHT của hai học kỳ trước liền kề, tổ chức xét chọn hồ sơ, phỏng vấn và cử SV tham gia đúng đối tượng. dựa trên các tiêu chuẩn chung của trường cũng như điều kiện cụ thể của đơn vị mà thông báo cho SV biết điều kiện tham gia và điều phối về số lượng SV tham gia. tổ chức quản lý, tư vấn, hướng dẫn cho SV thông tin đến gia đình SV biết yêu cầu gia đình SV ký cam kết về việc SV tham gia học tập ở nước ngoài chịu trách nhiệm với ban giám hiệu về kết quả tham quan, học tập của SV do khoa quản lý. phối hợp với PĐT xét miễn và công nhận điểm học phần cho SV theo hướng dẫn số 3570HD-ĐHCT, ngày 21122016 của hiệu trưởng trường đại học cần thơ trong thời gian 10 ngày kể từ ngày SV có quyết định thu nhận trở lại học tập. cử viên chức phụ trách, hỗ trợ SV hoàn thành hồ sơ, thủ tục theo quy định trước khi gửi về trường. trong trường hợp SV của đơn vị mình tham gia học tập theo chương trình do khoa khác tổ chức, khoa quản lý SV vẫn có trách nhiệm thực hiện các nội dung công tác ở điều này. chủ động phối hợp P.HTQT và các đơn vị có liên quan cung cấp thông tin để SV được cử đi biết và giới thiệuquảng bá trường, khoa, ngành đào tạo với phía đối tác nước ngoài. gửi công văn về trường thông qua P.CTSV đánh giá kết quả học tập của SV và đề nghị trường thu nhận SV trở lại trong vòng 10 ngày làm việc kể từ ngày khoa nhận đầy đủ báo cáo của SV về khóa học. thực hiện chế độ báo cáo và quản lý theo quy định.",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "SV",
+      "target": "HBKKHT",
+      "relationship": "được cấp"
+    },
+    {
+      "source": "SV",
+      "target": "kinh phí",
+      "relationship": "tự túc"
+    },
+    {
+      "source": "SV",
+      "target": "trường",
+      "relationship": "được cử đi"
+    },
+    {
+      "source": "SV",
+      "target": "đối tác nước ngoài",
+      "relationship": "tiếp nhận"
+    },
+    {
+      "source": "trường",
+      "target": "học bổng",
+      "relationship": "cấp"
+    },
+    {
+      "source": "trường",
+      "target": "khoa",
+      "relationship": "đồng ý cử"
+    },
+    {
+      "source": "khoa",
+      "target": "SV",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "khoa",
+      "target": "SV",
+      "relationship": "cử đi"
+    },
+    {
+      "source": "khoa",
+      "target": "thời gian",
+      "relationship": "lập kế hoạch"
+    },
+    {
+      "source": "khoa",
+      "target": "SV",
+      "relationship": "thông báo"
+    },
+    {
+      "source": "P. CTSV",
+      "target": "SV",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "P. HTQT",
+      "target": "khoa",
+      "relationship": "phối hợp"
+    },
+    {
+      "source": "P. HTQT",
+      "target": "SV",
+      "relationship": "hướng dẫn"
+    },
+    {
+      "source": "PĐT",
+      "target": "SV",
+      "relationship": "xét miễn và công nhận"
+    },
+    {
+      "source": "khoa",
+      "target": "PĐT",
+      "relationship": "phối hợp"
+    },
+    {
+      "source": "SV",
+      "target": "hồ sơ",
+      "relationship": "hoàn thành"
+    },
+    {
+      "source": "SV",
+      "target": "kết quả học tập",
+      "relationship": "đánh giá"
+    }
+  ]
+}

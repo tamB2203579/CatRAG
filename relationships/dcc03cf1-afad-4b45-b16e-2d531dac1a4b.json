@@ -1,0 +1,47 @@
+{
+  "chunk_id": "dcc03cf1-afad-4b45-b16e-2d531dac1a4b",
+  "text": "tháng... năm 20.. TRƯỞNG ĐOÀN  \nký tên và ghi rõ họ tên  \nTRƯỞNG ĐƠN VỊ  \nký tên và ghi rõ họ tên  \n\nghi chú  \n- danh sách sinh viên được miễn thi và tính điểm học phần do được cử tham dự kỳ thicuộc thi bằng văn bản và bằng e-file có đính kèm theo các bản sao quyết định cử sinh viên tham dự kỳ thicuộc thi của hiệu trưởng trường ĐHCT, văn bản thành tích đạt được của sinh viên trong kỳ thicuộc thi và các văn bản khác nếu có được gửi đến hội đồng xét miễn và công nhận điểm học phần trường ĐHCT thông qua phòng đào tạo. - cách ghi thông tin trong bảng trên như sau  \ncột TT ghi số thứ tự sinh viên trong danh sách  \ncột mã số sinh viên ghi mã số của SV chỉ ghi 1 lần tương ứng với số thứ tự  \ncột họ và tên sinh viên ghi họ và tên SV chỉ ghi 1 lần tương ứng với số thứ tự  \ncột mã số học phần ghi mã số học phần thuộc CTĐT mà SV được xét miễn thi  \ncột tên học phần ghi tên học phần tương ứng với mã số học phần  \ncột điểm ghi điểm theo thang điểm chữ. cột ghi chú ghi ngắn gọn thành tích sinh viên đạt được ví dụ giải nhất. nếu không có thành tích thì ghi là tham dự kỳ thicuộc thi.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "thi",
+      "relationship": "được miễn"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm học phần",
+      "relationship": "tính"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kỳ thi",
+      "relationship": "tham dự"
+    },
+    {
+      "source": "hiệu trưởng",
+      "target": "sinh viên",
+      "relationship": "cử tham dự"
+    },
+    {
+      "source": "sinh viên",
+      "target": "văn bản thành tích",
+      "relationship": "đạt được"
+    },
+    {
+      "source": "hội đồng",
+      "target": "sinh viên",
+      "relationship": "xét miễn"
+    },
+    {
+      "source": "hội đồng",
+      "target": "điểm học phần",
+      "relationship": "công nhận"
+    },
+    {
+      "source": "phòng đào tạo",
+      "target": "hội đồng",
+      "relationship": "gửi"
+    }
+  ]
+}

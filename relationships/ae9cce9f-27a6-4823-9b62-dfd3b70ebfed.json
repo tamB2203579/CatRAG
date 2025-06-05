@@ -1,0 +1,77 @@
+{
+  "chunk_id": "ae9cce9f-27a6-4823-9b62-dfd3b70ebfed",
+  "text": "hiện nay trường đào tạo từ trình độ đại học trong đó có chương trình đào tạo tiên tiến, chương trình đào tạo chất lượng cao, thạc sĩ và tiến sĩ. nhiệm vụ chính của trường là đào tạo, nghiên cứu khoa học NCKH, chuyển giao công nghệ phục vụ phát triển kinh tế - xã hội trong vùng. song song với công tác đào tạo, ĐHCT đã tham gia tích cực các chương trình NCKH, ứng dụng những thành tựu khoa học kỹ thuật nhằm giải quyết các vấn đề về khoa học, công nghệ, kinh tế, văn hóa và xã hội của vùng. từ những kết quả của các công trình NCKH và hợp tác quốc tế, trường đã tạo ra nhiều sản phẩm, quy trình công nghệ phục vụ sản xuất, đời sống và xuất khẩu, tạo được uy tín trên thị trường trong nước và quốc tế. tầm nhìn vision\n\ntrường ĐHCT sẽ trở thành một trong những trường hàng đầu về chất lượng của việt nam và nằm trong nhóm các trường mạnh về đào tạo, NCKH trong khu vực châu á-thái bình dương vào năm 2022. sứ mệnh mission\n\nsứ mệnh của trường ĐHCT là trung tâm đào tạo, NCKH chuyển giao công nghệ hàng đầu của quốc gia đóng góp hữu hiệu vào sự nghiệp đào tạo nhân lực chất lượng cao, bồi dưỡng nhân tài và phát triển khoa học phục vụ phát triển kinh tế - xã hội vùng và quốc gia. trường ĐHCT là nhân tố động lực có ảnh hưởng quyết định cho sự phát triển của vùng ĐBSCL. giá trị cốt lõi core values\n\nđồng thuận - tận tâm - chuẩn mực - sáng tạo. consensus - devotion - quality - innovation. chính sách đảm bảo chất lượng quality policy statement\n\nnhận thức tầm quan trọng của nhu cầu nguồn nhân lực chất lượng cao và sự cạnh tranh mạnh mẽ về chất lượng đào tạo trong bối cảnh phát triển mới của quốc gia và quốc tế, trường ĐHCT cam kết đảm bảo chất lượng thông qua thường xuyên đổi mới và hội nhập trong đào tạo sáng tạo và năng động trong nghiên cứu và chuyển giao công nghệ gắn lý thuyết với thực hành để trang bị đầy đủ kiến thức và kỹ năng cho người học khi ra trường đạt hiệu quả cao trong công việc, có năng lực lãnh đạo và thích ứng với thay đổi. trường cam kết xây dựng hệ thống quản trị hiệu quả, chuyên nghiệp, trách nhiệm, sáng tạo và luôn đổi mới.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "trường ĐHCT",
+      "target": "đào tạo",
+      "relationship": "là"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "nghiên cứu khoa học NCKH",
+      "relationship": "là"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "chuyển giao công nghệ",
+      "relationship": "là"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "phát triển kinh tế - xã hội",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "các chương trình NCKH",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "nhiều sản phẩm",
+      "relationship": "tạo ra"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "quy trình công nghệ",
+      "relationship": "tạo ra"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "uy tín",
+      "relationship": "tạo được"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "nhân lực chất lượng cao",
+      "relationship": "đóng góp"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "nhân tài",
+      "relationship": "bồi dưỡng"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "khoa học",
+      "relationship": "phát triển"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "sự phát triển của vùng ĐBSCL",
+      "relationship": "có ảnh hưởng quyết định"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "chất lượng",
+      "relationship": "cam kết đảm bảo"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "hệ thống quản trị",
+      "relationship": "xây dựng"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "chunk_id": "00cfef04-9f5f-4649-8582-c45f1bd7bd94",
+  "text": "cần thơ, ngày... tháng... năm 20.. SINH VIÊN  \nký tên và ghi rõ họ tên  \n\nghi chú  \n- sinh viên nộp đơn này cho trường chuyên ngànhkhoaviện thông qua quý thầy, cô là cố vấn học tập của lớp để xét miễn và công nhận điểm học phần cho SV. - đơn có đính kèm theo bản sao các quyết định cử đi học và quyết định thu nhận của trường ĐHCT văn bản xác nhận các học phần được xét miễn và công nhận điểm nếu SV hoàn thành nhiệm vụ học tập của đơn vị quản lý đào tạo cấp cho SV trước khi SV được cử đi học tập và các văn bản kết quả học tập sinh viên do cơ sở nơi sinh viên được cử đến học tập cấp. văn bản kết quả học tập do đơn vị nơi sinh viên đến học tập cấp có thể là chứng chỉ, chứng nhận, bảng điểm, giấy xác nhận kết quả học tập... được sử dụng để làm căn cứ xét miễn và công nhận điểm học phần. - sinh viên cần lưu ý việc có được xét miễn và công nhận điểm học phần thuộc CTĐT mà sinh viên đang theo học như đơn đề nghị của sinh viên hay không còn tùy thuộc vào kết quả học tập, trên cơ sở nguyên tắc và hướng dẫn xét miễn và công nhận điểm học phần của trường ĐHCT. phụ lục 6 mẫu biên bản xét miễn và công nhận điểm học phần của tổ xét miễn và công nhận điểm học phần của đơn vị  \n TRƯỜNG ĐẠI HỌC CÀN THƠ  \n CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \n TRƯỜNG KHOAVIỆN  \nđộc lập - tự do - hạnh phúc  \nsố BB-... cần thơ, ngày...",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "trường",
+      "relationship": "nộp đơn"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quý thầy, cô",
+      "relationship": "thông qua"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm học phần",
+      "relationship": "xét miễn và công nhận"
+    },
+    {
+      "source": "đơn",
+      "target": "bản sao các quyết định",
+      "relationship": "đính kèm"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "quyết định thu nhận",
+      "relationship": "của"
+    },
+    {
+      "source": "SV",
+      "target": "nhiệm vụ học tập",
+      "relationship": "hoàn thành"
+    },
+    {
+      "source": "văn bản kết quả học tập",
+      "target": "chứng chỉ, chứng nhận, bảng điểm, giấy xác nhận",
+      "relationship": "có thể là"
+    },
+    {
+      "source": "sinh viên",
+      "target": "CTĐT",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả học tập",
+      "relationship": "tùy thuộc vào"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "hướng dẫn xét miễn và công nhận điểm học phần",
+      "relationship": "của"
+    },
+    {
+      "source": "tổ",
+      "target": "biên bản xét miễn và công nhận điểm học phần",
+      "relationship": "của"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "chunk_id": "558d8c59-1f7b-45a1-8da5-7eba0c58d250",
+  "text": "tháng ... năm 20... về xét miễn và công nhận điểm học phần của hiệu trưởngtrưởng khoaviện trưởng  \n\n mã số  họ và tên  mã số sinh viên  mã số học phần  tên học phần  điểm  ghi chú   \n---------------------------------------------------------------------------------  \n\nTRƯỞNG ĐƠN VỊ  \nký tên và ghi rõ họ tên  \nTRƯỞNG KHOAVIỆN  \nký tên và ghi rõ họ tên  \n\nghi chú  \n- danh sách sinh viên được xét miễn và công nhận điểm học phần bằng văn bản và bằng e-file excel được đính kèm theo biên bản xét miễn và công nhận điểm học phần cùng bản sao các văn bản đã được sử dụng để xét miễn học phần gửi đến hội đồng xét miễn và công nhận điểm học phần thông qua phòng đào tạo. - cách ghi thông tin trong bảng trên như sau  \ncột TT ghi số thứ tự sinh viên trong danh sách  \ncột mã số sinh viên ghi mã số của SV chỉ ghi 1 lần tương ứng với số thứ tự  \ncột họ và tên sinh viên ghi họ và tên SV chỉ ghi 1 lần tương ứng với số thứ tự  \ncột mã số học phần ghi mã số học phần thuộc CTĐT mà SV được xét miễn  \ncột tên học phần ghi tên học phần tương ứng với mã số học phần  \ncột điểm ghi điểm theo thang điểm 10 được làm tròn đến 1 chữ số thập phân hoặc điểm theo thang điểm chữ nếu không có điểm theo thang điểm 10. nếu là điểm miễn thì ghi là M. cột ghi chú ghi ngắn gọn các lưu ý, ví dụ đính kèm chứng chỉ, đính kèm bảng điểm. phụ lục 8 mẫu danh sách sinh viên được miễn thi và tính điểm học phần do được cử tham gia và đạt thành tích cao trong các kỳ thi olympic toàn quốc toán học, vật lý, hóa học, tin học, cơ học,... do bộ giáo dục và đào tạo tổ chức cuộc thi robocon và những kỳ thicuộc thi khác do hiệu trưởng trường ĐHCT quyết định  \n TRƯỜNG ĐẠI HỌC CÀN THƠ  \n CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \n TRƯỜNG KHOAVIỆN  \nDANH SÁCH SINH VIÊN ĐƯỢC MIỄN THI VÀ TÍNH ĐIỂM HỌC PHẦN DO ĐƯỢC CỬ THAM GIA KỲ THI CUỘC THI.................... mã số  họ và tên sinh viên  mã số sinh viên  mã số học phần  tên học phần  điểm  ghi chú   \n-------------------------------------------------------------------------------------------  \n\nđính kèm là các bản sao quyết định cử sinh viên tham dự kỳ thicuộc thi của hiệu trưởng trường ĐHCT, văn bản thành tích đạt được của sinh viên trong kỳ thicuộc thi. cần thơ, ngày...",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "học phần",
+      "relationship": "được xét miễn và công nhận điểm"
+    },
+    {
+      "source": "học phần",
+      "target": "điểm",
+      "relationship": "ghi"
+    },
+    {
+      "source": "sinh viên",
+      "target": "mã số sinh viên",
+      "relationship": "có"
+    },
+    {
+      "source": "học phần",
+      "target": "mã số học phần",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "hiệu trưởng",
+      "target": "sinh viên",
+      "relationship": "cử tham gia"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thành tích",
+      "relationship": "đạt được"
+    },
+    {
+      "source": "hội đồng",
+      "target": "phòng đào tạo",
+      "relationship": "gửi"
+    }
+  ]
+}
