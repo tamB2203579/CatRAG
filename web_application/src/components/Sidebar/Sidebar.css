@@ -1,0 +1,195 @@
+.sidebar {
+    position: fixed; 
+    min-height: 100vh;
+    width: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F3F5F8;
+    padding: 25px 15px;
+    overflow-y: auto;
+}
+
+.sidebar img {
+    width: 20px;
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+  }
+
+.sidebar .new-chat {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    height: 40px;
+    padding: 10px 15px;
+    /* background-color: #E3E9EE; */
+    background-color: #E9EDF1;
+    border-radius: 10px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 22px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar .recent-entry .thread-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar .recent-entry .thread-title p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+}
+
+/* .sidebar .recent-entry:hover {
+    background-color: #ced4da;
+} */
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* .sidebar .bottom-item:hover {
+    background-color: #ced4da;
+} */
+
+.sidebar .divider {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+#help-btn,
+#history-btn,
+#settings-btn,
+#logout-btn {
+    background-color: #F3F5F8;
+}
+
+/* .bottom-item:hover {
+    background-color: #ced4da;
+}
+
+.bottom-item:hover button,
+.bottom-item:hover #help-btn,
+.bottom-item:hover #history-btn,
+.bottom-item:hover #settings-btn,
+.bottom-item:hover #logout-btn{
+    background-color: #ced4da;
+} */
+
+.recent-entry:hover #menu-btn {
+    background-color: #ced4da;
+}
+
+.actions {
+    position: relative;
+}
+
+#menu-btn {
+    background-color: #F3F5F8;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.dropdown .edit-btn p {
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.2s;
+}
+
+.dropdown .delete-btn p {
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+    color: red;
+    transition: background-color 0.2s;
+}
+
+.edit-btn {
+    display: inline-block;
+}
+
+.delete-btn span {
+    color: red
+}
+
+.edit-btn span {
+    color: black
+}
+
+.edit-btn, .delete-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-btn span, .delete-btn span {
+    margin-right: 8px;
+}
