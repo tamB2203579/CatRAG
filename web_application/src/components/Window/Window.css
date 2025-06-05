@@ -1,0 +1,185 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    margin-left: 300px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* chat styling */
+
+.main .chats-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.message {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 980px;
+}
+
+.chats-container .message {
+    display: flex;
+    gap: 11px;
+    align-items: center;  
+}
+
+.chats-container .bot-message .avatar {
+    height: 43px;
+    width: 43px;
+    flex-shrink: 0;
+    padding: 6px;
+    align-self: flex-start;
+    margin-right: -7px;
+    border-radius: 50%;
+    background-color: #f0f4f9;
+    border: 1px solid #dfe4ea;
+}
+
+.chats-container .bot-message.loading .avatar {
+    animation: rotate 3s linear infinite;
+}
+
+/* @keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+.chats-container .message .message-text {
+    padding: 3px 16px;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.chats-container .bot-message {
+    margin: 9px auto;
+}
+
+.chats-container .user-message {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chats-container .user-message .message-text {
+    padding: 12px 16px;
+    max-width: 75%;
+    border-radius: 13px 13px 13px 13px;
+    background-color: #f0f4f9;
+}
+
+/* prompt styling */
+
+/* .prompt-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: auto;
+} */
+
+.prompt-container {
+    position: fixed; /* ← chuyển từ absolute → fixed */
+    bottom: 0;
+    left: 410px;      /* ← để tránh bị sidebar đè nếu sidebar là fixed và rộng 250px */
+    right: 0;
+    width: 910px;
+    padding: 0 20px;
+    background-color: white; /* ← nên có để nhìn rõ khi cuộn */
+    z-index: 1000; /* ← để nổi lên trên */
+}
+
+
+.prompt-wrapper,
+.prompt-search,
+.prompt-actions {
+    display: flex;
+    gap: 5px;
+    height: 56px;
+    align-items: center;
+}
+
+.prompt-search #send-btn {
+    color: #fff;
+    display: none;
+    background: #1d7efd;
+}
+
+.prompt-search .prompt-input:valid ~ .prompt-actions #send-btn {
+    display: block;
+}
+
+/* .prompt-search #send-btn:hover {
+    background: #0264e3;
+} */
+
+.prompt-search {
+    flex: 1;
+    background: #f0f4f9;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+button,
+#add-file-btn,
+#theme-toggle-btn,
+#delete-btn,
+#send-btn {
+    width: 40px;
+    height: 40px;
+    border: none; 
+    background-color: #e6eaf1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* button:hover,
+#theme-toggle-btn:hover,
+#delete-btn:hover,
+#send-btn:hover,
+#add-file-btn:hover {
+    background-color: #dfe4ea;
+} */
+
+.prompt-input {
+    flex: 1;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
