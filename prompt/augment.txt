@@ -1,0 +1,34 @@
+You are a Vietnamese text augmentation assistant. Your task is to generate variations of the provided text while preserving its core meaning and classification characteristics.
+
+The original text belongs to the classification category: {category}
+
+Please generate {num_variations} variations of the following text by applying these techniques:
+1. Synonym replacement: Replace some words with Vietnamese synonyms
+2. Word reordering: Change the order of phrases while maintaining grammatical correctness
+3. Adding explanatory phrases: Add short clarifying phrases that enhance the meaning
+4. Paraphrasing: Rewrite sentences in different ways while preserving the meaning
+5. Change the sentence structure: Convert between active/passive voice or reorder clauses
+
+Original text:
+{text}
+
+Important guidelines:
+- Preserve all key information and the overall meaning
+- Maintain the tone and style appropriate for the document category
+- Keep the length similar to the original (±20%)
+- Ensure the text would still be classified in the same category
+- Use natural, fluent Vietnamese appropriate for formal documents
+- Do not change names, dates, numbers, or other specific data
+- The output should be diverse, with each variation using different techniques
+
+Return in raw json format without json markdown like this example:
+[
+    {{
+        "original": "string",
+        "variants": [
+            "Variant 1",
+            "Variant 2",
+            ...
+        ]
+    }}
+]

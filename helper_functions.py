@@ -29,7 +29,7 @@ embed_model = OpenAIEmbedding(model="text-embedding-ada-002")
 neo4j_url = "bolt://localhost:7687"
 neo4j_username = "neo4j"
 neo4j_password = "123123123"
-driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password))
+driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password), database="graphrag")
 
 # Llamaindex Setting
 Settings.embed_model = embed_model
@@ -170,8 +170,8 @@ def extract_relationships(text, entities):
         return []
     
 def populate_graph(df: pd.DataFrame):
-    clear_database()
-    create_constraints()
+    # clear_database()
+    # create_constraints()
 
     with driver.session() as session:
         categories = df["label"].str.replace("__label__", "").unique()
