@@ -1,0 +1,77 @@
+{
+  "chunk_id": "38751930-3fc4-410d-b572-f62fc6575b6f",
+  "text": "quy định về sử dụng phòng ở  \r\nkhông được di chuyển giường, tủ và các vật dụng trang bị trong phòng không được tự ý sửa chữa, cải tạo phòng ở hay làm thay đổi kết cấu của thiết kế công trình. không được trang bị, lắp đặt thêm thiết bị cá nhân như kệ sách, tủ, các vật dụng khác... làm ảnh hưởng đến không gian chung trong phòng không được viết, vẽ, dán giấy lên tường. sinh viên có trách nhiệm bảo quản tài sản chung trong phòng ở và KTX. khi có hư hỏng, phải báo cáo với trung tâm PVSV để được sửa chữa sinh viên phải chịu trách nhiệm đền bù về những hư hỏng, mất mát do mình gây ra đối với trang thiết bị trong phòng ở và của KTX. sinh viên tự bảo quản tư trang, đồ đạc và tài sản cá nhân. khuyến cáo không mang vào và cất giữ tại phòng ở tài sản có giá trị khác không liên quan đến việc phục vụ cho công tác học tập và sinh hoạt để tránh mất cắp. không được tự ý sử dụng, làm hỏng các thiết bị chữa cháy hoặc mở khóa báo động khi không có cháy nổ xảy ra trong khu vực. thực hiện đúng các quy định về sử dụng internet. cho phép sinh viên sử dụng các thiết bị điện máy tính, máy in phục vụ cho công việc học tập bàn ủi điện, âm nâu nước dùng điện công suất nhỏ dưới 1.000 W quạt điện để bàn, bóng đèn các phương tiện điện tử khác phục vụ cho học tập có công suất nhỏ. khi hết hạn ở KTX, sinh viên có trách nhiệm bàn giao chỗ ở và các tài sản thuộc KTX đúng thời gian, vệ sinh phòng ở và khôi phục lại như hiện trạng ban đầu. nếu quá thời hạn, sinh viên không thực hiện trả phòng, trung tâm PVSV sẽ tiến hành lập biên bản thu hồi phòng, tài sản của sinh viên còn trong phòng, trung tâm PVSV sẽ không chịu trách nhiệm về mất mát và hư hỏng. điều 5. công tác vệ sinh môi trường, cảnh quan  \r\nsinh viên có trách nhiệm tham gia vệ sinh và sắp xếp ngăn nắp trong phòng ở, tổng vệ sinh trong khu vực xung quanh dãy nhà, khu vực cầu thang các dãy nhà cao tầng. để rác đúng nơi quy định. tích cực tham gia chăm sóc cảnh quan môi trường trong khu vực KTX, tham gia các đợt tổng vệ sinh KTX do trung tâm PVSV tổ chức. không được đặt bát hương thờ cúng trong phòng ở và trong khu vực KTX không nuôi cá, vật nuôi trong phòng ở và khu vực KTX không trồng các loại thực vật, cây kiểng, hoa lan trong phòng ở và hành lang các dãy nhà. điều 6. công tác giữ gìn an ninh trật tự  \r\nphải nêu cao tinh thần trách nhiệm trong công tác giữ gìn an ninh trật tự ANTT, an toàn xã hội luôn đề cao cảnh giác, phát hiện và báo cáo kịp thời kẻ xấu trà trộn gây rối, trộm cắp trong khu vực KTX. nghiêm cấm các hành vi sau  \r\ntham gia biểu tình, tự ý tụ tập đông người kích động, lôi kéo người khác biểu tình, viết truyền đơn, áp-phích trái pháp luật  \r\nchứa chấp, buôn bán vũ khí, chất nổ và hàng cấm theo quy định của nhà nước  \r\ntàng trữ, lưu hành, truy cập, sử dụng sản phẩm văn hóa đồi trụy hoặc tham gia các hoạt động mê tín dị đoan, hoạt động tôn giáo trái phép  \r\nbuôn bán, vận chuyển, tàng trữ, sử dụng và lôi kéo người khác sử dụng ma túy  \r\ntổ chức hoặc tham gia đánh bạc, mại dâm dưới mọi hình thức  \r\nchứa chấp, che giấu hàng lậu, tội phạm  \r\nđánh nhau, tổ chức hoặc tham gia đánh nhau gây mất ANTT  \r\nlấy cắp tài sản, chứa chấp, tiêu thụ tài sản do người khác lấy cắp mà có  \r\nđưa người ngoài vào KTX, gây ảnh hưởng xấu đến ANTT. sinh viên cần trực tiếp phản ánh hoặc đề xuất với trung tâm PVSV các vấn đề liên quan nhằm xây dựng KTX luôn đề cao cảnh giác để không bị kẻ xấu lợi dụng không vận động hoặc tham gia ký đơn tập thể.",
+  "category": "KTX",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "tài sản chung",
+      "relationship": "bảo quản"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hư hỏng",
+      "relationship": "báo cáo"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trang thiết bị",
+      "relationship": "chịu trách nhiệm đền bù"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tư trang",
+      "relationship": "bảo quản"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài sản có giá trị",
+      "relationship": "khuyến cáo không mang vào"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quy định",
+      "relationship": "thực hiện đúng"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chỗ ở",
+      "relationship": "bàn giao"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian",
+      "relationship": "đúng"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cảnh quan môi trường",
+      "relationship": "tham gia chăm sóc"
+    },
+    {
+      "source": "sinh viên",
+      "target": "an ninh trật tự",
+      "relationship": "giữ gìn"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kẻ xấu",
+      "relationship": "phát hiện và báo cáo"
+    },
+    {
+      "source": "trung tâm PVSV",
+      "target": "sinh viên",
+      "relationship": "báo cáo"
+    },
+    {
+      "source": "trung tâm PVSV",
+      "target": "biên bản",
+      "relationship": "lập"
+    },
+    {
+      "source": "trung tâm PVSV",
+      "target": "vệ sinh",
+      "relationship": "tổ chức"
+    }
+  ]
+}

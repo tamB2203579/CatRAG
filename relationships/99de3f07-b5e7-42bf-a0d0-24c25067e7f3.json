@@ -1,0 +1,57 @@
+{
+  "chunk_id": "99de3f07-b5e7-42bf-a0d0-24c25067e7f3",
+  "text": "điều 16. nhiệm vụ và quyền của sinh viên  \r\n\r\nnhiệm vụ của sinh viên  \r\nsinh viên CTĐTCLC và CTĐTTT thực hiện nhiệm vụ đối với người học theo quy định của luật giáo dục đại học và của trường ĐHCT. quyền của sinh viên  \r\nngoài những quyền của sinh viên theo quy định của luật giáo dục đại học và các quyền lợi khác của sinh viên CTĐT đại trà theo quy định của bộ GDĐT và của trường ĐHCT, sinh viên CTĐTCLC và CTĐTTT còn có những quyền như sau  \r\nđược giảng dạy bởi các giảng viên như quy định đối với ĐTCLC và ĐTTT  \r\nđược ưu tiên bố trí học tập tại phòng học với các trang thiết bị hiện đại sử dụng tài liệu học tập phương tiện, trang thiết bị kỹ thuật, thư viện và hệ thống internet phục vụ cho học tập và NCKH  \r\nđược ưu tiên xét duyệt giao thực hiện đề tài NCKH  \r\nđược tạo điều kiện tham gia các hội thảo trong nước và quốc tế do trường ĐHCT và các đơn vị đối tác tổ chức các hoạt động chuyên môn tham quan thực tế và các hoạt động ngoại khóa  \r\nđược ưu tiên xét chọn đi học tập ở nước ngoài theo các chương trình hợp tác quốc tế chương trình trao đổi sinh viên với các cơ sở đào tạo nước ngoài của trường ĐHCT  \r\nưu tiên xét cấp học bổng khuyến khích của các tổ chức, cá nhân trong và ngoài nước xét vào ở ký túc xá của trường ĐHCT giới thiệu nơi thực tập và giới thiệu việc làm sau khi tốt nghiệp  \r\nđược tham gia đóng góp ý kiến để nâng cao chất lượng đào tạo và quản lý đào tạo CTĐTCLC và CTĐTTT  \r\nđược hỗ trợ học phí một lần khi học lần đầu học phần thi đánh giá năng lực ngoại ngữ sinh viên phải đóng học phí học phần này cho trường ĐHCT nếu có nhu cầu đăng ký học thi đánh giá năng lực ngoại ngữ trong các lần tiếp theo. thời khóa biểu lần đầu học phần thi đánh giá năng lực ngoại ngữ của sinh viên được trường ĐHCT sắp xếp.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "nhiệm vụ",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "quyền",
+      "relationship": "có"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "giảng viên",
+      "relationship": "được giảng dạy bởi"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "phòng học",
+      "relationship": "được ưu tiên bố trí"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "đề tài NCKH",
+      "relationship": "được ưu tiên xét duyệt giao thực hiện"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "hội thảo",
+      "relationship": "được tạo điều kiện tham gia"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "học bổng",
+      "relationship": "ưu tiên xét cấp"
+    },
+    {
+      "source": "sinh viên CTĐTCLC và CTĐTTT",
+      "target": "ý kiến",
+      "relationship": "được tham gia đóng góp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relationship": "được hỗ trợ"
+    },
+    {
+      "source": "trường ĐHCT",
+      "target": "thời khóa biểu",
+      "relationship": "sắp xếp"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "chunk_id": "c694ba97-9785-454e-a4ef-4017d84e6de5",
+  "text": "đánh giá học phần  \r\n\r\nhọc phần lý thuyết hoặc học phần lý thuyết kết hợp thực hành điểm học phần được đánh giá qua tối thiểu hai điểm thành phần như điểm bài tập, điểm kiểm tra giữa kỳ, điểm thực hành, điểm đánh giá nhận thức, điểm tham gia thảo luận, điểm chuyên cần, điểm đồ án,... và điểm thi kết thúc học phần. thi kết thúc học phần là bắt buộc. phương pháp đánh giá học phần được công bố trong đề cương chi tiết học phần. tổ chức kỳ thi kết thúc học phần đề thi và đáp án đề thi kết thúc học phần thực hiện theo hướng dẫn và quy định hiện hành của trường đại học cần thơ. học phần thực hành điểm học phần được tính tổng điểm trung bình của các bài thực hành. đối với các học phần có khối lượng nhỏ hơn 02 tín chỉ có thể chỉ có điểm của một loại hình đánh giá. hình thức đánh giá trực tuyến được áp dụng khi đảm bảo trung thực, công bằng và khách quan như đánh giá trực tiếp, đồng thời đóng góp không quá 50 trọng số tổng điểm học phần. riêng việc tổ chức bảo vệ và đánh giá luận văn tốt nghiệp được thực hiện trực tuyến với trọng số cao hơn khi đáp ứng thêm các điều kiện sau đây  \r\nviệc đánh giá được thực hiện thông qua một hội đồng chuyên môn gồm ít nhất 3 thành viên  \r\nhình thức bảo vệ và đánh giá trực tuyến được sự đồng thuận của các thành viên hội đồng và người học  \r\ndiễn biến của buổi bảo vệ trực tuyến được ghi hình, ghi âm đầy đủ và lưu trữ  \r\nviệc tổ chức đánh giá luận văn tốt nghiệp theo hình thức trực tuyến được thực hiện như văn bản hướng dẫn hiện hành của hiệu trưởng về việc đánh giá luận văn tốt nghiệp theo hình thức trực tuyến. phương pháp đánh giá, hình thức đánh giá học phần, trọng số các điểm thành phần do giảng viên đề xuất, trưởng bộ môn thuộc khoa, viện hoặc trung tâm hoặc trưởng khoa thuộc trường chuyên ngành, trưởng đơn vị đào tạo quản lý học phần duyệt và công bố trong đề cương chi tiết học phần tại trang thông tin điện tử của trường đại học cần thơ.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "học phần",
+      "target": "điểm học phần",
+      "relationship": "được đánh giá qua"
+    },
+    {
+      "source": "điểm học phần",
+      "target": "các điểm thành phần",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "thi kết thúc học phần",
+      "target": "bắt buộc",
+      "relationship": "là"
+    },
+    {
+      "source": "phương pháp đánh giá học phần",
+      "target": "được công bố trong",
+      "relationship": "đề cương chi tiết học phần"
+    },
+    {
+      "source": "hội đồng chuyên môn",
+      "target": "thành viên",
+      "relationship": "gồm"
+    },
+    {
+      "source": "hình thức bảo vệ và đánh giá trực tuyến",
+      "target": "được sự đồng thuận của",
+      "relationship": "các thành viên hội đồng và người học"
+    },
+    {
+      "source": "diễn biến của buổi bảo vệ trực tuyến",
+      "target": "được ghi hình, ghi âm",
+      "relationship": "và lưu trữ"
+    },
+    {
+      "source": "việc tổ chức đánh giá luận văn tốt nghiệp",
+      "target": "được thực hiện như",
+      "relationship": "văn bản hướng dẫn hiện hành của hiệu trưởng"
+    },
+    {
+      "source": "phương pháp đánh giá, hình thức đánh giá học phần",
+      "target": "do",
+      "relationship": "giảng viên đề xuất"
+    },
+    {
+      "source": "trưởng bộ môn",
+      "target": "duyệt và công bố trong",
+      "relationship": "đề cương chi tiết học phần"
+    },
+    {
+      "source": "trường đại học cần thơ",
+      "target": "thông tin điện tử",
+      "relationship": "tại"
+    }
+  ]
+}

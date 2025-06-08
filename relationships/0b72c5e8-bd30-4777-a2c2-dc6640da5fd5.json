@@ -1,0 +1,57 @@
+{
+  "chunk_id": "0b72c5e8-bd30-4777-a2c2-dc6640da5fd5",
+  "text": "cần thơ, ngày... tháng... năm 20.. SINH VIÊN  \r\nký tên và ghi rõ họ tên  \r\n\r\nHỘI ĐỒNG ĐÁNH GIÁ NĂNG LỰC NGOẠI NGỮ TRUNG TÂM ĐGNLNN  \r\nCHỦ TỊCH GIÁM ĐỐC  \r\nký tên và ghi rõ họ tên ghi ý kiến, ký tên và ghi rõ họ tên  \r\n\r\n- sinh viên nộp đơn có đính kèm theo bản photo chứng chỉ không cần công chứng cho trung tâm đánh giá năng lực ngoại ngữ. sinh viên lưu ý mang theo bản chính chứng chỉ để đối chiếu khi nộp đơn. - sau khi chủ tịch hội đồng đánh giá năng lực ngoại ngữ ký duyệt, đơn có đính kèm theo bản photo chứng chỉ được trung tâm đánh giá năng lực ngoại ngữ chuyển cho phòng đào tạo để nhập điểm M cho các học phần ngoại ngữ căn bản và bổ sung danh sách chứng chỉ của phụ lục 1. phụ lục 4 mẫu đơn của sinh viên đề nghị xét miễn và công nhận điểm học phần do đã tích lũy ở bậc đại học tại một cơ sở đào tạo trước đây  \r\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \r\nđộc lập - tự do - hạnh phúc  \r\n\r\n ĐƠN ĐỀ NGHỊ XÉT MIỄN VÀ CÔNG NHẬN ĐIỂM HỌC PHẦN  \r\ndo đã tích lũy ở bậc đại học tại một cơ sở đào tạo trước đây  \r\n\r\nkính gửi  \r\n- trường chuyên ngànhkhoaviện........................ - quý thầycô cố vấn học tập  \r\n\r\nnay tôi làm đơn này kính đề nghị được xét miễn và công nhận điểm các học phần do đã tích lũy khi theo học chương trình đào tạo trình độ đại học trước đây tại trườnghọc viện .......................... học phần đã tích lũy trước đây  học phần được xét miễn và công nhận điểm  \r\nTT  mã HP  tên học phần  số TC  mã HP  tên học phần  số TC  điểm  \r\n\r\ntrân trọng kính chào.. cần thơ, ngày...",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "SINH VIÊN",
+      "target": "ĐƠN ĐỀ NGHỊ",
+      "relationship": "làm"
+    },
+    {
+      "source": "SINH VIÊN",
+      "target": "chứng chỉ",
+      "relationship": "nộp"
+    },
+    {
+      "source": "chủ tịch",
+      "target": "đơn",
+      "relationship": "ký duyệt"
+    },
+    {
+      "source": "đơn",
+      "target": "phòng đào tạo",
+      "relationship": "chuyển"
+    },
+    {
+      "source": "phòng đào tạo",
+      "target": "điểm M",
+      "relationship": "nhập"
+    },
+    {
+      "source": "SINH VIÊN",
+      "target": "bản chính chứng chỉ",
+      "relationship": "mang theo"
+    },
+    {
+      "source": "ĐƠN ĐỀ NGHỊ",
+      "target": "học phần",
+      "relationship": "xét miễn và công nhận"
+    },
+    {
+      "source": "học phần",
+      "target": "tích lũy",
+      "relationship": "do đã"
+    },
+    {
+      "source": "trường",
+      "target": "học viện",
+      "relationship": "kính gửi"
+    },
+    {
+      "source": "học phần",
+      "target": "số TC",
+      "relationship": "có"
+    }
+  ]
+}

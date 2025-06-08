@@ -1,0 +1,47 @@
+{
+  "chunk_id": "3d4601dd-ad37-4d15-b578-ba411cfef0c5",
+  "text": "nếu có thắc mắc phải hỏi công khai. nếu có tình huống bất thường phải báo cáo để cán bộ coi thi giải quyết. những bài thi sau đây là không hợp lệ và không được chấm điểm  \r\nlàm bài trên giấy thi khác với giấy thi quy định. không có chữ ký của cán bộ coi thi. viết bằng bút chì, mực đỏ trừ vẽ có thể dùng bút chì. các bài làm giống nhau.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "thắc mắc",
+      "target": "công khai",
+      "relationship": "phải hỏi"
+    },
+    {
+      "source": "tình huống bất thường",
+      "target": "báo cáo",
+      "relationship": "phải"
+    },
+    {
+      "source": "bài thi",
+      "target": "không hợp lệ",
+      "relationship": "là"
+    },
+    {
+      "source": "bài thi",
+      "target": "không được chấm điểm",
+      "relationship": "là"
+    },
+    {
+      "source": "giấy thi",
+      "target": "giấy thi quy định",
+      "relationship": "khác"
+    },
+    {
+      "source": "bút chì",
+      "target": "viết",
+      "relationship": "dùng"
+    },
+    {
+      "source": "mực đỏ",
+      "target": "viết",
+      "relationship": "dùng"
+    },
+    {
+      "source": "bài làm",
+      "target": "giống nhau",
+      "relationship": "là"
+    }
+  ]
+}

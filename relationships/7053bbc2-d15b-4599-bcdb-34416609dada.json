@@ -1,0 +1,72 @@
+{
+  "chunk_id": "7053bbc2-d15b-4599-bcdb-34416609dada",
+  "text": "BỘ GIÁO DỤC VÀ ĐÀO TẠO  \r\n CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM  \r\n\r\n TRƯỜNG ĐẠI HỌC CÀN THƠ  \r\nđộc lập - tự do - hạnh phúc  \r\nsố ø62-zqđ-đhct  \r\ncần thơ, ngày ð tháng. năm 2020  \r\n\r\n QUYẾT ĐỊNH  \r\nvề mục tiêu giáo dục của trường đại học cần thơ  \r\n\r\nHIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CÀN THƠ  \r\n\r\ncăn cứ luật giáo dục đại học số 082012QH13 ngày 18 tháng 6 năm 2012 của quốc hội và luật số 342018QH74 ngày 19 tháng 11 năm 2018 của quốc hội sửa đổi, bổ sung một số điều của luật giáo dục đại học  \r\n\r\ncăn cứ nghị định số 432006NĐ-CP ngày 25 tháng 4 năm 2006 của chính phủ quy định quyền tự chủ, tự chịu trách nhiệm về thực hiện nhiệm vụ, tổ chức bộ máy, biên chế và tài chính đối với đơn vị sự nghiệp công lập  \r\n\r\ncăn cứ nội dung kết luận về mục tiêu giáo dục của trường đại học cần thơ u_zị biên bản họp số 2526BB-ĐHCT-HĐKHĐT ngày 20 tháng 10 năm 2020 của hội đồng khoa học và đào tạo  \r\n\r\ntheo đề nghị của ông giám đốc trung tâm quản lý chất lượng. QUYẾT ĐỊNH  \r\n\r\n điều 1. mục tiêu giáo dục của trường đại học cần thơ được thực hiện theo mục tiêu của giáo dục đại học được quy định tại điều 39 của luật giáo dục năm 2019 với nội dung như sau  \r\n\r\nđào tạo nhân lực trình độ cao, nâng cao dân trí, bồi dưỡng nhân tài nghiên cứu khoa học và công nghệ tạo ra trí thức, sản phẩm mới, phục vụ nhu cầu phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh, hội nhập quốc tế. đào tạo người học phát triển toàn diện về đức, trí, thể, mỹ có tri thức, kỹ năng, trách nhiệm nghề nghiệp có khả năng nắm bắt tiến bộ khoa học và công nghệ tương xứng với trình độ đào tạo, khả năng tự học, sáng tạo, thích nghi với môi trường làm việc có tinh thần lập nghiệp, có ý thức phục vụ nhân dân. điều 2. mục tiêu giáo dục được sử dụng nhằm định hướng thiết kế các hoạt động dạy và học phù hợp, thúc đẩy việc rèn luyện các kỹ năng và nâng cao khả năng học tập suốt đời của người học. điều 3. quyết định này có hiệu lực thi hành kể từ ngày ký. các ông bà thủ trưởng các đơn vị phòng đào tạo, khoa sau đại học, trung tâm liên kết đào tạo, trung tâm quản lý chất lượng, các đơn vị đào tạo cùng các đơn vị và cá nhân có liên quan khác trong trường chịu trách nhiệm thi hành quyết định này. nơi nhận  \r\nnhư điều 3  \r\nlưu VT, QLCL.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "TRƯỜNG ĐẠI HỌC CÀN THƠ",
+      "target": "mục tiêu giáo dục",
+      "relationship": "quy định"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "đào tạo nhân lực trình độ cao",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "nâng cao dân trí",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "bồi dưỡng nhân tài",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "nghiên cứu khoa học và công nghệ",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "phát triển kinh tế - xã hội",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "đảm bảo quốc phòng, an ninh",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "hội nhập quốc tế",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "phát triển toàn diện",
+      "relationship": "định hướng"
+    },
+    {
+      "source": "mục tiêu giáo dục",
+      "target": "nâng cao khả năng học tập suốt đời",
+      "relationship": "định hướng"
+    },
+    {
+      "source": "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC CÀN THƠ",
+      "target": "QUYẾT ĐỊNH",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "QUYẾT ĐỊNH",
+      "target": "có hiệu lực thi hành",
+      "relationship": "được"
+    },
+    {
+      "source": "các đơn vị",
+      "target": "chịu trách nhiệm",
+      "relationship": "thi hành"
+    }
+  ]
+}

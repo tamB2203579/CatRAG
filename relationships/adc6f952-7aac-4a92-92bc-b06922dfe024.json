@@ -1,0 +1,57 @@
+{
+  "chunk_id": "adc6f952-7aac-4a92-92bc-b06922dfe024",
+  "text": "NỘI QUY  \r\nvề công tác nội trú tại ký túc xá trường đại học cần thơ  \r\nban hành kèm theo quyết định thành lập trung tâm phục vụ sinh viên số 1944QĐ-ĐHCT, ngày 0462013. của hiệu trưởng trường ĐHCT  \r\náp dụng từ năm học 2016 - 2017  \r\n\r\n điều 1. đối tượng áp dụng  \r\nnội quy này áp dụng cho tất cả sinh viên các hệ đào tạo tại trường, học viên sau đại học gọi chung là SŠV được xét duyệt vào ở ký túc xá K7X trường đại học cần thơ sau khi thực hiện đầy đủ các thủ tục theo quy định. đối với SŠV nước ngoài và các đối tượng khác sẽ có quy định riêng.",
+  "category": "KTX",
+  "relationships": [
+    {
+      "source": "nội quy",
+      "target": "ký túc xá",
+      "relationship": "về"
+    },
+    {
+      "source": "nội quy",
+      "target": "sinh viên",
+      "relationship": "áp dụng cho"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hệ đào tạo",
+      "relationship": "các"
+    },
+    {
+      "source": "sinh viên",
+      "target": "SŠV",
+      "relationship": "gọi chung là"
+    },
+    {
+      "source": "SŠV",
+      "target": "ký túc xá K7X",
+      "relationship": "được xét duyệt vào"
+    },
+    {
+      "source": "trường đại học cần thơ",
+      "target": "trung tâm phục vụ sinh viên",
+      "relationship": "thành lập"
+    },
+    {
+      "source": "trung tâm phục vụ sinh viên",
+      "target": "quyết định",
+      "relationship": "ban hành kèm theo"
+    },
+    {
+      "source": "quyết định",
+      "target": "hiệu trưởng",
+      "relationship": "của"
+    },
+    {
+      "source": "năm học",
+      "target": "2016 - 2017",
+      "relationship": "áp dụng từ"
+    },
+    {
+      "source": "SŠV nước ngoài",
+      "target": "quy định",
+      "relationship": "sẽ có"
+    }
+  ]
+}

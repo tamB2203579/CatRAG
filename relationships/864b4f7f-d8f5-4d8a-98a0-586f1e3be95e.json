@@ -1,0 +1,47 @@
+{
+  "chunk_id": "864b4f7f-d8f5-4d8a-98a0-586f1e3be95e",
+  "text": "CHƯƠNG VI  \r\n NGHIÊN CỨU KHOA HỌC VÀ HỢP TÁC QUỐC TẾ  \r\n\r\nđiều 20. nghiên cứu khoa học  \r\n\r\nhàng năm, mỗi giảng viên cơ hữu tham gia giảng dạy học phần lý thuyết ngành ĐTCLC và ĐTTT phải có tối thiểu 01 công trình NCKH được đăng tạp chí khoa học thuộc danh mục của hội đồng giáo sư nhà nước hoặc được nghiệm thu có nội dung liên quan đến ngành ĐTCLC và ĐTTT. trong cả khóa học, mỗi sinh viên CTĐTCLC và CTĐTTT phải tham gia NCKH theo nhóm nghiên cứu do các giảng viên hướng dẫn hoặc tham gia đề tài NCKH với giảng viên. khuyến khích sinh viên tham dự các cuộc thi trong và ngoài nước có liên quan đến hoạt động khoa học và công nghệ, hoạt động đổi mới sáng tạo và khởi nghiệp dưới sự hướng dẫn của giảng viên nếu đạt giải nhất, nhì, ba hoặc khuyến khích từ cấp trường trở lên, sinh viên được xác định hoàn thành yêu cầu tham gia NCKH sinh viên nộp minh chứng đến đơn vị quản lý ngành ĐTCLC hoặc ĐTTT để được xem xét. hàng năm, trường trích tối thiểu 4 từ nguồn thu học phí ĐTCLC và ĐTTT cho hoạt động khoa học, công nghệ và đổi mới sáng tạo cho sinh viên CTĐTCLC và CTĐTTT. nếu có bài báo khoa học được đăng tạp chí khoa học trong nước hoặc quốc tế thuộc danh mục của hội đồng giáo sư nhà nước, sinh viên được cộng tối đa 1 điểm vào điểm học phần luận văn tốt nghiệp LVTN do hội đồng bảo vệ LVTN chấm điểm theo thang điểm 10, cụ thể nếu học phần LVTN được chấm điểm ít hơn 9 điểm thì được cộng thêm 1 điểm nếu học phần LVTN được chấm điểm từ 9 điểm trở lên thì được cộng điểm để điểm học phần LVTN là 10 điểm. điều 21.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "giảng viên",
+      "target": "sinh viên",
+      "relationship": "hướng dẫn"
+    },
+    {
+      "source": "sinh viên",
+      "target": "NCKH",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cuộc thi",
+      "relationship": "tham dự"
+    },
+    {
+      "source": "sinh viên",
+      "target": "minh chứng",
+      "relationship": "nộp"
+    },
+    {
+      "source": "trường",
+      "target": "hoạt động khoa học",
+      "relationship": "trích"
+    },
+    {
+      "source": "bài báo khoa học",
+      "target": "điểm học phần luận văn tốt nghiệp",
+      "relationship": "cộng"
+    },
+    {
+      "source": "học phần LVTN",
+      "target": "điểm",
+      "relationship": "chấm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "yêu cầu tham gia NCKH",
+      "relationship": "hoàn thành"
+    }
+  ]
+}

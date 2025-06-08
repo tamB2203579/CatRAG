@@ -1,2 +1,5 @@
 .env
-__pycache__
+Expanding.py
+dropindex.py
+augment.txt
+/Classification/models/

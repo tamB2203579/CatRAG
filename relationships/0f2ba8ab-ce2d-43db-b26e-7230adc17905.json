@@ -1,0 +1,57 @@
+{
+  "chunk_id": "0f2ba8ab-ce2d-43db-b26e-7230adc17905",
+  "text": "bị ốm, thai sản hoặc tai nạn phải điều trị trong thời gian dài có chứng nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền theo quy định của bộ Y tế. vì lý do cá nhân hoàn cảnh gia đình neo đơn, việc riêng,.... trường hợp này chỉ giải quyết khi sinh viên đã học ít nhất 1 học kỳ ở trường đại học cần thơ, không thuộc các trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật. thời gian nghỉ học tạm thời trong trường hợp này được tính vào thời gian học tập tối đa để hoàn thành chương trình đào tạo theo quy định. nếu được chấp thuận, sinh viên sẽ được nhận quyết định cho phép nghỉ học tạm thời của hiệu trưởng. khi hết thời gian nghỉ học tạm thời và chậm nhất là 2 tuần trước khi học kỳ mới bắt đầu, sinh viên phải nộp hồ sơ đề nghị được học lại. nếu đủ điều kiện, hiệu trưởng sẽ có quyết định thu nhận sinh viên học lại. cảnh báo học tập là hình thức cảnh báo sinh viên trong các trường hợp  \r\ncó điểm trung bình chung học kỳ đạt dưới 0,80 đối với học kỳ đầu của khóa học, dưới 1,00 đối với các học kỳ tiếp theo. không đăng ký học trong học kỳ mà không được sự cho phép của hiệu trưởng. từ khóa 47 trở về sau, ngoài áp dụng quy định tại điểm a và điểm b khoản này, sinh viên bị cảnh báo học tập trong các trường hợp  \r\ntổng số tín chỉ không đạt trong học kỳ vượt quá 50 khối lượng đã đăng ký học trong học kỳ, hoặc tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 tín chỉ  \r\nđiểm trung bình tích lũy đạt dưới 1,2 đối với sinh viên trình độ năm thứ nhất, dưới 1,4 đối với sinh viên trình độ năm thứ hai, dưới 1,6 đối với sinh viên trình độ năm thứ ba, dưới 1,8 đối với sinh viên các năm tiếp theo. đình chỉ học tập 1 học kỳ trong các trường hợp  \r\nbị kỷ luật ở mức đình chỉ học tập 1 học kỳ.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "học kỳ",
+      "relationship": "đã học"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quyết định",
+      "relationship": "nhận"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hồ sơ",
+      "relationship": "nộp"
+    },
+    {
+      "source": "hiệu trưởng",
+      "target": "sinh viên",
+      "relationship": "chấp thuận"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tín chỉ",
+      "relationship": "không đạt"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cảnh báo",
+      "relationship": "bị"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đình chỉ",
+      "relationship": "bị"
+    },
+    {
+      "source": "thời gian nghỉ học tạm thời",
+      "target": "thời gian học tập tối đa",
+      "relationship": "được tính vào"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm trung bình tích lũy",
+      "relationship": "đạt dưới"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quy định",
+      "relationship": "theo"
+    }
+  ]
+}

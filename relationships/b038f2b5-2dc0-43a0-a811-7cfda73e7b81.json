@@ -1,0 +1,72 @@
+{
+  "chunk_id": "b038f2b5-2dc0-43a0-a811-7cfda73e7b81",
+  "text": "là lực lượng nòng cốt trong các phong trào văn hóa, văn nghệ, thể thao. cấp bộ môn, chi đoàn chi hội, đội, nhóm cấp khoa và tương đương, trường. tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội. được khen thưởng trong các hoạt động phong trào. quyết định khen thưởng của đoàn khoa và tương đương\r\n\r\ngiấy khen cấp trường giấy khen cấp cao hơn. 1. các tiêu chí để xác định điểm đánh giá\r\n\r\nphòng công tác sinh viên. 2. khung điểm đánh giá của điều 6. điều 7. đánh giá về ý thức công dân trong quan hệ cộng đồng. chức năng tự điền hình thức khen thưởng của phân hệ đoàn viên. CB đoàn khoa nhập liệu, dựa vào dữ liệu khen thưởng đoàn viên. sau đó, chương trình sẽ lấy điểm đã định nghĩa đưa qua điểm rèn luyện. chức năng tự điền khen thưởng của phân hệ quản lý sinh viên. CB phòng công tác sinh viên nhập liệu, dựa vào dữ liệu khen thưởng sinh viên. sau đó, chương trình sẽ lấy điểm đã định nghĩa đưa qua điểm rèn luyện. cộng gộp số điểm nêu lớn hơn 20 thì lấy bằng 20. Ý thức chấp hành và tham gia tuyên truyền các chủ trương, chính sách, pháp luật của nhà nước trong cộng đồng. chức năng tự điền kỷ luật của phân hệ quản lý sinh viên. mặc định số điểm cao nhất  \r\nkhông vi phạm pháp luật của nhà nước nếu vi phạm pháp luật sẽ bị điểm 00. tích cực tham gia tuyên truyền các chủ trương của đảng, chính sách, pháp luật của nhà nước trong cộng đồng và chủ trì cập nhật điểm cho sinh viên.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "phòng công tác sinh viên",
+      "target": "dữ liệu khen thưởng sinh viên",
+      "relationship": "nhập liệu"
+    },
+    {
+      "source": "CB phòng công tác sinh viên",
+      "target": "dữ liệu khen thưởng sinh viên",
+      "relationship": "dựa vào"
+    },
+    {
+      "source": "chương trình",
+      "target": "điểm rèn luyện",
+      "relationship": "lấy"
+    },
+    {
+      "source": "cộng đồng",
+      "target": "chủ trương, chính sách, pháp luật của nhà nước",
+      "relationship": "tuyên truyền"
+    },
+    {
+      "source": "đoàn khoa",
+      "target": "quyết định khen thưởng",
+      "relationship": "quyết định"
+    },
+    {
+      "source": "khen thưởng",
+      "target": "hoạt động phong trào",
+      "relationship": "được"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khen thưởng",
+      "relationship": "dựa vào"
+    },
+    {
+      "source": "khoa",
+      "target": "giấy khen cấp trường",
+      "relationship": "cấp"
+    },
+    {
+      "source": "khoa",
+      "target": "giấy khen cấp cao hơn",
+      "relationship": "cấp"
+    },
+    {
+      "source": "đoàn viên",
+      "target": "hình thức khen thưởng",
+      "relationship": "tự điền"
+    },
+    {
+      "source": "phân hệ quản lý sinh viên",
+      "target": "kỷ luật",
+      "relationship": "tự điền"
+    },
+    {
+      "source": "vi phạm pháp luật",
+      "target": "điểm 00",
+      "relationship": "sẽ bị"
+    },
+    {
+      "source": "điểm",
+      "target": "20",
+      "relationship": "lớn hơn"
+    }
+  ]
+}

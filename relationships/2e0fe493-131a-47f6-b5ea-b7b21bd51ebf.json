@@ -1,0 +1,57 @@
+{
+  "chunk_id": "2e0fe493-131a-47f6-b5ea-b7b21bd51ebf",
+  "text": "trần trung tính  \r\n\r\n QUY CHẾ  \r\nđánh giá kết quả rèn luyện của sinh viên bậc đại học hệ chính quy  \r\nkèm theo quyết định số 6415QĐ-ĐHCT, ngày 40122024 của hiệu trưởng trường đại học cần thơ  \r\n\r\n 1. MỘT SỐ ĐỊNH NGHĨA  \r\n\r\nđiều ứng với 5 điều, từ điều 4 đến điều 8 trong quy chế  \r\n\r\nkhoản có 2 mục 1, 2  \r\n\r\nmục là các ý a, b, c... trong các khoản của bảng đánh giá BĐG  \r\n\r\ntiêu chí là các gạch đầu dòng trong BĐG  \r\n\r\ncấp khoa là từ để gọi chung các tổ chức quản lý ngành đào tạo trực thuộc trường đại học cần thơ, tương đương như trường chuyên ngành, khoa, đoàn khoa, các đơn vị trực thuộc trường đại học cần thơ  \r\n\r\ncấp trường là từ để gọi chung các tổ chức tương đương như trường đại học cần thơ, đoàn trường đại học cần thơ, đảng ủy trường đại học cần thơ, hội sinh viên trường đại học cần thơ  \r\n\r\ncấp cao hơn là từ để gọi chung các tổ chức cao hơn trường như bộ, trung ương đoàn, thành phố, thành đoàn. 2. NGUYÊN TẮC CHUNG  \r\n\r\nđiểm cộng tối đa cho từng mục thực hiện đúng quy chế từ điều 4 đến điều 8 của quy chế đánh giá kết quả rèn luyện  \r\n\r\nnhững sinh viên có thành tích sẽ được thưởng điểm. nếu sinh viên đạt được nhiều thành tích trong cùng một khoản thì tổng số điểm không vượt quá điểm tối đa của khoản đó  \r\n\r\nnhững sinh viên vi phạm kỷ luật sẽ bị trừ điểm trong tiêu chí tương ứng và trừ đến khi điểm của tiêu chí đó bằng 0 không có điểm âm trong từng tiêu chí  \r\n\r\ncác văn bản dùng làm minh chứng cho việc tính điểm cộng thêm hoặc trừ điểm rèn luyện sinh viên là bằng khen, giấy khen, quyết định, chứng nhận, giấy xác nhận, giấy đề nghị có phê duyệt của các cấp có thẩm quyền trong và ngoài trường sinh viên nộp bản sao y cho CVHT hoặc khoa  \r\n\r\nsinh viên không thực hiện BĐG điểm rèn luyện hoặc không nộp theo đúng thời gian quy định sẽ bị xử lý theo mức dưới 35 điểm phân loại kém  \r\n\r\ncác đơn vị đào tạo trực thuộc trường đại học cần thơ tùy theo điều kiện đặc thù có thể hướng dẫn chi tiết hơn nhưng vẫn bảo đảm theo nguyên tắc số điểm của từng mục không vượt quá khung quy định của khoản đó  \r\n\r\nmốc thời gian gửi điểm rèn luyện  \r\n\r\ncác đơn vị gửi văn bản đề nghị khen thưởng, kỷ luật về cấp khoa  \r\nhọc kỳ 1 gửi trước ngày 2411 tuần kết thúc giảng dạy học kỳ 1  \r\nhọc kỳ 2 gửi trước ngày 313 tuần kết thúc giảng dạy học kỳ 2  \r\nhọc kỳ 3 gửi trước ngày 287 tuần kết thúc giảng dạy học kỳ 3  \r\n\r\ncấp khoa gửi tổng kết điểm rèn luyện về hội đồng đánh giá cấp trường qua phòng công tác sinh viên - trường đại học cần thơ  \r\nhọc kỳ 1 gửi trước ngày 2912 tuần bắt đầu giảng dạy học kỳ 2  \r\nhọc kỳ 2 gửi trước ngày 125 tuần bắt đầu giảng dạy học kỳ 3  \r\nhọc kỳ 3 gửi trước ngày 089 tuần bắt đầu giảng dạy học kỳ 1. 3.",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "khen thưởng",
+      "relationship": "được"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kỷ luật",
+      "relationship": "vi phạm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm",
+      "relationship": "trừ"
+    },
+    {
+      "source": "các đơn vị đào tạo",
+      "target": "trường đại học cần thơ",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "cấp khoa",
+      "target": "hội đồng đánh giá",
+      "relationship": "gửi"
+    },
+    {
+      "source": "các đơn vị",
+      "target": "văn bản đề nghị",
+      "relationship": "gửi"
+    },
+    {
+      "source": "quy chế",
+      "target": "điều 4 đến điều 8",
+      "relationship": "ứng với"
+    },
+    {
+      "source": "quy chế",
+      "target": "điểm cộng tối đa",
+      "relationship": "quy định"
+    },
+    {
+      "source": "sinh viên",
+      "target": "BĐG",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian",
+      "relationship": "nộp"
+    }
+  ]
+}

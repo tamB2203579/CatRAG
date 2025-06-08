@@ -1,0 +1,92 @@
+{
+  "chunk_id": "dbc5702b-f1a3-4fcc-a5bf-30c1cc2047b5",
+  "text": "trần tùng tính  \r\n\r\n QUY CHẾ CỬ SINH VIÊN ĐI HỌC TẬP Ở NƯỚC NGOÀI  \r\nkèm theo quyết định số   OĐ-ĐHCT, ngày 2 012021 của hiệu trưởng  \r\n\r\n điều 1. phạm vi và đối tượng áp dụng  \r\n\r\nvăn bản này áp dụng cho sinh viên SV đại học hệ chính quy còn trong thời gian thiệt kê của chương trình đào tạo tại trường đại học cần thơ ĐHCT và chưa có quyết định tốt nghiệp được khoaviệnbộ môn trực thuộc sau đây gọi là khoa cử đi học tập ở trườngviệnkhoa nước ngoài sau đây gọi là phía đối tác nước ngoài. SV được nhận học bổng khuyến khích học tập HBKKHT, SV được nhận HBKKHT và được tài trợ hoặc tự túc một phần kinh phí, SV được tài trợ hoặc tự túc hoàn toàn kinh phí, tự nguyện đăng ký và thỏa điều kiện được cử đi học tập ở nước ngoài. điều 2. mục tiêu  \r\n\r\ntạo cơ hội cho SV được học tập, giao lưu, chia sẻ kinh nghiệm, trau dồi các kỹ năng, nâng cao kinh nghiệm thực tiễn trong môi trường giáo dục quốc tế tăng cường khả năng tự học và sử dụng ngoại ngữ, góp phần nâng cao chất lượng đào tạo. nâng cao năng lực hội nhập quốc tế, cơ hội việc làm cho người học đồng thời góp phần quảng bá, phát triển thương hiệu và nâng cao vị thế của trường ĐHCT trên trường quốc tế. tăng cường công tác trao đổi SV và hội nhập quốc tế. điều 3. nguyên tắc  \r\n\r\nđối với SV được trường cấp HBKKHT, SV đạt HBKKHT từ loại khá trở lên và có trình độ ngoại ngữ đáp ứng yêu cầu của khoa đề ra không bị kỷ luật từ hình thức cảnh cáo trở lên trong quá trình học tập tại trường. được trường, khoa đồng ý cử đi và phía đối tác nước ngoài tiếp nhận. thời hạn SV học tập ở nước ngoài tối đa là 12 tháng. trường hợp khác do khoa đề xuất trình BGH xem xét quyết định.",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "học bổng",
+      "relationship": "nhận"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học tập",
+      "relationship": "đi"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khoa",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "khoa",
+      "target": "trường",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "trường",
+      "target": "quy chế",
+      "relationship": "cấp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ngoại ngữ",
+      "relationship": "đáp ứng"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian",
+      "relationship": "còn trong"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quốc tế",
+      "relationship": "học tập ở"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kinh phí",
+      "relationship": "tự túc"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cơ hội",
+      "relationship": "tạo"
+    },
+    {
+      "source": "trường",
+      "target": "thương hiệu",
+      "relationship": "quảng bá"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kỹ năng",
+      "relationship": "trau dồi"
+    },
+    {
+      "source": "sinh viên",
+      "target": "việc làm",
+      "relationship": "cơ hội"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hội nhập",
+      "relationship": "tăng cường"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thỏa điều kiện",
+      "relationship": "được"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kỷ luật",
+      "relationship": "không bị"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời hạn",
+      "relationship": "học tập tối đa là"
+    }
+  ]
+}

@@ -11,12 +11,17 @@ THÔNG TIN TỪ ĐỒ THỊ:
 
 Câu hỏi: {query}
 
+Lịch sử câu hỏi và câu trả lời: {past_query} {past_response}
+
+
 Yêu cầu:
 1. Trả lời câu hỏi dựa trên thông tin được cung cấp
 2. Nếu không có đủ thông tin, hãy nói rằng bạn không có thông tin đầy đủ
 3. Trình bày câu trả lời rõ ràng, dễ hiểu và có cấu trúc
 4. Nếu có thông tin mâu thuẫn, hãy nêu rõ các khả năng
 5. Đối với công thức latex, chuyển thành dạng ký hiệu toán học để coi được
+6. Trả lời câu hỏi sau khi đã xem xét lịch sử các câu hỏi và câu trả lời trong quá khứ 
+7. Nếu không tồn tại lịch sử câu hỏi thì đây là cuộc hội thoại đầu tiên
 
 Trả lời:
 """

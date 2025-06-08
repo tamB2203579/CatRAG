@@ -1,0 +1,57 @@
+{
+  "chunk_id": "d13056e3-8d3d-4665-8ede-b8ead42e4a96",
+  "text": "điều 5. đánh giá về ý thức và kết quả chấp hành nội quy, quy chế, quy định trong nhà trường. các tiêu chí để xác định điểm đánh giá  \r\nÝ thức chấp hành các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên được thực hiện trong nhà trường. không vi phạm và có ý thức tham gia thực hiện nghiêm túc các quy định của lớp, nội quy, quy chế của trường, khoa và các tổ chức trong nhà trường mỗi lần vắng trừ 03 điểm. chức năng tự điền kỷ luật của phân hệ quản lý sinh viên. mặc định số điểm cao nhất  \r\nkhi phòng công tác sinh viên có nhập kỷ luật cho SV thì SV sẽ có tổng điểm trừ tùy vào mức trừ của các kỷ luật. SV và CVHT được quyền cập nhật lại điểm của SV nhưng không được lớn hơn điểm sau khi trừ. ví dụ SV bị kỷ luật với mức trừ là 3 điểm, khi đó hệ thống tính điểm cho tiêu chí này là 12 điểm, thì SV và CVHT có quyền thay đổi điểm lại nhưng không lớn hơn 12 điểm. ý thức chấp hành các nội quy, quy chế và các quy định khác được áp dụng trong nhà trường. SV có tích cực tham gia các hoạt động tuyên truyền, vận động mọi người xung quanh thực hiện nghiêm túc nội quy, quy chế, các quy định của nhà trường về  \r\ngiữ gìn an ninh, trật tự nơi công cộng có xác nhận của đoàn khoa  \r\ngiữ gìn vệ sinh, bảo vệ cảnh quan môi trường, nếp sống văn minh có xác nhận của đoàn thể, khoa, trường.... điều 6.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "SV",
+      "target": "nội quy",
+      "relationship": "chấp hành"
+    },
+    {
+      "source": "SV",
+      "target": "quy chế",
+      "relationship": "chấp hành"
+    },
+    {
+      "source": "SV",
+      "target": "quy định",
+      "relationship": "chấp hành"
+    },
+    {
+      "source": "SV",
+      "target": "kỷ luật",
+      "relationship": "bị"
+    },
+    {
+      "source": "SV",
+      "target": "điểm",
+      "relationship": "cập nhật"
+    },
+    {
+      "source": "CVHT",
+      "target": "điểm",
+      "relationship": "cập nhật"
+    },
+    {
+      "source": "SV",
+      "target": "hoạt động",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "đoàn khoa",
+      "target": "xác nhận",
+      "relationship": "có"
+    },
+    {
+      "source": "đoàn thể",
+      "target": "xác nhận",
+      "relationship": "có"
+    },
+    {
+      "source": "SV",
+      "target": "vắng",
+      "relationship": "trừ"
+    }
+  ]
+}

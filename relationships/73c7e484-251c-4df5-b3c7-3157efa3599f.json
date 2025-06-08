@@ -1,0 +1,32 @@
+{
+  "chunk_id": "73c7e484-251c-4df5-b3c7-3157efa3599f",
+  "text": "điều 35. thủ tục ra trường  \r\n\r\nsau khi có quyết định tốt nghiệp, sinh viên liên hệ đơn vị đào tạo quản lý ngành để thực hiện thủ tục thanh toán ra trường. điều 36. quản lý bằng tốt nghiệp  \r\n\r\nbằng tốt nghiệp chỉ cấp một lần. trường hợp bằng tốt nghiệp bị mất hoặc bị hỏng, sinh viên có thể nộp đơn cho trường đại học cần thơ thông qua phòng đào tạo đề nghị cấp bản sao bằng tốt nghiệp theo quy định. ---\r\n\r\nHIỆU TRƯỞNG",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "đơn vị đào tạo quản lý ngành",
+      "relationship": "liên hệ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trường đại học cần thơ",
+      "relationship": "nộp đơn"
+    },
+    {
+      "source": "trường đại học cần thơ",
+      "target": "bản sao bằng tốt nghiệp",
+      "relationship": "cấp"
+    },
+    {
+      "source": "bằng tốt nghiệp",
+      "target": "một lần",
+      "relationship": "chỉ cấp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bằng tốt nghiệp",
+      "relationship": "bị mất hoặc bị hỏng"
+    }
+  ]
+}

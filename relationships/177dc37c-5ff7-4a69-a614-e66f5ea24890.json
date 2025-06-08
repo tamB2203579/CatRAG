@@ -1,0 +1,82 @@
+{
+  "chunk_id": "177dc37c-5ff7-4a69-a614-e66f5ea24890",
+  "text": "có bài báo trong và ngoài nước trong hoạt động NCKH. hoàn thành chứng chỉ tin học. hoàn thành chứng chỉ ngoại ngữ  \r\nA1, A2 chuẩn khung châu âutương đương. B1, B2 chuẩn khung châu âutương đương. C1, C2 chuẩn khung châu âutương đương. chỉ tính 01 lần trong riêng chứng chỉ ngoại ngữ, chứng nhận toàn khóa học toefl  500 điểm IELTS  5,0 TOEIC  600. tham gia các kỳ thi chuyên ngành, thi olympic...",
+  "category": "Hoc_tap_ren_luyen",
+  "relationships": [
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "A1",
+      "relationship": "chuẩn"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "A2",
+      "relationship": "chuẩn"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "B1",
+      "relationship": "chuẩn"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "B2",
+      "relationship": "chuẩn"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "C1",
+      "relationship": "chuẩn"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "C2",
+      "relationship": "chuẩn"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "toefl",
+      "relationship": "chứng nhận"
+    },
+    {
+      "source": "toefl",
+      "target": "500 điểm",
+      "relationship": "có"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "IELTS",
+      "relationship": "chứng nhận"
+    },
+    {
+      "source": "IELTS",
+      "target": "5,0",
+      "relationship": "có"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ",
+      "target": "TOEIC",
+      "relationship": "chứng nhận"
+    },
+    {
+      "source": "TOEIC",
+      "target": "600",
+      "relationship": "có"
+    },
+    {
+      "source": "hoạt động",
+      "target": "NCKH",
+      "relationship": "có"
+    },
+    {
+      "source": "tham gia",
+      "target": "các kỳ thi chuyên ngành",
+      "relationship": "có"
+    },
+    {
+      "source": "tham gia",
+      "target": "thi olympic",
+      "relationship": "có"
+    }
+  ]
+}

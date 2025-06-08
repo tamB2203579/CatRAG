@@ -1,0 +1,42 @@
+{
+  "chunk_id": "0ed6439e-e345-48b2-9eb3-63f706a99156",
+  "text": "điều 9. khen thưởng, kỷ luật  \r\ntập thể, cá nhân sinh viên thực hiện tốt nội quy, có thành tích trong các hoạt động tự quản, an ninh xung kích, các hoạt động văn hóa văn nghệ, thể dục thể thao, vệ sinh môi trường, các hoạt động vì lợi ích cộng đồng, xây dựng KTX sẽ được xem xét khen thưởng. tập thể, cá nhân sinh viên vi phạm, tùy mức độ sẽ bị xử lý kỷ luật theo phụ lục nội quy này. TRUNG TÂM PHỤC VỤ SINH VIÊN  \r\n\r\n PHỤ LỤC  \r\nNỘI DUNG VI PHẠM VÀ KHUNG XỬ LÝ KỶ LUẬT  \r\nkèm theo nội quy, ban hành kèm theo QĐĐ số 1944QĐ-ĐHCT, ngày 0462013 của hiệu trưởng trường ĐHCT  \r\n\r\n TT  nội dung vi phạm  số lần vi phạm  hình thức xử lý  ghi chú \r\n-----------------------------------------------------------------\r\n 01  tàng trữ vũ khí, chất nổ, chất cháy, hóa chất độc hại. tàng trữ, mua bán hoặc sử dụng chất ma túy.",
+  "category": "KTX",
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "khen thưởng",
+      "relationship": "được"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kỷ luật",
+      "relationship": "bị"
+    },
+    {
+      "source": "nội quy",
+      "target": "vi phạm",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "vi phạm",
+      "target": "hình thức xử lý",
+      "relationship": "có"
+    },
+    {
+      "source": "hiệu trưởng",
+      "target": "ban hành",
+      "relationship": "của"
+    },
+    {
+      "source": "phụ lục",
+      "target": "nội dung vi phạm",
+      "relationship": "kèm theo"
+    },
+    {
+      "source": "sinh viên",
+      "target": "các hoạt động",
+      "relationship": "tham gia"
+    }
+  ]
+}

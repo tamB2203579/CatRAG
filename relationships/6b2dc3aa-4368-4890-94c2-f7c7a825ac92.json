@@ -1,0 +1,57 @@
+{
+  "chunk_id": "6b2dc3aa-4368-4890-94c2-f7c7a825ac92",
+  "text": "CHƯƠNG V  \r\n ĐIỀU KIỆN CƠ SỞ VẬT CHẤT PHỤC VỤ ĐÀO TẠO  \r\n\r\nđiều 17. phòng học  \r\n\r\nphòng học lý thuyết dành cho các lớp CTĐTCLC và CTĐTTT được phủ sóng wifi với tốc độ kết nối cao được trang bị máy tính kết nối mạng internet nếu cần thiết để phục vụ giảng dạy, thiết bị trình chiếu màn hình lớn hoặc projector và hệ thống âm thanh để phục vụ giảng dạy được trang bị máy điều hòa nhiệt độ. điều 18.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "phòng học",
+      "target": "CTĐTCLC",
+      "relationship": "dành cho"
+    },
+    {
+      "source": "phòng học",
+      "target": "CTĐTTT",
+      "relationship": "dành cho"
+    },
+    {
+      "source": "phòng học",
+      "target": "wifi",
+      "relationship": "được phủ sóng"
+    },
+    {
+      "source": "phòng học",
+      "target": "máy tính",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "máy tính",
+      "target": "internet",
+      "relationship": "kết nối"
+    },
+    {
+      "source": "phòng học",
+      "target": "thiết bị trình chiếu",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "thiết bị trình chiếu",
+      "target": "màn hình lớn",
+      "relationship": "hoặc"
+    },
+    {
+      "source": "thiết bị trình chiếu",
+      "target": "projector",
+      "relationship": "hoặc"
+    },
+    {
+      "source": "phòng học",
+      "target": "hệ thống âm thanh",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "phòng học",
+      "target": "máy điều hòa nhiệt độ",
+      "relationship": "được trang bị"
+    }
+  ]
+}

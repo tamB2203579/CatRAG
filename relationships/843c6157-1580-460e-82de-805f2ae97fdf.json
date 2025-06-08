@@ -1,0 +1,97 @@
+{
+  "chunk_id": "843c6157-1580-460e-82de-805f2ae97fdf",
+  "text": "học phí và miễn, giảm học phí  \r\n\r\nhọc phí của từng CTĐTCLC và CTĐTTT được xác định trên cơ sở tính đúng, tính đủ chi phí đào tạo cho toàn khóa học. đề án của từng CTĐTCLC và CTĐTTT phải ghi rõ mức học phí lộ trình điều chỉnh mức học phí cho những khóa học tiếp theo nếu cần thiết phương án thu, chi và quản lý kinh phí để đảm bảo thực hiện đầy đủ các tiêu chí của CTĐTCLC bao gồm cả miễn, giảm học phí cho sinh viên thuộc diện chính sách được nhận hỗ trợ tài chính của nhà nước thực hiện trích lập các quỹ theo quy định hiện hành đối với phần chênh lệch thu chi còn lại. mức học phí và lộ trình điều chỉnh mức học phí cho phù hợp với chi phí đào tạo thực tế nếu có của CTĐTCLC và CTĐTTT được ghi rõ trong thông báo tuyển sinh, thông báo về học phí hàng năm của trường ĐHCT được công bố công khai trên trang thông tin điện tử của trường ĐHCT. sinh viên CTĐTCLC và CTĐTTT thuộc diện chính sách được nhận hỗ trợ tài chính của nhà nước sinh viên được miễn, giảm học phí theo quy định của nhà nước vẫn phải thực hiện nghĩa vụ nộp phần học phí chênh lệch nếu có của CTĐTCLC và CTĐTTT so với CTĐT đại trà. sinh viên CTĐTCLC và CTĐTTT là người nước ngoài đóng học phí theo quy định hiện hành về tiếp nhận và đào tạo sinh viên nước ngoài đến học tập, nghiên cứu tại trường ĐHCT. điều 24. quỹ học bổng và học bổng  \r\n\r\ntrường dành tối thiểu bằng 8 tổng thu học phí ĐTCLC và ĐTTT để chi trả học bổng khuyến khích học tập cho sinh viên CTĐTCLC và CTĐTT. quỹ học bổng khuyến khích học tập dành cho sinh viên CTĐTCLC và CTĐTTT được sử dụng để cấp học bổng cho sinh viên CTĐTCLC và CTĐTTT theo quy định của trường ĐHCT. hiệu trưởng quyết định mức học bổng và số lượng sinh viên được nhận học bổng cho từng ngành ĐTCLC và ĐTTT. ngoài việc được hưởng học bổng theo quy định tại khoản 2 điều này, sinh viên CTĐTCLC và CTĐTTT được xem xét nhận các học bổng khác theo quy định của nhà nước hoặc học bổng của các tổ chức, cá nhân tài trợ nếu đáp ứng các điều kiện của học bổng. CHƯƠNG IX  \r\n KHEN THƯỞNG VÀ KỶ LUẬT  \r\n\r\nđiều 25. khen thưởng, kỷ luật đối với sinh viên  \r\n\r\nnội dung, hình thức khen thưởng, kỷ luật đối với sinh viên CTĐTCLC và CTĐTTT được áp dụng theo quy định công tác học vụ dành cho sinh viên trình độ đại học hình thức chính quy của trường ĐHCT và các quy định khác có liên quan của bộ GDĐT và của trường ĐHCT. điều 26. khen thưởng, kỷ luật đối với viên chức  \r\n\r\nnội dung, hình thức khen thưởng, kỷ luật đối với viên chức tham gia quản lý, giảng dạy, cố vấn học tập CTĐTCLC và CTĐTTT được áp dụng theo luật viên chức, pháp luật về lao động và các quy định khác có liên quan của nhà nước và của trường ĐHCT. CHƯƠNG X  \r\n TỔ CHỨC THỰC HIỆN  \r\n\r\nđiều 27. trách nhiệm tổ chức thực hiện  \r\n\r\nthủ trưởng đơn vị có đào tạo CTĐTCLC và CTĐTTT chịu trách nhiệm tổ chức phổ biến quy định này cho giảng viên, viên chức và sinh viên tại đơn vị kiểm tra việc thực hiện quy định này và báo cáo cho hiệu trưởng khi được yêu cầu. phòng thanh tra - pháp chế, phòng đào tạo phối hợp với các đơn vị tổ chức kiểm tra việc thực hiện quy định này và báo cáo cho hiệu trưởng. điều 28. điều khoản thi hành  \r\n\r\ntrong trường hợp các văn bản quy phạm pháp luật hoặc văn bản của trường ban hành được dẫn chiếu hoặc là căn cứ ban hành quy định này được sửa đổi, bổ sung, thay thế thì thực hiện theo các quy định tại các văn bản sửa đổi, bổ sung, thay thế đó. lãnh đạo các đơn vị và cá nhân có liên quan chịu trách nhiệm thực hiện quy định này báo cáo kịp thời những vấn đề phát sinh trong quá trình thực hiện để hiệu trưởng xem xét và quyết định. KT.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "học phí",
+      "target": "CTĐTCLC",
+      "relationship": "được xác định trên cơ sở"
+    },
+    {
+      "source": "học phí",
+      "target": "CTĐTTT",
+      "relationship": "được xác định trên cơ sở"
+    },
+    {
+      "source": "đề án",
+      "target": "học phí",
+      "relationship": "phải ghi rõ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "CTĐTCLC",
+      "relationship": "thuộc diện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "CTĐTTT",
+      "relationship": "thuộc diện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relationship": "được miễn, giảm"
+    },
+    {
+      "source": "học bổng",
+      "target": "sinh viên",
+      "relationship": "được cấp"
+    },
+    {
+      "source": "quỹ học bổng",
+      "target": "sinh viên",
+      "relationship": "dành cho"
+    },
+    {
+      "source": "hiệu trưởng",
+      "target": "học bổng",
+      "relationship": "quyết định mức"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học bổng",
+      "relationship": "được xem xét nhận"
+    },
+    {
+      "source": "thủ trưởng",
+      "target": "quy định",
+      "relationship": "chịu trách nhiệm tổ chức"
+    },
+    {
+      "source": "phòng thanh tra - pháp chế",
+      "target": "quy định",
+      "relationship": "phối hợp kiểm tra"
+    },
+    {
+      "source": "lãnh đạo",
+      "target": "quy định",
+      "relationship": "chịu trách nhiệm thực hiện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nghĩa vụ",
+      "relationship": "phải thực hiện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí chênh lệch",
+      "relationship": "nộp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relationship": "đóng"
+    },
+    {
+      "source": "CTĐTCLC",
+      "target": "học phí",
+      "relationship": "so với"
+    },
+    {
+      "source": "CTĐTTT",
+      "target": "học phí",
+      "relationship": "so với"
+    }
+  ]
+}

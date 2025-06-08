@@ -1,0 +1,57 @@
+{
+  "chunk_id": "d6b91dc0-e999-49ab-b421-cd8e20aa7c7a",
+  "text": "b. Ý thức tham gia các hoạt động xã hội có thành tích được ghi nhận, biểu dương, khen thưởng. tham gia đội, nhóm sinh hoạt hướng đến lợi ích cộng đồng tham gia mỗi đợt được cộng 02 điểm. chức năng quản lý SV đạt thành tích. CB đoàn và phòng công tác sinh viên sẽ thực hiện nhập liệu thông tin thành tích và điểm thành tích của SV bao gồm thành tích tiêu biểu của đoàn và thành tích đặc biệt. c.",
+  "category": "Khac",
+  "relationships": [
+    {
+      "source": "SV",
+      "target": "thành tích",
+      "relationship": "đạt"
+    },
+    {
+      "source": "thành tích",
+      "target": "biểu dương",
+      "relationship": "được"
+    },
+    {
+      "source": "thành tích",
+      "target": "khen thưởng",
+      "relationship": "được"
+    },
+    {
+      "source": "đội",
+      "target": "hoạt động",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "nhóm",
+      "target": "hoạt động",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "hoạt động",
+      "target": "lợi ích",
+      "relationship": "hướng đến"
+    },
+    {
+      "source": "đợt",
+      "target": "cộng",
+      "relationship": "được"
+    },
+    {
+      "source": "CB",
+      "target": "thông tin",
+      "relationship": "nhập"
+    },
+    {
+      "source": "phòng",
+      "target": "thông tin",
+      "relationship": "nhập"
+    },
+    {
+      "source": "thông tin",
+      "target": "thành tích",
+      "relationship": "bao gồm"
+    }
+  ]
+}

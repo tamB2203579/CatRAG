@@ -1,0 +1,62 @@
+{
+  "chunk_id": "124880c2-cf67-4473-a70d-5cb96608a752",
+  "text": "tài liệu giảng dạy  \r\n\r\ntài liệu giảng dạy cho sinh viên CTĐTCLC và CTĐTTT gồm giáo trình hoặc bài giảng và tài liệu tham khảo nội dung bài giảng bài tập, câu hỏi... phục vụ học tập tại lớp vàhoặc giờ tự học của sinh viên tài liệu hướng dẫn thực hành, thực tập các tài liệu khác phục vụ cho việc học tập của sinh viên. tài liệu giảng dạy được ghi rõ trong đề cương chi tiết học phần. học phần lý thuyết phải có đủ giáo trình hoặc bài giảng, tài liệu tham khảo trong, ngoài nước và được cập nhật thường xuyên. nội dung bài giảng được cung cấp bởi giảng viên giảng dạy học phần phải có phần nội dung cơ bản đáp ứng mục tiêu đào tạo của học phần và phần nội dung mang tính cập nhật các thành tựu, tiến bộ mới của ngành đào tạo trong nước và quốc tế. học phần thực hành, thực tập phải có tài liệu hướng dẫn đầy đủ. học phần phải có tài liệu là hệ thống bài tập, câu hỏi... phục vụ việc học tập tại lớp vàhoặc giờ tự học của sinh viên. nội dung bài tập, câu hỏi... phải giúp sinh viên tiếp thu và hệ thống kiến thức cơ bản phát triển kiến thức chuyên môn chuyên sâu hơn đồng thời thúc đẩy sinh viên rèn luyện các kỹ năng mềm. nội dung yêu cầu sinh viên thực hiện trong giờ tự học phải được đưa vào nội dung đánh giá học phần. tài liệu giảng dạy là bản cứng giấy hoặc bản mềm điện tử. sinh viên có thể tiếp cận, tra cứu được tài liệu học tập từ trung tâm học liệu hoặc từ hệ thống các thư viện của trường ĐHCT. điều 19. cơ sở vật chất phục vụ thực tập, thực hành  \r\n\r\ncó đủ các phòng thí nghiệm, xưởng thực hành, cơ sở thực tập với các thiết bị, dụng cụ, phần mềm cần thiết phục vụ giảng dạy thực tập, thực hành cho sinh viên theo yêu cầu của CTĐTCLC và CTĐTTT. có thư viện và thư viện điện tử cho giảng viên và sinh viên CTĐTCLC và CTĐTTT tra cứu và sử dụng trong giảng dạy, học tập và NCKH.",
+  "category": "Dao_tao",
+  "relationships": [
+    {
+      "source": "tài liệu giảng dạy",
+      "target": "sinh viên",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "tài liệu giảng dạy",
+      "target": "giáo trình hoặc bài giảng",
+      "relationship": "gồm"
+    },
+    {
+      "source": "nội dung bài giảng",
+      "target": "giảng viên",
+      "relationship": "cung cấp"
+    },
+    {
+      "source": "học phần lý thuyết",
+      "target": "giáo trình hoặc bài giảng",
+      "relationship": "phải có"
+    },
+    {
+      "source": "học phần thực hành, thực tập",
+      "target": "tài liệu hướng dẫn",
+      "relationship": "phải có"
+    },
+    {
+      "source": "nội dung bài tập, câu hỏi",
+      "target": "sinh viên",
+      "relationship": "giúp"
+    },
+    {
+      "source": "nội dung yêu cầu sinh viên",
+      "target": "đánh giá học phần",
+      "relationship": "được đưa vào"
+    },
+    {
+      "source": "tài liệu giảng dạy",
+      "target": "bản cứng giấy hoặc bản mềm điện tử",
+      "relationship": "là"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài liệu học tập",
+      "relationship": "tiếp cận"
+    },
+    {
+      "source": "cơ sở vật chất",
+      "target": "thiết bị, dụng cụ, phần mềm",
+      "relationship": "cần thiết phục vụ"
+    },
+    {
+      "source": "thư viện và thư viện điện tử",
+      "target": "giảng viên và sinh viên",
+      "relationship": "cho tra cứu và sử dụng"
+    }
+  ]
+}
