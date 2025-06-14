@@ -1,0 +1,64 @@
+{
+  "chunk_id": "6da84a7c-5c85-4bc8-b3de-86741fb62892",
+  "text": "tài liệu giảng dạy là bản cứng giấy hoặc bản mềm. sinh viên có thể tiếp cận, tra cứu được tài liệu học tập từ trung tâm học liệu hoặc từ hệ thống các thư viện của trường ĐHCT.",
+  "entities": [
+    "có thể",
+    "ĐHCT.",
+    "tài liệu",
+    "học tập",
+    "của",
+    "thư viện",
+    "các",
+    "được",
+    "mềm",
+    "liệu",
+    "là",
+    "tra cứu",
+    "trung tâm",
+    "trường",
+    "cứng",
+    "giảng dạy",
+    "hoặc",
+    "từ",
+    "giấy",
+    "học",
+    ",",
+    "tiếp cận",
+    "bản",
+    "sinh viên",
+    "hệ thống",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "tài liệu",
+      "relationship": "tiếp cận"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài liệu",
+      "relationship": "tra cứu"
+    },
+    {
+      "source": "tài liệu",
+      "target": "trung tâm học liệu",
+      "relationship": "từ"
+    },
+    {
+      "source": "tài liệu",
+      "target": "hệ thống các thư viện",
+      "relationship": "từ"
+    },
+    {
+      "source": "tài liệu",
+      "target": "giảng dạy",
+      "relationship": "là"
+    },
+    {
+      "source": "tài liệu",
+      "target": "bản cứng giấy hoặc bản mềm",
+      "relationship": "là"
+    }
+  ]
+}

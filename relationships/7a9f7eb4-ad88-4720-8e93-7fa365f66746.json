@@ -1,0 +1,79 @@
+{
+  "chunk_id": "7a9f7eb4-ad88-4720-8e93-7fa365f66746",
+  "text": "9. tiếng tây ban nha chứng chỉ tiếng tây ban nha được cấp bởi viện cervantes. chứng chỉ ngoại ngữ tiếng tây ban nha theo khung năng lực ngoại ngữ 6 bậc dùng cho việt nam do các đơn vị được bộ giáo dục và đào tạo công nhận cấp. BẢNG QUY ĐỔI CHUẨN TRÌNH ĐỘ NGOẠI NGỮ TIẾNG TÂY BAN NHA  khung NLNN 6 bậc dùng cho việt nam  khung tham chiếu châu âu CEFR  -------------------------------------------------------------------------  A1    A2    B1    B2    C1    C2",
+  "entities": [
+    "",
+    "TIẾNG",
+    "việt",
+    "tiếng",
+    "đơn vị",
+    "khung",
+    "6",
+    "QUY ĐỔI",
+    "dùng",
+    "C1    C2",
+    "-",
+    "TRÌNH ĐỘ",
+    "B2",
+    "nam",
+    "năng lực",
+    "cấp",
+    "A2",
+    "NLNN",
+    "việt nam",
+    "các",
+    "giáo dục",
+    "được",
+    "9",
+    "cho",
+    "NGOẠI NGỮ",
+    "BAN",
+    "châu",
+    "tây ban",
+    "CEFR",
+    "viện",
+    "B1",
+    "nha",
+    "do",
+    "BẢNG",
+    "cervantes",
+    "bộ",
+    "công nhận",
+    "bậc",
+    "chứng chỉ",
+    "âu",
+    "tham chiếu",
+    "A1",
+    "bởi",
+    "CHUẨN",
+    "đào tạo",
+    "TÂY",
+    "ngoại ngữ",
+    "và",
+    "theo",
+    "NHA",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "chứng chỉ tiếng tây ban nha",
+      "target": "viện cervantes",
+      "relationship": "được cấp bởi"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ tiếng tây ban nha",
+      "target": "bộ giáo dục và đào tạo",
+      "relationship": "công nhận"
+    },
+    {
+      "source": "khung năng lực ngoại ngữ 6 bậc",
+      "target": "việt nam",
+      "relationship": "dùng cho"
+    },
+    {
+      "source": "khung năng lực ngoại ngữ 6 bậc",
+      "target": "khung tham chiếu châu âu CEFR",
+      "relationship": "theo"
+    }
+  ]
+}

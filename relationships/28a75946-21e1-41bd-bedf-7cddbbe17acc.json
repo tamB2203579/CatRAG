@@ -1,0 +1,123 @@
+{
+  "chunk_id": "28a75946-21e1-41bd-bedf-7cddbbe17acc",
+  "text": "bằng tốt nghiệp và hạng tốt nghiệp bằng tốt nghiệp được cấp theo ngành đào tạo. hạng tốt nghiệp được xác định căn cứ vào điểm trung bình chung tích lũy theo các mức trong bảng sau  hạng tốt nghiệp  điểm trung bình chung tích lũy   ---  ---   loại xuất sắc  từ 3,60 đến 4,00   loại giỏi  từ 3,20 đến 3,59   loại khá  từ 2,50 đến 3,19   loại trung bình  từ 2,00 đến 2,49  hạng tốt nghiệp loại xuất sắc và giỏi sẽ bị giảm một mức nếu thuộc một trong các trường hợp sau có khối lượng các học phần bị điểm F vượt quá 5% so với tổng số tín chỉ quy định của chương trình đào tạo không tính khối lượng học phần học cải thiện điểm bị điểm F. đã bị kỷ luật từ mức cảnh cáo cấp trường trong thời gian học.",
+  "entities": [
+    "",
+    "hạng",
+    "kỷ luật",
+    "quá",
+    "cảnh cáo",
+    "bảng",
+    "chương trình",
+    "%",
+    "tốt nghiệp",
+    "bằng",
+    "căn cứ",
+    "nếu",
+    "2,50",
+    "-",
+    "quy định",
+    "không",
+    "loại",
+    "5",
+    "cấp",
+    "ngành",
+    "3,19",
+    "bị",
+    "trường hợp",
+    "với",
+    "của",
+    "các",
+    "xuất sắc",
+    "được",
+    "tích lũy",
+    "3,20",
+    "cải thiện",
+    "thời gian",
+    "sẽ",
+    "vào",
+    "học phần",
+    "trung bình",
+    "tín chỉ",
+    "tính",
+    "4,00",
+    "vượt",
+    "trường",
+    "đã",
+    "2,00",
+    "sau",
+    "so",
+    "từ",
+    "một",
+    "tổng số",
+    "xác định",
+    "giỏi",
+    "theo",
+    "3,59",
+    "khá",
+    "học",
+    "F",
+    "F.",
+    "đào tạo",
+    "chung",
+    "thuộc",
+    "khối lượng",
+    "đến",
+    "mức",
+    "có",
+    "giảm",
+    "trong",
+    "2,49",
+    "và",
+    "điểm",
+    "3,60",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "điểm trung bình chung tích lũy",
+      "relationship": "được xác định căn cứ vào"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "loại xuất sắc",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "loại giỏi",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "loại khá",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "loại trung bình",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "hạng tốt nghiệp loại xuất sắc và giỏi",
+      "target": "bị giảm một mức",
+      "relationship": "nếu thuộc"
+    },
+    {
+      "source": "khối lượng các học phần bị điểm F",
+      "target": "vượt quá 5%",
+      "relationship": "so với"
+    },
+    {
+      "source": "điểm F",
+      "target": "không tính",
+      "relationship": "đối với"
+    },
+    {
+      "source": "đã bị kỷ luật",
+      "target": "mức cảnh cáo cấp trường",
+      "relationship": "từ"
+    }
+  ]
+}

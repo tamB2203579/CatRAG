@@ -1,0 +1,87 @@
+{
+  "chunk_id": "2ce51a12-c62c-4729-ab56-cc0cab32752f",
+  "text": "tàng trữ, lưu hành, truy cập, sử dụng sản phẩm văn hóa đồi trụy hoặc tham gia các hoạt động mê tín dị đoan, hoạt động tôn giáo trái phép. chứa chấp, che giấu hàng cấm, hàng lậu. lấy cắp tài sản, chứa chấp, tiêu thụ tài sản do người khác lấy cắp. đánh bạc dưới mọi hình thức.",
+  "entities": [
+    "người",
+    "đồi",
+    "mọi",
+    "sử dụng",
+    "tài sản",
+    "tàng trữ",
+    "hoạt động",
+    "chứa chấp",
+    "che giấu",
+    "do",
+    "hình thức",
+    "khác",
+    "dưới",
+    "hoặc",
+    "sản phẩm",
+    "cấm",
+    "hàng",
+    ",",
+    "trụy",
+    "tiêu thụ",
+    "lấy",
+    "cắp",
+    "tham gia",
+    "các",
+    "lưu hành",
+    "truy cập",
+    "trái phép",
+    "tôn giáo",
+    ".",
+    "dị đoan",
+    "đánh bạc",
+    "lậu",
+    "văn hóa",
+    "mê tín"
+  ],
+  "relationships": [
+    {
+      "source": "sản phẩm",
+      "target": "văn hóa",
+      "relationship": "lưu hành"
+    },
+    {
+      "source": "sản phẩm",
+      "target": "đồi trụy",
+      "relationship": "tàng trữ"
+    },
+    {
+      "source": "hoạt động",
+      "target": "mê tín dị đoan",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "hoạt động",
+      "target": "tôn giáo",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "hàng",
+      "target": "cấm",
+      "relationship": "chứa chấp"
+    },
+    {
+      "source": "hàng",
+      "target": "lậu",
+      "relationship": "chứa chấp"
+    },
+    {
+      "source": "tài sản",
+      "target": "cắp",
+      "relationship": "lấy"
+    },
+    {
+      "source": "tài sản",
+      "target": "người khác",
+      "relationship": "tiêu thụ"
+    },
+    {
+      "source": "đánh bạc",
+      "target": "hình thức",
+      "relationship": "dưới mọi"
+    }
+  ]
+}

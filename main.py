@@ -25,7 +25,7 @@ def initialize_graphrag():
         
         # create_vector_store(documents)
         
-        build_knowledge_graph(documents)
+        # build_knowledge_graph(documents)
         
         print("GraphRAG initialization completed successfully!")
     else:
@@ -54,8 +54,7 @@ def main_menu():
     while True:
         print("\nGraphRAG System Menu")
         print("1. Interactive Query (Question Answering)")
-        print("2. Similarity Search")
-        print("3. Exit")
+        print("2. Exit")
         
         choice = input("\nEnter your choice (1-3): ")
         

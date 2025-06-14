@@ -1,0 +1,129 @@
+{
+  "chunk_id": "3ba3991a-a19b-46d3-9ccc-a66c8148d552",
+  "text": "NỘI QUY về công tác nội trú tại ký túc xá trường đại học cần thơ ban hành kèm theo quyết định thành lập trung tâm phục vụ sinh viên số 1944/QĐ-ĐHCT, ngày 04/6/2013. của hiệu trưởng trường ĐHCT áp dụng từ năm học 2016 - 2017  điều 1. đối tượng áp dụng nội quy này áp dụng cho tất cả sinh viên các hệ đào tạo tại trường, học viên sau đại học gọi chung là SŠV được xét duyệt vào ở ký túc xá K7X trường đại học cần thơ sau khi thực hiện đầy đủ các thủ tục theo quy định. đối với SŠV nước ngoài và các đối tượng khác sẽ có quy định riêng.",
+  "entities": [
+    "",
+    "1",
+    "đào tạo",
+    "sau",
+    "chung",
+    "2016",
+    "được",
+    "riêng",
+    "thơ",
+    "04",
+    "hiệu trưởng",
+    "theo",
+    "khi",
+    "từ",
+    "sẽ",
+    "-",
+    "gọi",
+    "này",
+    "thủ tục",
+    "quy định",
+    "số",
+    "1944",
+    "học viên",
+    "sinh viên",
+    "trường",
+    "tất cả",
+    "vào",
+    "và",
+    "ký túc xá",
+    "đầy đủ",
+    "SŠV",
+    "khác",
+    "quyết định",
+    "thực hiện",
+    "NỘI QUY",
+    "đại học",
+    "/",
+    "về",
+    "ban hành",
+    "điều",
+    "nội quy",
+    ",",
+    "trung tâm",
+    "kèm",
+    "cho",
+    "của",
+    "năm học",
+    "là",
+    "xét duyệt",
+    "công tác",
+    "2017",
+    "các",
+    "đối với",
+    "ĐHCT",
+    "ở",
+    "nước ngoài",
+    ".",
+    "ngày",
+    "6",
+    "K7X",
+    "hệ",
+    "cần",
+    "QĐ",
+    "2013",
+    "áp dụng",
+    "đối tượng",
+    "thành lập",
+    "phục vụ",
+    "nội trú",
+    "có",
+    "tại"
+  ],
+  "relationships": [
+    {
+      "source": "NỘI QUY",
+      "target": "ký túc xá",
+      "relationship": "về"
+    },
+    {
+      "source": "ký túc xá",
+      "target": "trường đại học cần thơ",
+      "relationship": "tại"
+    },
+    {
+      "source": "quyết định",
+      "target": "trung tâm phục vụ sinh viên",
+      "relationship": "kèm theo"
+    },
+    {
+      "source": "quyết định",
+      "target": "số 1944/QĐ-ĐHCT",
+      "relationship": "là"
+    },
+    {
+      "source": "quyết định",
+      "target": "ngày 04/6/2013",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "năm học",
+      "target": "2016 - 2017",
+      "relationship": "áp dụng từ"
+    },
+    {
+      "source": "đối tượng",
+      "target": "SŠV",
+      "relationship": "áp dụng cho"
+    },
+    {
+      "source": "SŠV",
+      "target": "ký túc xá K7X",
+      "relationship": "được xét duyệt vào"
+    },
+    {
+      "source": "SŠV",
+      "target": "học viên sau đại học",
+      "relationship": "gọi chung là"
+    },
+    {
+      "source": "SŠV nước ngoài",
+      "target": "các đối tượng khác",
+      "relationship": "sẽ có quy định riêng"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "chunk_id": "82641cab-17cf-489e-97c1-4dc9dc8fc76f",
+  "text": "các đơn vị có liên quan  1. phòng tài chính phát tiền học bổng khuyến khích học tập tạm ứng - thanh toán đề tài NCKH theo dõi, xử lý lỗi kỹ thuật trong quá trình SV nộp học phí phí, lệ phí khác qua các tiện ích tiền khen thưởng. 2.",
+  "entities": [
+    "các",
+    "",
+    "tiện ích",
+    "học bổng",
+    "nộp",
+    "tạm ứng",
+    "học phí",
+    "-",
+    "xử lý",
+    "qua",
+    "lỗi",
+    "đề tài",
+    "có",
+    "liên quan",
+    "thanh toán",
+    ".",
+    "theo dõi",
+    "kỹ thuật",
+    "khác",
+    "quá trình",
+    "học tập",
+    "tiền",
+    "1",
+    "phí",
+    "NCKH",
+    "khen thưởng",
+    "2",
+    "đơn vị",
+    "khuyến khích",
+    "phát",
+    "phòng",
+    ",",
+    "SV",
+    "tài chính",
+    "lệ phí",
+    "trong"
+  ],
+  "relationships": [
+    {
+      "source": "phòng tài chính",
+      "target": "học bổng",
+      "relationship": "phát"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "tiền",
+      "relationship": "phát"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "tạm ứng",
+      "relationship": "thanh toán"
+    },
+    {
+      "source": "SV",
+      "target": "học phí",
+      "relationship": "nộp"
+    },
+    {
+      "source": "SV",
+      "target": "lỗi",
+      "relationship": "xử lý"
+    },
+    {
+      "source": "SV",
+      "target": "học tập",
+      "relationship": "khuyến khích"
+    },
+    {
+      "source": "SV",
+      "target": "đề tài NCKH",
+      "relationship": "theo dõi"
+    }
+  ]
+}

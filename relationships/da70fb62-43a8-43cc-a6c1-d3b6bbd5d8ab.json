@@ -1,0 +1,90 @@
+{
+  "chunk_id": "da70fb62-43a8-43cc-a6c1-d3b6bbd5d8ab",
+  "text": "điều 35. thủ tục ra trường sau khi có quyết định tốt nghiệp, sinh viên liên hệ đơn vị đào tạo quản lý ngành để thực hiện thủ tục thanh toán ra trường. điều 36. quản lý bằng tốt nghiệp bằng tốt nghiệp chỉ cấp một lần. trường hợp bằng tốt nghiệp bị mất hoặc bị hỏng, sinh viên có thể nộp đơn cho trường đại học cần thơ thông qua phòng đào tạo đề nghị cấp bản sao bằng tốt nghiệp theo quy định. --- HIỆU TRƯỞNG",
+  "entities": [
+    "thủ tục",
+    "lần",
+    "có thể",
+    "đơn vị",
+    "đề nghị",
+    "thanh toán",
+    "khi",
+    "35",
+    "tốt nghiệp",
+    "bằng",
+    "liên hệ",
+    "điều",
+    "quy định",
+    "-",
+    "chỉ",
+    "quyết định",
+    "cấp",
+    "ra",
+    "ngành",
+    "trường hợp",
+    "bị",
+    "cần",
+    "cho",
+    "quản lý",
+    "đơn",
+    "36",
+    "thực hiện",
+    "thông qua",
+    "trường",
+    "mất",
+    "thơ",
+    "hỏng",
+    "sau",
+    "HIỆU TRƯỞNG",
+    "hoặc",
+    "một",
+    "nộp",
+    "phòng",
+    "bản sao",
+    "đào tạo",
+    "đại học",
+    ",",
+    "có",
+    "để",
+    "sinh viên",
+    "theo",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "đơn vị",
+      "relationship": "liên hệ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thủ tục",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relationship": "nộp"
+    },
+    {
+      "source": "bằng tốt nghiệp",
+      "target": "cấp",
+      "relationship": "chỉ"
+    },
+    {
+      "source": "bằng tốt nghiệp",
+      "target": "bị mất hoặc bị hỏng",
+      "relationship": "trường hợp"
+    },
+    {
+      "source": "trường đại học cần thơ",
+      "target": "bản sao bằng tốt nghiệp",
+      "relationship": "cấp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phòng đào tạo",
+      "relationship": "thông qua"
+    }
+  ]
+}

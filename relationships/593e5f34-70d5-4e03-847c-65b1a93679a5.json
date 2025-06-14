@@ -1,0 +1,85 @@
+{
+  "chunk_id": "593e5f34-70d5-4e03-847c-65b1a93679a5",
+  "text": "phòng học phòng học lý thuyết dành cho các lớp CTĐTCLC và CTĐTTT được phủ sóng wifi với tốc độ kết nối cao được trang bị máy tính kết nối mạng internet nếu cần thiết để phục vụ giảng dạy, thiết bị trình chiếu và hệ thống âm thanh để phục vụ giảng dạy được trang bị máy điều hòa nhiệt độ. điều 18.",
+  "entities": [
+    "máy",
+    "trình chiếu",
+    "wifi",
+    "dành",
+    "nhiệt độ",
+    "âm thanh",
+    "nếu",
+    "điều",
+    "kết nối mạng",
+    "thiết bị",
+    "với",
+    "trang bị",
+    "các",
+    "được",
+    "cho",
+    "CTĐTTT",
+    "cần thiết",
+    "internet",
+    "máy tính",
+    "18",
+    "giảng dạy",
+    "hòa",
+    "CTĐTCLC",
+    "phòng",
+    "tốc độ",
+    "học",
+    "cao",
+    "phục vụ",
+    "phủ sóng",
+    "lý thuyết",
+    ",",
+    "để",
+    "lớp",
+    "hệ thống",
+    "kết nối",
+    "và",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "phòng học",
+      "target": "wifi",
+      "relationship": "được phủ sóng"
+    },
+    {
+      "source": "phòng học",
+      "target": "máy tính",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "máy tính",
+      "target": "kết nối mạng internet",
+      "relationship": "kết nối"
+    },
+    {
+      "source": "phòng học",
+      "target": "thiết bị trình chiếu",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "phòng học",
+      "target": "hệ thống âm thanh",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "phòng học",
+      "target": "máy điều hòa nhiệt độ",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "thiết bị trình chiếu",
+      "target": "giảng dạy",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "hệ thống âm thanh",
+      "target": "giảng dạy",
+      "relationship": "phục vụ"
+    }
+  ]
+}

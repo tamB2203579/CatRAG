@@ -32,7 +32,7 @@ driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password), 
 # Load Vietnamese spaCy model
 nlp = spacy.load("vi_core_news_lg")
 
-def load_csv_data(dir="result"):
+def load_csv_data(dir="semantic_result"):
     """
     Load CSV files from a directory and combine them into a DataFrame.
     Each row gets a unique ID.
@@ -151,10 +151,6 @@ def extract_entities(text: str):
     """
     doc = nlp(text)
     entities = [ent.text for ent in doc]
-    # Add named entities from the NER model
-    # if not entities:
-        # If no entities found, extract noun phrases
-        # entities = [chunk.text for chunk in doc.noun_chunks]
     
     entities = list(set([e.strip() for e in entities]))
     return entities
@@ -197,20 +193,34 @@ def build_knowledge_graph(chunks):
     Build a knowledge graph in Neo4j
     """
     # Clear database and create constraints
-    clear_database()
-    create_constraints()
+    # clear_database()
+    # create_constraints()
 
     with driver.session() as session:
         print("Creating Chunk nodes")
         for chunk in tqdm(chunks, desc="Creating Chunk nodes"):
             # Create chunk node
             session.run("""
-                CREATE (c:Chunk {
-                    id: $id,
-                    text: $text,
-                    label: $label
-                })
+            CREATE (c:Chunk {
+                id: $id,
+                text: $text,
+                label: $label
+            })
             """, id=chunk.id_, text=chunk.text, label=chunk.metadata.get("label", ""))
+            
+            # Create category node if a label exists
+            if chunk.metadata.get("label"):
+                # Create category node
+                session.run("""
+                    MERGE (cat:Category {name: $label})
+                """, label=chunk.metadata.get("label", ""))
+            
+            # Connect chunk to category
+            session.run("""
+                MATCH (c:Chunk {id: $chunk_id})
+                MATCH (cat:Category {name: $label})
+                MERGE (c)-[:BELONGS_TO]->(cat)
+            """, chunk_id=chunk.id_, label=chunk.metadata.get("label", ""))
         
         print("Extracting entities and relationships from chunks...")
         for chunk in tqdm(chunks, desc="Processing entities and relationships"):
@@ -234,64 +244,77 @@ def build_knowledge_graph(chunks):
                 """, chunk_id=chunk.id_, entity_name=entity)
             
             # Extract relationships between entities
-            if len(entities) >= 2:
-                relationships = extract_relationships(chunk.text, entities)
+            relationships = extract_relationships(chunk.text, entities)
+            
+            # Save relationships to file for later reference
+            if relationships:
+                rels_dict = {
+                    "chunk_id": chunk.id_,
+                    "text": chunk.text,
+                    "entities": entities,
+                    "relationships": relationships
+                }
                 
-                # Save relationships to file for later reference
-                if relationships:
-                    rels_dict = {
-                        "chunk_id": chunk.id_,
-                        "text": chunk.text,
-                        "entities": entities,
-                        "relationships": relationships
-                    }
-                    
-                    if not os.path.exists("relationships"):
-                        os.makedirs("relationships")
-                    
-                    with open(f"relationships/{chunk.id_}.json", "w", encoding="utf-8") as f:
-                        json.dump(rels_dict, f, ensure_ascii=False, indent=2)
+                if not os.path.exists("relationships"):
+                    os.makedirs("relationships")
                 
-                # Create relationships in Neo4j
-                for rel in relationships:
-                    source = rel["source"]
-                    target = rel["target"]
-                    relationship = normalize(rel["relationship"].upper().replace(" ", "_"))
-                    
-                    if source != target:
-                        try:
-                            # Try to create a typed relationship
-                            session.run(f"""
-                                MATCH (s:Entity {{name: $source}})
-                                MATCH (t:Entity {{name: $target}})
-                                MERGE (s)-[r:{relationship}]->(t)
-                                SET r.chunk_id = $chunk_id
-                            """, source=source, target=target, chunk_id=chunk.id_)
-                        except Exception as e:
-                            # Fall back to generic relationship
-                            session.run("""
-                                MATCH (s:Entity {name: $source})
-                                MATCH (t:Entity {name: $target})
-                                MERGE (s)-[r:RELATED_TO]->(t)
-                                SET r.relationship = $relationship,
-                                    r.chunk_id = $chunk_id
-                            """, source=source, target=target, relationship=rel["relationship"], chunk_id=chunk.id_)
+                with open(f"relationships/{chunk.id_}.json", "w", encoding="utf-8") as f:
+                    json.dump(rels_dict, f, ensure_ascii=False, indent=2)
+            
+            # Create relationships in Neo4j
+            for rel in relationships:
+                source = rel["source"]
+                target = rel["target"]
+                relationship = normalize(rel["relationship"].upper().replace(" ", "_"))
+                
+                if source != target:
+                    try:
+                        # Try to create a typed relationship
+                        session.run(f"""
+                            MATCH (s:Entity {{name: $source}})
+                            MATCH (t:Entity {{name: $target}})
+                            MERGE (s)-[r:{relationship}]->(t)
+                            SET r.chunk_id = $chunk_id
+                        """, source=source, target=target, chunk_id=chunk.id_)
+                    except Exception as e:
+                        # Fall back to generic relationship
+                        session.run("""
+                            MATCH (s:Entity {name: $source})
+                            MATCH (t:Entity {name: $target})
+                            MERGE (s)-[r:RELATED_TO]->(t)
+                            SET r.relationship = $relationship,
+                                r.chunk_id = $chunk_id
+                        """, source=source, target=target, relationship=rel["relationship"], chunk_id=chunk.id_)
 
 def get_graph_context(query: str, limit=5):
     """
     Get relevant context from the knowledge graph based on the query.
     """
-    query_terms = query.split()
+    # Generate embedding for the query
+    query_embedding = embed_model.embed_query(query)
 
     with driver.session() as session:
-        # First approach: Find entities mentioned in the query
+        # Use vector similarity to find relevant entities
         entities = session.run("""
             MATCH (e:Entity)
-            WHERE any(term IN $query_terms WHERE e.name CONTAINS term OR $query_text CONTAINS e.name)
-            RETURN e.name AS entity
+            WHERE e.embedding IS NOT NULL
+            WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
+            WHERE score > 0.75
+            RETURN e.name AS entity, score
+            ORDER BY score DESC
             LIMIT $limit
-        """, query_terms=query_terms, query_text=query, limit=limit).values()
-
+        """, query_embedding=query_embedding, limit=limit).values()
+        
+        # If no entities found with vector search, fall back to text matching
+        if not entities:
+            query_terms = query.split()
+            entities = session.run("""
+                MATCH (e:Entity)
+                WHERE any(term IN $query_terms WHERE e.name CONTAINS term OR $query_text CONTAINS e.name)
+                RETURN e.name AS entity, 1.0 AS score
+                LIMIT $limit
+            """, query_terms=query_terms, query_text=query, limit=limit).values()
+        
         if not entities:
             return "No relevant graph context found."
         
@@ -299,6 +322,7 @@ def get_graph_context(query: str, limit=5):
 
         for entity_tuple in entities:
             entity_name = entity_tuple[0]
+            entity_score = entity_tuple[1]
 
             # Find relationships for this entity
             relationships = session.run("""
@@ -317,8 +341,8 @@ def get_graph_context(query: str, limit=5):
                 LIMIT 2
             """, entity_name=entity_name).values()
 
-            # Initialize entity_context
-            entity_context = f"Entity: {entity_name}\n"
+            # Initialize entity_context with similarity score
+            entity_context = f"Entity: {entity_name} (Similarity: {entity_score:.4f})\n"
 
             if relationships:
                 entity_context += "Relationships:\n"

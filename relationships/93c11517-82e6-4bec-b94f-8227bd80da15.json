@@ -1,0 +1,155 @@
+{
+  "chunk_id": "93c11517-82e6-4bec-b94f-8227bd80da15",
+  "text": "tài liệu giảng dạy tài liệu giảng dạy cho sinh viên CTĐTCLC và CTĐTTT gồm giáo trình hoặc bài giảng và tài liệu tham khảo nội dung bài giảng bài tập, câu hỏi... phục vụ học tập tại lớp và/hoặc giờ tự học của sinh viên tài liệu hướng dẫn thực hành, thực tập các tài liệu khác phục vụ cho việc học tập của sinh viên. tài liệu giảng dạy được ghi rõ trong đề cương chi tiết học phần. học phần lý thuyết phải có đủ giáo trình hoặc bài giảng, tài liệu tham khảo trong, ngoài nước và được cập nhật thường xuyên. nội dung bài giảng được cung cấp bởi giảng viên giảng dạy học phần phải có phần nội dung cơ bản đáp ứng mục tiêu đào tạo của học phần và phần nội dung mang tính cập nhật các thành tựu, tiến bộ mới của ngành đào tạo trong nước và quốc tế. học phần thực hành, thực tập phải có tài liệu hướng dẫn đầy đủ. học phần phải có tài liệu là hệ thống bài tập, câu hỏi... phục vụ việc học tập tại lớp và/hoặc giờ tự học của sinh viên. nội dung bài tập, câu hỏi... phải giúp sinh viên tiếp thu và hệ thống kiến thức cơ bản phát triển kiến thức chuyên môn chuyên sâu hơn đồng thời thúc đẩy sinh viên rèn luyện các kỹ năng mềm. nội dung yêu cầu sinh viên thực hiện trong giờ tự học phải được đưa vào nội dung đánh giá học phần.",
+  "entities": [
+    "đáp ứng",
+    "chuyên môn",
+    "tham khảo",
+    "đưa",
+    "tài liệu",
+    "câu",
+    "vào",
+    "chi tiết",
+    "CTĐTTT",
+    "khác",
+    "hoặc",
+    "ghi",
+    "tiến bộ",
+    "bởi",
+    "phục vụ",
+    "lý thuyết",
+    "tiếp thu",
+    "...",
+    "giảng",
+    ".",
+    "thực hiện",
+    "hướng dẫn",
+    "học tập",
+    "của",
+    "ngành",
+    "mềm",
+    "kỹ năng",
+    "đủ",
+    "học",
+    "phục vụ việc",
+    "kiến thức",
+    ",",
+    "có",
+    "sinh viên",
+    "hệ thống",
+    "yêu cầu",
+    "đánh giá",
+    "mới",
+    "cập nhật",
+    "bài tập",
+    "giờ",
+    "hơn",
+    "rõ",
+    "phần",
+    "đầy đủ",
+    "được",
+    "đồng thời",
+    "rèn luyện",
+    "học phần",
+    "giảng viên",
+    "nước",
+    "giảng dạy",
+    "giáo trình",
+    "giúp",
+    "đào tạo",
+    "bài",
+    "chuyên sâu",
+    "cơ bản",
+    "lớp",
+    "phải",
+    "quốc tế",
+    "mang",
+    "thực tập",
+    "hỏi",
+    "thực hành",
+    "mục tiêu",
+    "gồm",
+    "cung cấp",
+    "việc",
+    "các",
+    "cho",
+    "ngoài",
+    "/",
+    "là",
+    "tính",
+    "phát triển",
+    "thành tựu",
+    "tự",
+    "CTĐTCLC",
+    "thường xuyên",
+    "giảng dạy học phần",
+    "nội dung",
+    "thúc đẩy",
+    "trong",
+    "đề cương",
+    "và",
+    "tại"
+  ],
+  "relationships": [
+    {
+      "source": "tài liệu giảng dạy",
+      "target": "sinh viên",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "tài liệu giảng dạy",
+      "target": "CTĐTCLC",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "tài liệu giảng dạy",
+      "target": "CTĐTTT",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "nội dung bài giảng",
+      "target": "giảng viên",
+      "relationship": "cung cấp"
+    },
+    {
+      "source": "nội dung bài giảng",
+      "target": "mục tiêu đào tạo",
+      "relationship": "đáp ứng"
+    },
+    {
+      "source": "nội dung bài giảng",
+      "target": "thành tựu, tiến bộ mới",
+      "relationship": "mang tính cập nhật"
+    },
+    {
+      "source": "học phần thực hành, thực tập",
+      "target": "tài liệu hướng dẫn",
+      "relationship": "phải có"
+    },
+    {
+      "source": "học phần",
+      "target": "tài liệu",
+      "relationship": "phải có"
+    },
+    {
+      "source": "nội dung bài tập, câu hỏi",
+      "target": "sinh viên",
+      "relationship": "giúp"
+    },
+    {
+      "source": "nội dung yêu cầu",
+      "target": "đánh giá học phần",
+      "relationship": "được đưa vào"
+    },
+    {
+      "source": "kiến thức cơ bản",
+      "target": "kiến thức chuyên môn",
+      "relationship": "phát triển"
+    },
+    {
+      "source": "kỹ năng mềm",
+      "target": "sinh viên",
+      "relationship": "thúc đẩy"
+    }
+  ]
+}

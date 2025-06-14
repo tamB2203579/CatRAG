@@ -1,0 +1,80 @@
+{
+  "chunk_id": "3723fa3f-9565-450d-87da-14218fcca0ed",
+  "text": "ban hành kèm theo quyết định này quy định công tác học vụ dành cho sinh viên trình độ đại học hình thức chính quy của trường đại học cần thơ. điều 2. quyết định này có hiệu lực thi hành từ học kỳ 2, năm học 2024 - 2025. quyết định này thay thế quyết định số 1813/QĐ-ĐHCT ngày 18 tháng 6 năm 2021 của hiệu trưởng trường đại học cần thơ ban hành quy định công tác học vụ dành cho sinh viên trình độ đại học hệ chính quy. điều 3.",
+  "entities": [
+    "ban hành",
+    "hiệu lực",
+    "năm học",
+    "1813",
+    "dành",
+    "6",
+    "điều",
+    "quy định",
+    "2024",
+    "-",
+    "2025",
+    "ĐHCT",
+    "ngày",
+    "quyết định",
+    "của",
+    "thay thế",
+    "kèm",
+    "cần",
+    "QĐ",
+    "tháng",
+    "2021",
+    "cho",
+    "/",
+    "hiệu trưởng",
+    "này",
+    "số",
+    "từ học kỳ",
+    "3",
+    "chính quy",
+    "2",
+    "18",
+    "trường",
+    "thơ",
+    "vụ",
+    "học",
+    "hệ",
+    "đại học",
+    "thi hành",
+    "hình thức",
+    ",",
+    "có",
+    "sinh viên",
+    "công tác",
+    "theo",
+    "trình độ",
+    "năm",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "quyết định này",
+      "target": "quy định công tác học vụ",
+      "relationship": "ban hành kèm theo"
+    },
+    {
+      "source": "quyết định này",
+      "target": "học kỳ 2, năm học 2024 - 2025",
+      "relationship": "có hiệu lực thi hành từ"
+    },
+    {
+      "source": "quyết định này",
+      "target": "quyết định số 1813/QĐ-ĐHCT",
+      "relationship": "thay thế"
+    },
+    {
+      "source": "quyết định số 1813/QĐ-ĐHCT",
+      "target": "quy định công tác học vụ",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "quy định công tác học vụ",
+      "target": "sinh viên trình độ đại học hình thức chính quy",
+      "relationship": "dành cho"
+    }
+  ]
+}

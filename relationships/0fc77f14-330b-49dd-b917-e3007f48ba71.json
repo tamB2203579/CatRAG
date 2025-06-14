@@ -1,0 +1,135 @@
+{
+  "chunk_id": "0fc77f14-330b-49dd-b917-e3007f48ba71",
+  "text": "học phần, lớp học phần và lớp chuyên ngành học phần là lượng kiến thức tương đối trọn vẹn được dạy trong 1 học kỳ. mỗi học phần có tên riêng và được ký hiệu bằng một mã số. học phần bắt buộc là học phần sinh viên phải tích lũy. học phần tự chọn là học phần sinh viên tự lựa chọn để tích lũy. học phần tiên quyết của học phần hpxxx là học phần mà sinh viên phải tích lũy mới được đăng ký học học phần hpxxx. học phần song hành của học phần hpxxx là học phần mà sinh viên phải học trước hoặc học cùng lúc với học phần hpxxx. học phần điều kiện bao gồm các học phần giáo dục quốc phòng và an ninh, giáo dục thể chất, ngoại ngữ căn bản, tin học căn bản là học phần mà sinh viên phải hoàn thành nhưng kết quả học phần không dùng để tính điểm trung bình chung tích lũy ngoài ra, điểm học phần giáo dục thể chất không dùng để tính điểm trung bình chung học kỳ và điểm trung bình chung năm học. lớp học phần được dạy và học trực tiếp hoặc trực tuyến là lớp bao gồm những sinh viên đăng ký học cùng thời khóa biểu của một học phần trong học kỳ.",
+  "entities": [
+    "hoàn thành",
+    "tương đối",
+    "hpxxx",
+    "mới",
+    "tin học",
+    "năm học",
+    "mà",
+    "ngoại ngữ",
+    "những",
+    "tiên quyết",
+    "ký hiệu",
+    "mã số",
+    "bằng",
+    "biểu",
+    "thể chất",
+    "dùng",
+    "không",
+    "mỗi",
+    "của",
+    "trực tiếp",
+    "với",
+    "các",
+    "giáo dục",
+    "được",
+    "tích lũy",
+    "đăng ký",
+    "trọn vẹn",
+    "bắt buộc",
+    "là",
+    "tên riêng",
+    "học phần",
+    "dạy",
+    "tính",
+    "trung bình",
+    "quốc phòng",
+    "trước",
+    "khóa",
+    "chọn",
+    "bao gồm",
+    "1",
+    "tự",
+    "chuyên ngành",
+    "cùng",
+    "học kỳ",
+    "một",
+    "hoặc",
+    "lớp học phần",
+    "thời",
+    "học",
+    "lựa chọn",
+    "lúc",
+    "kiến thức",
+    "căn bản",
+    "chung",
+    "trực tuyến",
+    "an ninh",
+    "nhưng",
+    ",",
+    "có",
+    "lớp",
+    "để",
+    "lượng",
+    "trong",
+    "sinh viên",
+    "phải",
+    "song hành",
+    "điều kiện",
+    "và",
+    "điểm",
+    "ngoài ra",
+    "kết quả",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "học phần",
+      "target": "học kỳ",
+      "relationship": "được dạy trong"
+    },
+    {
+      "source": "học phần",
+      "target": "mã số",
+      "relationship": "được ký hiệu bằng"
+    },
+    {
+      "source": "học phần bắt buộc",
+      "target": "sinh viên",
+      "relationship": "phải tích lũy"
+    },
+    {
+      "source": "học phần tự chọn",
+      "target": "sinh viên",
+      "relationship": "tự lựa chọn để tích lũy"
+    },
+    {
+      "source": "học phần tiên quyết",
+      "target": "học phần hpxxx",
+      "relationship": "là học phần mà sinh viên phải tích lũy mới được đăng ký học"
+    },
+    {
+      "source": "học phần song hành",
+      "target": "học phần hpxxx",
+      "relationship": "là học phần mà sinh viên phải học trước hoặc học cùng lúc với"
+    },
+    {
+      "source": "học phần điều kiện",
+      "target": "sinh viên",
+      "relationship": "phải hoàn thành"
+    },
+    {
+      "source": "điểm học phần giáo dục thể chất",
+      "target": "điểm trung bình chung học kỳ",
+      "relationship": "không dùng để tính"
+    },
+    {
+      "source": "điểm học phần giáo dục thể chất",
+      "target": "điểm trung bình chung năm học",
+      "relationship": "không dùng để tính"
+    },
+    {
+      "source": "lớp học phần",
+      "target": "sinh viên",
+      "relationship": "bao gồm những"
+    },
+    {
+      "source": "lớp học phần",
+      "target": "thời khóa biểu",
+      "relationship": "cùng"
+    }
+  ]
+}

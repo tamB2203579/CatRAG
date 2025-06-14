@@ -1,0 +1,116 @@
+{
+  "chunk_id": "951efed2-12ad-45df-bfd8-11ecb41500f5",
+  "text": "6. tiếng nhật chứng chỉ tiếng nhật JLPT được cấp bởi trung tâm giao lưu văn hóa nhật bản và hiệp hội hỗ trợ giáo dục quốc tế nhật bản. chứng chỉ tiếng nhật NAT-TEST được cấp bởi ban tổ chức thi tiếng nhật NAT-TEST. chứng chỉ ngoại ngữ tiếng nhật theo khung năng lực ngoại ngữ 6 bậc dùng cho việt nam do các đơn vị được bộ giáo dục và đào tạo công nhận cấp. 7. tiếng đức chứng chỉ tiếng đức được cấp bởi viện goethe là tổ chức văn hóa của cộng hòa liên bang đức. chứng chỉ ngoại ngữ tiếng đức theo khung năng lực ngoại ngữ 6 bậc dùng cho việt nam do các đơn vị được bộ giáo dục và đào tạo công nhận cấp. 8. tiếng Ý chứng chỉ tiếng Ý CELI được cấp bởi đại học dành cho người nước ngoài perugia. chứng chỉ tiếng Ý PLIDA được cấp bởi đại học rome la sapienza. chứng chỉ ngoại ngữ tiếng Ý theo khung năng lực ngoại ngữ 6 bậc dùng cho việt nam do các đơn vị được bộ giáo dục và đào tạo công nhận cấp.",
+  "entities": [
+    "tiếng",
+    "đơn vị",
+    "goethe",
+    "ngoại ngữ",
+    "hỗ trợ",
+    "PLIDA",
+    "CELI",
+    "khung",
+    "TEST",
+    "dành",
+    "6",
+    "dùng",
+    "-",
+    "năng lực",
+    "7",
+    "cấp",
+    "người",
+    "của",
+    "đức",
+    "việt nam",
+    "các",
+    "giáo dục",
+    "được",
+    "8",
+    "cho",
+    "tổ chức",
+    "ban",
+    "văn hóa",
+    "hiệp hội",
+    "viện",
+    "là",
+    "thi",
+    "cộng hòa",
+    "liên bang",
+    "perugia",
+    "rome",
+    "do",
+    "bộ",
+    "công nhận",
+    "bậc",
+    "nhật",
+    "chứng chỉ",
+    "nước ngoài",
+    "Ý",
+    "bởi",
+    "JLPT",
+    "TEST.",
+    "đào tạo",
+    "đại học",
+    "bản",
+    "sapienza",
+    "và",
+    "la",
+    "NAT",
+    "trung tâm giao lưu",
+    "quốc tế",
+    "theo",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "tiếng nhật",
+      "target": "chứng chỉ tiếng nhật JLPT",
+      "relationship": "được cấp bởi"
+    },
+    {
+      "source": "chứng chỉ tiếng nhật JLPT",
+      "target": "trung tâm giao lưu văn hóa nhật bản",
+      "relationship": "cấp bởi"
+    },
+    {
+      "source": "chứng chỉ tiếng nhật JLPT",
+      "target": "hiệp hội hỗ trợ giáo dục quốc tế nhật bản",
+      "relationship": "cấp bởi"
+    },
+    {
+      "source": "chứng chỉ tiếng nhật NAT-TEST",
+      "target": "ban tổ chức thi tiếng nhật NAT-TEST",
+      "relationship": "được cấp bởi"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ tiếng nhật",
+      "target": "khung năng lực ngoại ngữ 6 bậc dùng cho việt nam",
+      "relationship": "theo"
+    },
+    {
+      "source": "chứng chỉ tiếng đức",
+      "target": "viện goethe",
+      "relationship": "được cấp bởi"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ tiếng đức",
+      "target": "khung năng lực ngoại ngữ 6 bậc dùng cho việt nam",
+      "relationship": "theo"
+    },
+    {
+      "source": "chứng chỉ tiếng Ý CELI",
+      "target": "đại học dành cho người nước ngoài perugia",
+      "relationship": "được cấp bởi"
+    },
+    {
+      "source": "chứng chỉ tiếng Ý PLIDA",
+      "target": "đại học rome la sapienza",
+      "relationship": "được cấp bởi"
+    },
+    {
+      "source": "chứng chỉ ngoại ngữ tiếng Ý",
+      "target": "khung năng lực ngoại ngữ 6 bậc dùng cho việt nam",
+      "relationship": "theo"
+    }
+  ]
+}
