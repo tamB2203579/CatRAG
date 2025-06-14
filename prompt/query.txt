@@ -11,12 +11,16 @@ INFORMATION FROM GRAPH:
 
 Question: {query}
 
+Question and answer histories: {past_query} {past_response}
+
 Requirements:
 1. Answer the question based on the information provided  
 2. If there is not enough information, state that you do not have complete information  
 3. Present the answer clearly, understandably, and with structure  
 4. If there is conflicting information, clearly state the possible explanations  
 5. For LaTeX formulas, convert them to readable mathematical notation
+6. Answer the question after reviewing the history of previous questions and answers.
+7. If there is no question history, then this is the first conversation.
 
 Answer:
 """

@@ -43,7 +43,7 @@ def interactive_query():
         if query.lower() == "q":
             break
         
-        result = graphrag_chatbot(query)
+        result = graphrag_chatbot(query, session_id)
         print("\nAnswer:")
         print(result["response"])
 
@@ -72,4 +72,6 @@ if __name__ == "__main__":
     else:
         print("Using existing GraphRAG system.")
     
+    session_id = generate_session_id()
+    load_history_from_file(session_id)
     main_menu()

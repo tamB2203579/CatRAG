@@ -9,6 +9,7 @@ from glob import glob
 from tqdm import tqdm
 import pandas as pd
 import warnings
+import datetime
 import spacy
 import json
 import os
@@ -32,7 +33,9 @@ driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password), 
 # Load Vietnamese spaCy model
 nlp = spacy.load("vi_core_news_lg")
 
-def load_csv_data(dir="semantic_result"):
+history = {}
+
+def load_csv_data(dir="result"):
     """
     Load CSV files from a directory and combine them into a DataFrame.
     Each row gets a unique ID.
@@ -378,7 +381,66 @@ def get_vector_results(query, top_k=5):
     
     return results
 
-def graphrag_chatbot(query):
+def generate_session_id():
+    return str(uuid4())
+
+def add_to_history(session_id, query, response):
+    global history
+    max_entries = 10
+    
+    if session_id not in history:
+        history[session_id] = []
+    
+    entry = {
+        "query": query,
+        "response": response,
+        "timestamp": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    }
+
+    if len(history[session_id]) >= max_entries:
+        history[session_id].pop(0)
+    history[session_id].append(entry)
+    save_history_to_file(session_id)  
+    
+def save_history_to_file(session_id):
+    
+    filename = f"history/chat_history_{session_id}.json"
+    
+    try:
+        with open(filename, 'w', encoding='utf-8') as file:
+            json.dump(history.get(session_id, []), file, indent=4, ensure_ascii=False)
+    except Exception as e:
+        print(f"Failed to save history to {filename}: {e}")
+    
+def load_history_from_file(session_id):
+    
+    filename = f"history/chat_history_{session_id}.json"
+    
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            
+            loaded_history = json.load(file)
+            history[session_id] = loaded_history[-10:]
+            
+        print(f"History loaded from {filename} successfully!")
+        
+    except FileNotFoundError:
+        print(f"No history file found at {filename}. Starting with empty history.")
+        history[session_id] = []
+    except Exception as e:
+        print(f"Failed to load history from {filename}: {e}")
+        history[session_id] = []
+
+def clear_history(session_id):
+    filename = f"history/chat_history_{session_id}.json"
+    if session_id in history:
+        history[session_id].clear()
+        
+    with open(filename, 'w', encoding='utf-8') as file:
+        json.dump([], file, indent=4)
+        print(f"History and file {filename} have been cleared successfully!")
+
+def graphrag_chatbot(query, session_id):
     """
     A chatbot that combines vector search and graph context for answering queries.
     """
@@ -402,13 +464,20 @@ def graphrag_chatbot(query):
     ])
 
     graph_context = get_graph_context(query)
+  
+    past_query = " ".join(entry["query"] for entry in history[session_id])
+    past_responses = " ".join(entry["response"] for entry in history[session_id])
 
     response = chain.invoke({
         "query": query,
         "vector_context": vector_context,
-        "graph_context": graph_context
+        "graph_context": graph_context,
+        "past_query": past_query,
+        "past_response": past_responses
     })
-
+    
+    add_to_history(session_id, query, response)
+    
     return {
         "query": query,
         "response": response,
