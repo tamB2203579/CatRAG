@@ -412,5 +412,6 @@ def graphrag_chatbot(query):
     return {
         "query": query,
         "response": response,
+        "vector_context": vector_context,
         "graph_context": graph_context
     }
