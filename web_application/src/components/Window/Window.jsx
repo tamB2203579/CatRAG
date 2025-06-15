@@ -1,10 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { assets } from '../../assets/assets';
+import WebFont from 'webfontloader';
 import './Window.css';
 
 const Window = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: [
+        'K2D:vietnamese',
+        'Readex Pro:vietnamese'
+      ]
+      }
+    });
+  }, []);
 
   const createMsgElement = (content, type) => ({
     id: Date.now(),
@@ -53,12 +66,16 @@ const Window = () => {
     } catch (error) {
       console.error("Error sending message:", error);
     }
+
+    if (!hasSubmitted) {
+      setHasSubmitted(true);
+    }
   };
 
   return (
     <div className='main'>
       <div className="nav">
-        <p>REBot</p>
+        <p style={{fontFamily: 'K2D, sans serif'}}>REBot</p>
       </div>
       <div className="main-container">
         <div className="chats-container">
@@ -81,7 +98,7 @@ const Window = () => {
           ))}
         </div>
 
-        <div className="prompt-container">
+        <div className={`prompt-container ${hasSubmitted ? 'at-bottom' : 'centered'}`}>
           <div className='prompt-wrapper'>
             <div className='prompt-search'>
               <input 
@@ -89,6 +106,12 @@ const Window = () => {
                 type="text" 
                 value={input} 
                 onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      onHandleSubmit(e);
+                    }
+                  }
+                }
                 placeholder='Message REBot' 
                 required
               />
@@ -100,7 +123,7 @@ const Window = () => {
               </div>
             </div>
             <button id='theme-toggle-btn' className="material-symbols-outlined">light_mode</button>
-            <button id='delete-btn' className="material-symbols-outlined">delete</button>
+            <button id='delete-btn' className="material-symbols-outlined" onClick={() => {setInput('')}}>delete</button>
           </div>
 
           <p className='bottom-info'>REBot can make mistakes. Check important info.</p>

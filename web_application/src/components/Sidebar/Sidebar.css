@@ -5,9 +5,12 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #F3F5F8;
+    /* background-color: #F3F5F8; */
+    background-color: #1f5ca9;
+    /* background-image: linear-gradient(to bottom right, #1f5ca9, #00afef); */
     padding: 25px 15px;
     overflow-y: auto;
+    color: white;
 }
 
 .sidebar img {
@@ -22,6 +25,7 @@
 
 button {
     border: none;
+    
   }
 
 .sidebar .new-chat {
@@ -33,7 +37,8 @@ button {
     height: 40px;
     padding: 10px 15px;
     /* background-color: #E3E9EE; */
-    background-color: #E9EDF1;
+    /* background-color: #E9EDF1; */
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     font-size: 14px;
     color: black;
@@ -54,7 +59,7 @@ button {
 .sidebar .recent-entry {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 10px;
     padding: 22px;
     height: 40px;
@@ -64,6 +69,7 @@ button {
     color: #282828;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
 }
 
 .sidebar .recent-entry .thread-title {
@@ -116,6 +122,16 @@ button {
 #settings-btn,
 #logout-btn {
     background-color: #F3F5F8;
+}
+
+.sidebar .home_logo {
+    display: flex;
+    /* margin-left: 10px; */
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 50%;
+    height: auto;
 }
 
 /* .bottom-item:hover {

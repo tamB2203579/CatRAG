@@ -72,6 +72,7 @@
     padding: 3px 16px;
     word-wrap: break-word;
     white-space: pre-line;
+    font-family: 'Readex Pro', sans-serif;
 }
 
 .chats-container .bot-message {
@@ -92,16 +93,19 @@
 
 /* prompt styling */
 
-/* .prompt-container {
-    position: absolute;
-    bottom: 0;
+.prompt-container {
+    position: fixed;
     width: 100%;
     max-width: 900px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0 20px;
-    margin: auto;
-} */
+    transition: all 0.7s ease;
+    z-index: 1000;
+    background-color: white;
+}
 
-.prompt-container {
+.prompt-container2 {
     position: fixed; /* ← chuyển từ absolute → fixed */
     bottom: 0;
     left: 410px;      /* ← để tránh bị sidebar đè nếu sidebar là fixed và rộng 250px */
@@ -110,6 +114,7 @@
     padding: 0 20px;
     background-color: white; /* ← nên có để nhìn rõ khi cuộn */
     z-index: 1000; /* ← để nổi lên trên */
+    transition: all 0.5s ease-out; /* animation */
 }
 
 
@@ -182,4 +187,17 @@ button,
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+}
+
+.prompt-container.centered {
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.prompt-container.at-bottom {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    transform: translateX(-50%);
 }

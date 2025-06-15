@@ -1,40 +1,36 @@
 import { assets } from '../../assets/assets';
+import { useEffect } from 'react';
+import WebFont from 'webfontloader';
 import './Sidebar.css'
 
 const Sidebar = () => {
 
+  useEffect(() => {
+      WebFont.load({
+        google: {
+          families: [
+          'K2D:vietnamese',
+          'Readex Pro:vietnamese'
+        ]
+        }
+      });
+    }, []);
+
   return (
     <div className="sidebar">
       <div className="top">
+        <img className="menu" src={assets.menu_icon} alt="" />
+        <img className="home_logo" src={assets.logo_icon} alt="" onClick={() => {window.location.reload()}} />
         <div className="new-chat">
           <img src={assets.plus_icon} alt="" />
           <p>New Chat</p>
         </div>
-        {/* <div className="recent">
-          <p className="recent-title">Recent</p>
-        </div> */}
-      </div>
-      <div className="bottom">
-        <div className="bottom-item">
-          <button id='help-btn' className="material-symbols-outlined">help</button>
-          <p>Help</p>
-        </div>
-
-        <div className="bottom-item">
-          <button id='history-btn' className="material-symbols-outlined">history</button>
-          <p>Activity</p>
-        </div>
-
-        <div className="bottom-item">
-          <button id='settings-btn' className="material-symbols-outlined">settings</button>
-          <p>Setting</p>
-        </div>
-
-        <hr className="divider" />
-
-        <div className="bottom-item sign-out">
-        <button id='logout-btn' className="material-symbols-outlined">logout</button>
-          <p>Sign Out</p>
+        <div  className='recent'>
+          <p className='recent-title'>Recent</p>
+          <div className='recent-entry'>
+            <img src={assets.message_icon} alt="" />
+            <p>Testing...</p>
+          </div>
         </div>
       </div>
     </div>
