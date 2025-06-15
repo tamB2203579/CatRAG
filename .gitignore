@@ -1,3 +1,5 @@
 .env
 __pycache__
 /Classification/models/
+/history/
+/storage/
