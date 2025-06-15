@@ -13,6 +13,8 @@ Question: {query}
 
 Question and answer histories: {past_query} {past_response}
 
+Contextual Label : {label}
+
 Requirements:
 1. Answer the question based on the information provided  
 2. If there is not enough information, state that you do not have complete information  
@@ -21,6 +23,8 @@ Requirements:
 5. For LaTeX formulas, convert them to readable mathematical notation
 6. Answer the question after reviewing the history of previous questions and answers.
 7. If there is no question history, then this is the first conversation.
+8. Pay attention to the provided label, classify what type of user query it is (e.g., Dao_tao).  
+
 
 Answer:
 """
