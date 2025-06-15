@@ -1,5 +1,7 @@
 from llama_index.core import Document
 from helper_functions import *
+from helper_functions import history
+from Classification import main
 import os
 
 def initialize_graphrag():
@@ -43,7 +45,9 @@ def interactive_query():
         if query.lower() == "q":
             break
         
-        result = graphrag_chatbot(query, session_id)
+        label = main.classify_text(query)
+        
+        result = graphrag_chatbot(query, "6c61ff71-2ba5-42cb-a4e6-abd901d7ebf9", label)
         print("\nAnswer:")
         print(result["response"])
 
@@ -73,5 +77,5 @@ if __name__ == "__main__":
         print("Using existing GraphRAG system.")
     
     session_id = generate_session_id()
-    load_history_from_file(session_id)
+    load_history_from_file("6c61ff71-2ba5-42cb-a4e6-abd901d7ebf9")
     main_menu()
