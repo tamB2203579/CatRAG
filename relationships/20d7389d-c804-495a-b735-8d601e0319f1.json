@@ -1,0 +1,44 @@
+{
+  "chunk_id": "20d7389d-c804-495a-b735-8d601e0319f1",
+  "text": "bố trí trợ giảng cho học phần thuộc khối kiến thức chuyên ngành nếu cần thiết.",
+  "entities": [
+    "khối",
+    "học phần",
+    "cần thiết",
+    "kiến thức",
+    "thuộc",
+    "chuyên ngành",
+    "bố trí",
+    "cho",
+    "trợ giảng",
+    "nếu",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "học phần",
+      "target": "khối",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "học phần",
+      "target": "chuyên ngành",
+      "relationship": "thuộc"
+    },
+    {
+      "source": "trợ giảng",
+      "target": "học phần",
+      "relationship": "cho"
+    },
+    {
+      "source": "bố trí",
+      "target": "trợ giảng",
+      "relationship": "cho"
+    },
+    {
+      "source": "bố trí",
+      "target": "học phần",
+      "relationship": "cho"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "chunk_id": "c78f9a6c-91df-4c80-bc43-d5071de90af2",
+  "text": "tổ chức thực hiện trưởng các đơn vị có trách nhiệm triển khai và tổ chức thực hiện quy định này thẩm quyền kiểm tra và xử lý những trường hợp vi phạm quy định hướng dẫn, giải đáp thắc mắc của SV và viên chức các vấn đề có liên quan giải trình khi có yêu cầu của ban giám hiệu. các đơn vị có liên quan báo cáo ban giám hiệu những vấn đề phát sinh trong quá trình thực hiện.",
+  "entities": [
+    "hướng dẫn",
+    "đơn vị",
+    "trách nhiệm",
+    "những",
+    ".",
+    "khi",
+    "trưởng",
+    "quy định",
+    "giám hiệu",
+    "của",
+    "trường hợp",
+    "các",
+    "vấn đề",
+    "tổ chức",
+    "thắc mắc",
+    "viên chức",
+    "ban",
+    "này",
+    "quá trình",
+    "triển khai",
+    "SV",
+    "vi phạm quy định",
+    "phát sinh",
+    "liên quan",
+    "báo cáo",
+    "kiểm tra",
+    ",",
+    "có",
+    "thẩm quyền",
+    "giải đáp",
+    "trong",
+    "yêu cầu",
+    "và",
+    "giải trình",
+    "xử lý",
+    "thực hiện"
+  ],
+  "relationships": [
+    {
+      "source": "trưởng",
+      "target": "đơn vị",
+      "relationship": "có trách nhiệm"
+    },
+    {
+      "source": "đơn vị",
+      "target": "quy định",
+      "relationship": "triển khai và tổ chức thực hiện"
+    },
+    {
+      "source": "đơn vị",
+      "target": "SV và viên chức",
+      "relationship": "giải đáp thắc mắc"
+    },
+    {
+      "source": "đơn vị",
+      "target": "ban giám hiệu",
+      "relationship": "báo cáo"
+    },
+    {
+      "source": "ban giám hiệu",
+      "target": "trường hợp vi phạm quy định",
+      "relationship": "kiểm tra và xử lý"
+    },
+    {
+      "source": "đơn vị",
+      "target": "vấn đề phát sinh",
+      "relationship": "báo cáo"
+    },
+    {
+      "source": "đơn vị",
+      "target": "yêu cầu",
+      "relationship": "giải trình khi có"
+    }
+  ]
+}

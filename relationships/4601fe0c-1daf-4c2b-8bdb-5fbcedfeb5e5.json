@@ -1,0 +1,16 @@
+{
+  "chunk_id": "4601fe0c-1daf-4c2b-8bdb-5fbcedfeb5e5",
+  "text": "TRUNG TÂM PHỤC VỤ SINH VIÊN",
+  "entities": [
+    "SINH VIÊN",
+    "TRUNG TÂM",
+    "PHỤC VỤ"
+  ],
+  "relationships": [
+    {
+      "source": "TRUNG TÂM",
+      "target": "SINH VIÊN",
+      "relationship": "phục vụ"
+    }
+  ]
+}

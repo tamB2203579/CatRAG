@@ -1,9 +1,7 @@
 from llama_index.core import VectorStoreIndex, StorageContext, Settings, load_index_from_storage
-from llama_index.embeddings.openai import OpenAIEmbedding
-from llama_index.core.node_parser import SentenceSplitter
 from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import ChatPromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
 from uuid import uuid4
@@ -11,6 +9,7 @@ from glob import glob
 from tqdm import tqdm
 import pandas as pd
 import warnings
+import datetime
 import spacy
 import json
 import os
@@ -23,7 +22,7 @@ load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("API_KEY")
 
 # Model Setup
-embed_model = OpenAIEmbedding(model="text-embedding-ada-002")
+embed_model = OpenAIEmbeddings()
 
 # Neo4j Setup
 neo4j_url = "bolt://localhost:7687"
@@ -31,13 +30,16 @@ neo4j_username = "neo4j"
 neo4j_password = "123123123"
 driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password), database="graphrag")
 
-# Llamaindex Setting
-Settings.embed_model = embed_model
-
 # Load Vietnamese spaCy model
 nlp = spacy.load("vi_core_news_lg")
 
+history = {}
+
 def load_csv_data(dir="result"):
+    """
+    Load CSV files from a directory and combine them into a DataFrame.
+    Each row gets a unique ID.
+    """
     csv_files = glob(f"{dir}/*.csv")
     print(f"Found {len(csv_files)} CSV files in {dir}")
 
@@ -58,50 +60,60 @@ def load_csv_data(dir="result"):
     else:
         print("No data loaded.")
         return None
-    
-def create_vector_store(documents):
-    text_splitter = SentenceSplitter(chunk_size=512, chunk_overlap=50)
-    
+
+def create_vector_store(docs):
+    """
+    Create a vector store index from document chunks and save it to disk.
+    """
     # Create vector store index
     print("Creating vector index...")
     vector_index = VectorStoreIndex.from_documents(
-        documents,
-        show_progress=True,
-        transformations=[text_splitter]
+        docs,
+        show_progress=True
     )
 
     # Save the index to disk
     print("Saving vector index to storage...")
     vector_index.storage_context.persist(persist_dir="./storage")
-
     print("Vector store created and saved successfully!")
 
 def load_vector_store():
+    """
+    Load a previously saved vector store index from disk.
+    """
     storage_context = StorageContext.from_defaults(persist_dir="./storage")
     loaded_index = load_index_from_storage(storage_context)
     return loaded_index
 
 def clear_database():
+    """
+    Clear all nodes and relationships from the Neo4j database.
+    """
     with driver.session() as session:
         session.run("MATCH (n) DETACH DELETE n")
         print("Database cleared")
 
 def create_constraints():
+    """
+    Create Neo4j constraints for the graph database.
+    """
     with driver.session() as session:
-        # Create chunk constrains
+        # Create chunk constraints
         session.run(
             """
             CREATE CONSTRAINT chunk_id IF NOT EXISTS
             FOR (c:Chunk) REQUIRE c.id IS UNIQUE
             """
         )
-        # Create entitiy contraints
+        
+        # Create entity constraints
         session.run(
             """
             CREATE CONSTRAINT entity_name IF NOT EXISTS
             FOR (e:Entity) REQUIRE e.name IS UNIQUE
             """
         )
+        
         # Create category constraints
         session.run(
             """
@@ -113,6 +125,9 @@ def create_constraints():
         print("Constraints created")
 
 def normalize(text: str):
+    """
+    Normalize Vietnamese text by removing diacritics and special characters.
+    """
     replacements = {
         'àáảãạăằắẳẵặâầấẩẫậ': 'a',
         'èéẻẽẹêềếểễệ': 'e',
@@ -134,12 +149,19 @@ def normalize(text: str):
     return result
 
 def extract_entities(text: str):
+    """
+    Extract entities from text using spaCy.
+    """
     doc = nlp(text)
     entities = [ent.text for ent in doc]
+    
     entities = list(set([e.strip() for e in entities]))
     return entities
 
 def extract_relationships(text, entities):
+    """
+    Extract relationships between entities using LLM.
+    """
     with open("prompt/extract_relationships.txt", mode="r", encoding="utf-8") as f:
         template = f.read()
     
@@ -168,104 +190,134 @@ def extract_relationships(text, entities):
     except Exception as e:
         print(f"Failed to parse relationships JSON: {e}")
         return []
-    
-def populate_graph(df: pd.DataFrame):
+
+def build_knowledge_graph(chunks):
+    """
+    Build a knowledge graph in Neo4j
+    """
+    # Clear database and create constraints
     # clear_database()
     # create_constraints()
 
     with driver.session() as session:
-        categories = df["label"].str.replace("__label__", "").unique()
-
-        for category in categories:
+        print("Creating Chunk nodes")
+        for chunk in tqdm(chunks, desc="Creating Chunk nodes"):
+            # Create chunk node
             session.run("""
-                MERGE (c:Category {name: $name})
-            """, name=category)
+            CREATE (c:Chunk {
+                id: $id,
+                text: $text,
+                label: $label
+            })
+            """, id=chunk.id_, text=chunk.text, label=chunk.metadata.get("label", ""))
+            
+            # Create category node if a label exists
+            if chunk.metadata.get("label"):
+                # Create category node
+                session.run("""
+                    MERGE (cat:Category {name: $label})
+                """, label=chunk.metadata.get("label", ""))
+            
+            # Connect chunk to category
+            session.run("""
+                MATCH (c:Chunk {id: $chunk_id})
+                MATCH (cat:Category {name: $label})
+                MERGE (c)-[:BELONGS_TO]->(cat)
+            """, chunk_id=chunk.id_, label=chunk.metadata.get("label", ""))
         
-        print(f"Created {len(categories)} category nodes")
-
-        for i, row in tqdm(df.iterrows(), total=len(df), desc="Building knowledge graph in Neo4j..."):
-            text = row["text"]
-            chunk_id = row["id"]
-            category = row["label"].replace("__label__", "")
-
-            entities = extract_entities(text)
-            relationships = extract_relationships(text, entities)
-
-            if relationships:
-                rels_dict = {
-                    "chunk_id": chunk_id,
-                    "text": text,
-                    "category": category,
-                    "relationships": relationships
-                }
-
-                if not os.path.exists("relationships"):
-                    os.makedirs("relationships")
-                
-                with open(f"relationships/{chunk_id}.json", "w", encoding="utf-8") as f:
-                    json.dump(rels_dict, f, ensure_ascii=False, indent=2)
-                
-            # Create chunk nodes:
-            session.run("""
-                MERGE (c:Chunk {id: $id})
-                SET c.text = $text, c.category = $category
-            """, id=chunk_id, text=text, category=category)
-
-            # Connect chunk with cateogory
-            session.run("""
-                MATCH (chunk:Chunk {id: $chunk_id})
-                MATCH (category:Category {name: $category})
-                MERGE (chunk)-[:BELONGS_TO]->(category)
-            """, chunk_id=chunk_id, category=category)
-
+        print("Extracting entities and relationships from chunks...")
+        for chunk in tqdm(chunks, desc="Processing entities and relationships"):
+            # Extract entities
+            entities = extract_entities(chunk.text)
+            
             # Create entity nodes and connect to chunk
             for entity in entities:
-                # Create entity nodes
+                embedding = embed_model.embed_query(entity)
+                # Create entity node
                 session.run("""
                     MERGE (e:Entity {name: $name})
-                """, name=entity)
-
-                # Connection entity to chunk
+                    SET e.embedding = $embedding
+                """, name=entity, embedding=embedding)
+                
+                # Connect entity to chunk
                 session.run("""
                     MATCH (c:Chunk {id: $chunk_id})
                     MATCH (e:Entity {name: $entity_name})
-                    MERGE (c)-[:CONTAINS]->(e)
-                """, chunk_id=chunk_id, entity_name=entity)
-
-            # Create relationships between entities
+                    MERGE (c)-[:MENTIONS]->(e)
+                """, chunk_id=chunk.id_, entity_name=entity)
+            
+            # Extract relationships between entities
+            relationships = extract_relationships(chunk.text, entities)
+            
+            # Save relationships to file for later reference
+            if relationships:
+                rels_dict = {
+                    "chunk_id": chunk.id_,
+                    "text": chunk.text,
+                    "entities": entities,
+                    "relationships": relationships
+                }
+                
+                if not os.path.exists("relationships"):
+                    os.makedirs("relationships")
+                
+                with open(f"relationships/{chunk.id_}.json", "w", encoding="utf-8") as f:
+                    json.dump(rels_dict, f, ensure_ascii=False, indent=2)
+            
+            # Create relationships in Neo4j
             for rel in relationships:
                 source = rel["source"]
                 target = rel["target"]
                 relationship = normalize(rel["relationship"].upper().replace(" ", "_"))
-            
+                
                 if source != target:
-                    # Create relationship in Neo4j
                     try:
+                        # Try to create a typed relationship
                         session.run(f"""
                             MATCH (s:Entity {{name: $source}})
                             MATCH (t:Entity {{name: $target}})
                             MERGE (s)-[r:{relationship}]->(t)
-                        """)
+                            SET r.chunk_id = $chunk_id
+                        """, source=source, target=target, chunk_id=chunk.id_)
                     except Exception as e:
+                        # Fall back to generic relationship
                         session.run("""
                             MATCH (s:Entity {name: $source})
                             MATCH (t:Entity {name: $target})
                             MERGE (s)-[r:RELATED_TO]->(t)
-                            SET r.type = $relationship
-                        """, source=source, target=target, relationship=rel["relationship"])
+                            SET r.relationship = $relationship,
+                                r.chunk_id = $chunk_id
+                        """, source=source, target=target, relationship=rel["relationship"], chunk_id=chunk.id_)
 
 def get_graph_context(query: str, limit=5):
-    query_terms = query.split()
+    """
+    Get relevant context from the knowledge graph based on the query.
+    """
+    # Generate embedding for the query
+    query_embedding = embed_model.embed_query(query)
 
     with driver.session() as session:
-        # First approach: Find entities mentioned in the query
+        # Use vector similarity to find relevant entities
         entities = session.run("""
             MATCH (e:Entity)
-            WHERE any(term IN $query_terms WHERE e.name CONTAINS term OR $query_text CONTAINS e.name)
-            RETURN e.name AS entity
+            WHERE e.embedding IS NOT NULL
+            WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
+            WHERE score > 0.75
+            RETURN e.name AS entity, score
+            ORDER BY score DESC
             LIMIT $limit
-        """, query_terms=query_terms, query_text=query, limit=limit).values()
-
+        """, query_embedding=query_embedding, limit=limit).values()
+        
+        # If no entities found with vector search, fall back to text matching
+        if not entities:
+            query_terms = query.split()
+            entities = session.run("""
+                MATCH (e:Entity)
+                WHERE any(term IN $query_terms WHERE e.name CONTAINS term OR $query_text CONTAINS e.name)
+                RETURN e.name AS entity, 1.0 AS score
+                LIMIT $limit
+            """, query_terms=query_terms, query_text=query, limit=limit).values()
+        
         if not entities:
             return "No relevant graph context found."
         
@@ -273,6 +325,7 @@ def get_graph_context(query: str, limit=5):
 
         for entity_tuple in entities:
             entity_name = entity_tuple[0]
+            entity_score = entity_tuple[1]
 
             # Find relationships for this entity
             relationships = session.run("""
@@ -280,12 +333,19 @@ def get_graph_context(query: str, limit=5):
                 RETURN type(r) AS relationship, 
                     e.name AS source, 
                     other.name AS target,
-                    r.type AS rel_type
+                    CASE WHEN type(r) = 'RELATED_TO' THEN r.relationship ELSE null END AS rel_type
                 LIMIT 5
             """, entity_name=entity_name).values()
 
-            # Initialize entity_context
-            entity_context = f"Entity: {entity_name}\n"
+            # Find chunks mentioning this entity
+            chunks = session.run("""
+                MATCH (e:Entity {name: $entity_name})<-[:MENTIONS]-(c:Chunk)
+                RETURN c.text AS chunk_text
+                LIMIT 2
+            """, entity_name=entity_name).values()
+
+            # Initialize entity_context with similarity score
+            entity_context = f"Entity: {entity_name} (Similarity: {entity_score:.4f})\n"
 
             if relationships:
                 entity_context += "Relationships:\n"
@@ -293,15 +353,21 @@ def get_graph_context(query: str, limit=5):
                     relationship = rel_name if rel_type == "RELATED_TO" else rel_type.lower().replace("_", " ")
                     entity_context += f" - {source} {relationship} {target}\n"
             
+            if chunks:
+                entity_context += "\nRelevant Context:\n"
+                for chunk_tuple in chunks:
+                    entity_context += f" - {chunk_tuple[0][:150]}...\n"
+            
             context_parts.append(entity_context)
         
     return "\n\n".join(context_parts)
 
 def get_vector_results(query, top_k=5):
+    """
+    Get relevant results from the vector store based on the query.
+    """
     index = load_vector_store()
-
-    retriever = index.as_retriever(kwargs=top_k)
-
+    retriever = index.as_retriever(similarity_top_k=top_k)
     nodes = retriever.retrieve(query)
 
     results = []
@@ -315,7 +381,69 @@ def get_vector_results(query, top_k=5):
     
     return results
 
-def graphrag_chatbot(query):
+def generate_session_id():
+    return str(uuid4())
+
+def add_to_history(session_id, query, response):
+    global history
+    max_entries = 10
+    
+    if session_id not in history:
+        history[session_id] = []
+    
+    entry = {
+        "query": query,
+        "response": response,
+        "timestamp": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    }
+
+    if len(history[session_id]) >= max_entries:
+        history[session_id].pop(0)
+    history[session_id].append(entry)
+    save_history_to_file(session_id)  
+    
+def save_history_to_file(session_id):
+    
+    filename = f"history/chat_history_{session_id}.json"
+    
+    try:
+        with open(filename, 'w', encoding='utf-8') as file:
+            json.dump(history.get(session_id, []), file, indent=4, ensure_ascii=False)
+    except Exception as e:
+        print(f"Failed to save history to {filename}: {e}")
+    
+def load_history_from_file(session_id):
+    
+    filename = f"history/chat_history_{session_id}.json"
+    
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            
+            loaded_history = json.load(file)
+            history[session_id] = loaded_history[-10:]
+            
+        print(f"History loaded from {filename} successfully!")
+        
+    except FileNotFoundError:
+        print(f"No history file found at {filename}. Starting with empty history.")
+        history[session_id] = []
+    except Exception as e:
+        print(f"Failed to load history from {filename}: {e}")
+        history[session_id] = []
+
+def clear_history(session_id):
+    filename = f"history/chat_history_{session_id}.json"
+    if session_id in history:
+        history[session_id].clear()
+        
+    with open(filename, 'w', encoding='utf-8') as file:
+        json.dump([], file, indent=4)
+        print(f"History and file {filename} have been cleared successfully!")
+
+def graphrag_chatbot(query, session_id):
+    """
+    A chatbot that combines vector search and graph context for answering queries.
+    """
     with open("prompt/query.txt", "r", encoding="utf-8") as f:
         template = f.read()
     
@@ -336,16 +464,23 @@ def graphrag_chatbot(query):
     ])
 
     graph_context = get_graph_context(query)
+  
+    past_query = " ".join(entry["query"] for entry in history[session_id])
+    past_responses = " ".join(entry["response"] for entry in history[session_id])
 
     response = chain.invoke({
         "query": query,
         "vector_context": vector_context,
-        "graph_context": graph_context
+        "graph_context": graph_context,
+        "past_query": past_query,
+        "past_response": past_responses
     })
-
+    
+    add_to_history(session_id, query, response)
+    
     return {
         "query": query,
         "response": response,
-        # "vector_results": vector_results,
+        "vector_context": vector_context,
         "graph_context": graph_context
     }

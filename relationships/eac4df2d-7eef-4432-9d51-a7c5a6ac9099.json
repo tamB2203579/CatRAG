@@ -1,0 +1,175 @@
+{
+  "chunk_id": "eac4df2d-7eef-4432-9d51-a7c5a6ac9099",
+  "text": "học kỳ mỗi năm học được tổ chức thành 03 học kỳ gọi là học kỳ 1, học kỳ 2 và học kỳ 3. mỗi học kỳ kéo dài 15 tuần, trong đó có 11 tuần dạy và 1 tuần dự trữ và tổ chức thi những học phần thi riêng, 1 tuần tổ chức thi những học phần thi riêng còn lại, 2 tuần tổ chức thi những học phần thi chung và xử lý kết quả đánh giá học phần. học kỳ 1 bắt đầu từ tuần thứ 37 đến tuần thứ 51 của năm học kỳ 2 bắt đầu từ tuần thứ 01 đến tuần thứ 17 của năm bao gồm 2 tuần nghỉ tết nguyên đán học kỳ 3 bắt đầu từ tuần thứ 20 đến tuần thứ 34 của năm. tuần nghỉ giữa các học kỳ là tuần thứ 18, 19, 35, 36, 52 và tuần thứ 53 nếu có của năm. điều 7.",
+  "entities": [
+    "năm học",
+    "thứ",
+    "năm học kỳ",
+    "15",
+    "những",
+    "34",
+    "tuần",
+    "35",
+    "riêng",
+    "điều",
+    "nếu",
+    "tết",
+    "kéo dài",
+    "đó",
+    "còn",
+    "7",
+    "03",
+    "dự trữ",
+    "mỗi",
+    "của",
+    "các",
+    "được",
+    "tổ chức",
+    "17",
+    "51",
+    "36",
+    "là",
+    "gọi",
+    "thi",
+    "kết quả",
+    "3",
+    "dạy",
+    "học phần",
+    "lại",
+    "01",
+    "2",
+    "18",
+    "bao gồm",
+    "1",
+    "thành",
+    "20",
+    "giữa",
+    "học kỳ",
+    "37",
+    "52",
+    "11",
+    "bắt đầu từ",
+    "19",
+    "năm",
+    "chung",
+    "nghỉ",
+    "đán",
+    "đến",
+    ",",
+    "có",
+    "53",
+    "trong",
+    "nguyên",
+    "và",
+    "đánh giá",
+    "xử lý",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "năm học",
+      "target": "học kỳ 1",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "năm học",
+      "target": "học kỳ 2",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "năm học",
+      "target": "học kỳ 3",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "học kỳ 1",
+      "target": "tuần thứ 37",
+      "relationship": "bắt đầu từ"
+    },
+    {
+      "source": "học kỳ 1",
+      "target": "tuần thứ 51",
+      "relationship": "đến"
+    },
+    {
+      "source": "học kỳ 2",
+      "target": "tuần thứ 01",
+      "relationship": "bắt đầu từ"
+    },
+    {
+      "source": "học kỳ 2",
+      "target": "tuần thứ 17",
+      "relationship": "đến"
+    },
+    {
+      "source": "học kỳ 3",
+      "target": "tuần thứ 20",
+      "relationship": "bắt đầu từ"
+    },
+    {
+      "source": "học kỳ 3",
+      "target": "tuần thứ 34",
+      "relationship": "đến"
+    },
+    {
+      "source": "tuần nghỉ giữa các học kỳ",
+      "target": "tuần thứ 18",
+      "relationship": "là"
+    },
+    {
+      "source": "tuần nghỉ giữa các học kỳ",
+      "target": "tuần thứ 19",
+      "relationship": "là"
+    },
+    {
+      "source": "tuần nghỉ giữa các học kỳ",
+      "target": "tuần thứ 35",
+      "relationship": "là"
+    },
+    {
+      "source": "tuần nghỉ giữa các học kỳ",
+      "target": "tuần thứ 36",
+      "relationship": "là"
+    },
+    {
+      "source": "tuần nghỉ giữa các học kỳ",
+      "target": "tuần thứ 52",
+      "relationship": "là"
+    },
+    {
+      "source": "tuần nghỉ giữa các học kỳ",
+      "target": "tuần thứ 53",
+      "relationship": "nếu có"
+    },
+    {
+      "source": "học kỳ",
+      "target": "15 tuần",
+      "relationship": "kéo dài"
+    },
+    {
+      "source": "học kỳ",
+      "target": "11 tuần dạy",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "học kỳ",
+      "target": "1 tuần dự trữ",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "học kỳ",
+      "target": "1 tuần tổ chức thi những học phần thi riêng còn lại",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "học kỳ",
+      "target": "2 tuần tổ chức thi những học phần thi chung",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "học kỳ",
+      "target": "xử lý kết quả đánh giá học phần",
+      "relationship": "bao gồm"
+    }
+  ]
+}

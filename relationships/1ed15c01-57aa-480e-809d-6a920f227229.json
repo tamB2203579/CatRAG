@@ -1,0 +1,30 @@
+{
+  "chunk_id": "1ed15c01-57aa-480e-809d-6a920f227229",
+  "text": "nếu có thắc mắc phải hỏi công khai.",
+  "entities": [
+    "hỏi",
+    "công khai",
+    "có",
+    "phải",
+    "thắc mắc",
+    "nếu",
+    "."
+  ],
+  "relationships": [
+    {
+      "source": "thắc mắc",
+      "target": "hỏi",
+      "relationship": "phải"
+    },
+    {
+      "source": "hỏi",
+      "target": "công khai",
+      "relationship": "phải"
+    },
+    {
+      "source": "nếu",
+      "target": "có",
+      "relationship": "nếu"
+    }
+  ]
+}

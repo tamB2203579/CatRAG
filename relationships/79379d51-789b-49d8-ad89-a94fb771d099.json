@@ -1,0 +1,81 @@
+{
+  "chunk_id": "79379d51-789b-49d8-ad89-a94fb771d099",
+  "text": "QUYỀN KHIẾU NẠI người học có quyền khiếu nại lên phòng, ban chức năng hoặc hiệu trưởng nếu thấy việc đánh giá kết quả rèn luyện chưa chính xác. khi nhận được đơn khiếu nại, cơ sở giáo dục đại học có trách nhiệm giải quyết, trả lời theo quy định của pháp luật về khiếu nại.",
+  "entities": [
+    "chưa",
+    "KHIẾU NẠI",
+    "lên",
+    "đánh giá",
+    "chính xác",
+    "rèn luyện",
+    "người",
+    "đơn",
+    "quyền",
+    "khi",
+    "hiệu trưởng",
+    "cơ sở",
+    "nhận",
+    "phòng",
+    "quy định",
+    "học",
+    "khiếu nại",
+    "thấy",
+    "trách nhiệm",
+    "về",
+    "trả lời",
+    "pháp luật",
+    ",",
+    "hoặc",
+    "đại học",
+    "của",
+    "nếu",
+    "việc",
+    ".",
+    "ban",
+    "kết quả",
+    "giáo dục",
+    "theo",
+    "có",
+    "giải quyết",
+    "được",
+    "QUYỀN",
+    "chức năng"
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "khiếu nại",
+      "relationship": "có quyền"
+    },
+    {
+      "source": "khiếu nại",
+      "target": "phòng, ban chức năng hoặc hiệu trưởng",
+      "relationship": "lên"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "đơn khiếu nại",
+      "relationship": "nhận"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "trách nhiệm",
+      "relationship": "có"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "giải quyết",
+      "relationship": "có trách nhiệm"
+    },
+    {
+      "source": "cơ sở giáo dục đại học",
+      "target": "trả lời",
+      "relationship": "phải"
+    },
+    {
+      "source": "việc đánh giá kết quả rèn luyện",
+      "target": "chưa chính xác",
+      "relationship": "thấy"
+    }
+  ]
+}

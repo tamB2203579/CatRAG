@@ -1,0 +1,12 @@
+[
+    {
+        "query": "Thế nào là điểm học phần ?",
+        "response": "Điểm học phần là tổng số điểm của tất cả các điểm đánh giá thành phần trong một học phần, được tính theo thang điểm 10 và làm tròn đến một chữ số thập phân. Cụ thể, điểm học phần được tính bằng công thức:\n\n\\[\n\\text{Điểm học phần} = \\sum (\\text{Điểm thành phần} \\times \\text{Trọng số})\n\\]\n\nTrong đó, điểm thành phần có thể bao gồm các loại điểm như điểm bài tập, điểm kiểm tra giữa kỳ, điểm thực hành, điểm đánh giá nhận thức, điểm tham gia thảo luận, điểm chuyên cần, và điểm thi kết thúc học phần. \n\nĐiểm thi kết thúc học phần là bắt buộc và được tổ chức một lần. Điểm học phần chỉ được tính tích lũy khi đạt từ điểm D (6.0) trở lên. Điểm học phần sẽ được công bố và ghi nhận với cả điểm số theo thang điểm 10 và điểm chữ theo thang điểm 4, với quy đổi như sau:\n\n- 9.0 - 10.0: A\n- 8.0 - 8.9: B\n- 7.0 - 7.9: C\n- 6.0 - 6.9: D\n- 5.0 - 5.9: E\n- Dưới 5.0: F\n\nHy vọng thông tin này giúp bạn hiểu rõ hơn về điểm học phần tại Đại học Cần Thơ!",
+        "timestamp": "2025-06-08 10:06:41"
+    },
+    {
+        "query": "Câu hỏi trước của tôi là gì ?",
+        "response": "Câu hỏi trước của bạn là: \"Thế nào là điểm học phần?\"\n\nĐiểm học phần là tổng số điểm của tất cả các điểm đánh giá thành phần trong một học phần, được tính theo thang điểm 10 và làm tròn đến một chữ số thập phân. Cụ thể, điểm học phần được tính bằng công thức:\n\n\\[\n\\text{Điểm học phần} = \\sum (\\text{Điểm thành phần} \\times \\text{Trọng số})\n\\]\n\nTrong đó, điểm thành phần có thể bao gồm các loại điểm như điểm bài tập, điểm kiểm tra giữa kỳ, điểm thực hành, điểm đánh giá nhận thức, điểm tham gia thảo luận, điểm chuyên cần, và điểm thi kết thúc học phần. \n\nĐiểm thi kết thúc học phần là bắt buộc và được tổ chức một lần. Điểm học phần chỉ được tính tích lũy khi đạt từ điểm D (6.0) trở lên. Điểm học phần sẽ được công bố và ghi nhận với cả điểm số theo thang điểm 10 và điểm chữ theo thang điểm 4, với quy đổi như sau:\n\n- 9.0 - 10.0: A\n- 8.0 - 8.9: B\n- 7.0 - 7.9: C\n- 6.0 - 6.9: D\n- 5.0 - 5.9: E\n- Dưới 5.0: F\n\nHy vọng thông tin này giúp bạn hiểu rõ hơn về điểm học phần tại Đại học Cần Thơ! Nếu bạn có thêm câu hỏi nào khác, hãy cho tôi biết.",
+        "timestamp": "2025-06-08 10:07:19"
+    }
+]

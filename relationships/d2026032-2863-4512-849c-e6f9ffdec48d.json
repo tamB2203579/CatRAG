@@ -1,0 +1,116 @@
+{
+  "chunk_id": "d2026032-2863-4512-849c-e6f9ffdec48d",
+  "text": "đăng ký học lại các học phần có điểm F không được tích lũy. nếu là học phần bắt buộc sinh viên phải đăng ký học lại những học phần này nếu là học phần tự chọn, sinh viên có thể đăng ký học lại hoặc chọn học phần tự chọn khác. sinh viên có thể đăng ký học để cải thiện kết quả. điểm của học phần sẽ là điểm cao nhất trong các lần học. số tín chỉ của học phần học cải thiện bị điểm F sẽ không tính giảm một mức hạng tốt nghiệp theo quy định. đối với học phần tự chọn, nếu sinh viên tích lũy số tín chỉ nhiều hơn yêu cầu của nhóm học phần tự chọn, khi xét tốt nghiệp sinh viên có thể lựa chọn học phần có điểm cao để tính vào điểm trung bình chung tích lũy. điều 18.",
+  "entities": [
+    "lần",
+    "nhiều",
+    "có thể",
+    "hạng",
+    "những",
+    ".",
+    "khi",
+    "tốt nghiệp",
+    "hơn",
+    "điều",
+    "nếu",
+    "quy định",
+    "đối với",
+    "không",
+    "của",
+    "bị",
+    "các",
+    "đăng ký",
+    "được",
+    "tích lũy",
+    "cải thiện",
+    "này",
+    "là",
+    "điểm cao",
+    "số",
+    "lại",
+    "học phần",
+    "sẽ",
+    "tín chỉ",
+    "tính",
+    "khác",
+    "vào",
+    "nhóm",
+    "trung bình",
+    "chọn",
+    "18",
+    "tự",
+    "hoặc",
+    "một",
+    "theo",
+    "xét",
+    "học",
+    "F",
+    "nhất",
+    "lựa chọn",
+    "chung",
+    "mức",
+    ",",
+    "có",
+    "để",
+    "giảm",
+    "sinh viên",
+    "trong",
+    "phải",
+    "yêu cầu",
+    "điểm",
+    "kết quả",
+    "bắt buộc"
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "học phần",
+      "relationship": "đăng ký học lại"
+    },
+    {
+      "source": "học phần",
+      "target": "điểm F",
+      "relationship": "không được tích lũy"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần bắt buộc",
+      "relationship": "phải đăng ký học lại"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần tự chọn",
+      "relationship": "có thể đăng ký học lại hoặc chọn"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả",
+      "relationship": "có thể đăng ký học để cải thiện"
+    },
+    {
+      "source": "điểm",
+      "target": "điểm cao nhất",
+      "relationship": "sẽ là"
+    },
+    {
+      "source": "số tín chỉ",
+      "target": "học phần học cải thiện",
+      "relationship": "không tính giảm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tín chỉ",
+      "relationship": "tích lũy nhiều hơn yêu cầu"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần có điểm cao",
+      "relationship": "có thể lựa chọn"
+    },
+    {
+      "source": "học phần tự chọn",
+      "target": "điểm trung bình chung tích lũy",
+      "relationship": "tính vào"
+    }
+  ]
+}
