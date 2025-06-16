@@ -1,13 +1,14 @@
 import React from 'react'
-import Sidebar from './components/Sidebar/Sidebar'
-import Window from './components/Window/Window'
+import Home from './pages/Home'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <>
-      <Sidebar/>
-      <Window/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/chat" element={<Home />} />
+      </Routes>
+    </Router>
   )
 }
 
