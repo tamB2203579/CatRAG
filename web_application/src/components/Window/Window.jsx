@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { assets } from '../../assets/assets';
 import WebFont from 'webfontloader';
 import './Window.css';
 
-const Window = () => {
+const Window = ({ isSidebarOpen }) => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -12,12 +12,23 @@ const Window = () => {
     WebFont.load({
       google: {
         families: [
-        'K2D:vietnamese',
-        'Readex Pro:vietnamese'
+        'K2D:400,500,700&display=swap',
+        'Readex Pro:400,500,700&display=swap'
       ]
       }
     });
   }, []);
+
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
 
   const createMsgElement = (content, type) => ({
     id: Date.now(),
@@ -73,7 +84,7 @@ const Window = () => {
   };
 
   return (
-    <div className='main'>
+    <div className={`main ${isSidebarOpen ? 'sidebar-open' : 'sidebar-collapsed'}`}>
       <div className="nav">
         <p style={{fontFamily: 'K2D, sans serif'}}>REBot</p>
       </div>
@@ -96,9 +107,10 @@ const Window = () => {
               )}
             </div>
           ))}
+          <div ref={messagesEndRef} />
         </div>
-
-        <div className={`prompt-container ${hasSubmitted ? 'at-bottom' : 'centered'}`}>
+      </div>
+      <div className={`prompt-container ${hasSubmitted ? 'at-bottom' : 'centered'}`}>
           <div className='prompt-wrapper'>
             <div className='prompt-search'>
               <input 
@@ -128,7 +140,6 @@ const Window = () => {
 
           <p className='bottom-info'>REBot can make mistakes. Check important info.</p>
         </div>
-      </div>
     </div>
   );
 };

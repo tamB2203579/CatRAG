@@ -7,10 +7,21 @@
     justify-content: space-between;
     /* background-color: #F3F5F8; */
     background-color: #1f5ca9;
-    /* background-image: linear-gradient(to bottom right, #1f5ca9, #00afef); */
-    padding: 25px 15px;
-    overflow-y: auto;
+    /* background-image: linear-gradient(to bottom right, #1f5ca9, #084860); */
+    padding: 0 15px;
+    overflow-y: hidden;
     color: white;
+    transition: width 0.5s ease;
+    font-family: 'K2D', sans-serif;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    background-color: white;
 }
 
 .sidebar img {
@@ -18,15 +29,45 @@
 }
 
 .sidebar .menu {
-    display: block;
-    margin-left: 10px;
+    width: 30px;
     cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Hide content in collapsed state */
+.sidebar.collapsed .top .home_logo,
+.sidebar.collapsed .top .new-chat,
+.sidebar.collapsed .top .recent {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Show content when expanded */
+.sidebar.open .top,
+.sidebar.open .recent,
+.sidebar.open .new-chat {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Optional: fade in/out text labels */
+.sidebar.collapsed p {
+    display: none;
+}
+
+.sidebar.open p {
+    display: block;
+}
+
+.menu-container {
+  position: relative;
+  z-index: 1;
 }
 
 button {
     border: none;
-    
-  }
+}
 
 .sidebar .new-chat {
     margin-top: 10px;
@@ -35,15 +76,19 @@ button {
     width: 100%;
     gap: 10px;
     height: 40px;
-    padding: 10px 15px;
-    /* background-color: #E3E9EE; */
-    /* background-color: #E9EDF1; */
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    font-size: 14px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-image: linear-gradient(90deg, #e3fbff 0%, #d9e7ff 100%);
+    border-radius: 30px;
+    font-size: 16px;
     color: black;
     cursor: pointer;
     justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar .new-chat:hover{
+    border-radius: 30px;
+    background-image: linear-gradient(90deg, #c5ecf2 0%, #bdcfed 100%);
 }
 
 .sidebar .recent {
@@ -54,6 +99,25 @@ button {
 .sidebar .recent-title {
     margin-top: 30px;
     margin-bottom: 0;
+    font-size: 20px;
+}
+
+.recent-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  padding: 6px 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.recent-entry p {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px; /* or any width that fits your design */
+    font-family: 'K2D', sans-serif;
 }
 
 .sidebar .recent-entry {
@@ -72,22 +136,10 @@ button {
     color: white;
 }
 
-.sidebar .recent-entry .thread-title {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.sidebar .recent-entry:hover {
+    background-color: #9fb2d2;
+    transform: scale(1.05);
 }
-
-.sidebar .recent-entry .thread-title p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 15px;
-}
-
-/* .sidebar .recent-entry:hover {
-    background-color: #ced4da;
-} */
 
 .sidebar .bottom {
     display: flex;
@@ -130,7 +182,7 @@ button {
     margin: auto;
     margin-bottom: 20px;
     cursor: pointer;
-    width: 50%;
+    width: 40%;
     height: auto;
 }
 
