@@ -39,12 +39,14 @@ const Sidebar = ({ isOpen, onToggle }) => {
         </div>
         <div className="recent">
           <p className="recent-title">Recent</p>
-          {recentChats.map((title, index) => (
-            <div className="recent-entry" key={index}>
-              <img src={assets.white_message_icon} alt="" />
-              <p>{title}</p>
-            </div>
-          ))}
+          <div className="recent-list">
+            {recentChats.map((title, index) => (
+              <div className="recent-entry" key={index}>
+                <img src={assets.white_message_icon} alt="" />
+                <p>{title}</p>
+              </div>
+            ))}
+           </div>
         </div>
       </div>
     </div>
