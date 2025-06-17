@@ -1,7 +1,6 @@
 .env
 __pycache__
 /Classification/models/
-/lib/
 /history/
 /relationships/
 /storage/

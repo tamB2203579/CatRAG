@@ -467,7 +467,7 @@ def clear_history(session_id):
         json.dump([], file, indent=4)
         print(f"History and file {filename} have been cleared successfully!")
 
-def graphrag_chatbot(query, session_id, label):
+def graphrag_chatbot(query, session_id, label, NED):
     """
     A chatbot that combines vector search and graph context for answering queries.
     """
@@ -506,7 +506,8 @@ def graphrag_chatbot(query, session_id, label):
         "graph_context": graph_context,
         "past_query": past_query,
         "past_response": past_responses,
-        "label": label
+        "label": label,
+        "NED":NED,
     })
     
     add_to_history(session_id, query, response)
