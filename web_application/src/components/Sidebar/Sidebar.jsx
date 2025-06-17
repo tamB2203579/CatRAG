@@ -32,7 +32,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
         <div className='menu-container'>
           <img className="menu" style={{ opacity: 1, pointerEvents: 'auto' }} src={assets.menu_icon} alt="" onClick={onToggle}/>
         </div>
-        <img className="home_logo" src={assets.logo_icon} alt="" onClick={() => {window.location.reload()}} />
+        <img className="home_logo" src={assets.logo_icon} alt="" onClick={() => {window.location.replace("/landing.html");}} />
         <div className="new-chat" onClick={handleNewChat}>
           <img src={assets.plus_icon} alt="" />
           <p>New Chat</p>
