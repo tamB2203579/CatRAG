@@ -1,0 +1,277 @@
+.sidebar {
+    position: fixed; 
+    min-height: 100vh;
+    width: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: #F3F5F8; */
+    background-color: #1f5ca9;
+    /* background-image: linear-gradient(to bottom right, #1f5ca9, #084860); */
+    padding: 0 15px;
+    overflow-y: hidden;
+    color: white;
+    transition: width 0.5s ease;
+    font-family: 'K2D', sans-serif;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    background-color: white;
+}
+
+.sidebar img {
+    width: 20px;
+}
+
+.sidebar .menu {
+    width: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Hide content in collapsed state */
+.sidebar.collapsed .top .home_logo,
+.sidebar.collapsed .top .new-chat,
+.sidebar.collapsed .top .recent {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Show content when expanded */
+.sidebar.open .top,
+.sidebar.open .recent,
+.sidebar.open .new-chat {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Optional: fade in/out text labels */
+.sidebar.collapsed p {
+    display: none;
+}
+
+.sidebar.open p {
+    display: block;
+}
+
+.menu-container {
+  position: relative;
+  z-index: 1;
+}
+
+button {
+    border: none;
+}
+
+.sidebar .new-chat {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    height: 40px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-image: linear-gradient(90deg, #e3fbff 0%, #d9e7ff 100%);
+    border-radius: 30px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar .new-chat:hover{
+    border-radius: 30px;
+    background-image: linear-gradient(90deg, #c5ecf2 0%, #bdcfed 100%);
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.recent-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  padding: 6px 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.recent-entry p {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px; /* or any width that fits your design */
+    font-family: 'K2D', sans-serif;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 22px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #9fb2d2;
+    transform: scale(1.05);
+}
+
+.recent-list {
+  overflow-y: auto;
+  max-height: 400px; /* adjust based on layout */
+  padding-right: 4px;
+}
+
+.recent-list::-webkit-scrollbar {
+  width: 6px;
+}
+.recent-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* .sidebar .bottom-item:hover {
+    background-color: #ced4da;
+} */
+
+.sidebar .divider {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+#help-btn,
+#history-btn,
+#settings-btn,
+#logout-btn {
+    background-color: #F3F5F8;
+}
+
+.sidebar .home_logo {
+    display: flex;
+    /* margin-left: 10px; */
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 40%;
+    height: auto;
+}
+
+/* .bottom-item:hover {
+    background-color: #ced4da;
+}
+
+.bottom-item:hover button,
+.bottom-item:hover #help-btn,
+.bottom-item:hover #history-btn,
+.bottom-item:hover #settings-btn,
+.bottom-item:hover #logout-btn{
+    background-color: #ced4da;
+} */
+
+.recent-entry:hover #menu-btn {
+    background-color: #ced4da;
+}
+
+.actions {
+    position: relative;
+}
+
+#menu-btn {
+    background-color: #F3F5F8;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.dropdown .edit-btn p {
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.2s;
+}
+
+.dropdown .delete-btn p {
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+    color: red;
+    transition: background-color 0.2s;
+}
+
+.edit-btn {
+    display: inline-block;
+}
+
+.delete-btn span {
+    color: red
+}
+
+.edit-btn span {
+    color: black
+}
+
+.edit-btn, .delete-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-btn span, .delete-btn span {
+    margin-right: 8px;
+}
