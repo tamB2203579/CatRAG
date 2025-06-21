@@ -8,6 +8,8 @@ from glob import glob
 import pandas as pd 
 import numpy as np
 import torch
+import faiss
+import os
 import re
 
 wikipedia.set_lang("vi")
@@ -51,6 +53,21 @@ def load_dictionary(path='lib/Dictionary_Underthesea.xlsx'):
     df = pd.read_excel(path)
     df.dropna(subset=["Entity", "Wikipedia Summary"], inplace=True)
     return df["Entity"].tolist(), df["Wikipedia Summary"].tolist()
+
+def load_faiss_index(path='storage/faiss_index.index'):
+    if os.path.exists(path):
+        index = faiss.read_index(path)
+        print(f"FAISS index loaded from {path}")
+        return index
+    else:
+        raise FileNotFoundError(f"Index file not found at: {path}")
+    
+def load_summaries(path='storage/summaries.npy'):
+    return np.load(path, allow_pickle=True).tolist()
+
+def index_exists():
+    return os.path.exists("storage/faiss_index.index") and os.path.exists("storage/summaries.npy")
+
 
 def NER_and_map_sentences(text):
     # Join strings and clean the text
@@ -123,18 +140,6 @@ def wikipedia_result(Entity_sentence_map):
     # print("Unprocessed Entities:", Unprocessed_Entities)
     return Wiki_Result_List
 
-def summary_search(Entity_sentence_map, entities, summaries):
-    entity_summary_map = dict(zip(entities, summaries))
-    matched_results = []
-    for entity, sentence in tqdm(Entity_sentence_map, desc="Summary search"):
-        # Try exact match (case-insensitive)
-        for dict_entity in entity_summary_map:
-            if entity.lower() == dict_entity.lower():
-                matched_results.append((entity, sentence, entity_summary_map[dict_entity]))
-                break  
-            
-    return matched_results 
-
 def encode_sentences(sentences, batch_size=32):
     all_embeddings = []
 
@@ -149,6 +154,40 @@ def encode_sentences(sentences, batch_size=32):
         all_embeddings.extend(embeddings)
 
     return np.array(all_embeddings)
+
+def build_faiss_index(summaries=None):
+    if index_exists():
+        print("Loading FAISS index and summaries from cache...")
+        index = load_faiss_index()
+        summaries = load_summaries()
+    else:
+        print("No cached index found. Building FAISS index from dictionary...")
+        entities, summaries = load_dictionary()
+        print(f"Encoding {len(summaries)} summaries with batching...")
+        summary_vectors = encode_sentences(summaries, batch_size=32)
+
+        index = faiss.IndexFlatL2(summary_vectors.shape[1])
+        index.add(np.ascontiguousarray(summary_vectors))
+        
+        faiss.write_index(index, 'storage/faiss_index.index')
+        np.save('storage/summaries.npy', summaries)
+
+        print("FAISS index built and saved.")
+
+    return index
+
+def search_summary_by_faiss(entity_sentence_map, summaries, summary_index):
+    results = []
+
+    for entity, sentence in tqdm(entity_sentence_map, desc="FAISS Lookup"):
+        encoded = encode_sentences([entity])[0]
+        D, I = summary_index.search(np.array([encoded]), 1)
+        summary = summaries[I[0][0]]
+        distance = D[0][0]
+        results.append((entity, sentence, summary))
+    
+    return results
+
 
 def Distance(Result_List):
     # Dictionary to store the shortest distance per entity
@@ -192,10 +231,10 @@ def NED(text):
     
     entities, summaries = load_dictionary()
     Entity_sentence_map = NER_and_map_sentences(text)
-
+    summary_index = build_faiss_index(summaries)
     
     # Result_List = wikipedia_result(Entity_sentence_map)
-    Result_List = summary_search(Entity_sentence_map, entities, summaries)
+    Result_List = search_summary_by_faiss(Entity_sentence_map, summaries, summary_index)
     Result = Distance(Result_List)
     # Distance_df(Result)
     return Result
@@ -206,7 +245,7 @@ def main():
     # text = load_csv_data()
     text = input("Enter your questions: ")
     
-    NED(text)
+    Result = NED(text)
     
      
     
