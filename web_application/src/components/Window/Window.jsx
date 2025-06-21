@@ -3,6 +3,7 @@ import { assets } from '../../assets/assets';
 import WebFont from 'webfontloader';
 import './Window.css';
 
+
 const Window = ({ isSidebarOpen }) => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -54,34 +55,96 @@ const Window = ({ isSidebarOpen }) => {
     }
   };
 
-  const onHandleSubmit = async (e) => {
-    e.preventDefault();
-    const userMessage = input.trim();
-    if (!userMessage) return;
+  const typeText = (text) => {
+  let index = 0;
+  const typingSpeed = 20;
 
-    setInput('');
+  const interval = setInterval(() => {
+    setMessages((prevMessages) => {
+      const updatedMessages = [...prevMessages];
+      const lastMessage = updatedMessages[updatedMessages.length - 1];
 
-    const userMsg = createMsgElement(userMessage, 'user');
-    setMessages((prevMessages) => [...prevMessages, userMsg]);
+      if (lastMessage && lastMessage.type === 'bot') {
+        updatedMessages[updatedMessages.length - 1] = {
+          ...lastMessage,
+          content: text.slice(0, index + 1),
+        };
+      }
 
-    const loadingMsg = createMsgElement("Vui lòng chờ trong giây lát...", "bot");
-    setMessages((prevMessages) => [...prevMessages, loadingMsg]);
+      return updatedMessages;
+    });
 
-    try {
-      const botResponse = await sendMessage();
-      setMessages((prevMessages) => {
-        const updatedMessages = [...prevMessages];
-        updatedMessages[updatedMessages.length - 1] = createMsgElement(botResponse, "bot");
-        return updatedMessages;
-      });
-    } catch (error) {
-      console.error("Error sending message:", error);
+    index++;
+
+    if (index >= text.length) {
+      clearInterval(interval);
     }
-
-    if (!hasSubmitted) {
-      setHasSubmitted(true);
-    }
+  }, typingSpeed);
   };
+
+
+  // const onHandleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const userMessage = input.trim();
+  //   if (!userMessage) return;
+
+  //   setInput('');
+
+  //   const userMsg = createMsgElement(userMessage, 'user');
+  //   setMessages((prevMessages) => [...prevMessages, userMsg]);
+
+  //   const loadingMsg = createMsgElement("Vui lòng chờ trong giây lát...", "bot");
+  //   setMessages((prevMessages) => [...prevMessages, loadingMsg]);
+
+  //   try {
+  //     const botResponse = await sendMessage();
+  //     setMessages((prevMessages) => {
+  //       const updatedMessages = [...prevMessages];
+  //       updatedMessages[updatedMessages.length - 1] = createMsgElement(botResponse, "bot");
+  //       return updatedMessages;
+  //     });
+  //   } catch (error) {
+  //     console.error("Error sending message:", error);
+  //   }
+
+  //   if (!hasSubmitted) {
+  //     setHasSubmitted(true);
+  //   }
+  // };
+
+  const onHandleSubmit = async (e) => {
+  e.preventDefault();
+  const userMessage = input.trim();
+  if (!userMessage) return;
+
+  setInput('');
+
+  const userMsg = createMsgElement(userMessage, 'user');
+  setMessages((prevMessages) => [...prevMessages, userMsg]);
+
+  const botMsg = createMsgElement('', 'bot');
+  setMessages((prevMessages) => [...prevMessages, botMsg]);
+
+  try {
+    const botResponse = await sendMessage();
+
+    // Start typing effect
+    typeText(botResponse);
+
+  } catch (error) {
+    console.error("Error sending message:", error);
+    setMessages((prevMessages) => {
+      const updatedMessages = [...prevMessages];
+      updatedMessages[updatedMessages.length - 1] = createMsgElement("Đã xảy ra lỗi khi lấy phản hồi.", "bot");
+      return updatedMessages;
+    });
+  }
+
+  if (!hasSubmitted) {
+    setHasSubmitted(true);
+  }
+};
+
 
   return (
     <div className={`main ${isSidebarOpen ? 'sidebar-open' : 'sidebar-collapsed'}`}>
