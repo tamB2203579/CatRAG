@@ -56,95 +56,62 @@ const Window = ({ isSidebarOpen }) => {
   };
 
   const typeText = (text) => {
-  let index = 0;
-  const typingSpeed = 20;
+    let index = 0;
+    const typingSpeed = 20;
 
-  const interval = setInterval(() => {
-    setMessages((prevMessages) => {
-      const updatedMessages = [...prevMessages];
-      const lastMessage = updatedMessages[updatedMessages.length - 1];
+    const interval = setInterval(() => {
+      setMessages((prevMessages) => {
+        const updatedMessages = [...prevMessages];
+        const lastMessage = updatedMessages[updatedMessages.length - 1];
 
-      if (lastMessage && lastMessage.type === 'bot') {
-        updatedMessages[updatedMessages.length - 1] = {
-          ...lastMessage,
-          content: text.slice(0, index + 1),
-        };
+        if (lastMessage && lastMessage.type === 'bot') {
+          updatedMessages[updatedMessages.length - 1] = {
+            ...lastMessage,
+            content: text.slice(0, index + 1),
+          };
+        }
+
+        return updatedMessages;
+      });
+
+      index++;
+
+      if (index >= text.length) {
+        clearInterval(interval);
       }
+    }, typingSpeed);
+    };
 
-      return updatedMessages;
-    });
-
-    index++;
-
-    if (index >= text.length) {
-      clearInterval(interval);
-    }
-  }, typingSpeed);
-  };
-
-
-  // const onHandleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const userMessage = input.trim();
-  //   if (!userMessage) return;
-
-  //   setInput('');
-
-  //   const userMsg = createMsgElement(userMessage, 'user');
-  //   setMessages((prevMessages) => [...prevMessages, userMsg]);
-
-  //   const loadingMsg = createMsgElement("Vui lòng chờ trong giây lát...", "bot");
-  //   setMessages((prevMessages) => [...prevMessages, loadingMsg]);
-
-  //   try {
-  //     const botResponse = await sendMessage();
-  //     setMessages((prevMessages) => {
-  //       const updatedMessages = [...prevMessages];
-  //       updatedMessages[updatedMessages.length - 1] = createMsgElement(botResponse, "bot");
-  //       return updatedMessages;
-  //     });
-  //   } catch (error) {
-  //     console.error("Error sending message:", error);
-  //   }
-
-  //   if (!hasSubmitted) {
-  //     setHasSubmitted(true);
-  //   }
-  // };
 
   const onHandleSubmit = async (e) => {
-  e.preventDefault();
-  const userMessage = input.trim();
-  if (!userMessage) return;
+    e.preventDefault();
+    const userMessage = input.trim();
+    if (!userMessage) return;
 
-  setInput('');
+    setInput('');
 
-  const userMsg = createMsgElement(userMessage, 'user');
-  setMessages((prevMessages) => [...prevMessages, userMsg]);
+    const userMsg = createMsgElement(userMessage, 'user');
+    setMessages((prevMessages) => [...prevMessages, userMsg]);
 
-  const botMsg = createMsgElement('', 'bot');
-  setMessages((prevMessages) => [...prevMessages, botMsg]);
+    const loadingMsg = createMsgElement("Vui lòng chờ trong giây lát...", "bot");
+    setMessages((prevMessages) => [...prevMessages, loadingMsg]);
 
-  try {
-    const botResponse = await sendMessage();
+    try {
+      const botResponse = await sendMessage();
+      // setMessages((prevMessages) => {
+      //   const updatedMessages = [...prevMessages];
+      //   updatedMessages[updatedMessages.length - 1] = createMsgElement(botResponse, "bot");
+      //   return updatedMessages;
+      // });
+      typeText(botResponse);
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
 
-    // Start typing effect
-    typeText(botResponse);
-
-  } catch (error) {
-    console.error("Error sending message:", error);
-    setMessages((prevMessages) => {
-      const updatedMessages = [...prevMessages];
-      updatedMessages[updatedMessages.length - 1] = createMsgElement("Đã xảy ra lỗi khi lấy phản hồi.", "bot");
-      return updatedMessages;
-    });
-  }
-
-  if (!hasSubmitted) {
-    setHasSubmitted(true);
-  }
-};
-
+    if (!hasSubmitted) {
+      setHasSubmitted(true);
+    }
+  };
 
   return (
     <div className={`main ${isSidebarOpen ? 'sidebar-open' : 'sidebar-collapsed'}`}>
