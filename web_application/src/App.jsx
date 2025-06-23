@@ -23,7 +23,7 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
+    <div>
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
       <Window isSidebarOpen={isSidebarOpen} />
     </div>

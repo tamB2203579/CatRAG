@@ -1,5 +1,6 @@
 import { assets } from '../../assets/assets';
 import { useEffect, useState } from 'react';
+
 import WebFont from 'webfontloader';
 import './Sidebar.css'
 
@@ -15,22 +16,22 @@ const Sidebar = ({ isOpen, onToggle }) => {
       WebFont.load({
         google: {
           families: [
-          'K2D:400,500,700&display=swap',
-          'Readex Pro:400,500,700&display=swap'
+          'K2D:vietnamese',
+          'Readex Pro:vietnamese'
         ]
         }
       });
   }, []);
 
   const handleNewChat = () => {
-    setRecentChats(prev => [...prev, `Untitled chat ${prev.length + 1}`]);
+    setRecentChats(prev => [`Untitled chat ${prev.length + 1}`, ...prev]);
   };
   
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'collapsed'}`}>
       <div className="top">
         <div className='menu-container'>
-          <img className="menu" style={{ opacity: 1, pointerEvents: 'auto' }} src={assets.menu_icon} alt="" onClick={onToggle}/>
+          <img className="menu" style={{ opacity: 1, pointerEvents: 'auto' }} src={isOpen ? assets.white_menu_icon : assets.menu_icon} alt="" onClick={onToggle}/>
         </div>
         <img className="home_logo" src={assets.logo_icon} alt="" onClick={() => {window.location.replace("/landing.html");}} />
         <div className="new-chat" onClick={handleNewChat}>
@@ -49,9 +50,10 @@ const Sidebar = ({ isOpen, onToggle }) => {
            </div>
         </div>
       </div>
+      <div>
+        <img className="home-btn" src={isOpen ? assets.white_home_icon : assets.home_icon} alt="" onClick={() => {window.location.replace("/landing.html");}} />
+      </div>
     </div>
-
-    
   )
 };
 

@@ -3,6 +3,7 @@ import { assets } from '../../assets/assets';
 import WebFont from 'webfontloader';
 import './Window.css';
 
+
 const Window = ({ isSidebarOpen }) => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -54,6 +55,34 @@ const Window = ({ isSidebarOpen }) => {
     }
   };
 
+  const typeText = (text) => {
+    let index = 0;
+    const typingSpeed = 20;
+
+    const interval = setInterval(() => {
+      setMessages((prevMessages) => {
+        const updatedMessages = [...prevMessages];
+        const lastMessage = updatedMessages[updatedMessages.length - 1];
+
+        if (lastMessage && lastMessage.type === 'bot') {
+          updatedMessages[updatedMessages.length - 1] = {
+            ...lastMessage,
+            content: text.slice(0, index + 1),
+          };
+        }
+
+        return updatedMessages;
+      });
+
+      index++;
+
+      if (index >= text.length) {
+        clearInterval(interval);
+      }
+    }, typingSpeed);
+    };
+
+
   const onHandleSubmit = async (e) => {
     e.preventDefault();
     const userMessage = input.trim();
@@ -69,11 +98,12 @@ const Window = ({ isSidebarOpen }) => {
 
     try {
       const botResponse = await sendMessage();
-      setMessages((prevMessages) => {
-        const updatedMessages = [...prevMessages];
-        updatedMessages[updatedMessages.length - 1] = createMsgElement(botResponse, "bot");
-        return updatedMessages;
-      });
+      // setMessages((prevMessages) => {
+      //   const updatedMessages = [...prevMessages];
+      //   updatedMessages[updatedMessages.length - 1] = createMsgElement(botResponse, "bot");
+      //   return updatedMessages;
+      // });
+      typeText(botResponse);
     } catch (error) {
       console.error("Error sending message:", error);
     }
