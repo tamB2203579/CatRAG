@@ -4,6 +4,7 @@ import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../../../firebase.config';
 import WebFont from 'webfontloader';
 import Sidebar from '../Sidebar/Sidebar';
+import { marked } from "marked";
 import './Window.css';
 
 const Window = ({ isOpen, onToggle }) => {
@@ -15,7 +16,6 @@ const Window = ({ isOpen, onToggle }) => {
 
   const messagesEndRef = useRef(null);
 
-  // Tải font
   useEffect(() => {
     WebFont.load({
       google: {
@@ -27,7 +27,6 @@ const Window = ({ isOpen, onToggle }) => {
     });
   }, []);
 
-  // Cuộn xuống tin nhắn mới nhất
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -36,7 +35,6 @@ const Window = ({ isOpen, onToggle }) => {
     scrollToBottom();
   }, [messages]);
 
-  // Tải lịch sử thread khi currentThread thay đổi
   useEffect(() => {
     const loadThreadHistory = async () => {
       if (currentThread) {
@@ -65,7 +63,6 @@ const Window = ({ isOpen, onToggle }) => {
     loadThreadHistory();
   }, [currentThread]);
 
-  // Hàm tạo object tin nhắn
   const createMsgElement = (content, type, loading = false) => ({
     id: Date.now(),
     type,
@@ -74,7 +71,6 @@ const Window = ({ isOpen, onToggle }) => {
     timestamp: new Date().toISOString(),
   });
 
-  // Cập nhật nội dung thread trong Firebase
   const updateThreadContent = async (updatedHistory) => {
     if (!currentThread) {
       console.log('Chưa chọn thread');
@@ -92,66 +88,80 @@ const Window = ({ isOpen, onToggle }) => {
     }
   };
 
-  // Cập nhật thread hiện tại
   const updateCurrentThread = (threadId) => {
     setCurrentThread(threadId);
   };
 
-  // Cập nhật lịch sử chat
+  const formatMarkdownToHTML = (markdownText) => {
+    return marked.parse(markdownText || '');
+  };
+
+
   const updateChatHistory = (newChatHistory) => {
     setMessages(newChatHistory);
     setHasSubmitted(newChatHistory.length > 0);
   };
 
-  // Xử lý gửi tin nhắn
   const onHandleSubmit = async (e) => {
-    e.preventDefault();
-    const userMessage = input.trim();
-    if (!userMessage) return;
+  e.preventDefault();
+  const userMessage = input.trim();
+  if (!userMessage) return;
 
-    if (!currentThread) {
-      alert('Vui lòng chọn hoặc tạo cuộc trò chuyện trước.');
-      return;
+  if (!currentThread) {
+    alert('Vui lòng chọn hoặc tạo cuộc trò chuyện trước.');
+    return;
+  }
+
+  setInput('');
+  setHasSubmitted(true);
+
+  const userMsg = createMsgElement(userMessage, 'user');
+  setMessages((prevMessages) => [...prevMessages, userMsg]);
+
+  try {
+    setIsLoading(true);
+
+    const loadingMsg = createMsgElement('', 'bot', true);
+    setMessages((prevMessages) => [...prevMessages, loadingMsg]);
+
+    const res = await fetch('http://localhost:8000/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: userMessage,
+        session_id: currentThread,
+        response: ''
+      }),
+    });
+
+    const data = await res.json();
+    const botResponse = data?.data?.response;
+
+    const htmlContent = formatMarkdownToHTML(botResponse);
+
+    setIsLoading(false);
+
+    if (botResponse) {
+      setMessages((prevMessages) => {
+        const filtered = prevMessages.filter(
+          (msg) => !msg.loading && msg.content.trim() !== ''
+        );
+        const botMsg = createMsgElement(htmlContent, 'bot');
+        const updated = [...filtered, botMsg];
+
+        updateThreadContent(updated);
+        return updated;
+      });
     }
+  } catch (error) {
+    console.error('Lỗi:', error);
+    setIsLoading(false);
+    setMessages((prevMessages) =>
+      prevMessages.filter((msg) => !msg.loading)
+    );
+  }
+};
 
-    setInput('');
-    setHasSubmitted(true);
-
-    const userMsg = createMsgElement(userMessage, 'user');
-    setMessages((prevMessages) => [...prevMessages, userMsg]);
-
-    try {
-      setIsLoading(true);
-
-      const loadingMsg = createMsgElement('', 'bot', true);
-      setMessages((prevMessages) => [...prevMessages, loadingMsg]);
-
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      const botResponse = `Bot trả lời giả lập cho: "${userMessage}"`;
-
-      setIsLoading(false);
-
-      if (botResponse) {
-        setMessages((prevMessages) => {
-          const filtered = prevMessages.filter(
-            (msg) => !msg.loading && msg.content.trim() !== ''
-          );
-          const botMsg = createMsgElement(botResponse, 'bot');
-          const updated = [...filtered, botMsg];
-
-          updateThreadContent(updated);
-
-          return updated;
-        });
-      }
-    } catch (error) {
-      console.error('Lỗi:', error);
-      setIsLoading(false);
-      setMessages((prevMessages) =>
-        prevMessages.filter((msg) => !msg.loading)
-      );
-    }
-  };
 
   return (
     <div>
@@ -177,9 +187,12 @@ const Window = ({ isOpen, onToggle }) => {
                 {msg.type === 'bot' ? (
                   <>
                     <img src={assets.bot_avatar} alt="" className="avatar" />
-                    <p className="message-text">
-                      {msg.loading ? 'Đang tải...' : msg.content}
-                    </p>
+                    <div
+                      className="message-text"
+                      dangerouslySetInnerHTML={{
+                        __html: msg.loading ? 'Đang tải...' : msg.content,
+                      }}
+                    ></div>
                   </>
                 ) : (
                   <p className="message-text">{msg.content}</p>

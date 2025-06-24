@@ -8,7 +8,6 @@ import './Sidebar.css';
 const Sidebar = ({ isOpen, onToggle, updateCurrentThread, updateChatHistory }) => {
   const [threads, setThreads] = useState([]);
 
-  // Tải font và danh sách thread từ Firebase khi component mount
   useEffect(() => {
     WebFont.load({
       google: {
@@ -28,7 +27,6 @@ const Sidebar = ({ isOpen, onToggle, updateCurrentThread, updateChatHistory }) =
           title: doc.data().title || 'Cuộc trò chuyện mới',
           timestamp: doc.data().timestamp,
         }));
-        // Sắp xếp thread theo thời gian, mới nhất lên đầu
         setThreads(threadsList.sort((a, b) => b.timestamp.seconds - a.timestamp.seconds));
       } catch (error) {
         console.error('Lỗi tải danh sách thread:', error);
@@ -38,7 +36,6 @@ const Sidebar = ({ isOpen, onToggle, updateCurrentThread, updateChatHistory }) =
     fetchThreads();
   }, []);
 
-  // Tạo thread mới
   const createThread = async () => {
     try {
       const threadRef = await addDoc(collection(db, 'threads'), {
@@ -60,7 +57,6 @@ const Sidebar = ({ isOpen, onToggle, updateCurrentThread, updateChatHistory }) =
     }
   };
 
-  // Xử lý khi click vào thread
   const handleThreadClick = async (threadId) => {
     try {
       console.log(`Chuyển sang thread ${threadId}`);
