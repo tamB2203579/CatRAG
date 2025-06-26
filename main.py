@@ -1,69 +1,41 @@
-from llama_index.core import Document
-from helper_functions import *
-from helper_functions import history
-from Classification import main
+from classify import main as classify_module
+from history_manager import HistoryManager
+from graph_rag import GraphRAG
 import os
 
-def initialize_graphrag():
+def main():
     """
-    Initialize the GraphRAG system:
-    1. Load documents
-    2. Split them into chunks
-    3. Create vector store
-    4. Build knowledge graph with entities and relationships
+    Main entry point for the GraphRAG system.
     """
-    print("Initializing GraphRAG system...")
+    # Initialize the GraphRAG system
+    graph_rag = GraphRAG(model_name="gpt-4o-mini")
+    history_manager = HistoryManager()
     
-    # Load CSV data
-    df = load_csv_data()
-    
-    if df is not None:
-        documents = [Document(text=row['text'], id_=row['id'], metadata={"label": row['label']}) for _, row in df.iterrows()]
-        print(f"Created {len(documents)} documents for indexing")
-        
-        if not documents:
-            print("No documents created due to data loading issues")
-            return
-        
-        # create_vector_store(documents)
-        
-        # build_knowledge_graph(documents)
-        
-        print("GraphRAG initialization completed successfully!")
+    # Check if we need to initialize the system
+    if not os.path.exists("storage") or input("Do you want to reinitialize the GraphRAG system? (y/n): ").lower() == "y":
+        graph_rag.initialize_system()
     else:
-        print("Skipping GraphRAG initialization due to missing data")
-
-def interactive_query():
-    """
-    Run an interactive query loop for the GraphRAG system.
-    """
-    print("\nGraphRAG Query System")
-    print("Type 'q' to exit")
+        print("Using existing GraphRAG system.")
     
-    while True:
-        query = input("\nNhập câu hỏi của bạn: ")
-        if query.lower() == "q":
-            break
-        
-        label = main.classify_text(query)
-        
-        result = graphrag_chatbot(query, "6c61ff71-2ba5-42cb-a4e6-abd901d7ebf9", label)
-        print("\nAnswer:")
-        print(result["response"])
-
-def main_menu():
-    """
-    Display the main menu for the GraphRAG system.
-    """
+    # Load a specific session history if needed
+    history_manager.load_history_from_file("6c61ff71-2ba5-42cb-a4e6-abd901d7ebf9")
+    
+    # Display the main menu
     while True:
         print("\nGraphRAG System Menu")
         print("1. Interactive Query (Question Answering)")
         print("2. Exit")
         
-        choice = input("\nEnter your choice (1-3): ")
+        choice = input("\nEnter your choice (1-2): ")
         
         if choice == "1":
-            interactive_query()
+            try:
+                # Attempt to import and use the classifier
+                graph_rag.interactive_query(classifier=classify_module)
+            except ImportError:
+                # Fall back to not using classification if the module isn't available
+                print("Classification module not available. Proceeding without classification.")
+                graph_rag.interactive_query()
         elif choice == "2":
             print("Exiting GraphRAG system. Goodbye!")
             break
@@ -71,11 +43,4 @@ def main_menu():
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    if not os.path.exists("storage") or input("Do you want to reinitialize the GraphRAG system? (y/n): ").lower() == "y":
-        initialize_graphrag()
-    else:
-        print("Using existing GraphRAG system.")
-    
-    session_id = generate_session_id()
-    load_history_from_file("6c61ff71-2ba5-42cb-a4e6-abd901d7ebf9")
-    main_menu()
+    main()
