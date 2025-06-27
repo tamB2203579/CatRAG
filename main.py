@@ -17,9 +17,6 @@ def main():
     else:
         print("Using existing GraphRAG system.")
     
-    # Load a specific session history if needed
-    history_manager.load_history_from_file("6c61ff71-2ba5-42cb-a4e6-abd901d7ebf9")
-    
     # Display the main menu
     while True:
         print("\nGraphRAG System Menu")
@@ -29,13 +26,7 @@ def main():
         choice = input("\nEnter your choice (1-2): ")
         
         if choice == "1":
-            try:
-                # Attempt to import and use the classifier
-                graph_rag.interactive_query(classifier=classify_module)
-            except ImportError:
-                # Fall back to not using classification if the module isn't available
-                print("Classification module not available. Proceeding without classification.")
-                graph_rag.interactive_query()
+            graph_rag.interactive_query(classifier=classify_module)
         elif choice == "2":
             print("Exiting GraphRAG system. Goodbye!")
             break

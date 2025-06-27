@@ -1,38 +1,55 @@
 from rag import RAG
 import os
-import argparse
 
 def main():
-    # Parse command line arguments
-    parser = argparse.ArgumentParser(description="Run RAG on PDF documents")
-    parser.add_argument("--pdf", help="Path to PDF file", required=True)
-    parser.add_argument("--model", help="Model name (gpt-4o-mini or gemini-pro)", 
-                        default="gemini-2.5-flash", choices=["gpt-4o-mini", "gemini-2.5-flash"])
-    parser.add_argument("--query", help="Query to ask", required=True)
-    args = parser.parse_args()
-
-    # Initialize the RAG system with the specified model
-    rag = RAG(args.model)
+    print("=" * 50)
+    print("PDF Question Answering System")
+    print("=" * 50)
     
-    # Process PDF if it exists
-    if os.path.exists(args.pdf):
-        print(f"Processing PDF: {args.pdf}")
-        # Read PDF content
-        pdf_text = rag.read_pdf_to_string(args.pdf)
+    # Get PDF path
+    while True:
+        pdf_path = input("Enter path to PDF file: ")
+        if os.path.exists(pdf_path):
+            break
+        else:
+            print(f"Error: PDF file not found at {pdf_path}")
+    
+    # Select model
+    print("\nAvailable models:")
+    print("1. gpt-4o-mini")
+    print("2. gemini-2.5-flash (default)")
+    
+    model_choice = input("Select model (1/2): ").strip() or "2"
+    model = "gpt-4o-mini" if model_choice == "1" else "gemini-2.5-flash"
+    
+    # Initialize the RAG system with the selected model
+    rag = RAG(model)
+    
+    print(f"\nProcessing PDF: {pdf_path}")
+    
+    # Read PDF content
+    pdf_text = rag.read_pdf_to_string(pdf_path)
+    
+    # Chunk the document
+    chunks = rag.chunking(pdf_text)
+    
+    # Create vector store
+    rag.create_vector_stores(chunks)
+    
+    # Query loop
+    while True:
+        print("\n" + "-" * 50)
+        query = input("Enter your question (or 'exit' to quit): ")
         
-        # Chunk the document
-        chunks = rag.chunking(pdf_text)
-        
-        # Create vector store
-        rag.create_vector_stores(chunks)
-        
-        # Generate response to query
-        print(f"\nQuery: {args.query}")
-        response = rag.generate_response(args.query)
-        print("\nResponse:")
-        print(response)
-    else:
-        print(f"Error: PDF file not found at {args.pdf}")
+        if query.lower() == 'exit':
+            break
+            
+        if query.strip():
+            response = rag.generate_response(query)
+            print("\nResponse:")
+            print(response)
+        else:
+            print("Please enter a valid question.")
 
 if __name__ == "__main__":
     main()

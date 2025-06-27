@@ -15,9 +15,6 @@ class KnowledgeGraph:
         self.embed_model = Embedding()
         self.nlp = spacy.load("vi_core_news_lg")
         
-        # Ensure relationships directory exists
-        os.makedirs("relationships", exist_ok=True)
-        
     def close(self):
         self.driver.close()
         

@@ -1,10 +1,9 @@
-from sentence_transformers import SentenceTransformer
 from transformers import AutoModel, AutoTokenizer
 from langchain.embeddings.base import Embeddings
 from typing import List
 
 class Embedding(Embeddings):
-    def __init__(self, model_name="vinai/phobert-base"):
+    def __init__(self, model_name="vinai/phobert-base-v2"):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModel.from_pretrained(model_name)
     

@@ -1,16 +1,18 @@
-from knowledge_graph import KnowledgeGraph
-from vector_store import VectorStore
-from history_manager import HistoryManager
-from embedding import Embedding
 from langchain_core.output_parsers import StrOutputParser
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain_google_genai import ChatGoogleGenerativeAI
-from dotenv import load_dotenv
 from llama_index.core import Document
+from dotenv import load_dotenv
+from uuid import uuid4
+from glob import glob
+
+from knowledge_graph import KnowledgeGraph
+from history_manager import HistoryManager
+from vector_store import VectorStore
+
 import pandas as pd
 import os
-from uuid import uuid4
 
 # Load environment variables
 load_dotenv()
@@ -35,7 +37,6 @@ class GraphRAG:
         Load CSV files from a directory and combine them into a DataFrame.
         Each row gets a unique ID.
         """
-        from glob import glob
         csv_files = glob(f"{dir}/*.csv")
         print(f"Found {len(csv_files)} CSV files in {dir}")
 
