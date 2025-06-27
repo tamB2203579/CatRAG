@@ -4,10 +4,13 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.vectorstores import FAISS
 from langchain_openai import ChatOpenAI
-from embedding import Embedding
 from dotenv import load_dotenv
 import os
 import re
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from embedding import Embedding
 
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
@@ -28,7 +31,7 @@ class RAG:
         with open("./lib/stopwords.txt", mode="r", encoding="utf-8") as f:
             self.stopwords = f.read().splitlines()
 
-    def preprocess(text):
+    def preprocess(self, text):
         # Convert non-uppercase words to lowercase
         words = text.split()
         processed_words = [word if word.isupper() else word.lower() for word in words]

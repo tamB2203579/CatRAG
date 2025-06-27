@@ -8,7 +8,7 @@ def main():
     Main entry point for the GraphRAG system.
     """
     # Initialize the GraphRAG system
-    graph_rag = GraphRAG(model_name="gpt-4o-mini")
+    graph_rag = GraphRAG(model_name="gemini-2.5-flash")
     history_manager = HistoryManager()
     
     # Check if we need to initialize the system
