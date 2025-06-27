@@ -1,0 +1,95 @@
+{
+  "chunk_id": "ddfb0def-c921-4878-8ac7-9f0ce1b168c8",
+  "text": "trung tâm thông tin và quản trị mạng xử lý lỗi kỹ thuật, mật khẩu của tài khoản và email SV. 4. phòng công tác chính trị tổ chức lễ phát bằng tốt nghiệp tổ chức các hội diễn văn nghệ truyền thống của trường quản lý đội văn nghệ trường. D.",
+  "entities": [
+    "phòng",
+    "kỹ thuật",
+    "chính trị",
+    ".",
+    "trường",
+    "quản lý",
+    "D.",
+    "mạng",
+    "quản trị",
+    "tổ chức",
+    "bằng",
+    "lễ",
+    "của",
+    "công tác",
+    "văn nghệ",
+    "phát",
+    "thông tin",
+    "SV.",
+    "và",
+    "truyền thống",
+    "4",
+    "trung tâm",
+    "mật khẩu",
+    "đội",
+    "tốt nghiệp",
+    "các",
+    "xử lý",
+    "lỗi",
+    "hội diễn văn nghệ",
+    "email",
+    "tài khoản",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "trung tâm",
+      "target": "thông tin",
+      "relationship": "quản trị"
+    },
+    {
+      "source": "trung tâm",
+      "target": "mạng",
+      "relationship": "quản trị"
+    },
+    {
+      "source": "phòng",
+      "target": "công tác",
+      "relationship": "chính trị"
+    },
+    {
+      "source": "phòng",
+      "target": "lễ",
+      "relationship": "tổ chức"
+    },
+    {
+      "source": "phòng",
+      "target": "hội diễn văn nghệ",
+      "relationship": "tổ chức"
+    },
+    {
+      "source": "trường",
+      "target": "đội",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "trường",
+      "target": "văn nghệ",
+      "relationship": "tổ chức"
+    },
+    {
+      "source": "lễ",
+      "target": "phát",
+      "relationship": "tổ chức"
+    },
+    {
+      "source": "SV.",
+      "target": "email",
+      "relationship": "của"
+    },
+    {
+      "source": "SV.",
+      "target": "tài khoản",
+      "relationship": "của"
+    },
+    {
+      "source": "trường",
+      "target": "truyền thống",
+      "relationship": "của"
+    }
+  ]
+}

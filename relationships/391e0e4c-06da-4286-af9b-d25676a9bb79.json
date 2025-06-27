@@ -1,0 +1,70 @@
+{
+  "chunk_id": "391e0e4c-06da-4286-af9b-d25676a9bb79",
+  "text": "nếu có tình huống bất thường phải báo cáo để cán bộ coi thi giải quyết. những bài thi sau đây là không hợp lệ và không được chấm điểm - làm bài trên giấy thi khác với giấy thi quy định. - không có chữ ký của cán bộ coi thi.",
+  "entities": [
+    ".",
+    "là",
+    "làm",
+    "báo cáo",
+    "chấm",
+    "quy định",
+    "-",
+    "bài",
+    "phải",
+    "có",
+    "sau",
+    "tình huống",
+    "cán bộ",
+    "khác",
+    "và",
+    "trên",
+    "coi",
+    "nếu",
+    "hợp lệ",
+    "giải quyết",
+    "những",
+    "giấy",
+    "thi",
+    "bất thường",
+    "điểm",
+    "để",
+    "được",
+    "đây",
+    "của",
+    "chữ ký",
+    "không",
+    "với"
+  ],
+  "relationships": [
+    {
+      "source": "tình huống",
+      "target": "báo cáo",
+      "relationship": "phải"
+    },
+    {
+      "source": "bài thi",
+      "target": "không hợp lệ",
+      "relationship": "là"
+    },
+    {
+      "source": "bài thi",
+      "target": "không được chấm điểm",
+      "relationship": "là"
+    },
+    {
+      "source": "giấy thi",
+      "target": "khác",
+      "relationship": "làm trên"
+    },
+    {
+      "source": "giấy thi",
+      "target": "quy định",
+      "relationship": "với"
+    },
+    {
+      "source": "chữ ký",
+      "target": "cán bộ coi thi",
+      "relationship": "không có"
+    }
+  ]
+}

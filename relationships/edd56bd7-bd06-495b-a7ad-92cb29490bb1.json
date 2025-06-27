@@ -1,0 +1,179 @@
+{
+  "chunk_id": "edd56bd7-bd06-495b-a7ad-92cb29490bb1",
+  "text": "điều 7. quy định về sử dụng nhà xe KTX nhà xe KTX chủ yếu để phục vụ sinh viên nội trú. sinh viên gửi xe đạp được miễn phí xe mô tô, xe đạp điện nộp phí theo quy định. sinh viên không nộp phí gửi xe thì trả theo mức phí vãng lai sau mỗi lần gửi. mỗi sinh viên chỉ đăng ký gửi 1 phương tiện xe đạp, hoặc mô tô, hoặc xe đạp điện để được hưởng ưu đãi như ở khoản 1 - điều 7 nội quy này. nếu mỗi sinh viên gửi hơn 1 phương tiện thì từ phương tiện thứ 2 trở đi, sinh viên phải nộp theo mức phí vãng lai. nhà xe phục vụ giữ xe cho sinh viên theo học kỳ. thời gian nghỉ tết nguyên đán và thời gian nghỉ hè, sinh viên phải lấy xe ra khỏi nhà xe để thực hiện công tác vệ sinh, bảo trì, sắp xếp nhà xe. sinh viên có nhu cầu gửi lại xe trong thời gian này thì làm thủ tục và nộp phí theo quy định. sau mỗi năm học, các xe vô chủ, xe gửi quá thời hạn trung tâm PVSV sẽ đề xuất nhà trường xử lý. thẻ giữ xe, phiếu giữ xe quá hạn sau mỗi học kỳ xem như không còn giá trị, nhà xe không chịu trách nhiệm về hư hỏng, mất mát. các trường hợp lấy xe quá thời hạn, sinh viên phải chi trả phí vãng lai thời gian lấy trễ.",
+  "entities": [
+    "cho",
+    "vô chủ",
+    "hưởng",
+    "năm học",
+    "nghỉ hè",
+    "nộp",
+    "gửi",
+    "chịu",
+    "-",
+    "thẻ",
+    "khoản",
+    "lần",
+    "1",
+    "nhà trường",
+    "khỏi",
+    "nguyên",
+    "ưu đãi",
+    "mỗi",
+    "trung tâm",
+    "học kỳ",
+    "KTX",
+    "hơn",
+    "trở đi",
+    "trường hợp",
+    "ra",
+    "làm",
+    "nội trú",
+    "ở",
+    "theo",
+    "nhà xe",
+    "còn",
+    "trả",
+    "xe đạp",
+    "phiếu",
+    "điều",
+    "trong",
+    "sau",
+    "trách nhiệm",
+    "miễn phí",
+    "sử dụng",
+    "và",
+    "như",
+    "nếu",
+    "mô tô",
+    "sinh viên",
+    "nhu cầu",
+    "thứ",
+    "quá",
+    "xử lý",
+    "chỉ",
+    "để",
+    "được",
+    "về",
+    "tết",
+    "như không",
+    "phí",
+    "trễ",
+    ".",
+    "từ",
+    "sắp xếp",
+    "lấy",
+    "thủ tục",
+    "lại",
+    "thực hiện",
+    "mất mát",
+    "điện",
+    "phải",
+    "này",
+    "mức",
+    "đán",
+    "đăng ký gửi",
+    "phục vụ",
+    "chủ yếu",
+    "PVSV",
+    "7",
+    "vệ sinh",
+    "các",
+    "xem",
+    "chi trả",
+    "không",
+    "giá trị",
+    "giữ",
+    "bảo trì",
+    "xe",
+    "2",
+    "thời hạn",
+    "thời gian",
+    "quy định",
+    "nghỉ",
+    "công tác",
+    "có",
+    "hạn",
+    "phương tiện",
+    "đề xuất",
+    "thì",
+    "sẽ",
+    "vãng lai",
+    "hư hỏng",
+    "nội quy",
+    "hoặc",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "nhà xe KTX",
+      "relationship": "sử dụng"
+    },
+    {
+      "source": "sinh viên",
+      "target": "xe đạp",
+      "relationship": "gửi"
+    },
+    {
+      "source": "sinh viên",
+      "target": "xe mô tô",
+      "relationship": "gửi"
+    },
+    {
+      "source": "sinh viên",
+      "target": "xe đạp điện",
+      "relationship": "gửi"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phí",
+      "relationship": "nộp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phí vãng lai",
+      "relationship": "chi trả"
+    },
+    {
+      "source": "nhà xe",
+      "target": "sinh viên",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thủ tục",
+      "relationship": "làm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "xe",
+      "relationship": "lấy"
+    },
+    {
+      "source": "xe",
+      "target": "thời hạn",
+      "relationship": "quá"
+    },
+    {
+      "source": "trung tâm PVSV",
+      "target": "nhà trường",
+      "relationship": "đề xuất"
+    },
+    {
+      "source": "thẻ giữ xe",
+      "target": "giá trị",
+      "relationship": "không còn"
+    },
+    {
+      "source": "nhà xe",
+      "target": "hư hỏng",
+      "relationship": "không chịu trách nhiệm về"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phí vãng lai",
+      "relationship": "phải chi trả"
+    }
+  ]
+}

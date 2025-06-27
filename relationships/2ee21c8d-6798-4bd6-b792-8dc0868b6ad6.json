@@ -1,0 +1,147 @@
+{
+  "chunk_id": "2ee21c8d-6798-4bd6-b792-8dc0868b6ad6",
+  "text": "điều 27. quy định về thi và kiểm tra sinh viên có trách nhiệm chấp hành các quy định về thi và kiểm tra, cụ thể như sau thực hiện đúng lịch kiểm tra và thi của trường đại học cần thơ, của đơn vị đào tạo. phải có mặt đúng giờ, nếu đến trễ 15 phút sau khi mở đề, sinh viên sẽ không được dự thi và xem như vắng thi không lý do, sẽ nhận điểm F cho học phần đó. phải mang thẻ sinh viên hoặc giấy tờ khác có dán ảnh và thông tin cá nhân do cơ quan có thẩm quyền cấp, còn giá trị sử dụng để chứng minh về nhân thân như chứng minh nhân dân, căn cước công dân, hộ chiếu, giấy phép lái xe,... khi vào phòng thi.",
+  "entities": [
+    "giấy tờ",
+    "cho",
+    "phòng",
+    "công dân",
+    "thẻ",
+    "đó",
+    "cá nhân",
+    "ảnh",
+    "mang",
+    "lịch",
+    "cụ thể",
+    "kiểm tra",
+    "trường",
+    "còn",
+    "đề",
+    "nhân dân",
+    "vào",
+    "điều",
+    "sau",
+    "trách nhiệm",
+    "khác",
+    "và",
+    "sử dụng",
+    "như",
+    "nếu",
+    "đến",
+    "sinh viên",
+    "thi",
+    "điểm",
+    "được",
+    "để",
+    "về",
+    "trễ",
+    "khi",
+    "15",
+    ".",
+    "thực hiện",
+    "F",
+    "mở",
+    "đại học",
+    "đào tạo",
+    "đúng",
+    "phải",
+    "giấy phép",
+    "do",
+    "học phần",
+    "vắng",
+    "nhân thân",
+    "có mặt",
+    "cấp",
+    "cơ quan",
+    "dán",
+    "phút",
+    "các",
+    "xem",
+    "không",
+    "giá trị",
+    "giờ",
+    "thẩm quyền",
+    "căn cước",
+    "dự",
+    "thơ",
+    "...",
+    "lái xe",
+    "chấp hành",
+    "quy định",
+    "có",
+    "27",
+    "thông tin",
+    "lý do",
+    "cần",
+    "hộ chiếu",
+    "sẽ",
+    "chứng minh",
+    "đơn vị",
+    "nhận",
+    "của",
+    "hoặc",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "quy định",
+      "relationship": "chấp hành"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lịch kiểm tra và thi",
+      "relationship": "thực hiện đúng"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giấy tờ",
+      "relationship": "mang"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "thẻ sinh viên",
+      "relationship": "hoặc"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "giấy phép lái xe",
+      "relationship": "hoặc"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm F",
+      "relationship": "nhận"
+    },
+    {
+      "source": "sinh viên",
+      "target": "vắng thi",
+      "relationship": "xem như"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phòng thi",
+      "relationship": "vào"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trễ",
+      "relationship": "đến"
+    },
+    {
+      "source": "trễ",
+      "target": "15 phút",
+      "relationship": "sau khi"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "thông tin cá nhân",
+      "relationship": "có"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "giá trị sử dụng",
+      "relationship": "còn"
+    }
+  ]
+}

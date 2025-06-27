@@ -46,7 +46,7 @@ data['text'] = data['text'].apply(preprocess_text)
 data['formatted'] = data['label'].astype(str) + ' ' + data['text']
 
 # Chia dữ liệu thành tập huấn luyện và kiểm tra
-train_data, test_data = train_test_split(data['formatted'], test_size=0.2, random_state=42)
+train_data, test_data = train_test_split(data['formatted'], test_size=0.3, random_state=42)
 train_data = train_data.str.strip()
 test_data = test_data.str.strip()
 
@@ -57,7 +57,7 @@ test_data.to_csv(test_data_path, index=False, header=False)
 start_time = time.time()
 
 # Huấn luyện mô hình
-model = fasttext.train_supervised(input=train_data_path, epoch=100, lr=1.0, wordNgrams=3, verbose=2, minCount=1, dim=100)
+model = fasttext.train_supervised(input=train_data_path, epoch=50, lr=1.0, wordNgrams=3, verbose=2, minCount=1, dim=100)
 print(f'Time: {time.time() - start_time} seconds')
 
 # Lưu mô hình

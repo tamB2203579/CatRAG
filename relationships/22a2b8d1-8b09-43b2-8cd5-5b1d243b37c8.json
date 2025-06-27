@@ -1,0 +1,154 @@
+{
+  "chunk_id": "22a2b8d1-8b09-43b2-8cd5-5b1d243b37c8",
+  "text": "điều 9. khen thưởng, kỷ luật tập thể, cá nhân sinh viên thực hiện tốt nội quy, có thành tích trong các hoạt động tự quản, an ninh xung kích, các hoạt động văn hóa văn nghệ, thể dục thể thao, vệ sinh môi trường, các hoạt động vì lợi ích cộng đồng, xây dựng KTX sẽ được xem xét khen thưởng. tập thể, cá nhân sinh viên vi phạm, tùy mức độ sẽ bị xử lý kỷ luật theo phụ lục nội quy này. TRUNG TÂM PHỤC VỤ SINH VIÊN  PHỤ LỤC NỘI DUNG VI PHẠM VÀ KHUNG XỬ LÝ KỶ LUẬT kèm theo nội quy, ban hành kèm theo QĐĐ số 1944/QĐ-ĐHCT, ngày 04/6/2013 của hiệu trưởng trường ĐHCT  TT  nội dung vi phạm  số lần vi phạm - hình thức xử lý  ghi chú  -----------------------------------------------------------------  01  tàng trữ vũ khí, chất nổ, chất cháy, hóa chất độc hại. tàng trữ, mua bán hoặc sử dụng chất ma túy.",
+  "entities": [
+    "",
+    "kỷ luật",
+    "QĐ",
+    "thành tích",
+    "2013",
+    "khen thưởng",
+    "hóa",
+    "môi trường",
+    "04",
+    "ma túy",
+    "nội dung",
+    "-",
+    "tàng trữ",
+    "vi phạm",
+    "lần",
+    "cá nhân",
+    "ĐHCT",
+    "VI PHẠM",
+    "01",
+    "cộng đồng",
+    "/",
+    "hoạt động",
+    "KTX",
+    "văn nghệ",
+    "1944",
+    "PHỤC VỤ",
+    "trường",
+    "thể dục",
+    "theo",
+    "an ninh",
+    "điều",
+    "mức độ",
+    "trong",
+    "sử dụng",
+    "vũ khí",
+    "sinh viên",
+    "ngày",
+    "kèm",
+    "xử lý",
+    "TRUNG TÂM",
+    "được",
+    "ghi chú",
+    "xem xét",
+    "tự quản",
+    "hiệu trưởng",
+    "6",
+    "chất",
+    "hình thức",
+    "VÀ",
+    "tùy",
+    ".",
+    "mua bán",
+    "xây dựng",
+    "lợi ích",
+    "thực hiện",
+    "phụ lục",
+    "văn hóa",
+    "NỘI DUNG",
+    "này",
+    "TT",
+    "số",
+    "chất độc hại",
+    "KHUNG",
+    "vệ sinh",
+    "các",
+    "chất cháy",
+    "bị",
+    "chất nổ",
+    "tốt",
+    "9",
+    "vì",
+    "QĐĐ",
+    "có",
+    "ban hành",
+    "tập thể",
+    "KỶ LUẬT",
+    "SINH VIÊN",
+    "PHỤ LỤC",
+    "xung kích",
+    "sẽ",
+    "thể thao",
+    "nội quy",
+    "XỬ LÝ",
+    "của",
+    "hoặc",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "nội quy",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khen thưởng",
+      "relationship": "được"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kỷ luật",
+      "relationship": "bị"
+    },
+    {
+      "source": "vi phạm",
+      "target": "hình thức xử lý",
+      "relationship": "có"
+    },
+    {
+      "source": "QĐĐ",
+      "target": "hiệu trưởng",
+      "relationship": "ban hành"
+    },
+    {
+      "source": "tập thể",
+      "target": "sinh viên",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "hoạt động",
+      "target": "cộng đồng",
+      "relationship": "vì lợi ích"
+    },
+    {
+      "source": "tàng trữ",
+      "target": "vũ khí",
+      "relationship": "liên quan đến"
+    },
+    {
+      "source": "tàng trữ",
+      "target": "chất nổ",
+      "relationship": "liên quan đến"
+    },
+    {
+      "source": "tàng trữ",
+      "target": "chất cháy",
+      "relationship": "liên quan đến"
+    },
+    {
+      "source": "tàng trữ",
+      "target": "hóa chất độc hại",
+      "relationship": "liên quan đến"
+    },
+    {
+      "source": "tàng trữ",
+      "target": "chất ma túy",
+      "relationship": "liên quan đến"
+    }
+  ]
+}

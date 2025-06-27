@@ -1,0 +1,127 @@
+{
+  "chunk_id": "d07003e5-3101-42ff-99e0-9a1c3655a0f4",
+  "text": "điều 8. đánh giá về ý thức và kết quả khi tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong nhà trường hoặc người học đạt được thành tích đặc biệt trong học tập, rèn luyện. Ý thức, tinh thần thái độ, uy tín và hiệu quả công việc của người học được phân công nhiệm vụ quản lý lớp, các tổ chức đảng, đoàn thanh niên, hội SV và các tổ chức khác trong nhà trường. lớp trưởng, bí thư chi đoàn, ủy viên BCH đoàn thể cấp cao hơn lớp, chi đoàn, BCH hội SV trường, liên chi hội trưởng, chỉ hội trưởng, đội trưởng các đội, nhóm, câu lạc bộ từ cấp khoa và tương đương. khung điểm đánh giá của điều 8.",
+  "entities": [
+    "Ý thức",
+    "uy tín",
+    "khi",
+    "đoàn thể",
+    "học tập",
+    "kết quả",
+    ".",
+    "SV",
+    "trường",
+    "thành tích",
+    "đội trưởng",
+    "về",
+    "quản lý",
+    "từ",
+    "cao",
+    "tương đương",
+    "trưởng",
+    "ủy viên",
+    "BCH",
+    "người",
+    "tổ chức",
+    "điều",
+    "liên chi hội trưởng",
+    "trong",
+    "lớp",
+    "của",
+    "thanh niên",
+    "công việc",
+    "nhà trường",
+    "tham gia công tác",
+    "nhóm",
+    "cán bộ",
+    "khác",
+    "và",
+    "nhiệm vụ",
+    "8",
+    "phân công",
+    "hội trưởng",
+    "cấp",
+    "điểm",
+    "khoa",
+    "đánh giá",
+    "hội",
+    "đội",
+    "đạt",
+    "ý thức",
+    "khung",
+    "các",
+    "tinh thần thái độ",
+    "bí thư",
+    "lạc bộ",
+    "chi đoàn",
+    "đặc biệt",
+    "được",
+    "đảng",
+    "đoàn",
+    "rèn luyện",
+    "hiệu quả",
+    "chỉ",
+    "học",
+    "câu",
+    "hoặc",
+    "hơn",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "công tác cán bộ lớp",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "người học",
+      "target": "thành tích đặc biệt",
+      "relationship": "đạt được"
+    },
+    {
+      "source": "người học",
+      "target": "nhiệm vụ quản lý lớp",
+      "relationship": "được phân công"
+    },
+    {
+      "source": "lớp trưởng",
+      "target": "lớp",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "bí thư chi đoàn",
+      "target": "chi đoàn",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "ủy viên BCH",
+      "target": "đoàn thể cấp cao hơn",
+      "relationship": "thuộc về"
+    },
+    {
+      "source": "hội SV",
+      "target": "trường",
+      "relationship": "thuộc về"
+    },
+    {
+      "source": "liên chi hội trưởng",
+      "target": "liên chi",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "đội trưởng",
+      "target": "đội",
+      "relationship": "quản lý"
+    },
+    {
+      "source": "người học",
+      "target": "uy tín",
+      "relationship": "được đánh giá qua"
+    },
+    {
+      "source": "người học",
+      "target": "hiệu quả công việc",
+      "relationship": "được đánh giá qua"
+    }
+  ]
+}

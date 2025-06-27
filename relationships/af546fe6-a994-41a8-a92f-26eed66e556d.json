@@ -1,0 +1,136 @@
+{
+  "chunk_id": "af546fe6-a994-41a8-a92f-26eed66e556d",
+  "text": "điều 2. quyết định này có hiệu lực kể từ ngày ký. điều 3. các ông bà trưởng phòng công tác sinh viên, tài chính, đào tạo, bí thư đoàn TNCS hồ chí minh trường đại học cần thơ, trưởng khoa, thủ trưởng các đơn vị có liên quan và sinh viên tại điều 1 chịu trách nhiệm thi hành quyết định này. KT.HIỆU TRƯỞNG PHÓ HIỆU TRƯỞNG nơi nhận như điều 3 lưu VT, CTSV. trần trùng tính  GIỚI THIỆU VỀ ĐẠI HỌC CẦN THƠ đại học cần thơ ĐHCT, cơ sở đào tạo đại học và sau đại học trọng điểm của nhà nước ở ĐBSCL, là trung tâm văn hóa - khoa học kỹ thuật của vùng. trường đã không ngừng hoàn thiện và phát triển.",
+  "entities": [
+    "",
+    "kỹ thuật",
+    "trưởng",
+    "chịu",
+    "hồ",
+    "tại",
+    "-",
+    "tính",
+    "vùng",
+    "1",
+    "chí",
+    "ĐHCT",
+    "ĐBSCL",
+    "TNCS",
+    "GIỚI THIỆU",
+    "khoa",
+    "trung tâm",
+    "VT",
+    "thi hành quyết định",
+    "trưởng phòng",
+    "hiệu lực",
+    "PHÓ",
+    "trường",
+    "ở",
+    "điều",
+    "sau",
+    "trách nhiệm",
+    "và",
+    "nhà nước",
+    "như",
+    "CTSV.",
+    "sinh viên",
+    "ngày",
+    "bí thư",
+    "CẦN",
+    "đoàn",
+    "cơ sở",
+    "trần trùng",
+    "hoàn thiện",
+    "THƠ",
+    ".",
+    "từ",
+    "thủ trưởng",
+    "liên quan",
+    "đại học",
+    "văn hóa",
+    "đào tạo",
+    "này",
+    "trọng điểm",
+    "VỀ",
+    "khoa học",
+    "minh",
+    "kể",
+    "các",
+    "quyết định",
+    "lưu",
+    "không",
+    "ông bà",
+    "3",
+    "ngừng",
+    "là",
+    "đã",
+    "tài chính",
+    "thơ",
+    "2",
+    "KT.",
+    "phát triển",
+    "công tác",
+    "có",
+    "HIỆU TRƯỞNG",
+    "ký",
+    "cần",
+    "ĐẠI HỌC",
+    "nơi",
+    "đơn vị",
+    "nhận",
+    "của",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "trưởng phòng",
+      "target": "công tác sinh viên",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "trưởng phòng",
+      "target": "tài chính",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "trưởng phòng",
+      "target": "đào tạo",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "bí thư đoàn TNCS Hồ Chí Minh",
+      "target": "trường đại học Cần Thơ",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "trưởng khoa",
+      "target": "các đơn vị có liên quan",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "thủ trưởng",
+      "target": "các đơn vị có liên quan",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điều 1",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "đại học Cần Thơ",
+      "target": "ĐBSCL",
+      "relationship": "cơ sở đào tạo"
+    },
+    {
+      "source": "đại học Cần Thơ",
+      "target": "trọng điểm",
+      "relationship": "cơ sở đào tạo"
+    },
+    {
+      "source": "đại học Cần Thơ",
+      "target": "trung tâm văn hóa - khoa học kỹ thuật",
+      "relationship": "là"
+    }
+  ]
+}

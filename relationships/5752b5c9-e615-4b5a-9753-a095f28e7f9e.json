@@ -1,0 +1,153 @@
+{
+  "chunk_id": "5752b5c9-e615-4b5a-9753-a095f28e7f9e",
+  "text": "điều 7. đánh giá về ý thức công dân trong quan hệ cộng đồng. các tiêu chí để xác định điểm đánh giá Ý thức chấp hành và tham gia tuyên truyền các chủ trương, chính sách, pháp luật của nhà nước trong cộng đồng. chức năng tự điền kỷ luật của phân hệ quản lý sinh viên. mặc định số điểm cao nhất không vi phạm pháp luật của nhà nước nếu vi phạm pháp luật sẽ bị điểm 00. tích cực tham gia tuyên truyền các chủ trương của đảng, chính sách, pháp luật của nhà nước trong cộng đồng và chủ trì cập nhật điểm cho sinh viên. Ý thức tham gia các hoạt động xã hội có thành tích được ghi nhận, biểu dương, khen thưởng. tham gia đội, nhóm sinh hoạt hướng đến lợi ích cộng đồng mỗi đợt tham gia được cộng 02 điểm. có tinh thần chia sẻ, giúp đỡ người thân, người có khó khăn, hoạn nạn. có tinh thần giúp đỡ bạn bè trong học tập, trong cuộc sống nhưng không quá 5 điểm. khung điểm đánh giá của điều 7.",
+  "entities": [
+    "cho",
+    "giúp đỡ",
+    "khó khăn",
+    "Ý thức",
+    "hoạn nạn",
+    "chức năng",
+    "kỷ luật",
+    "vi phạm pháp luật",
+    "pháp luật",
+    "thành tích",
+    "khen thưởng",
+    "đợt",
+    "5",
+    "công dân",
+    "điểm cao",
+    "người thân",
+    "nhóm",
+    "tiêu chí",
+    "mỗi",
+    "cộng đồng",
+    "ý thức",
+    "chủ trì",
+    "hoạt động",
+    "nhưng",
+    "mặc định",
+    "phân",
+    "hướng",
+    "cuộc sống",
+    "hệ",
+    "điều",
+    "trong",
+    "chính sách",
+    "ghi nhận",
+    "và",
+    "nhà nước",
+    "tích cực",
+    "nếu",
+    "cập nhật",
+    "sinh viên",
+    "đến",
+    "quá",
+    "biểu dương",
+    "đội",
+    "điểm",
+    "để",
+    "nhất",
+    "đảng",
+    "được",
+    "về",
+    "cộng",
+    "quan hệ",
+    ".",
+    "quản lý",
+    "chủ trương",
+    "lợi ích",
+    "sinh hoạt",
+    "tinh thần",
+    "số",
+    "xã hội",
+    "7",
+    "khung",
+    "các",
+    "bị",
+    "tham gia",
+    "không",
+    "học tập",
+    "02",
+    "bạn bè",
+    "chấp hành",
+    "người",
+    "có",
+    "tự điền",
+    "xác định",
+    "đánh giá",
+    "chia sẻ",
+    "sẽ",
+    "tuyên truyền",
+    "00",
+    "của",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "Ý thức",
+      "target": "công dân",
+      "relationship": "đánh giá"
+    },
+    {
+      "source": "công dân",
+      "target": "cộng đồng",
+      "relationship": "quan hệ"
+    },
+    {
+      "source": "chính sách",
+      "target": "pháp luật",
+      "relationship": "tuyên truyền"
+    },
+    {
+      "source": "nhà nước",
+      "target": "cộng đồng",
+      "relationship": "chủ trương"
+    },
+    {
+      "source": "vi phạm pháp luật",
+      "target": "điểm",
+      "relationship": "bị"
+    },
+    {
+      "source": "tham gia",
+      "target": "tuyên truyền",
+      "relationship": "tích cực"
+    },
+    {
+      "source": "thành tích",
+      "target": "ghi nhận",
+      "relationship": "được"
+    },
+    {
+      "source": "đội",
+      "target": "nhóm",
+      "relationship": "tham gia"
+    },
+    {
+      "source": "tinh thần",
+      "target": "chia sẻ",
+      "relationship": "có"
+    },
+    {
+      "source": "giúp đỡ",
+      "target": "người thân",
+      "relationship": "có"
+    },
+    {
+      "source": "giúp đỡ",
+      "target": "bạn bè",
+      "relationship": "có"
+    },
+    {
+      "source": "đợt",
+      "target": "tham gia",
+      "relationship": "được"
+    },
+    {
+      "source": "điểm",
+      "target": "cộng",
+      "relationship": "được"
+    }
+  ]
+}

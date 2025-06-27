@@ -1,0 +1,87 @@
+{
+  "chunk_id": "a7da3eb0-aa3d-4bc1-a7c8-82c893565013",
+  "text": "điều 28. điều khoản thi hành trong trường hợp các văn bản quy phạm pháp luật hoặc văn bản của trường ban hành được dẫn chiếu hoặc là căn cứ ban hành quy định này được sửa đổi, bổ sung, thay thế thì thực hiện theo các quy định tại các văn bản sửa đổi, bổ sung, thay thế đó. lãnh đạo các đơn vị và cá nhân có liên quan chịu trách nhiệm thực hiện quy định này báo cáo kịp thời những vấn đề phát sinh trong quá trình thực hiện để hiệu trưởng xem xét và quyết định. KT.",
+  "entities": [
+    "trường hợp",
+    "lãnh đạo",
+    "thay thế thì",
+    "văn bản",
+    "dẫn",
+    ".",
+    "trường",
+    "điều khoản",
+    "quy phạm pháp luật",
+    "là",
+    "báo cáo",
+    "theo",
+    "chiếu",
+    "chịu",
+    "liên quan",
+    "căn cứ",
+    "quy định",
+    "sửa đổi",
+    "thực hiện",
+    "tại",
+    "quá trình",
+    "phát sinh",
+    "kịp thời",
+    "điều",
+    "KT.",
+    "trong",
+    "bổ sung",
+    "thay thế",
+    "có",
+    "này",
+    "trách nhiệm",
+    "đó",
+    "28",
+    "ban hành",
+    "cá nhân",
+    "và",
+    "xem xét",
+    "những",
+    "các",
+    "vấn đề",
+    "đơn vị",
+    "quyết định",
+    "được",
+    "để",
+    "thi hành",
+    "của",
+    "hoặc",
+    "hiệu trưởng",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "văn bản",
+      "target": "quy định",
+      "relationship": "căn cứ ban hành"
+    },
+    {
+      "source": "lãnh đạo",
+      "target": "cá nhân",
+      "relationship": "chịu trách nhiệm"
+    },
+    {
+      "source": "cá nhân",
+      "target": "lãnh đạo",
+      "relationship": "liên quan"
+    },
+    {
+      "source": "quy định",
+      "target": "sửa đổi",
+      "relationship": "thực hiện theo"
+    },
+    {
+      "source": "vấn đề",
+      "target": "phát sinh",
+      "relationship": "báo cáo"
+    },
+    {
+      "source": "hiệu trưởng",
+      "target": "xem xét",
+      "relationship": "quyết định"
+    }
+  ]
+}

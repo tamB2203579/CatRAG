@@ -1,0 +1,59 @@
+{
+  "chunk_id": "a30b7470-e925-4d13-89d3-679b69e69a9f",
+  "text": "bố trí đủ cán bộ hướng dẫn thảo luận, thực hành, thí nghiệm, thực tập đảm bảo mỗi nhóm thảo luận không quá 30 sinh viên, nhóm thực hành không quá 15 sinh viên, nhóm làm thí nghiệm tại phòng thí nghiệm không quá 05 sinh viên/thiết bị. điều 12.",
+  "entities": [
+    "thực hành",
+    "phòng",
+    "15",
+    ".",
+    "làm",
+    "12",
+    "đủ",
+    "tại",
+    "05",
+    "thí nghiệm",
+    "điều",
+    "đảm bảo",
+    "thảo luận",
+    "30",
+    "nhóm",
+    "cán bộ",
+    "mỗi",
+    "thiết bị",
+    "sinh viên",
+    "quá",
+    "/",
+    "hướng dẫn",
+    "thực tập",
+    "bố trí",
+    "không",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "cán bộ",
+      "target": "hướng dẫn",
+      "relationship": "hướng dẫn"
+    },
+    {
+      "source": "nhóm thảo luận",
+      "target": "30 sinh viên",
+      "relationship": "không quá"
+    },
+    {
+      "source": "nhóm thực hành",
+      "target": "15 sinh viên",
+      "relationship": "không quá"
+    },
+    {
+      "source": "nhóm làm thí nghiệm",
+      "target": "05 sinh viên/thiết bị",
+      "relationship": "không quá"
+    },
+    {
+      "source": "điều",
+      "target": "12",
+      "relationship": "điều"
+    }
+  ]
+}

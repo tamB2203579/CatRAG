@@ -1,0 +1,80 @@
+{
+  "chunk_id": "dd6e80ac-2054-43d1-bc92-6a740a94b58f",
+  "text": "ban hành kèm theo quyết định này quy định đào tạo chất lượng cao và đào tạo tiên tiến trình độ đại học hình thức chính quy áp dụng đối với khóa tuyển sinh từ ngày 01 tháng 12 năm 2023 khóa 50 trở về sau của trường đại học cần thơ. điều 2. quyết định này có hiệu lực thi hành kể từ ngày 01 tháng 12 năm 2023 và áp dụng đối với các khóa tuyển sinh từ ngày 01 tháng 12 năm 2023 từ khóa 50 trở về sau của trường đại học cần thơ. điều 3.",
+  "entities": [
+    "3",
+    "hình thức",
+    "chính quy",
+    "trở",
+    "trường",
+    ".",
+    "tiên tiến trình độ",
+    "từ",
+    "cao",
+    "năm",
+    "thơ",
+    "theo",
+    "2",
+    "12",
+    "quy định",
+    "tuyển sinh",
+    "tháng",
+    "điều",
+    "đại học",
+    "đào tạo",
+    "50",
+    "áp dụng",
+    "sau",
+    "này",
+    "có",
+    "chất lượng",
+    "ban hành",
+    "và",
+    "01",
+    "cần",
+    "kể",
+    "ngày",
+    "kèm",
+    "đối với",
+    "các",
+    "quyết định",
+    "khóa",
+    "thi hành",
+    "của",
+    "hiệu lực",
+    "về",
+    "2023"
+  ],
+  "relationships": [
+    {
+      "source": "quy định",
+      "target": "đào tạo chất lượng cao",
+      "relationship": "ban hành kèm theo"
+    },
+    {
+      "source": "quy định",
+      "target": "đào tạo tiên tiến trình độ đại học",
+      "relationship": "ban hành kèm theo"
+    },
+    {
+      "source": "khóa tuyển sinh",
+      "target": "trường đại học cần thơ",
+      "relationship": "áp dụng đối với"
+    },
+    {
+      "source": "quyết định này",
+      "target": "có hiệu lực thi hành",
+      "relationship": "kể từ"
+    },
+    {
+      "source": "quyết định này",
+      "target": "áp dụng đối với các khóa tuyển sinh",
+      "relationship": "kể từ"
+    },
+    {
+      "source": "khóa 50",
+      "target": "khóa tuyển sinh",
+      "relationship": "trở về sau của"
+    }
+  ]
+}

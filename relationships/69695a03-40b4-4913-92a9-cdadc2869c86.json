@@ -1,0 +1,70 @@
+{
+  "chunk_id": "69695a03-40b4-4913-92a9-cdadc2869c86",
+  "text": "quy trình thực hiện đính kèm đối với SV được cấp HBKKHT thì thực hiện quy trình theo lưu đồ 1. đối với SV được cấp HBKKHT và được tài trợ hoặc tự túc hoàn toàn kinh phí thực hiện theo lưu đồ 2. đối với SV là ứng viên được tài trợ hoặc tự túc hoàn toàn kinh phí thực hiện quy trình theo lưu đồ 3. điều 9.",
+  "entities": [
+    "9",
+    "3",
+    ".",
+    "SV",
+    "là",
+    "theo",
+    "2",
+    "ứng viên",
+    "hoàn toàn",
+    "thực hiện",
+    "tự túc",
+    "điều",
+    "HBKKHT",
+    "1",
+    "đồ",
+    "đính",
+    "và",
+    "kinh phí",
+    "cấp",
+    "quy trình",
+    "thì",
+    "kèm",
+    "đối với",
+    "tài trợ",
+    "được",
+    "lưu",
+    "hoặc"
+  ],
+  "relationships": [
+    {
+      "source": "SV",
+      "target": "HBKKHT",
+      "relationship": "được cấp"
+    },
+    {
+      "source": "SV",
+      "target": "kinh phí",
+      "relationship": "tự túc hoàn toàn"
+    },
+    {
+      "source": "SV",
+      "target": "tài trợ",
+      "relationship": "được"
+    },
+    {
+      "source": "SV",
+      "target": "quy trình",
+      "relationship": "thực hiện"
+    },
+    {
+      "source": "quy trình",
+      "target": "lưu đồ 1",
+      "relationship": "theo"
+    },
+    {
+      "source": "quy trình",
+      "target": "lưu đồ 2",
+      "relationship": "theo"
+    },
+    {
+      "source": "quy trình",
+      "target": "lưu đồ 3",
+      "relationship": "theo"
+    }
+  ]
+}

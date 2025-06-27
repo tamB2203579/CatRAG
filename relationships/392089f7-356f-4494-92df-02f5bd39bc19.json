@@ -1,0 +1,89 @@
+{
+  "chunk_id": "392089f7-356f-4494-92df-02f5bd39bc19",
+  "text": "các đơn vị có liên quan  1. phòng tài chính phát tiền học bổng khuyến khích học tập tạm ứng - thanh toán đề tài NCKH theo dõi, xử lý lỗi kỹ thuật trong quá trình SV nộp học phí phí, lệ phí khác qua các tiện ích tiền khen thưởng. 2.",
+  "entities": [
+    "",
+    "học bổng",
+    "phí",
+    "phòng",
+    "kỹ thuật",
+    "học tập",
+    ".",
+    "SV",
+    "đề tài",
+    "tiền",
+    "khen thưởng",
+    "nộp",
+    "tiện ích",
+    "tài chính",
+    "tạm ứng",
+    "2",
+    "khuyến khích",
+    "liên quan",
+    "quá trình",
+    "-",
+    "trong",
+    "1",
+    "có",
+    "phát",
+    "khác",
+    "theo dõi",
+    "NCKH",
+    "lệ phí",
+    "học phí",
+    "các",
+    "xử lý",
+    "đơn vị",
+    "qua",
+    "lỗi",
+    "thanh toán",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "phòng tài chính",
+      "target": "học bổng",
+      "relationship": "phát"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "tiền",
+      "relationship": "phát"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "học phí",
+      "relationship": "theo dõi"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "lệ phí",
+      "relationship": "theo dõi"
+    },
+    {
+      "source": "SV",
+      "target": "học phí",
+      "relationship": "nộp"
+    },
+    {
+      "source": "SV",
+      "target": "phí",
+      "relationship": "nộp"
+    },
+    {
+      "source": "SV",
+      "target": "tiền khen thưởng",
+      "relationship": "nhận"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "đề tài NCKH",
+      "relationship": "thanh toán"
+    },
+    {
+      "source": "phòng tài chính",
+      "target": "lỗi kỹ thuật",
+      "relationship": "xử lý"
+    }
+  ]
+}

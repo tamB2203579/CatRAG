@@ -1,0 +1,63 @@
+{
+  "chunk_id": "e0533659-9ff4-4189-aa5f-2e069607683f",
+  "text": "cộng các điều 4, 5, 6, 7, 8.",
+  "entities": [
+    "5",
+    "6",
+    "7",
+    "cộng",
+    "các",
+    ".",
+    "8",
+    "điều",
+    "4",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "các điều",
+      "target": "4",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "các điều",
+      "target": "5",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "các điều",
+      "target": "6",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "các điều",
+      "target": "7",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "các điều",
+      "target": "8",
+      "relationship": "bao gồm"
+    },
+    {
+      "source": "4",
+      "target": "5",
+      "relationship": "cộng"
+    },
+    {
+      "source": "5",
+      "target": "6",
+      "relationship": "cộng"
+    },
+    {
+      "source": "6",
+      "target": "7",
+      "relationship": "cộng"
+    },
+    {
+      "source": "7",
+      "target": "8",
+      "relationship": "cộng"
+    }
+  ]
+}

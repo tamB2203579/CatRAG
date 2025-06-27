@@ -1,0 +1,95 @@
+{
+  "chunk_id": "a2fa3d84-fe66-4e56-916b-1fa719fc1605",
+  "text": "phòng học phòng học lý thuyết dành cho các lớp CTĐTCLC và CTĐTTT được phủ sóng wifi với tốc độ kết nối cao được trang bị máy tính kết nối mạng internet nếu cần thiết để phục vụ giảng dạy, thiết bị trình chiếu và hệ thống âm thanh để phục vụ giảng dạy được trang bị máy điều hòa nhiệt độ. điều 18.",
+  "entities": [
+    "tốc độ",
+    "cho",
+    "phòng",
+    "hệ thống",
+    ".",
+    "hòa",
+    "cao",
+    "lý thuyết",
+    "âm thanh",
+    "cần thiết",
+    "CTĐTCLC",
+    "wifi",
+    "điều",
+    "dành",
+    "giảng dạy",
+    "lớp",
+    "nhiệt độ",
+    "máy tính",
+    "và",
+    "CTĐTTT",
+    "với",
+    "kết nối",
+    "nếu",
+    "thiết bị",
+    "trình chiếu",
+    "18",
+    "phục vụ",
+    "máy",
+    "kết nối mạng",
+    "các",
+    "được",
+    "để",
+    "internet",
+    "học",
+    "phủ sóng",
+    "trang bị",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "phòng học",
+      "target": "wifi",
+      "relationship": "được phủ sóng"
+    },
+    {
+      "source": "wifi",
+      "target": "tốc độ",
+      "relationship": "với"
+    },
+    {
+      "source": "phòng học",
+      "target": "máy tính",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "máy tính",
+      "target": "internet",
+      "relationship": "kết nối"
+    },
+    {
+      "source": "thiết bị",
+      "target": "trình chiếu",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "hệ thống",
+      "target": "âm thanh",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "phòng học",
+      "target": "máy điều hòa nhiệt độ",
+      "relationship": "được trang bị"
+    },
+    {
+      "source": "phòng học",
+      "target": "giảng dạy",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "máy tính",
+      "target": "giảng dạy",
+      "relationship": "phục vụ"
+    },
+    {
+      "source": "thiết bị",
+      "target": "giảng dạy",
+      "relationship": "phục vụ"
+    }
+  ]
+}

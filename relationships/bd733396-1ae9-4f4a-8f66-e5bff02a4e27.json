@@ -1,0 +1,104 @@
+{
+  "chunk_id": "bd733396-1ae9-4f4a-8f66-e5bff02a4e27",
+  "text": "xếp trình độ năm học xếp trình độ năm học được xác định dựa vào tổng số tín chỉ mà sinh viên đã tích lũy, không dựa vào thời gian sinh viên vào trường. sau mỗi học kỳ, căn cứ vào khối lượng tín chỉ tích lũy, sinh viên được xếp trình độ năm học như sau  xếp trình độ năm học  số tín chỉ đã tích lũy khóa 36 đến khóa 39  số tín chỉ đã tích lũy từ khóa 40 đến khóa 44  số tín chỉ đã tích lũy từ khóa 45 trở về sau   ---  ---  ---  ---   năm thứ nhất  dưới 30  dưới 36  dưới 36   năm thứ hai  từ 30 đến dưới 60  từ 36 đến 70  từ 36 đến 70   năm thứ ba  từ 60 đến dưới 90  từ 71 đến 105  từ 71 đến 105   năm thứ tư  từ 90 đến dưới 120  từ 106 đến 140  từ 106 đến 141   năm thứ năm  từ 120 trở lên  trên 140  trên 141   ",
+  "entities": [
+    "",
+    "lên",
+    "106",
+    "xếp",
+    ".",
+    "trường",
+    "trở",
+    "năm học",
+    "về",
+    "từ",
+    "đã",
+    "trình độ",
+    "năm",
+    "141",
+    "36",
+    "thời gian",
+    "dưới",
+    "căn cứ",
+    "-",
+    "30",
+    "71",
+    "140",
+    "105",
+    "sau",
+    "tư",
+    "40",
+    "số",
+    "44",
+    "45",
+    "như",
+    "ba",
+    "mà",
+    "tích lũy",
+    "trên",
+    "120",
+    "mỗi",
+    "đến",
+    "sinh viên",
+    "tín chỉ",
+    "xác định",
+    "hai",
+    "khối lượng",
+    "thứ",
+    "70",
+    "90",
+    "học kỳ",
+    "dựa",
+    "39",
+    "được",
+    "khóa",
+    "nhất",
+    "tổng số",
+    "60",
+    "không",
+    "vào",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "trình độ năm học",
+      "relationship": "xếp"
+    },
+    {
+      "source": "trình độ năm học",
+      "target": "tín chỉ đã tích lũy",
+      "relationship": "được xác định dựa vào"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tín chỉ",
+      "relationship": "tích lũy"
+    },
+    {
+      "source": "sinh viên",
+      "target": "năm thứ nhất",
+      "relationship": "được xếp vào"
+    },
+    {
+      "source": "năm thứ hai",
+      "target": "tín chỉ đã tích lũy",
+      "relationship": "từ"
+    },
+    {
+      "source": "năm thứ ba",
+      "target": "tín chỉ đã tích lũy",
+      "relationship": "từ"
+    },
+    {
+      "source": "năm thứ tư",
+      "target": "tín chỉ đã tích lũy",
+      "relationship": "từ"
+    },
+    {
+      "source": "năm thứ năm",
+      "target": "tín chỉ đã tích lũy",
+      "relationship": "từ"
+    }
+  ]
+}

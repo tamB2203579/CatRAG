@@ -649,3 +649,328 @@ __label__Dao_tao quyết định ban hành quy định xét miễn công học c
 __label__Khac viên thực hiện nội quy quy định gìn vệ sinh môi trường an ninh trật khu vực ktx ký túc xá hoạt động quản phong trào sv sinh viên nội trú ngoại trú xét khen thưởng sv
 __label__Tot_nghiep kiện sinh viên công nghiệp tích lũy tín học quy định chương trình đào trung bình tích lũy tối thiểu thang tiêu chuẩn đầu chương trình đào bao yêu cầu ngoại ngữ công nghệ thông
 __label__Hoc_tap_ren_luyen quy chế đánh giá kết rèn luyện sinh viên bậc đại học hệ quy
+__label__KTX hoạt động phong trào tham gia khen thưởng _xd_ _xd_ tích cực tuyên truyền phòng chống tội phạm tệ nạn xã hội _xd_ _xd_ quyết định khen thưởng đoàn khoa tổ chức tương
+__label__Khen_thuong_ky_luat sinh viên nghiệp thời gian thời hạn thiết kế chương trình đào
+__label__Khen_thuong_ky_luat học kỳ đầu tiên khóa học học bổng dựa kết xét tuyển đầu quyết định hiệu trưởng trường đại học thơ
+__label__Hoc_tap_ren_luyen sinh viên quyền chỉnh kế hoạch học tập toàn khóa suốt trình học nhiên đồng cố vấn học tập
+__label__Hoc_tap_ren_luyen sinh viên buộc học xếp rèn luyện yếu kém hai học kỳ liên tiếp hai
+__label__Khen_thuong_ky_luat kiện xét học bổng bao tín đăng ký tối thiểu học kỳ tín trừ trường hợp trường bố trí học kỳ sinh viên kết học tập rèn luyện
+__label__Hoc_tap_ren_luyen sinh viên nguyện đăng ký học bổng khuyến khích học tập khoa xét đề cử đồng thời đáp ứng tiêu chí tham gia học tập trường học bổng
+__label__KTX cập nhật trường đoàn tn đảm nhiệm _xd_ phòng công tác sinh viên thực hiện cập nhật trường _xd_ danh sách đơn vị tổ chức trách nhiệm cập nhật
+__label__Dao_tao quản lý chuyên gia giảng viên sinh viên thực hiện quy định hiện hành trường đhct đại học thơ
+__label__Dao_tao học chương trình hai sinh viên công kết học nội dung khối kiến thức tương đương chương trình
+__label__KTX tham gia tất hoạt động trị xã hội văn hóa nghệ thuật thể thao độ lớp chi hội chi đoàn trở tham gia trừ đơn vị lớp trở
+__label__Khac khen thưởng sv sinh viên thành tích quản lý hoạt động liên quan bảo hiểm tai nạn bảo hiểm y tế bắt buộc
+__label__Khac đại học thơ cam kết trì chất thông xuyên cải tiến hội nhập đào nghiên cứu giao công nghệ năng động liên kết lý thuyết thực hành
+__label__Khac đối sinh viên trình độ đại học hình thức quy quy định quy định công tác học vụ bao chương trình đào thời gian học tập tổ chức đào đánh giá kết học tập nghiệp quy định thiết
+__label__Dao_tao kiện hỗ trợ nckh nghiên cứu khoa học hợp tác quốc tế hoạt động tư vấn hướng nghiệp phục vụ sinh viên vấn đề
+__label__KTX nội quy áp dụng tất sinh viên hệ đào trường học viên đại học gọi sšv xét duyệt cư trú ký túc xá kx trường đại học thơ thực hiện thủ tục thiết
+__label__Dao_tao trình đào chuẩn đầu chương trình đào ma trận tương mục tiêu đào chuẩn đầu chương trình đào ma trận tương học chương trình dạy học
+__label__KTX tài sản giá trị phục vụ công học tập sinh hoạt phòng tình trạng cắp thiết chữa cháy sử dụng khóa hỏng
+__label__Dao_tao nộp hồ sơ sinh viên nộp hồ sơ quy định mục phòng công tác sinh viên thời gian quy định mục
+__label__Khen_thuong_ky_luat khen thưởng sinh viên trúng tuyển trường đại học thơ khen thưởng quyết định hiệu trưởng
+__label__Hoc_tap_ren_luyen sinh viên thực hiện bảng đánh giá kết rèn luyện nộp bảng đánh giá thời gian quy định xếp kém học kỳ
+__label__Hoc_tap_ren_luyen rèn luyện sinh viên học kỳ tiêu chí xét học bổng khuyến khích học tập xếp khen thưởng học
+__label__Khen_thuong_ky_luat lĩnh vực học bổng trợ xã hội học bổng khuyến khích học tập xét duyệt học kỳ dựa trung bình rèn luyện học kỳ học bổng sinh viên
+__label__Dao_tao chứng tcf test de connaissance du français trung tâm nghiên cứu sư phạm quốc tế sèvres pháp centre international détudes pédagogiques de sèvres
+__label__KTX b sách biệt sinh viên trường đhct đại học thơ _xd_ _xd_ học bổng hỗ trợ tài
+__label__Dao_tao bảng quy đổi chuẩn trình độ ngoại ngữ tiếng khung nlnn bậc việt nam khung tham chiếu châu âu cefr
+__label__Dao_tao học song hành học hpxxx học sinh viên học học học hpxxx
+__label__Dao_tao trưởng khoa trường chuyên ngành quản lý học chấp thuận trường đại học thơ lớp học đề nghị
+__label__Tot_nghiep hình thức thực hiện khóa sinh viên học kỳ thiết sinh viên viết luận văn nghiệp tiểu luận nghiệp đăng ký học học
+__label__Khen_thuong_ky_luat đình thi thực hiện sinh viên vi phạm lỗi cảnh cáo sửa chữa hành vi thi
+__label__Tot_nghiep viên khóa viên sinh viên sử dụng thời gian học tập tối đa quy định hoàn thành học giáo dục quốc phòng an ninh giáo dục kiện nghiệp
+__label__Dao_tao sv sinh viên lý luận trị cử nhân trị trung lý luận trị xét miễn trường hợp m miễn tích luỹ hinh thức
+__label__Dao_tao đánh giá học đánh giá học ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến áp dụng quy định công tác học vụ sinh viên trình độ đại học hình thức
+__label__Khac quyết định bắt đầu hiệu lực ký thủ trưởng đơn vị phòng đào khoa đại học trung tâm liên kết đào trung tâm quản lý chất đơn vị đào lưu
+__label__Khen_thuong_ky_luat trở thông tập luyện kiện thiết môn d kỷ luật hình thức khiển trách trường trở
+__label__Tot_nghiep tiểu luận nghiệp chấm cán hướng cán bảo vệ hội đồng quyết định cán chấm tiểu luận nghiệp trưởng đơn vị đào
+__label__KTX phòng công tác sinh viên nhập khen thưởng sv sinh viên max định nghĩa rèn luyện _xd_ phân hệ bao chức năng
+__label__KTX hệ thống quy định tiêu chí sv sinh viên cvht cố vấn học tập quyền chỉnh nhiên
+__label__Dao_tao sv sinh viên học ctđt chương trình đào tiếng việt nguyện vọng học học ngoại ngữ
+__label__Khen_thuong_ky_luat sinh viên khiển trách trừ thikiểm tra sinh viên khiển trách học kỷ luật cảnh cáo toàn đơn vị đào quản lý sinh viên
+__label__KTX quy định sinh hoạt sinh viên nội trú yêu cầu khu vực ktx ký túc xá thẻ sinh viên quy định nghỉ trưa ồn ảnh hưởng
+__label__Khen_thuong_ky_luat quỹ học bổng sinh viên lớp chuyên ngành công bố đầu khóa học thể chỉnh quỹ học bổng trường đại học thơ thay đổi
+__label__Hoc_tap_ren_luyen trách nhiệm khoa quản lý sinh viên lập kế hoạch hàng bao sv sinh viên cử đi học tập thời gian thực hiện chi phí liên quan đề xuất
+__label__KTX đánh giá rèn luyện xét c hỗ trợ đăng ký trực tuyến xác sv sinh viên vay vốn địa phương tạm hoãn nghĩa vụ quân chỉnh thông cá nhân nộp thẻ bhyt bảo hiểm y tế địa phương
+__label__Khac tín dụng sinh viên sinh viên thể vay ngân hàng sách xã hội khu vực gia đình sinh sống trường đại học thơ cung giấy xác sinh viên yêu cầu bổ sung hồ sơ vay vốn
+__label__KTX hành vi cắp ktx ký túc xá thể hại antt an ninh trật sinh viên phản ánh trực tiếp đề xuất trung tâm pvsv vấn đề liên quan đảm bảo ktx ký túc xá trạng thái cảnh giác kẻ xấu lợi dụng tham gia ký đơn tập thể vận động
+__label__Tot_nghiep sinh viên thể đăng ký xét nghiệp thông hệ thống trực tuyến trường đại học thơ
+__label__KTX chủ động tham gia tuyên truyền chủ trương đảng sách pháp luật cộng đồng đồng thời cập nhật sinh viên xuyên
+__label__Hoc_tap_ren_luyen viên an ninh xung kích kx hội đồng quản ktx ký túc xá chủ tịch trưởng chuyên môn hội đồng quản ngoại trú trưởng ktx ký túc xá cụm trưởng khu trọ hoàn thành nhiệm vụ giao
+__label__Tot_nghiep nghiệp tổ chức đơn vị đào đào giáo viên tổ chức
+__label__Khac chất phát triển khoa học bồi dưỡng nhân tài phục vụ phát triển kinh tế xã hội quốc gia đại học thơ trường đhct đóng vai trò quan trọng ảnh hưởng quyết định phát triển đbscl
+__label__Hoc_tap_ren_luyen cung thông khen thưởng kỷ luật học tập rèn luyện lập tờ trình đề cử soạn thảo quyết định cử đi quyết định thu sinh viên trình ban giám hiệu phê duyệt
+__label__Khac quy định hiện hành văn hướng liên quan đối tượng miễn học phí hỗ trợ chi phí học tập thực hiện quy định hồ sơ hướng miễn học phí hỗ trợ chi phí học tập công khai trang thông điện tử phòng công tác sinh viên
+__label__Khac ngành phục vụ sản xuất sống xuất khẩu dựng danh tiếng vững bền thị trường quốc tế
+__label__KTX khung đánh giá _xd_ _xd_ đánh giá chấp hành nội quy quy chế quy định trường thức học sinh
+__label__KTX thủ tục quy định hiện đối sšv đối tượng quy định biệt
+__label__Khac quyết định quy định công tác học vụ ban hành quyết định áp dụng sinh viên hệ quy bậc đại học trường đại học thơ
+__label__KTX tích cực tham gia chăm sóc cảnh quan môi trường khu vực ktx ký túc xá quy định cạnh tham gia đợt tổng vệ sinh ktx ký túc xá trung tâm pvsv tổ chức thiết bát hương thờ cúng phép
+__label__Tot_nghiep nghiệp luận văn sinh viên hoàn thành luận văn bảo vệ hội đồng thành viên bao giảng viên hướng luận văn nghiệp ghi trung bình
+__label__Khen_thuong_ky_luat học bổng học kỳ đầu tiên khóa học dựa kết xét tuyển đầu quyết định hiệu trưởng trường đại học thơ
+__label__Dao_tao tiêu đối tượng kiện ưu tiên tuyển sinh tiêu tuyển sinh ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến nằm tổng tiêu tuyển sinh xác định hàng trường đhct đại học thơ
+__label__Dao_tao đối học học khối kiến thức giáo dục đại cương xét miễn học sv sinh viên yêu cầu
+__label__Khen_thuong_ky_luat chấp hành quản lý nhắc nhở cán coi thi thái độ tôn trọng vô lễ cán coi thi
+__label__KTX nhiệm bảo quản tài sản phòng ktx ký túc xá hư hỏng báo cáo trung tâm pvsv sửa chữa sinh viên trách nhiệm đền bù hư hỏng mát
+__label__Hoc_tap_ren_luyen quyết định qđđhct hiệu trưởng trường đại học thơ
+__label__Khen_thuong_ky_luat tập luyện trở đồng thời học d kỷ luật hình thức khiển trách trường trở
+__label__Khen_thuong_ky_luat sinh viên cảnh cáo trừ thikiểm tra học sinh viên cảnh cáo kỷ luật cảnh cáo toàn trường đại học thơ
+__label__Tot_nghiep nghiệp phân nghiệp
+__label__Tot_nghiep tích lũy tín nghiệp sinh viên thể quyết định luận văn tiểu luận nghiệp sinh viên học học tín quy định chương trình đào
+__label__KTX hình thức đánh bao tổ chức tham gia đánh trường hợp vi phạm sinh viên hình thức xử lý chấm dứt hợp đồng thời hạn buộc rời ktx ký túc xá tùy độ vi phạm thể đề nghị
+__label__KTX quy định sử dụng xe ktx ký túc xá thiết lập chủ yếu phục vụ sinh viên nội trú sinh viên gửi xe đạp miễn phí xe mô tô xe đạp điện nộp phí quy định sinh viên toán phí gửi xe phí vãng áp dụng
+__label__Hoc_tap_ren_luyen lớp trưởng bí thư chi đoàn ủy viên ban chấp hành đoàn thể chi đoàn ban chấp hành hội sinh viên trường liên chi hội trưởng chi hội trưởng đội trưởng đội câu lạc khoa trở
+__label__Tot_nghiep xét nghiệp chương trình hai sinh viên bắt buộc kiện nghiệp chương trình đặc biệt sinh viên khóa khóa đăng ký chương trình hai thời xét nghiệp
+__label__Khac trường đhct đại học thơ trường đại học hàng đầu chất việt nam nằm trường đào nghiên cứu khoa học nckh khu vực châu áthái bình dương
+__label__KTX sinh viên sv kê khai đính kèm file mềm minh chứng _xd_ phòng công tác sinh viên thực hiện kiểm tra _xd_ sinh viên sv nộp cứng phòng công tác sinh viên duyệt cập nhật thông hệ thống mềm
+__label__Dao_tao sinh viên ctptclc ctđttt chương trình đào tiên tiến đầu khóa học mục tiêu chuẩn đầu nội dung phương pháp giảng dạy phương pháp đánh giá kết học tập tài liệu
+__label__Dao_tao học học xét miễn học trở học học xét miễn trung bình trọng học học trọng tín
+__label__Dao_tao tín đơn vị học trình học học học xét miễn học học học miễn học học
+__label__Khac kthiệu trưởng _xd_ phó hiệu trưởng _xd_ _xd_ _xd_ _xd_ lưu vt ctsv công tác sinh viên _xd_ _xd_ trần trùng _xd_ _xd_ giới thiệu đại học thơ
+__label__Tot_nghiep tùy đặc ngành học sinh viên thực hiện phương thức
+__label__Khen_thuong_ky_luat học bổng dần ưu tiên dựa trung bình học kỳ trường hợp trung bình học kỳ xét ưu tiên rèn luyện đặc biệt đối học kỳ đầu
+__label__Dao_tao cứu giảng viên hướng tham gia đề tài nckh nghiên cứu khoa học giảng viên khuyến khích sinh viên tham dự thi liên quan hoạt động khoa học
+__label__KTX thiết cá nhân kệ sách tủ vật dụng phép lắp thể ảnh hưởng gian phòng sinh viên viết vẽ dán giấy tường trách nhiệm bảo quản tài sản
+__label__Hoc_tap_ren_luyen túc kinh phí sv sinh viên tài trợ túc hoàn toàn kinh phí nguyện đăng ký thỏa kiện cử đi học tập
+__label__Tot_nghiep sinh viên kiện nghiệp trường bảo lưu công kết học tập tích lũy bảng học tích lũy yêu cầu
+__label__Khac tham dự học yêu cầu sinh viên gìn trật vệ sinh tuân thủ luật giao thông đỗ xe quy định sinh viên trường đại học thơ thức lối sống văn minh
+__label__Hoc_tap_ren_luyen phối hợp chủ động phtqt hợp tác quốc tế đơn vị liên quan cung thông giúp sinh viên cử đi giới thiệu quảng bá trường khoa ngành đào đối tác
+__label__Tot_nghiep nghiệp trường hợp nghiệp hỏng sinh viên thể nộp đơn trường đại học thơ thông phòng đào yêu cầu nghiệp
+__label__KTX tiền hàng sinh viên trễ ghi hàng giám thị áp dụng trung bình hàng toán tạm thời sinh viên nghĩa vụ toán phí điện hàng
+__label__KTX quy định sử dụng điện phí điện phòng sinh viên lắp đồng hồ đo điện trừ dãy cấu trúc đặc biệt hàng sinh viên phí điện sử dụng thực tế đầu học kỳ đại
+__label__Hoc_tap_ren_luyen khen thưởng hoạt động phong trào khen thưởng hoạt động phong trào giấy khen khoa tương đương giấy khen trường tương đương giấy khen
+__label__Khen_thuong_ky_luat sinh viên nghiệp thời gian thiết kế chương trình đào
+__label__Tot_nghiep đánh giá bảo vệ luận văn nghiệp tổ chức trực tuyến giá tập trung trường
+__label__Khen_thuong_ky_luat xuất sắc kết học tập rèn luyện xuất sắc
+__label__Dao_tao cầu học đtclc đào chất đttt đào tiên tiến trình độ đại học kiện chủ đào
+__label__KTX trường hợp cháy nổ xảy khu vực báo động khóa thể xảy cháy tuân thủ nghiêm ngặt quy định sử dụng internet sinh viên phép sử dụng thiết điện máy in máy phục vụ
+__label__KTX khen thưởng kỷ luật tập thể cá nhân sinh viên thực hiện nội quy thành tích hoạt động quản an ninh xung kích hoạt động văn hóa văn nghệ thể dục thể thao vệ sinh môi trường hoạt động
+__label__Tot_nghiep thể đề tài luận văn nghiệp tiểu luận sinh viên đáp ứng yêu cầu đơn vị đào học kỳ đơn vị đào xét công bố hình thức thực hiện
+__label__KTX sv sinh viên kê khai bổ sung file mềm chứng _xd_ kiểm tra thực hiện phòng công tác sinh viên _xd_ nộp cứng phòng công tác sinh viên xét cập nhật thông mềm
+__label__Khac quy định hiện hành văn hướng liên quan quy định đối tượng miễn học phí hỗ trợ chi phí học tập hồ sơ hướng thực hiện miễn học phí hỗ trợ chi phí học tập công bố công khai trang thông điện tử phòng công tác sinh viên
+__label__Khen_thuong_ky_luat sinh viên đình thi tái phạm thi cảnh cáo lỗi
+__label__Tot_nghiep tích lũy tín nghiệp sinh viên thể thực hiện luận văn tiểu luận nghiệp nhiên sinh viên học học tín yêu cầu chương trình
+__label__KTX học thành tích đặc biệt học tập rèn luyện kết nạp đảng công đoàn viên ưu tú danh hiệu sv sinh viên trường trở phân đảng viên xếp
+__label__Khen_thuong_ky_luat sinh viên đình thi vi phạm lỗi cảnh cáo tái phạm kỳ thi
+__label__Khac nêu công khai website lưu vt đt đào ctsv công tác sinh viên
+__label__Dao_tao ctđttt chương trình đào tiên tiến áp dụng khóa trở rà soát đánh giá cập nhật quy định hiệu trưởng ban hành áp dụng khóa trở
+__label__Dao_tao tổ quản lý ctđtclc chương trình đào chất tổ quản lý ctđttt chương trình đào tiên tiến trách nhiệm tổ chức kiến phản ánh sinh viên viên chức liên
+__label__Khac văn hướng quy định hiện hành đối tượng miễn học phí hỗ trợ chi phí học tập thực hiện quy trình hồ sơ hướng miễn học phí hỗ trợ chi phí học tập công khai trang thông điện tử phòng công tác sinh viên
+__label__Dao_tao sv sinh viên giấy chứng sĩ quan dự nghiệp trường quân đội công an sv sinh viên chứng gdqpan tương ứng trình độ đào
+__label__Khac sinh viên học quy trường đại học thơ thành công kỳ thi tuyển sinh xét tuyển thông báo nhập học quy sinh viên
+__label__Khac hỗ trợ chi phí học tập chế độ miễn học phí kèm trợ xã hội học bổng khuyến khích tư vấn sức khỏe điện thoại liên hệ khen thưởng học nghiệp vấn đề kỷ luật trường trợ đột xuất
+__label__Khen_thuong_ky_luat hội đồng kỷ luật trường đại học thơ trách nhiệm xét quyết định hình thức xử lý trường hợp vi phạm tùy độ
+__label__Dao_tao động khoa học công nghệ hoạt động đổi khởi nghiệp hướng giảng viên giải nhì khuyến khích trường trở sinh viên xác định hoàn
+__label__Tot_nghiep phòng công tác sinh viên phòng đào trách nhiệm thẩm định trình hiệu trưởng ký quyết định công nghiệp
+__label__Khen_thuong_ky_luat giấy khen sinh viên giỏi trở toàn khóa học
+__label__KTX thời gian thực hiện thủ tục hoàn phí quy định hạn chế sinh viên phiếu đăng ký nội trú đkm phiếu đknt đăng ký nội trú vai trò kiểm soát sinh viên phòng xuất trình yêu cầu
+__label__Dao_tao miễn học gửi hội đồng xét miễn công học trường đhct đại học thơ thông phòng đào gửi kết xét miễn công học sv sinh viên thông cố vấn học tập
+__label__KTX khuôn viên ktx ký túc xá hành lang ghế bồn cầu tắc nghẽn hệ thống thoát bát hương thờ cúng phòng trồng thực vật cảnh hoa lan nuôi cá vật nuôi
+__label__Khac thời gian đóng học phí sinh viên nộp kết học tập học nợ hủy học kỳ đóng học phí nợ học phí học kỳ
+__label__Dao_tao đơn vị đào trách nhiệm kiểm tra đề nghị đơn vị chứng chứng trường đhct đại học thơ xác thông chứng chứng sinh viên
+__label__Tot_nghiep sinh viên tiêu chuẩn đầu ngoại ngữ công nghệ thông ninh giáo dục thể chất thời hạn học thể trường đại học thơ hoàn thành kiện đề xuất xét công nghiệp
+__label__Dao_tao thông đối sánh ctđt chương trình đào chương trình tương thông kết đánh giá kiểm định chất ctđt chương trình đào mục tiêu
+__label__Khac kthiệu trưởng _xd_ phó hiệu trưởng _xd_ _xd_ _xd_ _xd_ lưu trữ vt ctsv công tác sinh viên _xd_ _xd_ trần trùng _xd_ _xd_ giới thiệu đại học thơ
+__label__Hoc_tap_ren_luyen kiện học rút ngắn thời gian học tập hỗ trợ sinh viên nghiệp hạn tối ưu hóa sử dụng quỹ phòng học hoạt động giảng dạy học tập đồng thời đảm bảo thực hiện nghĩa vụ giảng viên
+__label__Hoc_tap_ren_luyen trường hợp sinh viên đơn vị tham gia học tập chương trình khoa tổ chức khoa quản lý sinh viên trách nhiệm thực hiện nội dung công tác nêu
+__label__Dao_tao thông báo tuyển sinh học ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến hội đồng tuyển sinh đăng công khai trang thông điện tử trường đhct đại học thơ
+__label__Dao_tao viên học kỳ nội dung phương pháp giảng dạy phương pháp đánh giá kết học tập chuẩn đầu giảng viên công tác quản lý kiện hỗ trợ sở vật chất kiện hỗ trợ
+__label__Hoc_tap_ren_luyen trung bình tích lũy học kiện học hoàn thành sử dụng đánh giá kết học tập toàn thời gian học xác định xếp học tập xếp hạng nghiệp
+__label__Dao_tao báo cáo viên chuyên gia khoa học doanh nhân nghệ nhân quan tổ chức doanh nghiệp tham gia giảng dạy báo cáo chuyên đề hướng thực hành
+__label__Khac vị trưởng phòng trách nhiệm công tác sinh viên tài đào bí thư đoàn tncs hồ chí minh trường đại học thơ trưởng khoa thủ trưởng đơn vị liên quan sinh viên nêu thực hiện quyết định
+__label__KTX hoạt động lợi ích cộng đồng xây dựng ktx ký túc xá xét khen thưởng sinh viên bao cá nhân lẫn tập thể xử lý kỷ luật tùy độ vi phạm nội quy phụ lục
+__label__Khac quyết định hiệu lực thi hành ký thủ trưởng đơn vị phòng đào khoa đại học trung tâm liên kết đào trung tâm quản lý chất đơn vị đào trách nhiệm thực hiện
+__label__Khen_thuong_ky_luat đầu khóa học quỹ học bổng sinh viên lớp chuyên ngành công bố thể chỉnh thay đổi quỹ học bổng trường đại học thơ
+__label__Khac khả năng học nghi môi trường tinh thần khởi nghiệp thức phục vụ nhân dân đào
+__label__Dao_tao kt hiệu trưởng phó hiệu trưởng trần trung phụ lục quy đổi tương đương chứng ngoại ngữ khung năng lực ngoại ngữ bậc việt nam tiếng
+__label__KTX công tác bảo vệ an ninh trật thể hiện tinh thần trách nhiệm đảm bảo an toàn xã hội trạng thái cảnh giác phát hiện báo cáo kịp thời kẻ xấu trà trộn rối trộm cắp
+__label__KTX thức tuân thủ tích cực tham gia tuyên truyền sách chủ trương luật pháp cộng đồng vi phạm pháp luật
+__label__KTX sv sinh viên khen thưởng phòng công tác sinh viên nhập max quy định đổi rèn luyện _xd_ hệ thống bao chức năng
+__label__Hoc_tap_ren_luyen thức thái độ tham gia câu lạc học thuật hoạt động học thuật hoạt động ngoại khóa hoạt động nghiên cứu khoa học nghiên cứu khoa học vckh
+__label__KTX phí điện hàng thời gian quy định phát hiện hư hỏng đồng hồ đo điện nghi ngờ đồng hồ đo xác sinh viên báo trung tâm pvsv sửa chữa
+__label__KTX nội quy áp dụng tất sinh viên hệ đào trường học viên đại học gọi sšv xét duyệt ký túc xá kx trường đại học thơ hoàn thành thủ tục
+__label__Khac học phí miễn học phí hỗ trợ chi phí học tập học phí đóng học kỳ dựa tổng tín sinh viên đăng ký học kỳ quyết định học phí hiệu trưởng
+__label__Dao_tao sinh viên diện xét buộc học sinh viên thời gian học tập quy định công tác học vụ trường thời gian học tập tối đa sinh viên hoàn thành ctđt chương trình đào học ctđt chương
+__label__Hoc_tap_ren_luyen đối sv sinh viên ứng viên tài trợ túc hoàn toàn kinh phí thực hiện quy trình lưu đồ khen thưởng kỷ luật
+__label__Khen_thuong_ky_luat thực hiện quản lý nhắc nhở cán coi thi thái độ tôn trọng vô lễ cán coi thi
+__label__Khen_thuong_ky_luat sinh viên thành tích học tập trở xét thủ khoa ngành chuyên ngành đào giấy khen thưởng
+__label__Dao_tao bi b pet
+__label__Khen_thuong_ky_luat đối học kỳ đầu tiên khóa học hiệu trưởng trường đại học thơ quyết định học bổng dựa kết xét tuyển đầu
+__label__Tot_nghiep sinh viên quyền trở trường đại học thơ thời gian ngừng học hoàn thiện kiện thiết đề nghị xét công nghiệp áp dụng sinh viên khóa trở đi
+__label__Tot_nghiep đối tích lũy tín nghiệp sinh viên thể phương thức luận văn nghiệp tiểu luận nghiệp sinh viên học học đáp ứng tín yêu cầu chương trình
+__label__Tot_nghiep dựa chất ngành đào sinh viên hướng thực hiện hình thức
+__label__Dao_tao ngữ cường sinh viên đơn đề nghị sinh viên trường đồng phép miễn học chương trình ngoại ngữ cường đơn vị quản lý đào phối hợp phòng đào xếp học
+__label__KTX hàng sinh viên toán phí điện thời gian quy định phát hiện hư hỏng đồng hồ đo điện nghi ngờ độ xác đồng hồ đo sinh viên lập tức thông báo trung tâm pvsv sửa chữa
+__label__Khen_thuong_ky_luat quỹ học bổng sinh viên lớp chuyên ngành công bố đầu khóa học chỉnh quỹ học bổng trường đại học thơ thay đổi
+__label__Hoc_tap_ren_luyen tín tích lũy xác định tổng tín học hoàn thành
+__label__Tot_nghiep xử lý sinh viên thời gian học tập
+__label__Tot_nghiep sinh viên xét nghiệp chương trình hai hoàn thành kiện nghiệp chương trình đối sinh viên khóa trở kiện bổ sung đăng ký học chương trình hai thời xét nghiệp
+__label__Dao_tao đại học hình thức quy hiện hành trường đhct đại học thơ
+__label__Khen_thuong_ky_luat học bổng tài trợ trường thực hiện xét duyệt học bổng tài trợ quan tổ chức doanh nghiệp cá nhân quy định quản lý học bổng
+__label__Dao_tao hàng kỳ tuyển sinh kết tuyển sinh ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến gửi gdđt báo cáo
+__label__Khen_thuong_ky_luat quy định học sinh thành tích học tập rèn luyện phân hình thức khiển trách trường trở
+__label__Khac đóng học phí thời hạn quy định sinh viên kết học tập học nợ học kỳ toán học phí nợ học phí học kỳ tiếp
+__label__Dao_tao hợp xét buộc học xét kỷ luật thời gian nghỉ học tạm thời trường hợp thời gian học tập tối đa hoàn thành chương trình đào quy định
+__label__Tot_nghiep trưởng đơn vị đào quyết định hội đồng bảo vệ luận văn nghiệp viên trung bình cộng thành viên hội đồng trường hợp thể tổ chức đánh giá tập trung
+__label__KTX dựa phí vãng lai gửi sinh viên phép đăng ký gửi phương tiện xe đạp mô tô xe đạp điện ưu đãi quy định khoản nội quy sinh viên thực hiện gửi
+__label__Tot_nghiep cán hướng cán thực hiện chấm tiểu luận nghiệp bảo vệ hội đồng trưởng đơn vị đào quyết định cán chấm tiểu luận nghiệp
+__label__Hoc_tap_ren_luyen đánh giá chi tiết nội dung đề nghị đánh giá thông tư ghi đánh giá thức tham gia học tập tiêu chí xác định đánh giá
+__label__Khac khả năng học ứng môi trường tinh thần khởi nghiệp yếu tố quan trọng đào phục vụ nhân dân
+__label__Khen_thuong_ky_luat học bổng trợ xã hội học bổng khuyến khích học tập áp dụng học kỳ dựa sở trung bình rèn luyện học kỳ học bổng sinh viên
+__label__KTX trường đoàn tn đơn vị chủ trì cập nhật _xd_ phòng công tác sinh viên cập nhật thông trường _xd_ đơn vị tổ chức nghĩa vụ cập nhật danh sách
+__label__KTX thủ tục nộp phí quy định học trung tâm pvsv đề xuất trường xử lý xe chủ xe gửi thời hạn thẻ xe phiếu xe hạn học kỳ coi hiệu lực
+__label__Khac quyết định công bố quy định liên quan công tác học vụ sinh viên trình độ đại học hình thức quy
+__label__Tot_nghiep giá tập trung trường học tổ chức bảo vệ đánh giá luận văn nghiệp thực hiện trực tuyến
+__label__Dao_tao đình học tập học kỳ trường hợp kỷ luật đình học tập học kỳ rèn luyện yếu kém học kỳ liên tiếp
+__label__Khac nêu công bố trang mạng lưu vt đt đào ctsv công tác sinh viên
+__label__KTX quy định sinh viên nội trú bắt buộc thẻ sinh viên khu vực ktx ký túc xá quy định thời gian nghỉ trưa sinh viên ồn ảnh hưởng
+__label__Hoc_tap_ren_luyen tư xác định cụ thể quy định trở tương ứng
+__label__Khac cam kết đại học thơ bảo đảm chất thông đổi liên tục hội nhập đào nghiên cứu giao công nghệ năng động gắn kết lý thuyết thực hành
+__label__Khen_thuong_ky_luat ưu tiên học bổng xếp dựa trung bình học kỳ trường hợp trung bình học kỳ rèn luyện xét ưu tiên học kỳ đầu
+__label__KTX quy định tích cực tham gia chăm sóc cảnh quan môi trường khu vực ktx ký túc xá quan trọng đồng thời tham gia đợt tổng vệ sinh ktx ký túc xá trung tâm pvsv tổ chức bắt buộc bát hương thờ cúng
+__label__Khen_thuong_ky_luat học bổng sinh viên trung bình học kỳ rèn luyện trở
+__label__KTX hàng thời cụ thể thông báo giám thị đại diện sinh viên phòng ghi điện bảng dõi giám thị ghi toán chi phí sinh viên toán hàng
+__label__Hoc_tap_ren_luyen sinh viên danh hiệu khoa đảng viên phân đảng viên phân
+__label__Dao_tao quy trình tuyển sinh hàng hiệu trưởng ban hành quyết định thành lập hội đồng tuyển sinh trường đhct đại học thơ hội đồng tuyển sinh nhiệm vụ tổ chức xét tuyển sinh viên học ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến quy định thông báo tuyển sinh
+__label__KTX trung tâm tư vấn hỗ trợ khởi nghiệp sv sinh viên thể truy cập httpsscsctueduvn
+__label__Hoc_tap_ren_luyen công bố đề cương chi tiết học tổ chức kỳ thi kết thúc học đề thi đáp án đề thi kết thúc học thực hiện hướng quy định hiện hành trường đại học thơ
+__label__KTX trang tân sinh viên thông cvht cố vấn học tập cập nhật sv sinh viên trúng tuyển trường hỗ trợ lớp thời khóa biểu
+__label__Khac trường đại học thơ sinh viên tuân quy định nội quy trường khoa viện chuyên ngành gọi đơn vị đào lớp
+__label__Khac thời hạn đóng học phí sinh viên đóng học phí hủy kết học tập học nợ học phí học kỳ buộc đóng học phí nợ học phí học kỳ tiếp sinh viên đóng học phí học kỳ liên tiếp buộc học
+__label__Tot_nghiep sinh viên kiện nghiệp thời gian học xóa
+__label__Khen_thuong_ky_luat xét học bổng trợ xã hội học bổng khuyến khích học tập áp dụng học kỳ trung bình rèn luyện học kỳ học bổng sinh viên
+__label__KTX xử lý phát phòng sinh viên đầu học sinh viên trách nhiệm nghiên cứu kỹ nghiêm túc thực hiện nội quy
+__label__Tot_nghiep truy cứu trách nhiệm hình thời gian kỷ luật đình học tập thời xét nghiệp
+__label__Khen_thuong_ky_luat trung bình học kỳ rèn luyện trở kiện học bổng
+__label__Khac truy cập httpsbaohiemxahoigovvntracuupagestracuuthoihansudungthebhytaspx kiểm tra thời hạn bhyt bảo hiểm y tế
+__label__Hoc_tap_ren_luyen trường hợp sv sinh viên đơn vị tham gia học tập chương trình khoa tổ chức khoa quản lý sv sinh viên trách nhiệm thực hiện nội dung công tác
+__label__KTX suốt khóa học chứng học kỳ chứng cộng tiêu chí
+__label__Hoc_tap_ren_luyen gửi công văn trường thông pctsv công tác sinh viên đánh giá kết học tập sv sinh viên đề nghị trường thu sv sinh viên trở vòng khoa
+__label__Tot_nghiep xét nghiệp chương trình hai sinh viên kiện nghiệp chương trình đặc biệt sinh viên khóa trở đi đăng ký học chương trình hai xét nghiệp
+__label__Khen_thuong_ky_luat học bổng xếp hạng ưu tiên dựa trung bình học kỳ trường hợp sinh viên trung bình xét ưu tiên dựa rèn luyện đối học kỳ đầu
+__label__Khac phục vụ sản xuất đời sống xuất khẩu ngành dựng danh tiếng thị trường quốc nội quốc tế
+__label__Dao_tao tiếng tây ban nha chứng tiếng tây ban nha viện cervantes
+__label__Khac suốt thời gian học tập trường sinh viên mã sinh viên thẻ sinh viên tài khoản máy địa email sử dụng
+__label__Hoc_tap_ren_luyen giấy khen nckh nghiên cứu khoa học báo hoạt động nckh nghiên cứu khoa học hoàn thành chứng học hoàn thành chứng ngoại ngữ
+__label__Khen_thuong_ky_luat trường hợp vi phạm hội đồng kỷ luật trường đại học thơ xét quyết định xử lý tùy độ vi phạm
+__label__Tot_nghiep hạng nghiệp xuất sắc giỏi rơi trường hợp khối học f thể tích luỹ học tổng tín quy định chương trình đào bao khối học cải thiện f tích luỹ học kỷ luật cảnh cáo trường thời gian học
+__label__KTX hư hại thiết wifi khu vực ktx ký túc xá phòng chậm toán phí điện hạn nộp phí thể hiện thức bảo vệ tài sản mát khóa cửa phòng sinh viên
+__label__Khac khu vực ktx ký túc xá hoạt động quản sv sinh viên thực hiện quy định gìn vệ sinh môi trường đảm bảo an ninh trật xét khen thưởng
+__label__Tot_nghiep sinh viên hoàn thành chương trình học thời gian quy định xóa danh sách
+__label__Khen_thuong_ky_luat học bổng học kỳ đầu tiên khóa học dựa kết xét tuyển đầu quyết định hiệu trưởng trường đại học thơ
+__label__Dao_tao đào ctđt chương trình đào học bố trí khối kiến thức kế hoạch dạy học ctđt chương trình đào học bố trí học kỳ thời gian thiết
+__label__Dao_tao chương trình ngành đào đáp ứng kiện bảo đảm chất năng lực đào quy định hiện hành giáo dục đào trường hợp sinh viên đăng ký
+__label__KTX khung đánh giá quy định _xd_ _xd_ đánh giá tuân thủ nội quy quy chế kết thực hiện môi trường học tập
+__label__Dao_tao chứng ngoại ngữ tiếng pháp khung năng lực ngoại ngữ bậc việt nam đơn vị giáo dục đào công
+__label__Tot_nghiep hội đồng xét nghiệp đảm bảo xét nghiệp thực hiện thời hạn đối tượng đề nghị hiệu trưởng công sinh viên kiện nghiệp
+__label__Khac _xd_ mục tiêu giáo dục áp dụng hướng thiết kế hoạt động dạy học hợp đồng thời khuyến khích rèn luyện kỹ năng cải thiện khả năng học tập liên tục học
+__label__Khen_thuong_ky_luat đối học kỳ đầu tiên khóa học học bổng dựa kết xét tuyển đầu hiệu trưởng trường đại học thơ quyết định
+__label__Khac chất đại học thơ cam kết xuyên đổi hội nhập đào nghiên cứu giao công nghệ năng động gắn lý thuyết thực tiễn
+__label__Khen_thuong_ky_luat trường hợp vi phạm hội đồng kỷ luật trường đại học thơ xét hình thức xử lý quyết định tùy độ
+__label__Hoc_tap_ren_luyen hỗ trợ tham gia tích cực hoạt động lớp tập thể khoa trường thiết
+__label__KTX hoạt động mê tín dị đoan tôn giáo trái phép bao chứa chấp che giấu hàng cấm hàng lậu tài sản cắp tiêu thụ tài sản cắp đánh bạc hình thức chí đánh
+__label__Hoc_tap_ren_luyen trung bình học trung bình trọng học sinh viên học học học f tích luỹ học học
+__label__Tot_nghiep tiểu luận nghiệp cán hướng cán chấm bảo vệ hội đồng cán chấm tiểu luận nghiệp trưởng đơn vị đào quyết định
+__label__Khen_thuong_ky_luat sinh viên thikiểm tra đình thi học sinh viên đình thi đình học tiếp tiếp tục vi phạm sinh viên buộc học
+__label__Khen_thuong_ky_luat đối thi hộ đình học vi phạm hai suốt khóa học học
+__label__Tot_nghiep thời gian học tập tối đa quy định đối sinh viên kiện nghiệp hoàn thành học giáo dục quốc phòng an ninh giáo dục thể chất thời hạn
+__label__Dao_tao quy định mẫu đơn phụ lục đơn vị đào trách nhiệm xét miễn công học sv sinh viên nộp bổ sung chứng lập danh sách sv sinh viên
+__label__Hoc_tap_ren_luyen tiêu chuẩn trường kiện cụ thể đơn vị thông báo sinh viên yêu cầu tham gia phối sinh viên tham gia
+__label__Dao_tao chứng ielts international english language testing system hội đồng british council tổ chức giáo dục quốc tế idp idp education vietnam
+__label__KTX sinh viên xe xe thời gian nghỉ hè dịp nguyên đán tiến hành công tác vệ sinh bảo trì xếp xe nhu cầu gửi xe thời gian sinh viên thực hiện thủ tục tương ứng
+__label__Khen_thuong_ky_luat học bổng tài trợ trường thực hiện xét học bổng tài trợ doanh nghiệp tổ chức cá nhân quốc tế quy định quản lý học bổng
+__label__Khen_thuong_ky_luat trung bình học kỳ giỏi rèn luyện trở kiện học bổng giỏi
+__label__KTX nhu cầu lưu đêm sinh viên đăng ký văn phòng trung tâm pvsv tổ bảo vệ ktx ký túc xá bố trí khu vực biệt
+__label__KTX giao lưu học tập ngắn hạn thông website đơn vị quản lý ngành httpswwwctueduvndonvitructhuochtml website phòng ctsv công tác sinh viên phòng hợp tác
+__label__Dao_tao a b
+__label__Tot_nghiep kiện thiết sinh viên công nghiệp hoàn thành học tín quy định chương trình đào trung bình tích lũy học tối thiểu thang chuẩn đầu chương trình đào bao ngoại ngữ công nghệ thông
+__label__KTX sv sinh viên thông báo trúng tuyển trường trang tân sinh viên cung thông cvht cố vấn học tập giao nhiệm vụ hỗ trợ sv sinh viên lớp thời khóa biểu
+__label__Dao_tao ml nguyên lý chủ nghĩa máclênin ml triết học máclênin
+__label__KTX tiêu chí xác định đánh giá _xd_ thức hiệu tham gia hoạt động rèn luyện trị xã hội văn hóa văn nghệ thể thao
+__label__KTX b sách đặc biệt áp dụng sv sinh viên trường đhct đại học thơ _xd_ _xd_ học bổng tài trợ
+__label__Khen_thuong_ky_luat khen thưởng quyết định hiệu trưởng khen thưởng sinh viên trúng tuyển trường đại học thơ
+__label__Khac kthiệu trưởng _xd_ phó hiệu trưởng _xd_ _xd_ _xd_ ghi _xd_ lưu vt ctsv công tác sinh viên _xd_ _xd_ trần trùng _xd_ _xd_ giới thiệu trường đại học thơ
+__label__Hoc_tap_ren_luyen gọi tổ chức trường trung ương đoàn thành phố thành đoàn nguyên tắc
+__label__Khen_thuong_ky_luat học sinh viên khen thưởng hiệu trưởng xét giấy khen thưởng sinh viên xuất sắc lớp chuyên ngành xếp giỏi trở sinh viên kết học tập tương ưu tiên sinh viên rèn luyện khen thưởng hiệu trưởng quyết định
+__label__KTX sv sinh viên nỗ lực khăn học tập đtb trung bình học kỳ học kỳ học kỳ i
+__label__Dao_tao đối sinh viên tuyển sinh đào học khóa trở sinh viên hoàn thành học kỳ đầu tiên trung bình tích lũy trở đối sinh viên
+__label__Khen_thuong_ky_luat sinh viên khiển trách kỳ thikiểm tra trừ sinh viên khiển trách học kỷ luật cảnh cáo toàn đơn vị đào quản lý sinh viên
+__label__Hoc_tap_ren_luyen phân giao trường trường hợp đặc biệt hiệu trưởng quyết định
+__label__Dao_tao chương ii tiêu đối tượng kiện ưu tiên tuyển sinh quy trình tuyển sinh kiện học chương trình ngành đào
+__label__Hoc_tap_ren_luyen rèn luyện toàn khóa học lưu trữ hồ sơ quản lý sinh viên ghi phụ lục văn nghiệp
+__label__KTX tiêu chí xác định đánh giá _xd_ thực hiện đạo ngành quan trường thức chấp hành
+__label__Dao_tao hợp tác quốc tế thực hiện tất hình thức hợp tác quốc tế hỗ trợ phát triển ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến bồi dưỡng trao đổi giảng
+__label__Dao_tao đăng ký học học kỳ phép hiệu trưởng
+__label__KTX hoạt động tôn giáo hợp pháp mê tín dị đoan bao chứa chấp che giấu hàng cấm hàng lậu tài sản đánh cắp hành vi tiêu thụ tài sản cắp đánh bạc đánh hình thức
+__label__Dao_tao thang đối học nội dung thang sv sinh viên học học nội dung gdqpan tương ứng chương trình gdqpan hiện
+__label__Khac _xd_ mục tiêu giáo dục sử dụng mục đích định hướng thiết kế hoạt động dạy học hợp lý thúc đẩy rèn luyện kỹ năng nâng khả năng học tập suốt đời học
+__label__KTX ktx ký túc xá quy định lý ồn trật khu ktx ký túc xá thái độ vô lễ cán viên chức trường khu ktx ký túc xá thái độ
+__label__Dao_tao quản lý lớp khả năng hỗ trợ tư vấn sinh viên lớp phân công trình học tập năng lực ngoại ngữ đáp ứng yêu cầu công danh sách cố vấn học tập hiệu trưởng quyết định
+__label__KTX đơn vị hành đầu tiên trường tiếp xử lý tất yêu cầu sv sinh viên ngành học đơn vị trách nhiệm quản lý đối trường
+__label__Khac sinh viên trường đại học thơ chấp hành nội quy quy định trường trường chuyên ngành khoa viện trường đại học thơ gọi đơn vị đào lớp
+__label__KTX hoạt động phục vụ lợi ích cộng đồng xây dựng ktx ký túc xá đánh giá khen thưởng tùy độ vi phạm cá nhân tập thể sinh viên xử lý kỷ luật quy định phụ lục
+__label__Khac vay tín dụng sinh viên sinh viên khả năng đề nghị vay vốn ngân hàng sách xã hội cư trú gia đình trường đại học thơ phát hành giấy xác sinh viên nhu cầu bổ sung hồ sơ vay
+__label__Khen_thuong_ky_luat sinh viên đình thi thikiểm tra hai đình thi học sinh viên đình học tiếp vi phạm tiếp sinh viên buộc học
+__label__Tot_nghiep viên khóa trở đi mặc sinh viên thời gian học tập tối đa quy định kiện nghiệp hoàn thành học giáo dục quốc phòng an ninh giáo dục
+__label__Tot_nghiep sinh viên thể trường đại học thơ thời gian dừng học hoàn thiện kiện đề nghị xét công nghiệp đặc biệt đối sinh viên khóa trở
+__label__KTX tất sinh viên hệ đào trường học viên đại học gọi sšv đối tượng áp dụng nội quy xét duyệt ký túc xá kx trường đại học thơ thực hiện thủ tục yêu cầu
+__label__Khac học phí miễn học phí hỗ trợ chi phí học tập học phí đóng học kỳ tổng tín sinh viên đăng ký học học kỳ học phí hiệu trưởng quyết định
+__label__Khac ngành phục vụ sản xuất đời sống xuất khẩu uy tín vững thị trường quốc tế
+__label__Khen_thuong_ky_luat trung bình học kỳ giỏi rèn luyện trở kiện học bổng giỏi
+__label__KTX quy định phát phòng sinh viên đầu học sinh viên trách nhiệm kỹ thực hiện nghiêm chỉnh nội quy
+__label__Khac tinh thần lập nghiệp khả năng học nghi môi trường cạnh thức phục vụ nhân dân
+__label__KTX quy định sinh viên nguyện vọng nội trú ktx ký túc xá thực hiện thủ tục toán tiền thuê chỗ gọi phí ktx ký túc xá quy định đặc biệt sinh viên ktx ký túc xáb ký hợp đồng
+__label__Dao_tao b b b b
+__label__Dao_tao b b b b
+__label__Khac chánh văn phòng trường trưởng phòng đào trưởng phòng công tác sinh viên trưởng đơn vị viên chức sinh viên liên quan trách nhiệm thực hiện quyết định
+__label__Khen_thuong_ky_luat khen thưởng xếp sinh viên học tín quy định tín trở học kỳ tiến độ học tập thời gian chương trình đào thiết kế vi phạm kỷ luật
+__label__Tot_nghiep hàng sinh viên xét nghiệp sinh viên nghiệp quyết định công nghiệp lễ trao nghiệp tổ
+__label__Tot_nghiep luận văn nghiệp sinh viên hoàn thành luận văn bảo vệ hội đồng thành viên cán hướng luận văn nghiệp sinh viên trung bình
+__label__Dao_tao học phí ctđtclc chương trình đào chất ctđttt chương trình đào tiên tiến xác định sở chi phí đào toàn khóa học đề án
+__label__KTX đội văn nghệ trường quản lý lễ phát nghiệp hội diễn văn nghệ truyền thống tổ chức _xd_ _xd_ d công tác đánh giá rèn luyện trực tuyến
+__label__Tot_nghiep phòng công tác sinh viên phòng đào thẩm định trình hiệu trưởng ký quyết định công nghiệp
+__label__Tot_nghiep thời hạn ngừng học sinh viên đáp ứng tiêu chuẩn đầu ngoại ngữ công nghệ thông ninh giáo dục thể chất thể trở trường đại học thơ hoàn thiện kiện đề nghị công nghiệp
+__label__Hoc_tap_ren_luyen sinh viên thành tích thưởng sinh viên thành tích khoản tổng tối đa khoản
+__label__Hoc_tap_ren_luyen học kỳ gửi tuần kết thúc giảng dạy học kỳ
+__label__KTX phụ lục nội dung vi phạm khung xử lý kỷ luật nội quy ban hành quy định qđđ qđ quyết địnhđhct đại học thơ hiệu trưởng trường đhct
+__label__KTX đơn vị phụ trách quản lý đào nhiệm vụ đào lĩnh vực định trường
+__label__KTX giải quyết cố kỹ thuật thông đăng nhập địa email sinh viên sv _xd_ _xd_ phận công tác trị
+__label__Hoc_tap_ren_luyen đơn vị cá nhân hỗ trợ phí kinh phí đóng góp sinh viên tham gia khoa ghi chép ràng chi định thực hiện thông báo phân giao ban hành
+__label__Dao_tao sinh viên trình độ khóa diện xét buộc học thời gian học tập quy định
+__label__Hoc_tap_ren_luyen học kết rèn luyện xuất sắc sở giáo dục đại học xét biểu dương khen thưởng
+__label__KTX thông website đơn vị quản lý ngành httpswwwctueduvndonvitructhuochtml trang web đoàn hội sinh viên câu lạc học thuật đội sở nguyện xét
+__label__Khac đbscl đh thơ đại học thơ sở đào đại học đại học chủ chốt đồng thời trung tâm văn hóa khoa học kỹ thuật trường nỗ lực hoàn thiện
+__label__KTX đối học thành tích nổi bật học tập rèn luyện kết nạp đảng công đoàn viên ưu tú danh hiệu sv trường trở phân đảng viên
+__label__KTX bảo quản tài sản ký túc xá phòng nhiệm vụ sinh viên phát hiện hư hỏng sinh viên báo cáo trung tâm pvsv sửa chữa đồng thời trách nhiệm bồi hư hỏng mát
+__label__KTX hoạt động lợi ích cộng đồng xây dựng ktx ký túc xá xét khen thưởng sinh viên tập thể cá nhân vi phạm xử lý kỷ luật quy định phụ lục nội quy tùy độ vi phạm
+__label__Khac trình học tập trường sinh viên mã sinh viên thẻ sinh viên tài khoản máy địa thư điện tử hỗ trợ học
+__label__Khen_thuong_ky_luat học bổng trợ xã hội học bổng khuyến khích học tập xét dựa trung bình học kỳ rèn luyện học kỳ học bổng sinh viên
+__label__Hoc_tap_ren_luyen thực hiện hồ sơ thủ tục phí bảo hiểm sinh viên tuân thủ quy định pháp luật việt nam pháp luật quốc gia tiếp sinh viên
+__label__Tot_nghiep hệ thống quản lý trực tuyến trường đại học thơ hỗ trợ sinh viên đăng ký xét nghiệp
+__label__Hoc_tap_ren_luyen thủ trưởng đơn vị đào trách nhiệm truyền thông toàn giảng viên viên chức lao động học quyền quản lý đồng thời đạo trưởng khoabộ môn cố vấn học tập thực hiện rà soát
+__label__Dao_tao ngữ độ hội đồng ký duyệt đồng xét miễn học ngoại ngữ cập nhật bổ sung phụ lục xét miễn học ngoại ngữ trường hợp tương thông xét duyệt hội đồng đánh giá năng lực ngoại ngữ
+__label__Hoc_tap_ren_luyen thời gian tổ chức thi thực hiện quy định đối học lẻ giảng viên xếp tổ chức thi thông hệ thống quản lý trực tuyến trường đại học thơ đối
+__label__Tot_nghiep quy định nghiệp hạng nghiệp
+__label__Khen_thuong_ky_luat sinh viên trừ thikiểm tra khiển trách sinh viên khiển trách học kỷ luật cảnh cáo toàn đơn vị đào quản lý
+__label__Khac phát triển toàn diện đức trí thể mỹ học trang tri thức kỹ năng trách nhiệm nghề nghiệp giúp thể nắm bắt tiến khoa học công nghệ trình độ đào
+__label__Tot_nghiep sinh viên f tích luỹ học luận văn nghiệp tiểu luận nghiệp đăng ký học thay hoàn tất chương trình học
+__label__Hoc_tap_ren_luyen tổ chức đánh giá luận văn nghiệp hình thức trực tuyến thực hiện văn hướng hiện hành hiệu trưởng đánh giá luận văn nghiệp hình thức trực tuyến
+__label__Khen_thuong_ky_luat học bổng tài trợ trường xét học bổng tài trợ doanh nghiệp tổ chức cá nhân quy định phát học bổng
+__label__KTX thực hiện ký hợp đồng thuê chỗ mẫu quy định trung tâm phục vụ sinh viên pvsp đăng ký nội trú tổ chức chỗ tiến hành đầu học giá trị học học tiếp
+__label__Tot_nghiep thẩm định phòng đào phòng công tác sinh viên trình hiệu trưởng ký quyết định công nghiệp
+__label__Tot_nghiep viên kết trung bình cộng thành viên hội đồng quyết định trưởng đơn vị đào hội đồng bảo vệ luận văn nghiệp trường hợp thể tổ chức đánh giá tập trung
+__label__Tot_nghiep viên khóa trở sinh viên thời gian học tập tối đa quy định kiện nghiệp hoàn thành học giáo dục quốc phòng an ninh giáo dục
+__label__Khen_thuong_ky_luat kỷ luật hình thức khiển trách trường trở học tập luyện trở môn d
+__label__Khen_thuong_ky_luat học bổng sinh viên đi học tập sinh viên học bổng khuyến khích học tập xét học bổng đi học quy định hiện hành hiệu trưởng học bổng quyết định hiệu trưởng
+__label__KTX kết học tập trung bình học kỳ đtbchk trung bình học kỳ đtbchk trung bình học kỳ kết đtbchk trung bình học kỳ kết
+__label__Khac sinh viên mã sinh viên thẻ sinh viên tài khoản máy địa thư điện tử hỗ trợ suốt trình học trường
+__label__KTX hỗ trợ sinh viên sv tổ chức thực hiện đánh giá rèn luyện xét học bổng khen thưởng kỷ luật sinh hoạt cố vấn học tập cvht tư vấn sv sinh viên học tập sinh hoạt rèn luyện nghề nghiệp
+__label__KTX ký kết hợp đồng thuê chỗ mẫu quy định trung tâm phục vụ sinh viên pvsp đăng ký nội trú xếp chỗ thực hiện đầu học hiệu lực suốt học đối học
+__label__Tot_nghiep đối trung bình nằm
+__label__Khac mục tiêu hiệu chuyên nghiệp trường cam kết xây dựng hệ thống quản trị trách nhiệm ngừng đổi hoạt động quản lý quy trình hóa học hóa áp dụng phương thức quản trị cập nhật đồng thời giám sát đánh giá liên tục
+__label__Tot_nghiep lễ nghiệp diễn đơn vị đào giáo viên tổ chức
+__label__Khen_thuong_ky_luat xếp khen thưởng sinh viên hoàn thành tối thiểu tín học kỳ quy định tiến độ học tập thời gian thiết kế chương trình đào vi phạm bất kỳ hình thức kỷ luật
+__label__Tot_nghiep thời gian học sinh viên quyền trở trường đại học thơ hoàn thiện kiện đề nghị xét công nghiệp đặc biệt sinh viên khóa trở
+__label__Dao_tao bảng quy đổi chuẩn trình độ ngoại ngữ tiếng trung quốc khung nlnn bậc việt nam khung tham chiếu châu âu cefr
+__label__Hoc_tap_ren_luyen phòng ban chức năng khẩn trương triển khai rà soát chỉnh sửa đổi bổ sung quy định quy chế quy trình công tác liên quan giảng dạy học kỳ học triển khai thông toàn thể vcnlđ viên chức lao động đơn vị

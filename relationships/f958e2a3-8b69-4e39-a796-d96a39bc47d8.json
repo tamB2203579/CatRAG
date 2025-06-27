@@ -1,0 +1,85 @@
+{
+  "chunk_id": "f958e2a3-8b69-4e39-a796-d96a39bc47d8",
+  "text": "nghỉ học tạm thời, cảnh báo học tập, đình chỉ học tập và buộc thôi học nghỉ học tạm thời sinh viên có thể làm đơn xin phép nghỉ học tạm thời trong các trường hợp sau đây được điều động vào các lực lượng vũ trang. được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế.",
+  "entities": [
+    "thẩm quyền",
+    "trường hợp",
+    "học tập",
+    "đại diện",
+    "lực lượng",
+    "buộc",
+    ".",
+    "làm",
+    "quốc gia",
+    "kỳ",
+    "có thể",
+    "giải đấu",
+    "nghỉ",
+    "phép",
+    "trong",
+    "sau",
+    "có",
+    "xin",
+    "đình chỉ",
+    "và",
+    "đơn",
+    "sinh viên",
+    "cơ quan",
+    "điều động",
+    "quốc tế",
+    "cảnh báo",
+    "vũ trang",
+    "tham dự",
+    "các",
+    "thi",
+    "được",
+    "tạm thời",
+    "đây",
+    "thôi",
+    "học",
+    "vào",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relationship": "làm"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nghỉ học tạm thời",
+      "relationship": "xin phép"
+    },
+    {
+      "source": "cơ quan",
+      "target": "thẩm quyền",
+      "relationship": "có"
+    },
+    {
+      "source": "cơ quan",
+      "target": "điều động",
+      "relationship": "được"
+    },
+    {
+      "source": "đại diện",
+      "target": "quốc gia",
+      "relationship": "tham dự"
+    },
+    {
+      "source": "quốc gia",
+      "target": "kỳ thi",
+      "relationship": "tham dự"
+    },
+    {
+      "source": "quốc gia",
+      "target": "giải đấu quốc tế",
+      "relationship": "tham dự"
+    },
+    {
+      "source": "lực lượng",
+      "target": "vũ trang",
+      "relationship": "điều động"
+    }
+  ]
+}

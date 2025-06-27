@@ -8,7 +8,8 @@ def main():
     Main entry point for the GraphRAG system.
     """
     # Initialize the GraphRAG system
-    graph_rag = GraphRAG(model_name="gemini-2.5-flash")
+    name = input("Enter the LLM model you want to use: ")
+    graph_rag = GraphRAG(model_name=name)
     history_manager = HistoryManager()
     
     # Check if we need to initialize the system

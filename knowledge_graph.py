@@ -10,7 +10,7 @@ import os
 import re
 
 class KnowledgeGraph:
-    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="graphrag"):
+    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="test"):
         self.driver = GraphDatabase.driver(uri, auth=(username, password), database=database)
         self.embed_model = Embedding()
         self.nlp = spacy.load("vi_core_news_lg")
@@ -258,7 +258,10 @@ class KnowledgeGraph:
                     RETURN type(r) AS relationship, 
                         e.name AS source, 
                         other.name AS target,
-                        CASE WHEN type(r) = 'RELATED_TO' THEN r.relationship ELSE null END AS rel_type
+                        CASE
+                            WHEN type(r) = 'RELATED_TO' THEN 'RELATED_TO'
+                            ELSE type(r)
+                        END AS rel_type
                     LIMIT 5
                 """, entity_name=entity_name).values()
 

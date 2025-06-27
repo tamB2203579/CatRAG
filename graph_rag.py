@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import StrOutputParser
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 from llama_index.core import Document
 from dotenv import load_dotenv
@@ -18,6 +18,7 @@ import os
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
 class GraphRAG:
     def __init__(self, model_name="gpt-4o-mini"):
@@ -29,8 +30,15 @@ class GraphRAG:
         # Initialize LLM
         if model_name == "gpt-4o-mini":
             self.llm = ChatOpenAI(model=model_name, temperature=0)
-        else:
+        elif model_name == "gemini-2.5-flash":
             self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
+        else:
+            self.llm = ChatOpenAI(
+                api_key=DEEPSEEK_API_KEY,
+                base_url="https://openrouter.ai/api/v1",
+                model_name="deepseek/deepseek-chat-v3-0324:free"
+            )
+        print(f"Using model {model_name}")
             
     def load_csv_data(self, dir="result"):
         """

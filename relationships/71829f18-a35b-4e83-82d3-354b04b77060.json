@@ -1,0 +1,43 @@
+{
+  "chunk_id": "71829f18-a35b-4e83-82d3-354b04b77060",
+  "text": "văn phòng đoàn thanh niên công tác đoàn - hội sinh viên hoạt động phong trào trong và ngoài trường. 3.",
+  "entities": [
+    "phong trào",
+    "hội",
+    "thanh niên",
+    "3",
+    "văn phòng",
+    "và",
+    ".",
+    "trường",
+    "-",
+    "hoạt động",
+    "đoàn",
+    "ngoài",
+    "trong",
+    "sinh viên",
+    "công tác"
+  ],
+  "relationships": [
+    {
+      "source": "văn phòng",
+      "target": "đoàn thanh niên",
+      "relationship": "công tác"
+    },
+    {
+      "source": "đoàn thanh niên",
+      "target": "hội sinh viên",
+      "relationship": "hoạt động"
+    },
+    {
+      "source": "hội sinh viên",
+      "target": "phong trào",
+      "relationship": "hoạt động"
+    },
+    {
+      "source": "phong trào",
+      "target": "trường",
+      "relationship": "trong và ngoài"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "chunk_id": "e16bbff0-3fb0-4cd9-8615-cbc6a8eebc80",
+  "text": "Ý thức và thái độ tham gia các kỳ thi, cuộc thi. không vi phạm quy chế về thi, kiểm tra mỗi lần vi phạm trừ 03 điểm. chức năng nhập điểm trong phân hệ quản lý điểm. CB giảng dạy sẽ nhập điểm cho sinh viên, nếu SV có vi phạm thì check vào cột vi phạm. hệ thống sẽ tự động tính điểm khi tổng hợp. có cố gắng, vượt khó trong học tập có ĐTB học kỳ của SV để thực hiện tính điểm rèn luyện. nếu ĐTBHK  3.6 thì được cộng 2 điểm trường hợp còn lại thì so sánh với học kỳ trước nếu ĐTBHK hơn 0.01 thì được 2 điểm. kết quả học tập điểm trung bình chung học kỳ ĐTBCH đạt  3.60. ĐTBCHK đạt từ 2.50 đến 3.19. ĐTBCHK đạt từ 2.00 đến 2.49. khung điểm đánh giá của điều 4.",
+  "entities": [
+    "",
+    "cho",
+    "3.19",
+    "Ý thức",
+    "chức năng",
+    "hệ thống",
+    "cố gắng",
+    "ĐTBCH",
+    "trước",
+    "tính",
+    "lần",
+    "vi phạm",
+    "giảng dạy",
+    "khó",
+    "ĐTBHK",
+    "2.49",
+    "mỗi",
+    "học kỳ",
+    "2.50",
+    "với",
+    "hơn",
+    "chung",
+    "trung bình",
+    "trường hợp",
+    "kiểm tra",
+    "phân",
+    "còn",
+    "hệ",
+    "tổng hợp",
+    "điều",
+    "check",
+    "trong",
+    "và",
+    "2.00",
+    "nếu",
+    "đến",
+    "sinh viên",
+    "vi phạm quy chế",
+    "đạt",
+    "thi",
+    "điểm",
+    "để",
+    "được",
+    "rèn luyện",
+    "về",
+    "so sánh",
+    "khi",
+    "vượt",
+    "cộng",
+    "kết quả",
+    ".",
+    "SV",
+    "quản lý",
+    "0.01",
+    "từ",
+    "ĐTB",
+    "lại",
+    "thực hiện",
+    "thái độ",
+    "3.6",
+    "CB",
+    "cuộc",
+    "4",
+    "nhập",
+    "ĐTBCHK",
+    "3.60",
+    "khung",
+    "các",
+    "trừ",
+    "03",
+    "tham gia",
+    "không",
+    "tự động",
+    "cột",
+    "học tập",
+    "kỳ",
+    "2",
+    "có",
+    "thì",
+    "đánh giá",
+    "sẽ",
+    "của",
+    "vào",
+    ","
+  ],
+  "relationships": [
+    {
+      "source": "SV",
+      "target": "vi phạm quy chế",
+      "relationship": "không"
+    },
+    {
+      "source": "vi phạm",
+      "target": "trừ",
+      "relationship": "lần"
+    },
+    {
+      "source": "CB",
+      "target": "giảng dạy",
+      "relationship": "sẽ nhập"
+    },
+    {
+      "source": "hệ thống",
+      "target": "tự động",
+      "relationship": "tính"
+    },
+    {
+      "source": "ĐTBHK",
+      "target": "3.6",
+      "relationship": "được cộng"
+    },
+    {
+      "source": "ĐTBHK",
+      "target": "0.01",
+      "relationship": "hơn"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "3.60",
+      "relationship": "đạt"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "2.50",
+      "relationship": "đạt từ"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "2.49",
+      "relationship": "đạt từ"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "2.00",
+      "relationship": "đạt từ"
+    },
+    {
+      "source": "học kỳ",
+      "target": "điểm trung bình chung",
+      "relationship": "đạt"
+    },
+    {
+      "source": "học tập",
+      "target": "có cố gắng",
+      "relationship": "vượt khó"
+    },
+    {
+      "source": "hệ thống",
+      "target": "tính điểm",
+      "relationship": "khi tổng hợp"
+    }
+  ]
+}
