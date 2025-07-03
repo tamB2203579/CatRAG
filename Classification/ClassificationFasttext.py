@@ -4,10 +4,10 @@ import fasttext
 import time
 from sklearn.model_selection import train_test_split
 
-train_data_path = './content/train_data.txt'
-test_data_path = './content/test_data.txt'
-model_path = './models/fasttext_model_tnn.bin'
-data_path = './content/dataset.csv'
+train_data_path = './Classification/content/train_data.txt'
+test_data_path = './Classification/content/test_data.txt'
+model_path = './Classification/models/fasttext_model_tnn.bin'
+data_path = './Classification/content/dataset.csv'
 
 
 

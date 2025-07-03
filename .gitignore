@@ -1,5 +1,7 @@
 .env
 __pycache__
 /Classification/models/
-node_modules/
-history/
+/node_modules/
+/history/
+/relationships/
+/storage/

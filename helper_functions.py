@@ -289,7 +289,7 @@ def build_knowledge_graph(chunks):
                                 r.chunk_id = $chunk_id
                         """, source=source, target=target, relationship=rel["relationship"], chunk_id=chunk.id_)
 
-def get_graph_context(query: str, limit=5):
+def get_graph_context(query: str, limit=5, label = None):
     """
     Get relevant context from the knowledge graph based on the query.
     """
@@ -297,8 +297,21 @@ def get_graph_context(query: str, limit=5):
     query_embedding = embed_model.embed_query(query)
 
     with driver.session() as session:
+        
+        if label:
+            entities = session.run("""
+            MATCH (e:Entity)<-[:MENTIONS]-(c:Chunk)-[:BELONGS_TO]->(cat:Category {name: $label})
+            WHERE e.embedding IS NOT NULL
+            WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
+            WHERE score > 0.75
+            RETURN e.name AS entity, score
+            ORDER BY score DESC
+            LIMIT $limit
+        """, query_embedding=query_embedding, label=label, limit=limit).values()
+        
+        else:
         # Use vector similarity to find relevant entities
-        entities = session.run("""
+            entities = session.run("""
             MATCH (e:Entity)
             WHERE e.embedding IS NOT NULL
             WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
@@ -403,23 +416,37 @@ def add_to_history(session_id, query, response):
     save_history_to_file(session_id)  
     
 def save_history_to_file(session_id):
-    
-    filename = f"history/chat_history_{session_id}.json"
-    
+    filename = f"history/{session_id}.json"
+
+    # Load the existing full history from file (if any)
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            full_history = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        full_history = []
+
+    new_entries = [
+        entry for entry in history.get(session_id, [])
+        if (entry['query'], entry['timestamp']) 
+    ]
+
+    full_history.extend(new_entries)
+
     try:
         with open(filename, 'w', encoding='utf-8') as file:
-            json.dump(history.get(session_id, []), file, indent=4, ensure_ascii=False)
+            json.dump(full_history, file, indent=4, ensure_ascii=False)
     except Exception as e:
         print(f"Failed to save history to {filename}: {e}")
+
     
 def load_history_from_file(session_id):
     
-    filename = f"history/chat_history_{session_id}.json"
+    filename = f"history/{session_id}.json"
     
     try:
         with open(filename, 'r', encoding='utf-8') as file:
             
-            loaded_history = json.load(file)
+            loaded_history = list(json.load(file))
             history[session_id] = loaded_history[-10:]
             
         print(f"History loaded from {filename} successfully!")
@@ -432,7 +459,7 @@ def load_history_from_file(session_id):
         history[session_id] = []
 
 def clear_history(session_id):
-    filename = f"history/chat_history_{session_id}.json"
+    filename = f"history/{session_id}.json"
     if session_id in history:
         history[session_id].clear()
         
@@ -440,7 +467,7 @@ def clear_history(session_id):
         json.dump([], file, indent=4)
         print(f"History and file {filename} have been cleared successfully!")
 
-def graphrag_chatbot(query, session_id):
+def graphrag_chatbot(query, session_id, label):
     """
     A chatbot that combines vector search and graph context for answering queries.
     """
@@ -463,17 +490,23 @@ def graphrag_chatbot(query, session_id):
         for i, result in enumerate(vector_results)
     ])
 
-    graph_context = get_graph_context(query)
+
+
+
+    graph_context = get_graph_context(query, label=label)
   
     past_query = " ".join(entry["query"] for entry in history[session_id])
     past_responses = " ".join(entry["response"] for entry in history[session_id])
+    
+
 
     response = chain.invoke({
         "query": query,
         "vector_context": vector_context,
         "graph_context": graph_context,
         "past_query": past_query,
-        "past_response": past_responses
+        "past_response": past_responses,
+        "label": label
     })
     
     add_to_history(session_id, query, response)
