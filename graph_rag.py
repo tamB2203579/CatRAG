@@ -10,7 +10,6 @@ import pandas as pd
 import os
 
 from knowledge_graph import KnowledgeGraph
-from history_manager import HistoryManager
 from vector_store import VectorStore
 
 # Load environment variables
@@ -23,7 +22,6 @@ class GraphRAG:
         # Initialize components
         self.knowledge_graph = KnowledgeGraph()
         self.vector_store = VectorStore()
-        self.history_manager = HistoryManager()
         
         # Initialize LLM
         if model_name == "gpt-4o-mini":
@@ -57,7 +55,7 @@ class GraphRAG:
             print("No data loaded.")
             return None
             
-    def initialize_system(self):
+    def initialize_system(self, force_reinit=False):
         """
         Initialize the GraphRAG system:
         1. Load documents
@@ -90,7 +88,7 @@ class GraphRAG:
         else:
             print("Skipping GraphRAG initialization due to missing data")
             
-    def generate_response(self, query, session_id, label=None):
+    def generate_response(self, query, label=None):
         """
         Generate a response using the GraphRAG system.
         """
@@ -105,11 +103,6 @@ class GraphRAG:
 
         # Get graph context
         graph_context = self.knowledge_graph.get_graph_context(query, label=label)
-        
-        # Get conversation history
-        history = self.history_manager.get_history(session_id)
-        past_query = " ".join(entry["query"] for entry in history)
-        past_responses = " ".join(entry["response"] for entry in history)
         
         # Load prompt template
         with open("prompt/query.txt", "r", encoding="utf-8") as f:
@@ -127,13 +120,8 @@ class GraphRAG:
             "query": query,
             "vector_context": vector_context,
             "graph_context": graph_context,
-            "past_query": past_query,
-            "past_response": past_responses,
             "label": label
         })
-        
-        # Add to history
-        self.history_manager.add_to_history(session_id, query, response)
         
         return {
             "query": query,

@@ -3,13 +3,18 @@ import time
 import fasttext
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import os
+
+# Get the absolute path to the classify directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+root_dir = os.path.dirname(current_dir)
 
 # Thiết lập đường dẫn
-train_data_path = "./classify/data/train_data.txt"
-test_data_path = "./classify/data/test_data.txt"
-model_path = "./classify/models/fasttext_model.bin"
-data_path = "./classify/data/dataset.csv"
-stopwords_path = "./lib/stopwords.txt"
+train_data_path = os.path.join(current_dir, "data", "train_data.txt")
+test_data_path = os.path.join(current_dir, "data", "test_data.txt")
+model_path = os.path.join(current_dir, "models", "fasttext_model.bin")
+data_path = os.path.join(current_dir, "data", "dataset.csv")
+stopwords_path = os.path.join(root_dir, "lib", "stopwords.txt")
 
 with open(file=stopwords_path, mode="r", encoding="utf-8") as f:
     stopwords = f.read().splitlines()

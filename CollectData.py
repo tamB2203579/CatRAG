@@ -174,9 +174,9 @@ def main():
                     content = preprocess(content)
                     chunks = semantic_chunking(content)
                     data = []
-                    label = labelling()
+                    # label = labelling()
                     for chunk in chunks:
-                        data.append({"text": chunk.page_content, "label": label})
+                        data.append({"text": chunk.page_content})
                     df = pd.DataFrame(data)
                     path = os.path.join("result", file.replace(".pdf", ".csv"))
                     df.to_csv(path, index=False, encoding="utf-8-sig", sep=";")

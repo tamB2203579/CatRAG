@@ -1,9 +1,10 @@
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import numpy as np
 import fasttext
+import os
 
-model_path = "./classify/models/fasttext_model.bin"
-test_data_path = "./classify/data/test_data.txt"
+model_path = ".classify/models/fasttext_model.bin"
+test_data_path = ".classify/data/test_data.txt"
 
 model = fasttext.load_model(model_path)
 
