@@ -8,9 +8,12 @@ def main():
     Main entry point for the GraphRAG system.
     """
     # Initialize the GraphRAG system
-    name = input("Enter the LLM model you want to use: ")
+    print("1. gpt-4o-mini")
+    print("2. gemini-2.5-flash")
+    choice = input("Enter the LLM model you want to use (1/2): ")
+    
+    name = "gpt-4o-mini" if choice == "1" else "gemini-2.5-flash"
     graph_rag = GraphRAG(model_name=name)
-    history_manager = HistoryManager()
     
     # Check if we need to initialize the system
     if not os.path.exists("storage") or input("Do you want to reinitialize the GraphRAG system? (y/n): ").lower() == "y":

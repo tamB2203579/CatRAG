@@ -3,18 +3,17 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from embedding import Embedding
 from neo4j import GraphDatabase
+from underthesea import ner
 from tqdm import tqdm
-import spacy
+import re
 import json
 import os
-import re
 
 class KnowledgeGraph:
-    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="test"):
+    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="test"):  # Change the datbase name please
         self.driver = GraphDatabase.driver(uri, auth=(username, password), database=database)
         self.embed_model = Embedding()
-        self.nlp = spacy.load("vi_core_news_lg")
-        
+    
     def close(self):
         self.driver.close()
         
@@ -75,14 +74,14 @@ class KnowledgeGraph:
         return result
         
     def extract_entities(self, text: str):
-        """Extract entities from text using spaCy."""
-        doc = self.nlp(text)
-        entities = [ent.text for ent in doc]
+        """Extract noun entities from text using underthesea."""
+        docs = ner(text)
+        noun_tags = ['N', 'Nb', 'Np', 'Ny']
+        entities = [ent[0] for ent in docs if ent[1] in noun_tags]
         
-        entities = list(set([e.strip() for e in entities]))
-        return entities
-        
-    def extract_relationships(self, text, entities):
+        return list(set(entities))
+
+    def extract_relationships(self, text, entities, use_cache=True):
         """Extract relationships between entities using LLM."""
         with open("prompt/extract_relationships.txt", mode="r", encoding="utf-8") as f:
             template = f.read()
@@ -102,30 +101,27 @@ class KnowledgeGraph:
         })
 
         try:
-            cleaned_response = response
-            if "```json" in cleaned_response:
-                cleaned_response = cleaned_response.replace("```json", "").replace("```", "")
-            cleaned_response = cleaned_response.strip()
-
-            relationships = json.loads(cleaned_response)
+            relationships = json.loads(response)
             return relationships
         except Exception as e:
             print(f"Failed to parse relationships JSON: {e}")
             return []
             
-    def build_knowledge_graph(self, chunks):
+    def build_knowledge_graph(self, chunks, use_cache=True):
         """Build a knowledge graph in Neo4j"""
         with self.driver.session() as session:
-            print("Creating Chunk nodes")
-            for chunk in tqdm(chunks, desc="Creating Chunk nodes"):
-                # Create chunk node
+            print("Creating chunks in Neo4j...")
+            for chunk in tqdm(chunks, desc="Creating chunk nodes"):
+                # Get embedding for the chunk
+                embeddings = self.embed_model.embed_query(chunk.text)
+
+                # Create chunk node with embedding
                 session.run("""
-                CREATE (c:Chunk {
-                    id: $id,
-                    text: $text,
-                    label: $label
-                })
-                """, id=chunk.id_, text=chunk.text, label=chunk.metadata.get("label", ""))
+                    MERGE (c:Chunk {id: $id})
+                    SET c.text = $text,
+                    c.label = $label,
+                    c.embeddings = $embedding
+                """, id=chunk.id_, text=chunk.text, label=chunk.metadata.get("label", ""), embedding=embeddings)
                 
                 # Create category node if a label exists
                 if chunk.metadata.get("label"):
@@ -182,9 +178,9 @@ class KnowledgeGraph:
                 
                 # Create relationships in Neo4j
                 for rel in relationships:
-                    source = rel["source"]
-                    target = rel["target"]
-                    relationship = self.normalize(rel["relationship"].upper().replace(" ", "_"))
+                    source = rel["subject"]
+                    target = rel["object"]
+                    relationship = self.normalize(rel["predicate"].upper())
                     
                     if source != target:
                         try:
@@ -203,89 +199,85 @@ class KnowledgeGraph:
                                 MERGE (s)-[r:RELATED_TO]->(t)
                                 SET r.relationship = $relationship,
                                     r.chunk_id = $chunk_id
-                            """, source=source, target=target, relationship=rel["relationship"], chunk_id=chunk.id_)
+                            """, source=source, target=target, relationship=rel["predicate"], chunk_id=chunk.id_)
 
-    def get_graph_context(self, query: str, limit=5, label=None):
+    def get_graph_context(self, query: str, limit=5, entity_limit=10, label=None):
         """Get relevant context from the knowledge graph based on the query."""
         # Generate embedding for the query
         query_embedding = self.embed_model.embed_query(query)
 
         with self.driver.session() as session:
+            # 1. Retrieve the most relevant chunks based on embedding similarity
             if label:
-                entities = session.run("""
-                MATCH (e:Entity)<-[:MENTIONS]-(c:Chunk)-[:BELONGS_TO]->(cat:Category {name: $label})
-                WHERE e.embedding IS NOT NULL
-                WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
-                WHERE score > 0.75
-                RETURN e.name AS entity, score
-                ORDER BY score DESC
-                LIMIT $limit
+                chunks = session.run("""
+                    MATCH (c:Chunk)-[:BELONGS_TO]->(cat:Category {name: $label})
+                    WHERE c.embeddings IS NOT NULL
+                    WITH c, gds.similarity.cosine(c.embeddings, $query_embedding) AS score
+                    WHERE score > 0.7
+                    RETURN c.id AS chunk_id, c.text AS chunk_text, score
+                    ORDER BY score DESC
+                    LIMIT $limit
                 """, query_embedding=query_embedding, label=label, limit=limit).values()
             else:
-                # Use vector similarity to find relevant entities
-                entities = session.run("""
-                MATCH (e:Entity)
-                WHERE e.embedding IS NOT NULL
-                WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
-                WHERE score > 0.75
-                RETURN e.name AS entity, score
-                ORDER BY score DESC
-                LIMIT $limit
+                chunks = session.run("""
+                    MATCH (c:Chunk)
+                    WHERE c.embeddings IS NOT NULL
+                    WITH c, gds.similarity.cosine(c.embeddings, $query_embedding) AS score
+                    WHERE score > 0.7
+                    RETURN c.id AS chunk_id, c.text AS chunk_text, score
+                    ORDER BY score DESC
+                    LIMIT $limit
                 """, query_embedding=query_embedding, limit=limit).values()
             
-            # If no entities found with vector search, fall back to text matching
-            if not entities:
-                query_terms = query.split()
-                entities = session.run("""
+            # Format chunks context
+            chunks_context = "Relevant chunks context: "
+            for _, text, score in chunks:
+                chunks_context += f"\n- {text} (relevance: {score:.2f})"
+            
+            # 2. Get entities from retrieved chunks
+            chunk_ids = [chunk_id for chunk_id, _, _ in chunks]
+            entities = []
+            
+            if chunk_ids:
+                entities_result = session.run("""
+                    MATCH (c:Chunk)-[:MENTIONS]->(e:Entity)
+                    WHERE c.id IN $chunk_ids
+                    RETURN DISTINCT e.name AS entity_name
+                """, chunk_ids=chunk_ids).values()
+                
+                entities = [name[0] for name in entities_result]
+            
+                # 3. Get semantically similar entities based on query embedding
+                semantic_entities_result = session.run("""
                     MATCH (e:Entity)
-                    WHERE any(term IN $query_terms WHERE e.name CONTAINS term OR $query_text CONTAINS e.name)
-                    RETURN e.name AS entity, 1.0 AS score
-                    LIMIT $limit
-                """, query_terms=query_terms, query_text=query, limit=limit).values()
+                    WHERE e.name in $entities AND e.embedding IS NOT NULL
+                    WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
+                    WHERE score > 0.7
+                    RETURN e.name AS entity_name, score
+                    ORDER BY score DESC
+                    LIMIT $entity_limit
+                """, query_embedding=query_embedding, entity_limit=entity_limit, entities=entities).values()
             
-            if not entities:
-                return "No relevant graph context found."
-            
-            context_parts = []
-
-            for entity_tuple in entities:
-                entity_name = entity_tuple[0]
-                entity_score = entity_tuple[1]
-
-                # Find relationships for this entity
+            if not semantic_entities_result and not entities:
+                rels_context = "\nNo entities found for the query."
+            else:
+                # Get unique entities from both sources
+                semantic_entities = [name for name, _ in semantic_entities_result]
+                all_entities = list(set(semantic_entities))
+                
+                print(f"Found {len(all_entities)} entities: {', '.join(all_entities)}")
+                
                 relationships = session.run("""
-                    MATCH (e:Entity {name: $entity_name})-[r]-(other:Entity)
-                    RETURN type(r) AS relationship, 
-                        e.name AS source, 
-                        other.name AS target,
-                        CASE
-                            WHEN type(r) = 'RELATED_TO' THEN 'RELATED_TO'
-                            ELSE type(r)
-                        END AS rel_type
-                    LIMIT 5
-                """, entity_name=entity_name).values()
-
-                # Find chunks mentioning this entity
-                chunks = session.run("""
-                    MATCH (e:Entity {name: $entity_name})<-[:MENTIONS]-(c:Chunk)
-                    RETURN c.text AS chunk_text
-                    LIMIT 2
-                """, entity_name=entity_name).values()
-
-                # Initialize entity_context with similarity score
-                entity_context = f"Entity: {entity_name} (Similarity: {entity_score:.4f})\n"
-
+                    MATCH (e1:Entity)-[r]-(e2:Entity)
+                    WHERE e1.name IN $entity_names
+                    RETURN DISTINCT type(r) AS relationship, e1.name AS from, e2.name AS to
+                """, entity_names=all_entities).values()
+                    
+                rels_context = "Relationships: "
                 if relationships:
-                    entity_context += "Relationships:\n"
-                    for rel_type, source, target, rel_name in relationships:
-                        relationship = rel_name if rel_type == "RELATED_TO" else rel_type.lower().replace("_", " ")
-                        entity_context += f" - {source} {relationship} {target}\n"
-                
-                if chunks:
-                    entity_context += "\nRelevant Context:\n"
-                    for chunk_tuple in chunks:
-                        entity_context += f" - {chunk_tuple[0][:150]}...\n"
-                
-                context_parts.append(entity_context)
+                    for rel, from_entity, to_entity in relationships:
+                        rels_context += f"\n- {from_entity} -- {rel} --> {to_entity}"
+                else:
+                    rels_context += "\nNo relationships found for the entities."
             
-        return "\n\n".join(context_parts)
+            return chunks_context + "\n\n" + rels_context

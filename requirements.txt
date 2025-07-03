@@ -8,8 +8,6 @@ langchain_openai==0.3.18
 langchain-google-genai
 langchain_experimental==0.3.4
 multilingual_pdf2text==1.1.0
-vi_core_news_lg @ https://gitlab.com/trungtv/vi_spacy/-/raw/master/packages/vi_core_news_lg-3.6.0/dist/vi_core_news_lg-3.6.0.tar.gz
-pyvi
 matplotlib
 python-dotenv
 fasttext-wheel==0.9.2

@@ -6,7 +6,7 @@ Use both information from vector search and the knowledge graph to provide a com
 INFORMATION FROM VECTOR STORE:
 {vector_context}
 
-INFORMATION FROM KNOWLEDGE GRAPH:
+INFORMATION FROM KNOWLEDGE GRAPH (include relevant chunks, entities and relationships between them and {query}):
 {graph_context}
 
 QUESTION:

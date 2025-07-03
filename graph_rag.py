@@ -6,19 +6,17 @@ from llama_index.core import Document
 from dotenv import load_dotenv
 from uuid import uuid4
 from glob import glob
+import pandas as pd
+import os
 
 from knowledge_graph import KnowledgeGraph
 from history_manager import HistoryManager
 from vector_store import VectorStore
 
-import pandas as pd
-import os
-
 # Load environment variables
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
 class GraphRAG:
     def __init__(self, model_name="gpt-4o-mini"):
@@ -30,15 +28,8 @@ class GraphRAG:
         # Initialize LLM
         if model_name == "gpt-4o-mini":
             self.llm = ChatOpenAI(model=model_name, temperature=0)
-        elif model_name == "gemini-2.5-flash":
-            self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
         else:
-            self.llm = ChatOpenAI(
-                api_key=DEEPSEEK_API_KEY,
-                base_url="https://openrouter.ai/api/v1",
-                model_name="deepseek/deepseek-chat-v3-0324:free"
-            )
-        print(f"Using model {model_name}")
+            self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
             
     def load_csv_data(self, dir="result"):
         """
@@ -91,9 +82,9 @@ class GraphRAG:
             self.vector_store.create_vector_store(documents)
             
             # Build knowledge graph
-            self.knowledge_graph.clear_database()
-            self.knowledge_graph.create_constraints()
-            self.knowledge_graph.build_knowledge_graph(documents)
+            # self.knowledge_graph.clear_database()
+            # self.knowledge_graph.create_constraints()
+            # self.knowledge_graph.build_knowledge_graph(documents)
             
             print("GraphRAG initialization completed successfully!")
         else:
@@ -111,7 +102,7 @@ class GraphRAG:
             f"Đoạn {i+1} (Điểm tương đồng: {result['score']:.4f}):\n{result['text']}"
             for i, result in enumerate(vector_results)
         ])
-        
+
         # Get graph context
         graph_context = self.knowledge_graph.get_graph_context(query, label=label)
         
@@ -175,5 +166,6 @@ class GraphRAG:
                     print(f"Classification error: {e}")
             
             result = self.generate_response(query, session_id, label)
-            print("\nAnswer:")
-            print(result["response"])
+            print("Answer: ", result["response"])
+            print("Graph context: ", result["graph_context"])
+            print("Vector context: ", result["vector_context"])

@@ -1,3 +1,6 @@
 .env
 __pycache__
 /classify/models/
+/rag/faiss/
+/storage/
+/relationships/
