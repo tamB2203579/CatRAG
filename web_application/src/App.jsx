@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Sidebar from './components/Sidebar/Sidebar'
-import Window from './components/Window/Window'
+import React, { useEffect } from 'react'
+import Home from './pages/Home'
 import './index.css'
 import WebFont from 'webfontloader'
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
   useEffect(() => {
         WebFont.load({
           google: {
@@ -17,15 +14,9 @@ const App = () => {
           }
         });
       }, []);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(prev => !prev);
-  };
-
   return (
     <div>
-      <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
-      <Window isSidebarOpen={isSidebarOpen} />
+      <Home/>
     </div>
   );
 };

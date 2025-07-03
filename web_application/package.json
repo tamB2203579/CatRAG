@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^11.9.1",
+    "marked": "^15.0.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.6.2",

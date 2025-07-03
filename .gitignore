@@ -2,5 +2,7 @@
 __pycache__
 /classify/models/
 /rag/faiss/
-/storage/
+/node_modules/
+/history/
 /relationships/
+/storage/

@@ -1,12 +1,16 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar/Sidebar'
 import Window from '../components/Window/Window'
+import { useState } from 'react';
 
 function Home() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(prev => !prev);
+  };
   return (
     <div>
-        <Sidebar/>
-        <Window/>
+        <Window isOpen={isSidebarOpen} onToggle={toggleSidebar}/>
     </div>
   )
 }
