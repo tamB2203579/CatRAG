@@ -1,30 +1,32 @@
-import os
-import re
-import json
-import pathlib
-import pandas as pd
-from tqdm import tqdm
-from dotenv import load_dotenv
+from multilingual_pdf2text.models.document_model.document import Document
+from multilingual_pdf2text.pdf2text import PDF2Text
+from langchain_text_splitters import MarkdownTextSplitter
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai.chat_models import ChatOpenAI
-from langchain_openai import OpenAIEmbeddings
-from multilingual_pdf2text.models.document_model.document import Document as PDFDocument
-from multilingual_pdf2text.pdf2text import PDF2Text
+from embedding import Embedding
+from dotenv import load_dotenv
+from tqdm import tqdm
+import pandas as pd
+import pathlib
+import json
+import os
+import re
 
 # Load environment variables
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("API_KEY")
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 # Initialize labels for classification task
 labels = ["Dao_tao", "Hoc_tap_ren_luyen", "Khen_thuong_ky_luat", "Tot_nghiep", "KTX", "Khac"]
 
 def load_stop_words():
     # Load stopwords.txt
-    with open("lib/vietnamese-stopwords.txt", "r", encoding="utf-8") as f:
+    with open("./lib/stopwords.txt", "r", encoding="utf-8") as f:
         stop_words = f.read().splitlines()
+    
     return stop_words
 
 def preprocess(text):
@@ -43,9 +45,9 @@ def preprocess(text):
 
     return text
 
-def convert_pdf_to_markdown_with_llm(pdf_path, output_path=None):
+def convert_pdf_to_markdown_with_llm(pdf_path, output_path=None, use_cache=True):
     # Initialize document object with Vietnamese language setting
-    pdf_document = PDFDocument(document_path=pdf_path, language="vie")
+    pdf_document = Document(document_path=pdf_path, language="vie")
     pdf2text = PDF2Text(document=pdf_document)
 
     # Extract text from PDF
@@ -79,19 +81,19 @@ def convert_pdf_to_markdown_with_llm(pdf_path, output_path=None):
 
     return markdown_text
 
-def chunking(text):
-    text_splitter = SemanticChunker(
-        OpenAIEmbeddings(),
-        breakpoint_threshold_type="percentile",
-        breakpoint_threshold_amount=95
-    )
+def chunking(text, use_cache=True):
+    text_splitter = MarkdownTextSplitter(chunk_size=1000, chunk_overlap=200)
+    return text_splitter.create_documents([text])
+
+def semantic_chunking(text, use_cache=True):
+    text_splitter = SemanticChunker(breakpoint_threshold_type="percentile", breakpoint_threshold_amount=95, embeddings=Embedding(), min_chunk_size=100)
     return text_splitter.create_documents([text])
 
 def labelling():
     choice = input("Enter label for this data: ")
     return "__label__" + labels[int(choice)]
 
-def data_augment(varr):
+def data_augment(varr, use_cache=True):
     with open("prompt/augment.txt", mode="r", encoding="utf-8") as f:
         template = f.read()
     
@@ -137,36 +139,51 @@ def data_augment(varr):
             
         except Exception as e:
             print(f"Error processing text at index {index}: {e}")
-
+    
     augmented_df = pd.DataFrame(augmented_data)
     augmented_df.to_excel("augmented_dataset_TN.xlsx", index=False)
     print(f"Original dataset size: {len(df)}, Augmented dataset size: {len(augmented_df)}")
-
+    print(f"Cached augmented data with {varr} variations")
 
 def main():
     while True:
         print("---Collect Data Menu---")
-        print("1. Convert pdf to CSV file.")
-        print("2. Augment data for classification.")
-        print("3. Exit")
+        print("1. Convert PDF to CSV file using Recursive chunking.")
+        print("2. Convert PDF to CSV file using Semantic chunking.")
+        print("3. Augment data for classification.")
+        print("4. Exit")
         print("----------------------")
         choice = int(input("Enter your choice: "))
         if choice == 1:
            for file in tqdm(os.listdir("content")):
-            content = convert_pdf_to_markdown_with_llm(os.path.join("content", file), os.path.join("result", file.replace(".pdf", ".md")))
-            content = preprocess(content)
-            chunks = chunking(content)
-            data = []
-            label = labelling()
-            for chunk in chunks:
-                data.append({"text": chunk.page_content, "label": label})
-            df = pd.DataFrame(data)
-            path = os.path.join("result", file.replace(".pdf", ".csv"))
-            df.to_csv(path, index=False, encoding="utf-8-sig", sep=";")
+            if file.endswith(".pdf"):
+                content = convert_pdf_to_markdown_with_llm(os.path.join("content", file), os.path.join("result", file.replace(".pdf", ".md")))
+                content = preprocess(content)
+                chunks = chunking(content)
+                data = []
+                label = labelling()
+                for chunk in chunks:
+                    data.append({"text": chunk.page_content, "label": label})
+                df = pd.DataFrame(data)
+                path = os.path.join("result", file.replace(".pdf", ".csv"))
+                df.to_csv(path, index=False, encoding="utf-8-sig", sep=";")
         elif choice == 2:
+            for file in tqdm(os.listdir("content")):
+                if file.endswith(".pdf"):
+                    content = convert_pdf_to_markdown_with_llm(os.path.join("content", file), os.path.join("result", file.replace(".pdf", ".md")))
+                    content = preprocess(content)
+                    chunks = semantic_chunking(content)
+                    data = []
+                    label = labelling()
+                    for chunk in chunks:
+                        data.append({"text": chunk.page_content, "label": label})
+                    df = pd.DataFrame(data)
+                    path = os.path.join("result", file.replace(".pdf", ".csv"))
+                    df.to_csv(path, index=False, encoding="utf-8-sig", sep=";")
+        elif choice == 3:
             variations = input("Enter number of variations to paraphrase: ")
             data_augment(variations)
-        elif choice == 3:
+        elif choice == 4:
             print("Exiting the program.")
             break
         else:

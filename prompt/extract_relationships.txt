@@ -1,20 +1,49 @@
-Extract meaningful relationships between entities in the following text. 
-The text is in Vietnamese about university regulations.
+Your task:
+Read the Vietnamese university regulation text below and extract all meaningful Subject–Predicate–Object (S-P-O) relationships, using only the provided list of entities.
 
 Text: {text}
-
 Entities: {entities}
 
-For each pair of entities that have a clear relationship, identify the relationship verb or phrase.
-Format your response as a JSON array of objects with the following structure:
+Instructions:
+
+1. All subject and object values must be selected from the {entities} list. Do not invent or merge unrelated concepts. However, you may infer compound entities from adjacent parts when they clearly form a single concept (see Rule 8).
+2. Always use the exact form of the entity as it appears in the provided list.
+3. Replace pronouns like "họ", "nó", "anh ấy", etc., with the correct entity from the list if clearly identifiable.
+4. Treat each entity as an atomic, standalone term. Do not group or merge multiple entities into one.
+5. For every meaningful pair of entities that have a clear connection in the text, create an S-P-O triple.
+6. Each predicate must be: Concise (1 to 3 words only), descriptive of the relationship and written in lower_snakecase (e.g., CHU_TRI, THUOC, HO_TRO)
+7. All subject and object values must be in lowercase, even names and places.
+8. If the entity list includes fragments like "ngày", "20", "tháng", "6", or "sản phẩm", "công nghệ cao", "xe điện", "vinfast", you are allowed to intelligently combine them into coherent, full entities only if they form a clearly recognized concept in the text (e.g., "ngày" "20" "tháng" "6" → "ngày 20 tháng 6 năm 2025", or "xe điện vinfast" from parts). The combined entity must still come from and be traceable to the original entity fragments.
+
+Output format:
+Return a JSON array of triples using the following format:
+
 [
-    {{
-    "source": "Entity1",
-    "target": "Entity2",
-    "relationship": "relationship_verb"
-    }}
+  {{
+    "subject": "entity1",
+    "predicate": "RELATIONSHIP_VERB",
+    "object": "entity2"
+  }}
 ]
 
-Only include relationships that are explicitly stated or strongly implied in the text.
-If no clear relationships exist, return an empty array.
-Do not include any explanations, markdown formatting, or code blocks - just return the raw JSON.
+Do not include any commentary, markdown, or explanation. If there are no valid relationships, return an empty array: [].
+
+Output:
+
+Example:
+
+Input text: Thủ tướng Phạm Minh Chính đã chủ trì Hội nghị Thượng đỉnh Kinh tế Châu Á tại Hà Nội, Việt Nam vào ngày 20 tháng 6 năm 2025. Trong hội nghị này, Bộ Kế hoạch và Đầu tư đã công bố Nghị quyết 01/NQ-CP về thúc đẩy đầu tư công, nhằm hỗ trợ phát triển các sản phẩm công nghệ cao như xe điện VinFast. Sự kiện này thu hút sự chú ý lớn từ các tổ chức quốc tế và giới truyền thông.
+
+Input entities: ["phạm minh chính", "hội nghị thượng đỉnh kinh tế châu á", "hà nội", "việt nam", "bộ kế hoạch và đầu tư", "nghị quyết 01/nq-cp", "sản phẩm công nghệ cao", "xe điện vinfast", "vinfast", "ngày 20 tháng 6 năm 2025"]
+
+Output:
+[
+  {{ "subject": "phạm minh chính", "predicate": "CHU_TRI", "object": "hội nghị thượng đỉnh kinh tế châu á" }},
+  {{ "subject": "hội nghị thượng đỉnh kinh tế châu á", "predicate": "DIEN_RA_TAI", "object": "hà nội" }},
+  {{ "subject": "hà nội", "predicate": "THUOC", "object": "việt nam" }},
+  {{ "subject": "bộ kế hoạch và đầu tư", "predicate": "CONG_BO", "object": "nghị quyết 01/nq-cp" }},
+  {{ "subject": "nghị quyết 01/nq-cp", "predicate": "HO_TRO", "object": "sản phẩm công nghệ cao" }},
+  {{ "subject": "sản phẩm công nghệ cao", "predicate": "BAO_GOM", "object": "xe điện vinfast" }},
+  {{ "subject": "xe điện vinfast", "predicate": "THUOC", "object": "vinfast" }},
+  {{ "subject": "hội nghị thượng đỉnh kinh tế châu á", "predicate": "VAO_NGAY", "object": "ngày 20 tháng 6 năm 2025" }}
+]
