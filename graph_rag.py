@@ -29,19 +29,19 @@ class GraphRAG:
         else:
             self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
             
-    def load_csv_data(self, dir="result"):
+    def load_excel_data(self, dir="result"):
         """
-        Load CSV files from a directory and combine them into a DataFrame.
+        Load Excel files from a directory and combine them into a DataFrame.
         Each row gets a unique ID.
         """
-        csv_files = glob(f"{dir}/*.csv")
-        print(f"Found {len(csv_files)} CSV files in {dir}")
+        excel_files = glob(f"{dir}/*.xlsx")
+        print(f"Found {len(excel_files)} Excel files in {dir}")
 
         all_dfs = []
 
-        for csv_file in csv_files:
-            df = pd.read_csv(csv_file, encoding="utf-8-sig", sep=";")
-            print(f" - {csv_file}: {len(df)} rows")
+        for file in excel_files:
+            df = pd.read_excel(file, engine="openpyxl")
+            print(f" - {file}: {len(df)} rows")
             all_dfs.append(df)
 
         if all_dfs:
@@ -66,7 +66,7 @@ class GraphRAG:
         print("Initializing GraphRAG system...")
         
         # Load CSV data
-        df = self.load_csv_data()
+        df = self.load_excel_data()
         
         if df is not None:
             documents = [Document(text=row['text'], id_=row['id'], metadata={"label": row['label']}) for _, row in df.iterrows()]
@@ -77,12 +77,12 @@ class GraphRAG:
                 return
             
             # Create vector store
-            self.vector_store.create_vector_store(documents)
+            # self.vector_store.create_vector_store(documents)
             
             # Build knowledge graph
-            # self.knowledge_graph.clear_database()
-            # self.knowledge_graph.create_constraints()
-            # self.knowledge_graph.build_knowledge_graph(documents)
+            self.knowledge_graph.clear_database()
+            self.knowledge_graph.create_constraints()
+            self.knowledge_graph.build_knowledge_graph(documents)
             
             print("GraphRAG initialization completed successfully!")
         else:
@@ -137,9 +137,6 @@ class GraphRAG:
         print("\nGraphRAG Query System")
         print("Type 'q' to exit")
         
-        # Generate a new session ID
-        session_id = self.history_manager.generate_session_id()
-        
         while True:
             query = input("\nNhập câu hỏi của bạn: ")
             if query.lower() == "q":
@@ -153,7 +150,7 @@ class GraphRAG:
                 except Exception as e:
                     print(f"Classification error: {e}")
             
-            result = self.generate_response(query, session_id, label)
+            result = self.generate_response(query, label)
             print("Answer: ", result["response"])
             print("Graph context: ", result["graph_context"])
             print("Vector context: ", result["vector_context"])

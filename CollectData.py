@@ -1,193 +1,168 @@
-from multilingual_pdf2text.models.document_model.document import Document
-from multilingual_pdf2text.pdf2text import PDF2Text
+import os
+import re
+import json
+import pathlib
+import pandas as pd
+from tqdm import tqdm
+from dotenv import load_dotenv
+
 from langchain_text_splitters import MarkdownTextSplitter
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_openai.chat_models import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from embedding import Embedding
-from dotenv import load_dotenv
-from tqdm import tqdm
-import pandas as pd
-import pathlib
-import json
-import os
-import re
+
+from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode, TesseractOcrOptions
+from docling.document_converter import DocumentConverter
+from docling.document_converter import PdfFormatOption
+from docling.datamodel.base_models import InputFormat
 
 # Load environment variables
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"
 
-# Initialize labels for classification task
+# Labels for classification
 labels = ["Dao_tao", "Hoc_tap_ren_luyen", "Khen_thuong_ky_luat", "Tot_nghiep", "KTX", "Khac"]
 
-def load_stop_words():
-    # Load stopwords.txt
-    with open("./lib/stopwords.txt", "r", encoding="utf-8") as f:
-        stop_words = f.read().splitlines()
-    
-    return stop_words
+# ----- Helper Functions -----
 
 def preprocess(text):
-    # Convert non-uppercase words to lowercase
     words = text.split()
     processed_words = [word if word.isupper() else word.lower() for word in words]
-
-    # Join words back into a string
     text = " ".join(processed_words)
-
-    # Remove unwanted special characters (keep letters, numbers, whitespace, , ? . - % + / \)
     text = re.sub(r'[^\w\s,.?%+/\\\-]', '', text)
+    return text.strip()
 
-    # Remove leading/trailing whitespace
-    text = text.strip()
-
-    return text
-
-def convert_pdf_to_markdown_with_llm(pdf_path, output_path=None, use_cache=True):
-    # Initialize document object with Vietnamese language setting
-    pdf_document = Document(document_path=pdf_path, language="vie")
-    pdf2text = PDF2Text(document=pdf_document)
-
-    # Extract text from PDF
-    extracted_text = ""
-    for words in pdf2text.extract():
-        extracted_text += words["text"]
-
-    # Load prompt template for PDF to Markdown conversion
-    with open("prompt/pdf_to_markdown.txt", mode="r", encoding="utf-8") as f:
+def vietnamese_spelling(text):
+    with open("prompt/vietnamese_spelling.txt", "r", encoding="utf-8") as f:
         template = f.read()
-
-    # Set up the LLM chain
     prompt = ChatPromptTemplate.from_template(template)
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    chain = {"text": RunnablePassthrough()} | prompt | llm | StrOutputParser()
+    return chain.invoke(text)
 
-    # Create processing chain: pass PDF content through the prompt to the model
-    chain = (
-        {"pdf_content": RunnablePassthrough()}
-        | prompt
-        | llm
-        | StrOutputParser()
+def chunking(text):
+    text_splitter = MarkdownTextSplitter(chunk_size=500, chunk_overlap=20)
+    return text_splitter.create_documents([text])
+
+def semantic_chunking(text):
+    text_splitter = SemanticChunker(
+        embeddings=Embedding(),
+        breakpoint_threshold_type="percentile",
+        breakpoint_threshold_amount=95,
+        min_chunk_size=100
     )
-
-    # Process the extracted text through the LLM chain
-    markdown_text = chain.invoke(extracted_text)
-
-    # Save to file if output path is provided
-    if output_path:
-        pathlib.Path(output_path).write_text(markdown_text, encoding="utf-8")
-        print(f"Markdown saved to {output_path}")
-
-    return markdown_text
-
-def chunking(text, use_cache=True):
-    text_splitter = MarkdownTextSplitter(chunk_size=1000, chunk_overlap=200)
     return text_splitter.create_documents([text])
 
-def semantic_chunking(text, use_cache=True):
-    text_splitter = SemanticChunker(breakpoint_threshold_type="percentile", breakpoint_threshold_amount=95, embeddings=Embedding(), min_chunk_size=100)
-    return text_splitter.create_documents([text])
-
-def labelling():
-    choice = input("Enter label for this data: ")
-    return "__label__" + labels[int(choice)]
-
-def data_augment(varr, use_cache=True):
-    with open("prompt/augment.txt", mode="r", encoding="utf-8") as f:
+def data_augment(varr, name):
+    with open("prompt/augment.txt", "r", encoding="utf-8") as f:
         template = f.read()
-    
     prompt = ChatPromptTemplate.from_template(template)
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-
     chain = (
         {"category": RunnablePassthrough(), "num_variations": RunnablePassthrough(), "text": RunnablePassthrough()}
         | prompt
         | llm
         | StrOutputParser()
     )
-
-    df = pd.read_excel("classed_dataset.xlsx", sheet_name="KTX")
+    df = pd.read_excel("dataset.xlsx", sheet_name=name)
     augmented_data = []
-
     category = df['label'].iloc[0]
-
     for index, row in tqdm(df.iterrows(), total=len(df)):
-        text = row['text']
-        
-        chain_input = {
-            "category": category,
-            "num_variations": varr,
-            "text": text
-        }
-        
         try:
-            result = chain.invoke(chain_input)
-            
+            result = chain.invoke({"category": category, "num_variations": varr, "text": row['text']})
             augmented_texts = json.loads(result)
-            
-            augmented_data.append({
-                "text": text,
-                "label": row['label']
-            })
-            
+            augmented_data.append({"text": row['text'], "label": row['label']})
             for variant in augmented_texts[0]["variants"]:
-                augmented_data.append({
-                    "text": variant,
-                    "label": row['label']
-                })
-            
+                augmented_data.append({"text": variant, "label": row['label']})
         except Exception as e:
-            print(f"Error processing text at index {index}: {e}")
-    
+            print(f"Error at index {index}: {e}")
     augmented_df = pd.DataFrame(augmented_data)
-    augmented_df.to_excel("augmented_dataset_TN.xlsx", index=False)
-    print(f"Original dataset size: {len(df)}, Augmented dataset size: {len(augmented_df)}")
-    print(f"Cached augmented data with {varr} variations")
+    augmented_df.to_excel(f"augmented_dataset_{name}.xlsx", index=False)
+    print(f"Original: {len(df)}, Augmented: {len(augmented_df)}")
+
+def convert_pdf_to_md():
+    for file in os.listdir("content"):
+        if not file.endswith('.pdf'):
+            continue
+        input_path = os.path.join("content", file)
+        print(f"Processing: {input_path}")
+        try:
+            ocr_options = TesseractOcrOptions(
+                lang=["vie"],
+                force_full_page_ocr=False
+            )
+            pipeline_options = PdfPipelineOptions(
+                do_ocr=True, 
+                do_table_structure=True,
+                ocr_options=ocr_options
+            )
+            pipeline_options.table_structure_options.mode = TableFormerMode.ACCURATE
+            converter = DocumentConverter(
+                format_options={
+                    InputFormat.PDF: PdfFormatOption(
+                        pipeline_options=pipeline_options
+                    )
+                }
+            )
+            print(f"Converting: {file}")
+            result = converter.convert(input_path)
+            text = result.document.export_to_text()
+            output_path = os.path.join("result", file.replace(".pdf", ".txt"))
+            pathlib.Path(output_path).write_bytes(text.encode())
+            print(f"✓ Done: {input_path}")
+        except Exception as e:
+            print(f"✗ Error: {file} -> {str(e)}")
+
+def process_md_files(use_semantic=False):
+    for file in tqdm(os.listdir("result")):
+        if not file.endswith(".md"):
+            continue
+        try:
+            with open(os.path.join("result", file), "r", encoding="utf-8") as f:
+                content = f.read()
+            content = vietnamese_spelling(content)
+            content = preprocess(content)
+            chunks = semantic_chunking(content) if use_semantic else chunking(content)
+            data = [{"text": chunk.page_content} for chunk in chunks]
+            df = pd.DataFrame(data)
+            path = os.path.join("result", file.replace(".md", ".xlsx"))
+            df.to_excel(path, index=False, engine="openpyxl")
+            print(f"Processed: {file} → {len(chunks)} chunks")
+        except Exception as e:
+            print(f"Error processing {file}: {str(e)}")
+
+# ----- Main Entry -----
 
 def main():
     while True:
-        print("---Collect Data Menu---")
-        print("1. Convert PDF to CSV file using Recursive chunking.")
-        print("2. Convert PDF to CSV file using Semantic chunking.")
-        print("3. Augment data for classification.")
-        print("4. Exit")
-        print("----------------------")
-        choice = int(input("Enter your choice: "))
-        if choice == 1:
-           for file in tqdm(os.listdir("content")):
-            if file.endswith(".pdf"):
-                content = convert_pdf_to_markdown_with_llm(os.path.join("content", file), os.path.join("result", file.replace(".pdf", ".md")))
-                content = preprocess(content)
-                chunks = chunking(content)
-                data = []
-                label = labelling()
-                for chunk in chunks:
-                    data.append({"text": chunk.page_content, "label": label})
-                df = pd.DataFrame(data)
-                path = os.path.join("result", file.replace(".pdf", ".csv"))
-                df.to_csv(path, index=False, encoding="utf-8-sig", sep=";")
-        elif choice == 2:
-            for file in tqdm(os.listdir("content")):
-                if file.endswith(".pdf"):
-                    content = convert_pdf_to_markdown_with_llm(os.path.join("content", file), os.path.join("result", file.replace(".pdf", ".md")))
-                    content = preprocess(content)
-                    chunks = semantic_chunking(content)
-                    data = []
-                    # label = labelling()
-                    for chunk in chunks:
-                        data.append({"text": chunk.page_content})
-                    df = pd.DataFrame(data)
-                    path = os.path.join("result", file.replace(".pdf", ".csv"))
-                    df.to_csv(path, index=False, encoding="utf-8-sig", sep=";")
-        elif choice == 3:
-            variations = input("Enter number of variations to paraphrase: ")
-            data_augment(variations)
-        elif choice == 4:
-            print("Exiting the program.")
+        print("\n--- Menu ---")
+        print("1. Convert PDFs to Text Files")
+        print("2. Process Text Files using Recursive Chunking")
+        print("3. Process Text Files using Semantic Chunking")
+        print("4. Augment Classification Data")
+        print("5. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            convert_pdf_to_md()
+        elif choice == '2':
+            process_md_files(use_semantic=False)
+        elif choice == '3':
+            process_md_files(use_semantic=True)
+        elif choice == '4':
+            name = input("Enter class for augment: ")
+            varr = input("Enter number of variations to generate: ")
+            data_augment(varr, name)
+        elif choice == '5':
+            print("Exiting.")
             break
         else:
-            print("Invalid choice")
+            print("Invalid choice. Please enter a number between 1 and 5.")
 
 if __name__ == "__main__":
     main()

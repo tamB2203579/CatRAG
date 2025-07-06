@@ -6,14 +6,11 @@ Use both information from vector search and the knowledge graph to provide a com
 INFORMATION FROM VECTOR STORE:
 {vector_context}
 
-INFORMATION FROM KNOWLEDGE GRAPH (include relevant chunks, entities and relationships between them and {query}):
+INFORMATION FROM KNOWLEDGE GRAPH:
 {graph_context}
 
 QUESTION:
 {query}
-
-History of questions and answers:
-{past_query} {past_response}
 
 Contextual Label:
 {label}

@@ -41,7 +41,7 @@ def preprocess_text(text):
     return text
 
 # Tải và tiền xử lý bộ dữ liệu
-data = pd.read_csv(data_path, encoding="utf-8", sep=";")
+data = pd.read_csv(data_path, encoding="utf-8", sep=",")
 
 # Tiền xử lý dữ liệu
 data.dropna(subset=['text'], inplace=True)  # Remove rows where 'text' is NaN

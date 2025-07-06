@@ -9,7 +9,6 @@ import random
 import json
 import os
 
-# Load environment variables
 load_dotenv()
 
 class QuestionGenerator:
@@ -40,7 +39,6 @@ class QuestionGenerator:
                 for _, row in df.iterrows():
                     chunk_data = {
                         "text": row.get("text", ""),
-                        "label": row.get("label", ""),
                         "source_file": os.path.basename(csv_file)
                     }
                     all_chunks.append(chunk_data)
@@ -112,7 +110,7 @@ class QuestionGenerator:
         # Handle different data formats
         if isinstance(evaluation_data, dict):
             # If data is organized by label
-            for label, questions in evaluation_data.items():
+            for questions in evaluation_data.items():
                 for item in questions:
                     excel_data.append({
                         'question': item['question'],
@@ -161,7 +159,6 @@ class QuestionGenerator:
                         "question": qa["question"],
                         "answer": qa["answer"],
                         "context": chunk["text"],
-                        "label": chunk["label"],
                         "source_file": chunk["source_file"]
                     }
                     evaluation_data.append(eval_item)
@@ -171,73 +168,6 @@ class QuestionGenerator:
             json.dump(evaluation_data, f, ensure_ascii=False, indent=2)
         
         print(f"Generated {len(evaluation_data)} evaluation questions")
-        print(f"Saved to: {output_file}")
-        
-        # Save to Excel if requested
-        if save_excel:
-            self.save_to_excel(evaluation_data, excel_file)
-        
-        return evaluation_data
-    
-    def generate_questions_by_label(self, num_per_label=10, output_file="evaluation_questions_by_label.json", save_excel=False, excel_file="dataset.xlsx"):
-        """Generate evaluation questions organized by label"""
-        print("Generating evaluation questions by label...")
-        
-        # Read all chunks
-        chunks = self.read_csv_files()
-        
-        if not chunks:
-            print("No chunks found. Exiting.")
-            return
-        
-        # Group chunks by label
-        chunks_by_label = {}
-        for chunk in chunks:
-            label = chunk["label"]
-            if label not in chunks_by_label:
-                chunks_by_label[label] = []
-            chunks_by_label[label].append(chunk)
-        
-        print(f"Found {len(chunks_by_label)} unique labels:")
-        for label, chunk_list in chunks_by_label.items():
-            print(f"  - {label}: {len(chunk_list)} chunks")
-        
-        evaluation_data = {}
-        
-        for label, chunk_list in chunks_by_label.items():
-            print(f"\nProcessing label: {label}")
-            
-            # Sample chunks for this label
-            sample_chunks = random.sample(chunk_list, min(num_per_label, len(chunk_list)))
-            
-            label_questions = []
-            
-            for i, chunk in enumerate(sample_chunks):
-                print(f"  Processing chunk {i+1}/{len(sample_chunks)}...")
-                
-                qa_pairs = self.generate_questions_for_chunk(chunk["text"])
-                
-                if qa_pairs:
-                    for qa in qa_pairs:
-                        eval_item = {
-                            "id": f"{label}_{i+1}_{len(label_questions)+1}",
-                            "question": qa["question"],
-                            "answer": qa["answer"],
-                            "context": chunk["text"],
-                            "label": label,
-                            "source_file": chunk["source_file"]
-                        }
-                        label_questions.append(eval_item)
-            
-            evaluation_data[label] = label_questions
-            print(f"  Generated {len(label_questions)} questions for {label}")
-        
-        # Save to JSON file
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(evaluation_data, f, ensure_ascii=False, indent=2)
-        
-        total_questions = sum(len(questions) for questions in evaluation_data.values())
-        print(f"\nTotal questions generated: {total_questions}")
         print(f"Saved to: {output_file}")
         
         # Save to Excel if requested
@@ -294,7 +224,6 @@ class QuestionGenerator:
         
         for i, chunk in enumerate(sample_chunks):
             print(f"\n{'='*50}")
-            print(f"CHUNK {i+1} (Label: {chunk['label']})")
             print(f"Source: {chunk['source_file']}")
             print(f"{'='*50}")
             print(f"Text: {chunk['text'][:200]}...")
@@ -322,11 +251,10 @@ def main():
         Choose an option:
         1. Preview questions from random chunks
         2. Generate evaluation dataset (random sampling)
-        3. Generate evaluation dataset by label
-        4. Generate dataset and save to Excel (question & ground_truth columns)
-        5. Exit
+        3. Generate dataset and save to Excel (question & ground_truth columns)
+        4. Exit
 
-        Enter your choice (1-5): """)
+        Enter your choice (1-4): """)
     
     if choice == "1":
         num_samples = int(input("Number of chunks to preview (default 5): ") or "5")
@@ -342,20 +270,11 @@ def main():
         generator.generate_evaluation_dataset(num_samples, output_file, save_excel, excel_file)
         
     elif choice == "3":
-        num_per_label = int(input("Number of chunks per label (default 10): ") or "10")
-        output_file = input("Output file name (default: evaluation_questions_by_label.json): ") or "evaluation_questions_by_label.json"
-        save_excel = input("Also save to Excel? (y/n, default: n): ").lower() == 'y'
-        excel_file = "dataset.xlsx"
-        if save_excel:
-            excel_file = input("Excel file name (default: dataset.xlsx): ") or "dataset.xlsx"
-        generator.generate_questions_by_label(num_per_label, output_file, save_excel, excel_file)
-        
-    elif choice == "4":
         num_samples = int(input("Number of chunks to process (default 50): ") or "50")
         excel_file = input("Excel file name (default: dataset.xlsx): ") or "dataset.xlsx"
         generator.generate_dataset_excel_only(num_samples, excel_file)
         
-    elif choice == "5":
+    elif choice == "4":
         print("Goodbye!")
         return
         

@@ -115,27 +115,31 @@ class KnowledgeGraph:
                 # Get embedding for the chunk
                 embeddings = self.embed_model.embed_query(chunk.text)
 
+                # Extract and clean label from metadata - handle non-string types
+                label_value = chunk.metadata.get("label", "")
+                label = str(label_value).replace("__label__", "").strip() if label_value is not None else ""
+
                 # Create chunk node with embedding
                 session.run("""
                     MERGE (c:Chunk {id: $id})
                     SET c.text = $text,
                     c.label = $label,
                     c.embeddings = $embedding
-                """, id=chunk.id_, text=chunk.text, label=chunk.metadata.get("label", ""), embedding=embeddings)
+                """, id=chunk.id_, text=chunk.text, label=label, embedding=embeddings)
                 
                 # Create category node if a label exists
-                if chunk.metadata.get("label"):
+                if label:
                     # Create category node
                     session.run("""
                         MERGE (cat:Category {name: $label})
-                    """, label=chunk.metadata.get("label", ""))
+                    """, label=label)
                 
                 # Connect chunk to category
                 session.run("""
                     MATCH (c:Chunk {id: $chunk_id})
                     MATCH (cat:Category {name: $label})
                     MERGE (c)-[:BELONGS_TO]->(cat)
-                """, chunk_id=chunk.id_, label=chunk.metadata.get("label", ""))
+                """, chunk_id=chunk.id_, label=label)
             
             print("Extracting entities and relationships from chunks...")
             for chunk in tqdm(chunks, desc="Processing entities and relationships"):
