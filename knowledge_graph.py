@@ -251,31 +251,14 @@ class KnowledgeGraph:
                 
                 entities = [name[0] for name in entities_result]
             
-                # 3. Get semantically similar entities based on query embedding
-                semantic_entities_result = session.run("""
-                    MATCH (e:Entity)
-                    WHERE e.name in $entities AND e.embedding IS NOT NULL
-                    WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
-                    WHERE score > 0.7
-                    RETURN e.name AS entity_name, score
-                    ORDER BY score DESC
-                    LIMIT $entity_limit
-                """, query_embedding=query_embedding, entity_limit=entity_limit, entities=entities).values()
-            
-            if not semantic_entities_result and not entities:
+            if  not entities:
                 rels_context = "\nNo entities found for the query."
             else:
-                # Get unique entities from both sources
-                semantic_entities = [name for name, _ in semantic_entities_result]
-                all_entities = list(set(semantic_entities))
-                
-                print(f"Found {len(all_entities)} entities: {', '.join(all_entities)}")
-                
                 relationships = session.run("""
                     MATCH (e1:Entity)-[r]-(e2:Entity)
                     WHERE e1.name IN $entity_names
                     RETURN DISTINCT type(r) AS relationship, e1.name AS from, e2.name AS to
-                """, entity_names=all_entities).values()
+                """, entity_names=entities).values()
                     
                 rels_context = "Relationships: "
                 if relationships:

@@ -16,7 +16,7 @@ Contextual Label:
 {label}
 
 Requirements:
-1.  Base your answer only on the provided information. 
+1. Base your answer only on the provided information. 
 2. If there is not enough information, state that you do not have complete information, do not make up answer
 3. Present the answer in a clear, structured, and easy-to-understand manner. 
 4. If there is conflicting information, clearly state the possible explanations  

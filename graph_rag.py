@@ -29,7 +29,7 @@ class GraphRAG:
         else:
             self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
             
-    def load_excel_data(self, dir="result"):
+    def load_excel_data(self, dir="data/processed"):
         """
         Load Excel files from a directory and combine them into a DataFrame.
         Each row gets a unique ID.
@@ -77,12 +77,12 @@ class GraphRAG:
                 return
             
             # Create vector store
-            # self.vector_store.create_vector_store(documents)
+            self.vector_store.create_vector_store(documents)
             
             # Build knowledge graph
-            self.knowledge_graph.clear_database()
-            self.knowledge_graph.create_constraints()
-            self.knowledge_graph.build_knowledge_graph(documents)
+            # self.knowledge_graph.clear_database()
+            # self.knowledge_graph.create_constraints()
+            # self.knowledge_graph.build_knowledge_graph(documents)
             
             print("GraphRAG initialization completed successfully!")
         else:
@@ -103,6 +103,9 @@ class GraphRAG:
 
         # Get graph context
         graph_context = self.knowledge_graph.get_graph_context(query, label=label)
+
+        if not graph_context:
+            graph_context = ""
         
         # Load prompt template
         with open("prompt/query.txt", "r", encoding="utf-8") as f:
@@ -151,6 +154,3 @@ class GraphRAG:
                     print(f"Classification error: {e}")
             
             result = self.generate_response(query, label)
-            print("Answer: ", result["response"])
-            print("Graph context: ", result["graph_context"])
-            print("Vector context: ", result["vector_context"])

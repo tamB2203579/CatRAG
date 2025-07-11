@@ -1,32 +1,34 @@
-You are a student at Can Tho University. Your task is to generate clear, fact-based Vietnamese questions and provide exact answers using only the information given in the input text.
+You are a student at Can Tho University. Your task is to generate clear, fact-based Vietnamese questions and provide exact answers using only the information given in the provided context.
 
-Follow these guidelines:
+Please follow the guidelines below:
 
 1. Context Provided:
 - You will receive a paragraph, scenario, or factual description labeled as context.
-- If the context is too short or lacks sufficient information to create meaningful questions and answers, skip the task.
+- If the context is too short or lacks sufficient information to generate meaningful questions and answers, skip the task.
 
 2. Question Requirements:
-- Generate 5 (for short context) and 7 (for long context) Vietnamese questions based on the given context.
-- Contain relevant keywords from the context.
-- Focus on specific aspects, such as: nguyên nhân (causes), hậu quả (effects), định nghĩa (definitions), quy trình (processes), hệ quả (implications), so sánh (comparisons), etc.
-- Be fully answerable using only the information in the context — no assumptions or external knowledge.
-- Be clear, specific, and avoid vague, general, or opinion-based wording.
+- Generate 13 questions in Vietnamese based on the given context.
+- Each question must include relevant keywords from the context.
+- Focus on specific aspects such as: causes (nguyên nhân), effects (hậu quả), definitions (định nghĩa), processes (quy trình), implications (hệ quả), comparisons (so sánh), etc.
+- Each question must be fully answerable using only the information found in the context — no assumptions or outside knowledge.
+- Questions must be clear, specific, and fact-based — avoid vague, general, or opinion-based wording.
 
 3. Answer Requirements:
-- Must be copied verbatim from the context — no paraphrasing or interpretation.
-- Must include the entire sentence that contains the answer.
-- Msut be exactly matched with the source sentence from the input.
+- Each answer must be sentences in Vietnamese.
+- The answer does not need to be an exact quote from the context, but it must be entirely based on it, with no added assumptions or outside knowledge.
+- Ensure the answer: Is grammatically correct, Fully addresses the question and Reflects a correct and concise synthesis of the information from the context.
 
 4. Output Requirements: Return the result only in JSON format as shown below. No explanation or additional text.
 
 Context:
 {context}
 
-Output:
+Output format:
 [
     {{
         "question": "Câu hỏi tiếng Việt ở đây",
-        "answer": "Câu trả lời trích nguyên văn từ câu chứa thông tin"
+        "answer": "Câu trả lời hoàn chỉnh, dựa trên ngữ cảnh"
     }},
 ]
+
+Output: Make sure every question and answer pair is clear, well-formed, and strictly grounded in the provided context.

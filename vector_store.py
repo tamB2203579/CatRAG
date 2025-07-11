@@ -2,6 +2,9 @@ from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_s
 from embedding import Embedding
 import os
 
+import logging
+logging.getLogger("llama_index").setLevel(logging.ERROR)
+
 class VectorStore:
     def __init__(self, storage_dir="./storage"):
         self.storage_dir = storage_dir

@@ -23,28 +23,28 @@ class QuestionGenerator:
             template = f.read()
         return ChatPromptTemplate.from_template(template)
     
-    def read_csv_files(self, result_folder="result"):
-        """Read all CSV files from the result folder and combine them"""
-        csv_files = glob(f"{result_folder}/*.csv")
-        print(f"Found {len(csv_files)} CSV files in {result_folder}")
+    def read_excel_files(self, result_folder="./data/processed"):
+        """Read all Excel files from the result folder and combine them"""
+        excel_files = glob(f"{result_folder}/*.xlsx")
+        print(f"Found {len(excel_files)} Excel files in {result_folder}")
         
         all_chunks = []
         
-        for csv_file in csv_files:
+        for excel_file in excel_files:
             try:
-                df = pd.read_csv(csv_file, encoding="utf-8-sig", sep=";")
-                print(f"- {csv_file}: {len(df)} rows")
+                df = pd.read_excel(excel_file, engine="openpyxl")
+                print(f"- {excel_file}: {len(df)} rows")
                 
                 # Convert DataFrame to list of dictionaries
                 for _, row in df.iterrows():
                     chunk_data = {
                         "text": row.get("text", ""),
-                        "source_file": os.path.basename(csv_file)
+                        "source_file": os.path.basename(excel_file)
                     }
                     all_chunks.append(chunk_data)
                     
             except Exception as e:
-                print(f"Error reading {csv_file}: {e}")
+                print(f"Error reading {excel_file}: {e}")
                 continue
         
         print(f"Total chunks loaded: {len(all_chunks)}")
@@ -136,7 +136,7 @@ class QuestionGenerator:
         print("Starting evaluation dataset generation...")
         
         # Read all chunks
-        chunks = self.read_csv_files()
+        chunks = self.read_excel_files()
         
         if not chunks:
             print("No chunks found. Exiting.")
@@ -181,7 +181,7 @@ class QuestionGenerator:
         print("Generating evaluation dataset for Excel output...")
         
         # Read all chunks
-        chunks = self.read_csv_files()
+        chunks = self.read_excel_files()
         
         if not chunks:
             print("No chunks found. Exiting.")
@@ -214,7 +214,7 @@ class QuestionGenerator:
         """Preview generated questions from a few random chunks"""
         print("Generating preview questions...")
         
-        chunks = self.read_csv_files()
+        chunks = self.read_excel_files()
         
         if not chunks:
             print("No chunks found.")
