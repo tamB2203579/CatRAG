@@ -6,3 +6,4 @@ __pycache__
 /history/
 /relationships/
 /storage/
+.DS_Store
