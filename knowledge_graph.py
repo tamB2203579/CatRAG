@@ -10,7 +10,7 @@ import json
 import os
 
 class KnowledgeGraph:
-    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="test"):  # Change the datbase name please
+    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="graphrag"):  # Change the datbase name please
         self.driver = GraphDatabase.driver(uri, auth=(username, password), database=database)
         self.embed_model = Embedding()
     

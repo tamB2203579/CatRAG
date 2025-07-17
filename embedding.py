@@ -11,8 +11,7 @@ class Embedding(Embeddings):
     def __init__(self, model_name="vinai/phobert-base-v2"):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModel.from_pretrained(model_name, add_pooling_layer=False)
-        self.model = self.model.to(self.device)
+        self.model = AutoModel.from_pretrained(model_name, add_pooling_layer=False).to(self.device)
         print(f"▶ Embedding model loaded on device: {self.device}")
 
     def encode(self, text):
