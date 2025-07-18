@@ -1,0 +1,9 @@
+You are a Vietnamese grammar and spelling expert, you will be provided a text, your mission is fix all grammar and spelling of that text.
+
+Requirements:
+- Do not change the content of the text, neither change the format too.
+- If there are tables, rewrite them so that they will be easily read.
+
+Input: {text}
+
+Output:

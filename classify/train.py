@@ -5,10 +5,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Thiết lập đường dẫn
-train_data_path = "./classify/data/train_data.txt"
-test_data_path = "./classify/data/test_data.txt"
+train_data_path = "./data/classify/train_data.txt"
+test_data_path = "./data/classify/test_data.txt"
 model_path = "./classify/models/fasttext_model.bin"
-data_path = "./classify/data/dataset.csv"
+data_path = "./data/classify/dataset.csv"
 stopwords_path = "./lib/stopwords.txt"
 
 with open(file=stopwords_path, mode="r", encoding="utf-8") as f:
@@ -46,7 +46,7 @@ data['text'] = data['text'].apply(preprocess_text)
 data['formatted'] = data['label'].astype(str) + ' ' + data['text']
 
 # Chia dữ liệu thành tập huấn luyện và kiểm tra
-train_data, test_data = train_test_split(data['formatted'], test_size=0.3, random_state=42)
+train_data, test_data = train_test_split(data['formatted'], test_size=0.2, random_state=42)
 train_data = train_data.str.strip()
 test_data = test_data.str.strip()
 

@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_mistralai import ChatMistralAI
 from langchain_openai import ChatOpenAI
 from llama_index.core import Document
 from dotenv import load_dotenv
@@ -10,40 +10,38 @@ import pandas as pd
 import os
 
 from knowledge_graph import KnowledgeGraph
-from history_manager import HistoryManager
 from vector_store import VectorStore
 
 # Load environment variables
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+os.environ["MISTRAL_API_KEY"] = os.getenv("MISTRAL_API_KEY")
 
 class GraphRAG:
     def __init__(self, model_name="gpt-4o-mini"):
         # Initialize components
         self.knowledge_graph = KnowledgeGraph()
         self.vector_store = VectorStore()
-        self.history_manager = HistoryManager()
         
         # Initialize LLM
         if model_name == "gpt-4o-mini":
             self.llm = ChatOpenAI(model=model_name, temperature=0)
         else:
-            self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
+            self.llm = ChatMistralAI(model=model_name, temperature=0)
             
-    def load_csv_data(self, dir="result"):
+    def load_excel_data(self, dir="data/processed"):
         """
-        Load CSV files from a directory and combine them into a DataFrame.
+        Load Excel files from a directory and combine them into a DataFrame.
         Each row gets a unique ID.
         """
-        csv_files = glob(f"{dir}/*.csv")
-        print(f"Found {len(csv_files)} CSV files in {dir}")
+        excel_files = glob(f"{dir}/*.xlsx")
+        print(f"Found {len(excel_files)} Excel files in {dir}")
 
         all_dfs = []
 
-        for csv_file in csv_files:
-            df = pd.read_csv(csv_file, encoding="utf-8-sig", sep=";")
-            print(f" - {csv_file}: {len(df)} rows")
+        for file in excel_files:
+            df = pd.read_excel(file, engine="openpyxl")
+            print(f" - {file}: {len(df)} rows")
             all_dfs.append(df)
 
         if all_dfs:
@@ -57,7 +55,7 @@ class GraphRAG:
             print("No data loaded.")
             return None
             
-    def initialize_system(self):
+    def initialize_system(self, force_reinit=False):
         """
         Initialize the GraphRAG system:
         1. Load documents
@@ -68,7 +66,7 @@ class GraphRAG:
         print("Initializing GraphRAG system...")
         
         # Load CSV data
-        df = self.load_csv_data()
+        df = self.load_excel_data()
         
         if df is not None:
             documents = [Document(text=row['text'], id_=row['id'], metadata={"label": row['label']}) for _, row in df.iterrows()]
@@ -90,7 +88,7 @@ class GraphRAG:
         else:
             print("Skipping GraphRAG initialization due to missing data")
             
-    def generate_response(self, query, session_id, label=None):
+    def generate_response(self, query, label=None):
         """
         Generate a response using the GraphRAG system.
         """
@@ -105,14 +103,12 @@ class GraphRAG:
 
         # Get graph context
         graph_context = self.knowledge_graph.get_graph_context(query, label=label)
-        
-        # Get conversation history
-        history = self.history_manager.get_history(session_id)
-        past_query = " ".join(entry["query"] for entry in history)
-        past_responses = " ".join(entry["response"] for entry in history)
+
+        if not graph_context:
+            graph_context = ""
         
         # Load prompt template
-        with open("prompt/query.txt", "r", encoding="utf-8") as f:
+        with open("prompt/graphrag_query.txt", "r", encoding="utf-8") as f:
             template = f.read()
         
         prompt = ChatPromptTemplate.from_template(template)
@@ -127,13 +123,8 @@ class GraphRAG:
             "query": query,
             "vector_context": vector_context,
             "graph_context": graph_context,
-            "past_query": past_query,
-            "past_response": past_responses,
             "label": label
         })
-        
-        # Add to history
-        self.history_manager.add_to_history(session_id, query, response)
         
         return {
             "query": query,
@@ -141,16 +132,13 @@ class GraphRAG:
             "vector_context": vector_context,
             "graph_context": graph_context
         }
-        
+
     def interactive_query(self, classifier=None):
         """
         Run an interactive query loop for the GraphRAG system.
         """
         print("\nGraphRAG Query System")
         print("Type 'q' to exit")
-        
-        # Generate a new session ID
-        session_id = self.history_manager.generate_session_id()
         
         while True:
             query = input("\nNhập câu hỏi của bạn: ")
@@ -165,7 +153,5 @@ class GraphRAG:
                 except Exception as e:
                     print(f"Classification error: {e}")
             
-            result = self.generate_response(query, session_id, label)
-            print("Answer: ", result["response"])
-            print("Graph context: ", result["graph_context"])
-            print("Vector context: ", result["vector_context"])
+            result = self.generate_response(query, label)
+            print(result["response"])

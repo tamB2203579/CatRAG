@@ -1,9 +1,11 @@
+from tracemalloc import start
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import numpy as np
 import fasttext
+import os
 
 model_path = "./classify/models/fasttext_model.bin"
-test_data_path = "./classify/data/test_data.txt"
+test_data_path = "./data/classify/test_data.txt"
 
 model = fasttext.load_model(model_path)
 
@@ -13,10 +15,10 @@ labels_list = [label.replace('__label__', '') for label in model.labels]
 def classify_text(query):
     labels, probabilities = model.predict(query, k=1)  # k is the number of top labels to return
     
-    print(f"Predicted label: {labels[0]}")
-    print(f"Probability: {probabilities[0]}")
-    
-    return labels[0].replace('__label__', '')
+    if probabilities[0] >= 0.9:
+        return labels[0].replace('__label__', '')
+    else:
+        return None
 
 def evaluate_model():
     # Read test data
@@ -61,4 +63,7 @@ def evaluate_model():
     }
 
 if __name__ == "__main__":
+    import time
+    start_time = time.time()
     metrics = evaluate_model()
+    print("Testing time", (time.time() - start_time)*1000) # Time ins milisecond

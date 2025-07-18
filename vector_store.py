@@ -1,11 +1,12 @@
 from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_storage
-from embedding import Embedding
 import os
+
+import logging
+logging.getLogger("llama_index").setLevel(logging.ERROR)
 
 class VectorStore:
     def __init__(self, storage_dir="./storage"):
         self.storage_dir = storage_dir
-        self.embed_model = Embedding()
         
         # Create storage directory if it doesn't exist
         os.makedirs(storage_dir, exist_ok=True)

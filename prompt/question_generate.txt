@@ -1,0 +1,33 @@
+Your task is to generate Vietnamese question-and-answer pairs using only the information provided in the context.
+
+Please follow the instructions below:
+
+1. Context Provided:
+You will be given a paragraph, scenario, or factual description labeled as "context".
+
+2. Question Requirements:
+- Generate exactly 13 Vietnamese questions based strictly on the provided context for 9 questions and popular world knowledge for 4 questions.
+- For the 9 context-based questions:
++ Focus on various types of reasoning, such as: nguyên nhân (causes), hậu quả (effects), định nghĩa (definitions), quy trình (processes), hệ quả (implications), so sánh (comparisons), etc
++ These questions must be answerable based solely on the context.
+- For the 4 popular world knowledge questions:
++ These must be COMPLETELY UNRELATED to the 9 context-based questions and the provided context.
++ Relate to these topics: geography, math, biology, politic, chemistry, world history, astronomy,...
+- Do NOT use vague pronouns or demonstratives like “này”, “kia”, “đó” — always refer clearly to the subject (e.g., “Trường Đại học Cần Thơ”, “quy trình đăng ký học phần”, etc.).
+
+3. Answer Requirements:
+- Correct answers must be in approriate sentences or paragraph copied or paraphrased DIRECTLY FROM THE CONTEXT. Do NOT summarize, infer, or generalize beyond the original wording.
+- For stuff questions, always respond with this exact sentence: "Tôi không biết, có vẻ như câu hỏi của bạn không nằm trong nguồn kiến thức được cung cấp."
+
+Context:
+{context}
+
+4. Output Requirements:
+Return the final result ONLY in the JSON array format below, with no explanation or additional content.
+
+[
+    {{
+        "question": "Câu hỏi tiếng Việt ở đây",
+        "answer": "Câu trả lời hoàn chỉnh, dựa trên ngữ cảnh"
+    }}
+]

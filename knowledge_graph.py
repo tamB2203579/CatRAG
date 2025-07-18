@@ -10,7 +10,7 @@ import json
 import os
 
 class KnowledgeGraph:
-    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="test"):  # Change the datbase name please
+    def __init__(self, uri="bolt://localhost:7687", username="neo4j", password="123123123", database="graphrag"):  # Change the datbase name please
         self.driver = GraphDatabase.driver(uri, auth=(username, password), database=database)
         self.embed_model = Embedding()
     
@@ -115,27 +115,31 @@ class KnowledgeGraph:
                 # Get embedding for the chunk
                 embeddings = self.embed_model.embed_query(chunk.text)
 
+                # Extract and clean label from metadata - handle non-string types
+                label_value = chunk.metadata.get("label", "")
+                label = str(label_value).replace("__label__", "").strip() if label_value is not None else ""
+
                 # Create chunk node with embedding
                 session.run("""
                     MERGE (c:Chunk {id: $id})
                     SET c.text = $text,
                     c.label = $label,
                     c.embeddings = $embedding
-                """, id=chunk.id_, text=chunk.text, label=chunk.metadata.get("label", ""), embedding=embeddings)
+                """, id=chunk.id_, text=chunk.text, label=label, embedding=embeddings)
                 
                 # Create category node if a label exists
-                if chunk.metadata.get("label"):
+                if label:
                     # Create category node
                     session.run("""
                         MERGE (cat:Category {name: $label})
-                    """, label=chunk.metadata.get("label", ""))
+                    """, label=label)
                 
                 # Connect chunk to category
                 session.run("""
                     MATCH (c:Chunk {id: $chunk_id})
                     MATCH (cat:Category {name: $label})
                     MERGE (c)-[:BELONGS_TO]->(cat)
-                """, chunk_id=chunk.id_, label=chunk.metadata.get("label", ""))
+                """, chunk_id=chunk.id_, label=label)
             
             print("Extracting entities and relationships from chunks...")
             for chunk in tqdm(chunks, desc="Processing entities and relationships"):
@@ -247,33 +251,16 @@ class KnowledgeGraph:
                 
                 entities = [name[0] for name in entities_result]
             
-                # 3. Get semantically similar entities based on query embedding
-                semantic_entities_result = session.run("""
-                    MATCH (e:Entity)
-                    WHERE e.name in $entities AND e.embedding IS NOT NULL
-                    WITH e, gds.similarity.cosine(e.embedding, $query_embedding) AS score
-                    WHERE score > 0.7
-                    RETURN e.name AS entity_name, score
-                    ORDER BY score DESC
-                    LIMIT $entity_limit
-                """, query_embedding=query_embedding, entity_limit=entity_limit, entities=entities).values()
-            
-            if not semantic_entities_result and not entities:
+            if  not entities:
                 rels_context = "\nNo entities found for the query."
             else:
-                # Get unique entities from both sources
-                semantic_entities = [name for name, _ in semantic_entities_result]
-                all_entities = list(set(semantic_entities))
-                
-                print(f"Found {len(all_entities)} entities: {', '.join(all_entities)}")
-                
                 relationships = session.run("""
                     MATCH (e1:Entity)-[r]-(e2:Entity)
                     WHERE e1.name IN $entity_names
                     RETURN DISTINCT type(r) AS relationship, e1.name AS from, e2.name AS to
-                """, entity_names=all_entities).values()
+                """, entity_names=entities).values()
                     
-                rels_context = "Relationships: "
+                rels_context = "Relationships between entities in those 5 relevant chunks: "
                 if relationships:
                     for rel, from_entity, to_entity in relationships:
                         rels_context += f"\n- {from_entity} -- {rel} --> {to_entity}"

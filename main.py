@@ -1,5 +1,4 @@
 from classify import main as classify_module
-from history_manager import HistoryManager
 from graph_rag import GraphRAG
 import os
 
