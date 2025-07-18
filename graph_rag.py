@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_mistralai import ChatMistralAI
 from langchain_openai import ChatOpenAI
 from llama_index.core import Document
 from dotenv import load_dotenv
@@ -15,7 +15,7 @@ from vector_store import VectorStore
 # Load environment variables
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+os.environ["MISTRAL_API_KEY"] = os.getenv("MISTRAL_API_KEY")
 
 class GraphRAG:
     def __init__(self, model_name="gpt-4o-mini"):
@@ -27,7 +27,7 @@ class GraphRAG:
         if model_name == "gpt-4o-mini":
             self.llm = ChatOpenAI(model=model_name, temperature=0)
         else:
-            self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
+            self.llm = ChatMistralAI(model=model_name, temperature=0)
             
     def load_excel_data(self, dir="data/processed"):
         """
@@ -108,7 +108,7 @@ class GraphRAG:
             graph_context = ""
         
         # Load prompt template
-        with open("prompt/query.txt", "r", encoding="utf-8") as f:
+        with open("prompt/graphrag_query.txt", "r", encoding="utf-8") as f:
             template = f.read()
         
         prompt = ChatPromptTemplate.from_template(template)
@@ -132,7 +132,7 @@ class GraphRAG:
             "vector_context": vector_context,
             "graph_context": graph_context
         }
-        
+
     def interactive_query(self, classifier=None):
         """
         Run an interactive query loop for the GraphRAG system.
@@ -154,3 +154,4 @@ class GraphRAG:
                     print(f"Classification error: {e}")
             
             result = self.generate_response(query, label)
+            print(result["response"])

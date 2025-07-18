@@ -260,7 +260,7 @@ class KnowledgeGraph:
                     RETURN DISTINCT type(r) AS relationship, e1.name AS from, e2.name AS to
                 """, entity_names=entities).values()
                     
-                rels_context = "Relationships: "
+                rels_context = "Relationships between entities in those 5 relevant chunks: "
                 if relationships:
                     for rel, from_entity, to_entity in relationships:
                         rels_context += f"\n- {from_entity} -- {rel} --> {to_entity}"

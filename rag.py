@@ -1,7 +1,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_mistralai import ChatMistralAI
 from langchain_openai import ChatOpenAI
 from llama_index.core import Document
 from dotenv import load_dotenv
@@ -19,7 +19,7 @@ from vector_store import VectorStore
 # Load environment variables
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+os.environ["MISTRAL_API_KEY"] = os.getenv("MISTRAL_API_KEY")
 
 class RAG:
     def __init__(self, model_name="gpt-4o-mini"):
@@ -27,7 +27,7 @@ class RAG:
         if model_name == "gpt-4o-mini":
             self.llm = ChatOpenAI(model=model_name, temperature=0)
         else:
-            self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
+            self.llm = ChatMistralAI(model=model_name, temperature=0)
             
         # Initialize embedding model
         self.embedded_model = Embedding()
@@ -104,28 +104,20 @@ class RAG:
         """
         Generate a response using the RAG system.
         """
-        # Get relevant results from the vector store
-        retrieved_docs = self.vector_store.get_vector_results(query, top_k=5)
+        # Get vector results
+        vector_results = self.vector_store.get_vector_results(query, top_k=5)
         
         # Format vector context
         vector_context = "\n\n".join([
             f"Đoạn {i+1} (Điểm tương đồng: {result['score']:.4f}):\n{result['text']}"
-            for i, result in enumerate(retrieved_docs)
+            for i, result in enumerate(vector_results)
         ])
+
+        # Load prompt template
+        with open("prompt/rag_query.txt", "r", encoding="utf-8") as f:
+            template = f.read()
         
-        # Create prompt template
-        prompt_template = """
-            Dựa trên các thông tin sau đây, hãy trả lời câu hỏi một cách chính xác và đầy đủ.
-            
-            Thông tin:
-            {context}
-            
-            Câu hỏi: {query}
-            
-            Trả lời:
-        """
-        
-        prompt = ChatPromptTemplate.from_template(prompt_template)
+        prompt = ChatPromptTemplate.from_template(template)
         
         chain = (
             prompt
@@ -134,14 +126,14 @@ class RAG:
         )
         
         response = chain.invoke({
-            "context": vector_context,
-            "query": query
+            "query": query,
+            "vector_context": vector_context,
         })
         
         return {
             "query": query,
             "response": response,
-            "vector_context": vector_context
+            "vector_context": vector_context,
         }
     
     def interactive_query(self):
