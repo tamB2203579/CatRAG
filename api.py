@@ -1,12 +1,16 @@
 from fastapi.middleware.cors import CORSMiddleware
-from llama_index.core import Document
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import List, Dict
 from fastapi import FastAPI
+import time
 import os
 
 from graph_rag import GraphRAG 
+from rag import RAG
 from classify.main import classify_text
+import rag
 
 app = FastAPI()
 
@@ -18,28 +22,37 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Mount static files for the frontend
+static_dir = os.path.join(os.path.dirname(__file__), "web_application", "dist")
+app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
+
+
 # Initialize GraphRAG instance
-graph_rag = GraphRAG()
+# graphrag = GraphRAG(model_name="gpt-4o-mini")
+rag = RAG(model_name="mistral-small-2506")
 responses: List[Dict] = []
+first_query_processed = False
 
 class ResponseData(BaseModel):
     query: str
     response: str = ""
     session_id: str
 
-def answer_query(query: str, session_id: str) -> str:
-    label = classify_text(query)
-    result = graph_rag.generate_response(query=query, label=label, session_id=session_id)
+def answer_query(query: str) -> str:
+    start_time = time.time()
+    # label = classify_text(query)
+    # result = graphrag.generate_response(query=query, label=label)
+    result = rag.generate_response(query=query)
+    print(time.time() - start_time)
     return result["response"]
 
 @app.post("/ask")
 async def ask_question(data: ResponseData):
-    response_text = answer_query(data.query, data.session_id)
+    response_text = answer_query(data.query)
 
     result = {
         "query": data.query,
         "response": response_text,
-        "session_id": data.session_id
     }
 
     responses.append(result)
@@ -49,7 +62,8 @@ async def ask_question(data: ResponseData):
 async def get_responses():
     return {"status": "success", "responses": responses}
 
+
+
 if __name__ == "__main__":
     import uvicorn
-    # graph_rag.initialize_system()
     uvicorn.run(app="api:app", host="localhost", port=8000)

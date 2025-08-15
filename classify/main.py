@@ -1,8 +1,5 @@
-from tracemalloc import start
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
-import numpy as np
 import fasttext
-import os
 
 model_path = "./classify/models/fasttext_model.bin"
 test_data_path = "./data/classify/test_data.txt"
