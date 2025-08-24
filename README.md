@@ -22,9 +22,7 @@ Academic regulation advising is vital for helping students interpret and comply 
 
 ## Performances
 
-To evaluate the effectiveness of GraphRAG, we conducted a comparative analysis against the standard RAG baseline. The evaluation was performed using a dataset of questions and reference answers derived from [Can Tho University website](https://www.ctu.edu.vn/don-vi-truc-thuoc.html).
-
-The evaluation framework measures the quality of the generated answers based on metrics such as Answer Relevance, Context Recall, and Faithfulness. The detailed results of our experiments are presented below.
+To evaluate the effectiveness of GraphRAG, we conducted a comparative analysis against the standard RAG baseline. The evaluation was performed using a dataset of questions and reference answers derived from [Can Tho University website](https://www.ctu.edu.vn/don-vi-truc-thuoc.html). The detailed results of our experiments are presented below.
 
 ### Table 1: Comparison of CatRAG (CR) and RAG (R) across thresholds
 
