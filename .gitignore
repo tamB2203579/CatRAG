@@ -1,9 +1,6 @@
 .env
 __pycache__
 /classify/models/
-/rag/faiss/
-/node_modules/
-/history/
 /relationships/
 /storage/
 /evaluation/
