@@ -39,7 +39,16 @@ To evaluate the effectiveness of GraphRAG, we conducted a comparative analysis a
 Our findings indicate that the CatRAG system consistently outperforms the standard RAG baseline, particularly on complex questions requiring relational understanding. The structured context from the knowledge graph proves to be a significant factor in improving the quality and accuracy of the generated responses.
 
 ## Citation
-
+```bash
+@inproceedings{ma2025rebot,
+  title        = {REBot: From RAG to CatRAG with Semantic Enrichment and Graph Routing},
+  author       = {Thanh-Ma and Tri-Tam La and Thu-Lam Le Huu and Minh-Nghi Nguyen and Khanh-Van Pham Luu},
+  booktitle    = {Proceedings of the Can Tho University Research Symposium},
+  year         = {2025},
+  organization = {Can Tho University},
+  note         = {Funded by Can Tho University, Code: THS2025-69}
+}
+```
 ## Acknowledgement
 
 This study is funded by Can Tho University, Code: THS2025-69
