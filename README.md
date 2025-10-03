@@ -40,13 +40,14 @@ Our findings indicate that the CatRAG system consistently outperforms the standa
 
 ## Citation
 ```bash
-@inproceedings{ma2025rebot,
-  title        = {REBot: From RAG to CatRAG with Semantic Enrichment and Graph Routing},
-  author       = {Thanh-Ma and Tri-Tam La and Thu-Lam Le Huu and Minh-Nghi Nguyen and Khanh-Van Pham Luu},
-  booktitle    = {Proceedings of the Can Tho University Research Symposium},
-  year         = {2025},
-  organization = {Can Tho University},
-  note         = {Funded by Can Tho University, Code: THS2025-69}
+@misc{ma2025rebotragcatragsemantic,
+      title={REBot: From RAG to CatRAG with Semantic Enrichment and Graph Routing}, 
+      author={Thanh Ma and Tri-Tam La and Lam-Thu Le Huu and Minh-Nghi Nguyen and Khanh-Van Pham Luu and Huu-Hoa Nguyen},
+      year={2025},
+      eprint={2510.01800},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2510.01800}, 
 }
 ```
 ## Acknowledgement
