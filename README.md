@@ -1,4 +1,4 @@
-# REBot: From RAG to CatRAG with Semanttic Enrichment and Graph Routing
+# REBot: From RAG to CatRAG with Semantic Enrichment and Graph Routing
 ## Thanh-Ma, Tri-Tam La, Thu-Lam Le Huu, Minh-Nghi Nguyen, Khanh-Van Pham Luu
 #### {mtthanh,ncdanh}@ctu.edu.vn, {tamb2203579,thub2206018,nghib2203570,vanb2203592}@student.ctu.edu.vn
 
